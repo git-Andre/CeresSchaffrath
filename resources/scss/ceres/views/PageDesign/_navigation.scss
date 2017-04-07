@@ -1,0 +1,22 @@
+.navbar-toggleable-md.collapse.in{
+	.nav.navbar-nav {
+		margin-top: 25px;
+		background: rgba(255,255,255,.75);
+	}
+}
+
+.navbar {
+	padding:0 1rem;
+}
+nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
+	display: block;
+	margin-top: 0px;
+}
+
+.dropdown-menu.dropdown-menu-right {
+	min-width: 100%;
+}
+
+.dropdown-item.special-case {
+	padding: 3px 5px !important;
+}
