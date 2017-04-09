@@ -1,0 +1,14 @@
+<application>
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="600ad5ca-8303-4430-969d-7e83f5a11ce5" name="plenty" url="https://ftp-cloud02.plentymarkets.com">
+        <fileTransfer host="ftp-cloud02.plentymarkets.com" port="21" rootFolder="//layout_32017bcf68">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" />
+          </advancedOptions>
+          <option name="port" value="21" />
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</application>
