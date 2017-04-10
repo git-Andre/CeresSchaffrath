@@ -1,12 +1,24 @@
 {% extends 'Ceres::Homepage.Homepage' %}
+{% set currentLang = services.sessionStorage.getLang() %}
 
 {% block ThemeHomepage %}
+    <div style="visibility: hidden" id="currentLang">{{ currentLang }}</div>
 
 <div class="home page-content container-max">
     
     <div class="cmp cmp-hero">
 
         <div class="hero-main">
+            <div class="container-max" style="margin-bottom: 2rem">
+                <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-example">
+                    <div class="carousel-inner" id="carousel-content">
+                        <!-- dynamic add content -->
+                    </div>
+                    <a class="left carousel-control" href="#carousel-example" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
+                    <a class="right carousel-control" href="#carousel-example" data-slide="next"><i class="icon-next fa fa-angle-right"></i></a>
+                </div>
+            </div>
+
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner" role="listbox">
                     <div class="carousel-item active">
@@ -755,4 +767,82 @@
         </div>
     </div>
 </div>
+
+{#from Theme homepage + .json#}
+    <script>
+        function getJson(url)
+        {
+            var Httpreq = new XMLHttpRequest();
+            Httpreq.open("GET", url, false);
+            Httpreq.send(null);
+            return Httpreq.responseText;
+        }
+
+        var currentLang = document.getElementById("currentLang").textContent || document.getElementById("currentLang").innerText;
+        var json = JSON.parse(getJson('https://test-ceres-ao.plentymarkets-cloud01.com/layout/theme_ao/homepage_ao.json'));
+
+        renderCarousel();
+        renderTexts();
+        renderRecommendPlugins();
+
+        function renderCarousel()
+        {
+            var carousel = document.getElementById("carousel-content");
+
+            for(var i = 0; i < json[currentLang].pictures.length; i++)
+            {
+                var contentToAddDiv = document.createElement('div');
+
+                contentToAddDiv.className = "carousel-item text-muted" + ( i == 0 ? " active" : "" ) ;
+
+                var contentToAdd = 	'<a href="' + json[currentLang].pictures[i].pictureLink + '">' +
+                    '<img class="img-fluid" src="' + json[currentLang].pictures[i].pictureUrl + '">' +
+                    '</a>' +
+                    '<div class="carousel-caption">' +
+                    '<h2>' + json[currentLang].pictures[i].text + '</h2>' +
+                    '</div>';
+
+                contentToAddDiv.innerHTML = contentToAdd;
+
+                carousel.appendChild(contentToAddDiv);
+            }
+        }
+
+        function renderTexts()
+        {
+            var welcomeText = document.getElementById("welcome-text");
+            var shortDescription = document.getElementById("short-description");
+            var recommendText = document.getElementById("recommend-text");
+
+            welcomeText.innerHTML = json[currentLang].texts.welcome;
+            shortDescription.innerHTML = json[currentLang].texts.shortDescription;
+            recommendText.innerHTML = json[currentLang].texts.recommendText;
+        }
+
+        function renderRecommendPlugins()
+        {
+            var recommendedPlugins = document.getElementById("recommended-plugins");
+
+            for(var i = 0; i < json[currentLang].recommended.length; i++)
+            {
+                var contentToAddLi = document.createElement('li');
+                contentToAddLi.className = "flex-item";
+
+                var contentToAdd = 	'<a target="_blank" href="' + json[currentLang].recommended[i].pluginLink + '">' +
+                    '<img class="flex-image" src="' + json[currentLang].recommended[i].pluginIcon + '"</img>' +
+                    '<div class="flex-align-bottom">' +
+                    '<h1 class="flex-title">' + json[currentLang].recommended[i].pluginTitle + '</h1>' +
+                    '<div class="flex-text">' + json[currentLang].recommended[i].pluginText + '</div>' +
+                    '</div>' +
+                    '</a>';
+
+                contentToAddLi.innerHTML = contentToAdd;
+
+                recommendedPlugins.appendChild(contentToAddLi);
+            }
+        }
+    </script>
+
+
+
 {% endblock %}
