@@ -9,7 +9,7 @@
 	.featured-category-inner{
 		position: absolute;
 		top: 0;
-		left: 0;
+		right: 0;
 		height: 100%;
 		width: 100%;
 
@@ -21,9 +21,10 @@
 	}
 
 	.featured-category-headline{
-		background-color: rgba(white, .9);
-	    padding: .5em;
-	    text-align: left;
+		background-color: rgba(white, .5);
+		min-width: 8rem;
+		padding: .5em;
+	    text-align: right;
 		font-weight: 700;
 	    display: inline-block;
 	    width: fit-content;
@@ -33,7 +34,7 @@
 
 	.featured-category-cta{
 		display: inline-block;
-		background-color: rgba(white, .9);
+		background-color: rgba(white, .5);
 	    padding: .5em;
 	    text-align: right;
 	    width: fit-content;
