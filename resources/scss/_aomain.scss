@@ -1,4 +1,13 @@
+.cmp-hero .hero-xtras .hero-category>img {
+  width: 100%;
+  min-height: 100%;
+}
 
+.hero-xtras .hero-category-headline {
+  background-color: rgba(white, 0.4);
+  min-width: 8rem;
+  padding: .5em;
+}
 
 .carousel-control {
   bottom: 50px;
@@ -7,7 +16,7 @@
 .carousel-caption {
   padding-bottom: 0px;
   padding-top: 7px;
-  bottom: 58px;
+  bottom: 6.5rem;
   //background-color: rgba(233,233,233,0.5);
 }
 
