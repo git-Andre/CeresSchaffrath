@@ -11,11 +11,12 @@
 		position: absolute;
 		width: 100%;
 		bottom: 0;
-		left: 0;
+		right: 0;
 		z-index: 100;
-		background-color: rgba(white, .8);
+		background-color: rgba(white, .5);
+		min-width: 8rem;
 
-	    @include clearfix();
+		@include clearfix();
 	}
 
 	.featured-category-headline{

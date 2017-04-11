@@ -101,9 +101,10 @@
 		}
 
 		.hero-category-headline{
-			background-color: rgba(white, .9);
+			background-color: rgba(white, .5);
 		    padding: .5em;
-		    text-align: right;
+			min-width: 8rem;
+			text-align: right;
 		    display: inline-block;
 		    width: fit-content;
 		    align-self: flex-end;
@@ -111,7 +112,7 @@
 		}
 
 		.hero-category-cta{
-			background-color: rgba(white, .9);
+			background-color: rgba(white, .5);
 		    padding: .5em;
 		    text-align: right;
 		    width: fit-content;
