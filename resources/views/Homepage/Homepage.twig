@@ -9,12 +9,12 @@
     <div class="cmp cmp-hero">
 
         <div class="hero-main">
-            <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-example">
+            <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-slider">
                 <div class="carousel-inner" id="carousel-content">
                     <!-- dynamic add content -->
                 </div>
-                <a class="left carousel-control" href="" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
-                <a class="right carousel-control" href="/kontakt" data-slide="next"><i class="icon-next fa fa-angle-right"></i></a>
+                <a class="left carousel-control" href="#carousel-slider" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
+                <a class="right carousel-control" href="#carousel-slider" data-slide="next"><i class="icon-next fa fa-angle-right"></i></a>
             </div>
         </div>
 
@@ -316,14 +316,13 @@
                                     
                                     
                                     
+
                                     
                                     
                                     
                                     
                                     
-                                    
-                                    
-                                </ul>
+    </ul>
             </div>
         </div>
     </div>
@@ -674,7 +673,8 @@
 
                 var contentToAdd = 	'<a class="hero-category" href="' + json[currentLang].pictures[i].pictureLink + '">' +
                     '<img class="img-fluid" src="' + json[currentLang].pictures[i].pictureUrl + '">' +
-                    '<div class="hero-category-inner"><h4 class="hero-category-headline">{{ trans("CeresElectronic::Template.homepageSmallHeroHeading") }}</h4><div class="hero-category-cta">{{ trans("CeresElectronic::Template.homepageShow") }}<i class="fa fa-chevron-right" aria-hidden="true"></i></div></div>' +
+                    '<div class="hero-category-inner"><h4 class="hero-category-headline">' + json[currentLang].pictures[i].textSliderUnten +
+                    '</h4><div class="hero-category-cta">href="/kontakt/"<i class="fa fa-chevron-right" aria-hidden="true"></i></div></div>' +
                     '</a>' +
                     '<div class="carousel-caption">' +
                     '<h2>' + json[currentLang].pictures[i].text + '</h2>' +
