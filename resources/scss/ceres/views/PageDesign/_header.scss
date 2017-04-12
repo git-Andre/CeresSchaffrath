@@ -117,7 +117,7 @@
 		}
 		font-family:$font-family-heading;
 		text-transform: uppercase;
-		background-color: $gray-lighter2;
+		background-color: darken($gray-lighter2, 2%);
 		border-bottom: 0;
 		a {
 			color: $white;
