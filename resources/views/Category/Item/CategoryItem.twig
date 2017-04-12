@@ -9,7 +9,7 @@
 'variationShowType' : config("Ceres.item.variation_show_type"),
 'itemsPerPage'      : request.get("items") | default( config('Ceres.pagination.defaultItemsPerPage') ),
 'orderBy'           : itemSort[0],
-'orderByKey'        : itemSort[1] | default('ASC')
+'orderByKey'        : itemSort[1] | default('ASC'),
 'facetParams'       : request.get("facets")
 } %}
 
