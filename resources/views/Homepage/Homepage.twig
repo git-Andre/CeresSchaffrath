@@ -8,112 +8,115 @@
 {% block ThemeHomepage %}
     <div style="visibility: hidden" id="currentLang">{{ currentLang }}</div>
 
-<div class="home page-content container-max">
-    
-    <div class="cmp cmp-hero">
+    <div class="home page-content container-max">
 
-        <div class="hero-main">
-            <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-slider">
-                <div class="carousel-inner" id="carousel-content">
-                    <!-- dynamic add content -->
-                </div>
-                <a class="left carousel-control" href="#carousel-slider" data-slide="prev"><i class="icon-prev  fa fa-angle-left"></i></a>
-                <a class="right carousel-control" href="#carousel-slider" data-slide="next"><i class="icon-next fa fa-angle-right"></i></a>
-            </div>
-        </div>
+        <div class="cmp cmp-hero">
 
-        <div class="hero-xtras">
-            <a class="hero-category" href="{{ domainPath }}/medaillen/">
-                <img src="{{ layoutPath }}/img/categorie2.jpg" alt="Medaillen">
-                <div class="hero-category-inner">
-                    <h4 class="hero-category-headline">
-                        Medaillen
-                    </h4>
-                </div>
-            </a>
-            <a class="hero-category" href="{{ domainPath }}/muenzen/">
-                <img src="{{ layoutPath }}/img/categorie1.jpg" alt="Münzen">
-
-                <div class="hero-category-inner">
-                    <h4 class="hero-category-headline">
-                        Münzen
-                    </h4>
-
-                </div>
-            </a>
-        </div>
-
-    </div>
-
-    <!-- Abschnitt recommended plugins -->
-    <div class="container-max">
-        <div class="row">
-            <div class="col-lg-6">
-                <h1 style="font-size: 3rem" id="welcome-text"><!-- welcome text --></h1>
-            </div>
-            <div class="col-lg-6">
-                <p id="short-description"><!-- short description --></p>
-            </div>
-        </div>
-
-        <hr class="my-2">
-
-        <div class="row">
-            <div class="col-lg-12">
-                <h2 style="text-align: center" id="recommend-text"><!-- recommend text --></h2>
-            </div>
-        </div>
-
-        <hr class="my-2">
-
-        <div class="row">
-            <div class="row mt-xs-0_5">
-                <ul class="flex-container" id="recommended-plugins">
-                    <!-- recommended plugins -->
-                </ul>
-            </div>
-        </div>
-    </div>
-
-    <!-- SALE -->
-
-    <div class="row prop-row">
-        <div class="col-xs-12">
-            <div class="prop-xs-2-1 prop-sm-4-1 prop-md-6-1">
-                <div class="prop-inner">
-                    <a class="featured-sale" href="{{ domainPath }}/geldscheine/">
-                        <img src="{{ layoutPath }}/img/categorie3.jpg" alt="First slide">
-                        <div class="featured-category-inner">
-                            <h4 class="featured-category-headline">
-                               Geldscheine
-                            </h4>
-
-                        </div>
-                    </a>
+            <div class="hero-main">
+                <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-slider">
+                    <div class="carousel-inner" id="carousel-content">
+                        <!-- dynamic add content -->
+                    </div>
+                    <a class="left carousel-control" href="#carousel-slider" data-slide="prev"><i
+                                class="icon-prev  fa fa-angle-left"></i></a>
+                    <a class="right carousel-control" href="#carousel-slider" data-slide="next"><i
+                                class="icon-next fa fa-angle-right"></i></a>
                 </div>
             </div>
-        </div>    
-    </div>
 
-    <!-- END SALE -->
+            <div class="hero-xtras">
+                <a class="hero-category" href="{{ domainPath }}/medaillen/">
+                    <img src="{{ layoutPath }}/img/categorie2.jpg" alt="Medaillen">
+                    <div class="hero-category-inner">
+                        <h4 class="hero-category-headline">
+                            {{ trans("CeresElectronic::Template.homepageKategorieMedaillen") }}
+                        </h4>
+                    </div>
+                </a>
+                <a class="hero-category" href="{{ domainPath }}/muenzen/">
+                    <img src="{{ layoutPath }}/img/categorie1.jpg" alt="Münzen">
 
-    <div class="m-b-2">
-        <h4 class="section-header">{{ trans("CeresElectronic::Template.homepageNew") }}</h4>
-        <!-- crosssell start -->
-        <div class="row">
+                    <div class="hero-category-inner">
+                        <h4 class="hero-category-headline">
+                            {{ trans("CeresElectronic::Template.homepageKategorieMuenzen") }}
+                        </h4>
+
+                    </div>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Abschnitt recommended plugins -->
+        <div class="container-max">
+            <div class="row">
+                <div class="col-lg-6">
+                    <h1 style="font-size: 3rem" id="welcome-text"><!-- welcome text --></h1>
+                </div>
+                <div class="col-lg-6">
+                    <p id="short-description"><!-- short description --></p>
+                </div>
+            </div>
+
+            <hr class="my-2">
+
+            <div class="row">
+                <div class="col-lg-12">
+                    <h2 style="text-align: center" id="recommend-text"><!-- recommend text --></h2>
+                </div>
+            </div>
+
+            <hr class="my-2">
+
+            <div class="row">
+                <div class="row mt-xs-0_5">
+                    <ul class="flex-container" id="recommended-plugins">
+                        <!-- recommended plugins -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Geldscheine -->
+
+        <div class="row prop-row">
             <div class="col-xs-12">
-                <ul class="product-list row grid">
-    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-        
-        <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-            <div class="thumb-inner">
-                <div class="thumb-background"></div>
-                <span>
+                <div class="prop-xs-2-1 prop-sm-4-1 prop-md-6-1">
+                    <div class="prop-inner">
+                        <a class="featured-sale" href="{{ domainPath }}/geldscheine/">
+                            <img src="{{ layoutPath }}/img/categorie3.jpg" alt="First slide">
+                            <div class="featured-category-inner">
+                                <h4 class="featured-category-headline">
+                                    {{ trans("CeresElectronic::Template.homepageKategorieGeld") }}
+                                </h4>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- END Geldscheine -->
+
+        <!-- Neuigkeiten -->
+        <div class="m-b-2">
+            <h4 class="section-header">{{ trans("CeresElectronic::Template.homepageNew") }}</h4>
+            <!-- crosssell start -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="product-list row grid">
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+                            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
+                                <div class="thumb-inner">
+                                    <div class="thumb-background"></div>
+                                    <span>
                     <div class="thumb-controls">
                         <span>
                             <button class="btn btn-primary thumb-btn-buy">
                             {{ trans("Ceres::Template.addToBasket") }}
-                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                             </button>
                         </span>
                     </div>
@@ -122,57 +125,60 @@
                         </div>
                     </div>
                 </span>
-                
-                <div class="thumb-image">
-                    <div class="square-container">
-                        <div class="square-inner main-image">
-                            <div>
-                                <div>
-                                    <a href="/barhocker-white-sanfrancisco/109/1007">
-                                        <img class="img-fluid lazy" data-original="/item/images/109/3000x3000/109-Barhocker-White-SanFrancisco.jpg" src="/item/images/109/3000x3000/109-Barhocker-White-SanFrancisco.jpg" style="display: inline;">
-                                    </a>
+
+                                    <div class="thumb-image">
+                                        <div class="square-container">
+                                            <div class="square-inner main-image">
+                                                <div>
+                                                    <div>
+                                                        <a href="/barhocker-white-sanfrancisco/109/1007">
+                                                            <img class="img-fluid lazy"
+                                                                 data-original="/item/images/109/3000x3000/109-Barhocker-White-SanFrancisco.jpg"
+                                                                 src="/item/images/109/3000x3000/109-Barhocker-White-SanFrancisco.jpg"
+                                                                 style="display: inline;">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- STORE SPECIALS -->
+                                    <!-- ./STORE SPECIALS -->
+                                    <!-- ITEM DETAILS -->
+                                    <div class="thumb-content">
+                                        <a href="/barhocker-white-sanfrancisco/109/1007" class="thumb-title small">
+                                            Barhocker White SanFrancisco
+
+                                        </a>
+                                        <div class="thumb-meta">
+
+                                            <div class="prices">
+                                                <del class="crossprice">
+                                                    100,00&nbsp;€
+                                                </del>
+
+                                                <div class="price">
+                                                    79,00&nbsp;€
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- ./ITEM DETAILS  -->
                                 </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- STORE SPECIALS -->
-                <!-- ./STORE SPECIALS -->
-                <!-- ITEM DETAILS -->
-                <div class="thumb-content">
-                    <a href="/barhocker-white-sanfrancisco/109/1007" class="thumb-title small">
-                        Barhocker White SanFrancisco
-                        
-                    </a>
-                    <div class="thumb-meta">
-                        
-                        <div class="prices">
-                            <del class="crossprice">
-                            100,00&nbsp;€
-                            </del>
-                            
-                            <div class="price">
-                                79,00&nbsp;€
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-                <!-- ./ITEM DETAILS  -->
-            </div>
-        </article>
-        </li>
-        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-            
-            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-                <div class="thumb-inner">
-                    <div class="thumb-background"></div>
-                    <span>
+                            </article>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+                            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
+                                <div class="thumb-inner">
+                                    <div class="thumb-background"></div>
+                                    <span>
                         <div class="thumb-controls">
                             <span>
                                 <button class="btn btn-primary thumb-btn-buy">
                                 {{ trans("Ceres::Template.addToBasket") }}
-                                <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                 </button>
                             </span>
                         </div>
@@ -181,22 +187,25 @@
                             </div>
                         </div>
                     </span>
-                    
-                    <div class="thumb-image">
-                        <div class="square-container">
-                            <div class="square-inner main-image">
-                                <div>
-                                    <div>
-                                        <a href="/barhockerl-fury-gepolstert/107/1005">
-                                            <img class="img-fluid lazy" data-original="/item/images/107/3000x3000/107-Barhocker-Fury-gepolstert.jpg" src="/item/images/107/3000x3000/107-Barhocker-Fury-gepolstert.jpg" style="display: inline;">
-                                        </a>
+
+                                    <div class="thumb-image">
+                                        <div class="square-container">
+                                            <div class="square-inner main-image">
+                                                <div>
+                                                    <div>
+                                                        <a href="/barhockerl-fury-gepolstert/107/1005">
+                                                            <img class="img-fluid lazy"
+                                                                 data-original="/item/images/107/3000x3000/107-Barhocker-Fury-gepolstert.jpg"
+                                                                 src="/item/images/107/3000x3000/107-Barhocker-Fury-gepolstert.jpg"
+                                                                 style="display: inline;">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- STORE SPECIALS -->
-                    <div class="special-tags">
+                                    <!-- STORE SPECIALS -->
+                                    <div class="special-tags">
                         
                         
                         
@@ -204,42 +213,43 @@
                         <span class="tag bg-danger">
                             -39%
                         </span>
-                    </div>
-                    <!-- ./STORE SPECIALS -->
-                    <!-- ITEM DETAILS -->
-                    <div class="thumb-content">
-                        <a href="/barhockerl-fury-gepolstert/107/1005" class="thumb-title small">
-                            Barhockerl Fury gepolstert
-                            
-                        </a>
-                        <div class="thumb-meta">
-                            
-                            <div class="prices">
-                                <del class="crossprice">
-                                110,00&nbsp;€
-                                </del>
-                                
-                                <div class="price">
-                                    79,00&nbsp;€
+                                    </div>
+                                    <!-- ./STORE SPECIALS -->
+                                    <!-- ITEM DETAILS -->
+                                    <div class="thumb-content">
+                                        <a href="/barhockerl-fury-gepolstert/107/1005" class="thumb-title small">
+                                            Barhockerl Fury gepolstert
+
+                                        </a>
+                                        <div class="thumb-meta">
+
+                                            <div class="prices">
+                                                <del class="crossprice">
+                                                    110,00&nbsp;€
+                                                </del>
+
+                                                <div class="price">
+                                                    79,00&nbsp;€
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!-- ./ITEM DETAILS  -->
                                 </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                    <!-- ./ITEM DETAILS  -->
-                </div>
-            </article>                    </li>
-            <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                
-                <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-                    <div class="thumb-inner">
-                        <div class="thumb-background"></div>
-                        <span>
+                            </article>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+                            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
+                                <div class="thumb-inner">
+                                    <div class="thumb-background"></div>
+                                    <span>
                             <div class="thumb-controls">
                                 <span>
                                     <button class="btn btn-primary thumb-btn-buy">
                                     {{ trans("Ceres::Template.addToBasket") }}
-                                    <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                     </button>
                                 </span>
                             </div>
@@ -248,56 +258,60 @@
                                 </div>
                             </div>
                         </span>
-                        
-                        <div class="thumb-image">
-                            <div class="square-container">
-                                <div class="square-inner main-image">
-                                    <div>
-                                        <div>
-                                            <a href="/barsessel-black-mamba/108/1006">
-                                                <img class="img-fluid lazy" data-original="/item/images/108/3000x3000/108-Barsessel-Black-Mamba.jpg" src="/item/images/108/3000x3000/108-Barsessel-Black-Mamba.jpg" style="display: inline;">
-                                            </a>
+
+                                    <div class="thumb-image">
+                                        <div class="square-container">
+                                            <div class="square-inner main-image">
+                                                <div>
+                                                    <div>
+                                                        <a href="/barsessel-black-mamba/108/1006">
+                                                            <img class="img-fluid lazy"
+                                                                 data-original="/item/images/108/3000x3000/108-Barsessel-Black-Mamba.jpg"
+                                                                 src="/item/images/108/3000x3000/108-Barsessel-Black-Mamba.jpg"
+                                                                 style="display: inline;">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- STORE SPECIALS -->
-                        <!-- ./STORE SPECIALS -->
-                        <!-- ITEM DETAILS -->
-                        <div class="thumb-content">
-                            <a href="/barsessel-black-mamba/108/1006" class="thumb-title small">
-                                Barsessel Black Mamba
-                                
-                            </a>
-                            <div class="thumb-meta">
-                                
-                                <div class="prices">
-                                    <del class="crossprice">
-                                    120,00&nbsp;€
-                                    </del>
-                                    
-                                    <div class="price">
-                                        99,00&nbsp;€
+                                    <!-- STORE SPECIALS -->
+                                    <!-- ./STORE SPECIALS -->
+                                    <!-- ITEM DETAILS -->
+                                    <div class="thumb-content">
+                                        <a href="/barsessel-black-mamba/108/1006" class="thumb-title small">
+                                            Barsessel Black Mamba
+
+                                        </a>
+                                        <div class="thumb-meta">
+
+                                            <div class="prices">
+                                                <del class="crossprice">
+                                                    120,00&nbsp;€
+                                                </del>
+
+                                                <div class="price">
+                                                    99,00&nbsp;€
+                                                </div>
+                                            </div>
+
+                                        </div>
                                     </div>
+                                    <!-- ./ITEM DETAILS  -->
                                 </div>
-                                
-                            </div>
-                        </div>
-                        <!-- ./ITEM DETAILS  -->
-                    </div>
-                </article>                    </li>
-                <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                    
-                    <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-                        <div class="thumb-inner">
-                            <div class="thumb-background"></div>
-                            <span>
+                            </article>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+                            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
+                                <div class="thumb-inner">
+                                    <div class="thumb-background"></div>
+                                    <span>
                                 <div class="thumb-controls">
                                     <span>
                                         <button class="btn btn-primary thumb-btn-buy">
                                         {{ trans("Ceres::Template.addToBasket") }}
-                                        <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
                                         </button>
                                     </span>
                                 </div>
@@ -306,74 +320,75 @@
                                     </div>
                                 </div>
                             </span>
-                            
-                            <div class="thumb-image">
-                                <div class="square-container">
-                                    <div class="square-inner main-image">
-                                        <div>
-                                            <div>
-                                                <a href="/cocktailsessel-venedig/111/1009">
-                                                    <img class="img-fluid lazy" data-original="/item/images/111/3000x3000/111-Cocktailsessel-Venedig.jpg" src="/item/images/111/3000x3000/111-Cocktailsessel-Venedig.jpg" style="display: inline;">
-                                                </a>
+
+                                    <div class="thumb-image">
+                                        <div class="square-container">
+                                            <div class="square-inner main-image">
+                                                <div>
+                                                    <div>
+                                                        <a href="/cocktailsessel-venedig/111/1009">
+                                                            <img class="img-fluid lazy"
+                                                                 data-original="/item/images/111/3000x3000/111-Cocktailsessel-Venedig.jpg"
+                                                                 src="/item/images/111/3000x3000/111-Cocktailsessel-Venedig.jpg"
+                                                                 style="display: inline;">
+                                                        </a>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <!-- STORE SPECIALS -->
-                            <!-- ./STORE SPECIALS -->
-                            <!-- ITEM DETAILS -->
-                            <div class="thumb-content">
-                                <a href="/cocktailsessel-venedig/111/1009" class="thumb-title small">
-                                    Cocktailsessel Venedig
-                                    
-                                </a>
-                                <div class="thumb-meta">
-                                    
-                                    <div class="prices">
-                                        <del class="crossprice">
-                                        150,00&nbsp;€
-                                        </del>
-                                        
-                                        <div class="price">
-                                            119,00&nbsp;€
+                                    <!-- STORE SPECIALS -->
+                                    <!-- ./STORE SPECIALS -->
+                                    <!-- ITEM DETAILS -->
+                                    <div class="thumb-content">
+                                        <a href="/cocktailsessel-venedig/111/1009" class="thumb-title small">
+                                            Cocktailsessel Venedig
+
+                                        </a>
+                                        <div class="thumb-meta">
+
+                                            <div class="prices">
+                                                <del class="crossprice">
+                                                    150,00&nbsp;€
+                                                </del>
+
+                                                <div class="price">
+                                                    119,00&nbsp;€
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
-                                    
+                                    <!-- ./ITEM DETAILS  -->
                                 </div>
-                            </div>
-                            <!-- ./ITEM DETAILS  -->
-                        </div>
-                    </article>                    </li>
-                    
+                            </article>
+                        </li>
 
-                                    
-    </ul>
+
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
 
-    <!-- CATEGORIES -->
-    
-
-    <!-- END CATEGORIES -->
-
-    <div class="m-b-2">
-        <h4 class="section-header">Das könnte Sie interessieren</h4>
-        <!-- crosssell start -->
-        <div class="row">    
-            <div class="col-xs-12">
-               <ul class="product-list row grid">
-                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        
+        <!-- CATEGORIES -->
 
 
+        <!-- END CATEGORIES -->
 
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
+        <div class="m-b-2">
+            <h4 class="section-header">Das könnte Sie interessieren</h4>
+            <!-- crosssell start -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <ul class="product-list row grid">
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
 
-        <span>
+
+                            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
+                                <div class="thumb-inner">
+                                    <div class="thumb-background"></div>
+
+                                    <span>
         <div class="thumb-controls">
              <span>
                  <button class="btn btn-primary thumb-btn-buy">
@@ -389,61 +404,62 @@
          </div>
     </span>
 
-    
 
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <div>
-                        <div>
-                            <a href="/bu-rostuhl-manhattan/110/1008">
-                                <img class="img-fluid lazy" data-original="/item/images/110/3000x3000/110-Bu--rostuhl-Manhattan.jpg" src="/item/images/110/3000x3000/110-Bu--rostuhl-Manhattan.jpg" style="display: inline;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                    <div class="thumb-image">
+                                        <div class="square-container">
+                                            <div class="square-inner main-image">
+                                                <div>
+                                                    <div>
+                                                        <a href="/bu-rostuhl-manhattan/110/1008">
+                                                            <img class="img-fluid lazy"
+                                                                 data-original="/item/images/110/3000x3000/110-Bu--rostuhl-Manhattan.jpg"
+                                                                 src="/item/images/110/3000x3000/110-Bu--rostuhl-Manhattan.jpg"
+                                                                 style="display: inline;">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <!-- STORE SPECIALS -->
+                                    <!-- STORE SPECIALS -->
 
-                <!-- ./STORE SPECIALS -->
+                                    <!-- ./STORE SPECIALS -->
 
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/bu-rostuhl-manhattan/110/1008" class="thumb-title small">
-                Bürostuhl Manhattan
-                
-            </a>
-            <div class="thumb-meta">
-                                
+                                    <!-- ITEM DETAILS -->
+                                    <div class="thumb-content">
+                                        <a href="/bu-rostuhl-manhattan/110/1008" class="thumb-title small">
+                                            Bürostuhl Manhattan
 
-                <div class="prices">
-                                            <del class="crossprice">
-                            100,00&nbsp;€
-                        </del>
-                    
-                    <div class="price">
-                        79,00&nbsp;€
-                    </div>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                    </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        
+                                        </a>
+                                        <div class="thumb-meta">
 
 
+                                            <div class="prices">
+                                                <del class="crossprice">
+                                                    100,00&nbsp;€
+                                                </del>
 
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
+                                                <div class="price">
+                                                    79,00&nbsp;€
+                                                </div>
+                                            </div>
 
-        <span>
+
+                                        </div>
+                                    </div>
+                                    <!-- ./ITEM DETAILS  -->
+                                </div>
+                            </article>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+
+                            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
+                                <div class="thumb-inner">
+                                    <div class="thumb-background"></div>
+
+                                    <span>
         <div class="thumb-controls">
              <span>
                  <button class="btn btn-primary thumb-btn-buy">
@@ -459,25 +475,27 @@
          </div>
     </span>
 
-    
 
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <div>
-                        <div>
-                            <a href="/design-chefsessel-brookhaven-leder-schwarz/105/1003">
-                                <img class="img-fluid lazy" data-original="/item/images/105/3000x3000/105-buerostuhl-schwarz.jpg" src="/item/images/105/3000x3000/105-buerostuhl-schwarz.jpg" style="display: inline;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                    <div class="thumb-image">
+                                        <div class="square-container">
+                                            <div class="square-inner main-image">
+                                                <div>
+                                                    <div>
+                                                        <a href="/design-chefsessel-brookhaven-leder-schwarz/105/1003">
+                                                            <img class="img-fluid lazy"
+                                                                 data-original="/item/images/105/3000x3000/105-buerostuhl-schwarz.jpg"
+                                                                 src="/item/images/105/3000x3000/105-buerostuhl-schwarz.jpg"
+                                                                 style="display: inline;">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <!-- STORE SPECIALS -->
+                                    <!-- STORE SPECIALS -->
 
-                    <div class="special-tags">
+                                    <div class="special-tags">
                 
                                         
                 
@@ -485,44 +503,44 @@
                     NEW
                 </span>
 
-            </div>
-                <!-- ./STORE SPECIALS -->
+                                    </div>
+                                    <!-- ./STORE SPECIALS -->
 
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/design-chefsessel-brookhaven-leder-schwarz/105/1003" class="thumb-title small">
-                Design Chefsessel »Brookhaven« Leder schwarz
-                
-            </a>
-            <div class="thumb-meta">
-                                
+                                    <!-- ITEM DETAILS -->
+                                    <div class="thumb-content">
+                                        <a href="/design-chefsessel-brookhaven-leder-schwarz/105/1003"
+                                           class="thumb-title small">
+                                            Design Chefsessel »Brookhaven« Leder schwarz
 
-                <div class="prices">
-                                            <del class="crossprice">
-                            450,00&nbsp;€
-                        </del>
-                    
-                    <div class="price">
-                        415,31&nbsp;€
-                    </div>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                    </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        
+                                        </a>
+                                        <div class="thumb-meta">
 
 
+                                            <div class="prices">
+                                                <del class="crossprice">
+                                                    450,00&nbsp;€
+                                                </del>
 
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
+                                                <div class="price">
+                                                    415,31&nbsp;€
+                                                </div>
+                                            </div>
 
-        <span>
+
+                                        </div>
+                                    </div>
+                                    <!-- ./ITEM DETAILS  -->
+                                </div>
+                            </article>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+
+                            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
+                                <div class="thumb-inner">
+                                    <div class="thumb-background"></div>
+
+                                    <span>
         <div class="thumb-controls">
              <span>
                  <button class="btn btn-primary thumb-btn-buy">
@@ -538,61 +556,62 @@
          </div>
     </span>
 
-    
 
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <div>
-                        <div>
-                            <a href="/moderner-b-rostuhl-merrick-gr-n/106/1004">
-                                <img class="img-fluid lazy" data-original="/item/images/106/3000x3000/106-buerostuhl-gruen.jpg" src="/item/images/106/3000x3000/106-buerostuhl-gruen.jpg" style="display: inline;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                    <div class="thumb-image">
+                                        <div class="square-container">
+                                            <div class="square-inner main-image">
+                                                <div>
+                                                    <div>
+                                                        <a href="/moderner-b-rostuhl-merrick-gr-n/106/1004">
+                                                            <img class="img-fluid lazy"
+                                                                 data-original="/item/images/106/3000x3000/106-buerostuhl-gruen.jpg"
+                                                                 src="/item/images/106/3000x3000/106-buerostuhl-gruen.jpg"
+                                                                 style="display: inline;">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <!-- STORE SPECIALS -->
+                                    <!-- STORE SPECIALS -->
 
-                <!-- ./STORE SPECIALS -->
+                                    <!-- ./STORE SPECIALS -->
 
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/moderner-b-rostuhl-merrick-gr-n/106/1004" class="thumb-title small">
-                Moderner Bürostuhl »Merrick« grün
-                
-            </a>
-            <div class="thumb-meta">
-                                
+                                    <!-- ITEM DETAILS -->
+                                    <div class="thumb-content">
+                                        <a href="/moderner-b-rostuhl-merrick-gr-n/106/1004" class="thumb-title small">
+                                            Moderner Bürostuhl »Merrick« grün
 
-                <div class="prices">
-                                            <del class="crossprice">
-                            320,00&nbsp;€
-                        </del>
-                    
-                    <div class="price">
-                        279,00&nbsp;€
-                    </div>
-                </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                    </li>
-                                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        
+                                        </a>
+                                        <div class="thumb-meta">
 
 
+                                            <div class="prices">
+                                                <del class="crossprice">
+                                                    320,00&nbsp;€
+                                                </del>
 
-<article class="cmp cmp-product-thumb cmp-product-thumb--grid">
-    <div class="thumb-inner">
-        <div class="thumb-background"></div>
+                                                <div class="price">
+                                                    279,00&nbsp;€
+                                                </div>
+                                            </div>
 
-        <span>
+
+                                        </div>
+                                    </div>
+                                    <!-- ./ITEM DETAILS  -->
+                                </div>
+                            </article>
+                        </li>
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+
+
+                            <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
+                                <div class="thumb-inner">
+                                    <div class="thumb-background"></div>
+
+                                    <span>
         <div class="thumb-controls">
              <span>
                  <button class="btn btn-primary thumb-btn-buy">
@@ -608,25 +627,27 @@
          </div>
     </span>
 
-    
 
-        <div class="thumb-image">
-            <div class="square-container">
-                <div class="square-inner main-image">
-                    <div>
-                        <div>
-                            <a href="/schreibtischstuhl-youngprofessional/121/1019">
-                                <img class="img-fluid lazy" data-original="/item/images/121/3000x3000/121-Schreibtischstuhl-YoungProfessional.jpg" src="/item/images/121/3000x3000/121-Schreibtischstuhl-YoungProfessional.jpg" style="display: inline;">
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                    <div class="thumb-image">
+                                        <div class="square-container">
+                                            <div class="square-inner main-image">
+                                                <div>
+                                                    <div>
+                                                        <a href="/schreibtischstuhl-youngprofessional/121/1019">
+                                                            <img class="img-fluid lazy"
+                                                                 data-original="/item/images/121/3000x3000/121-Schreibtischstuhl-YoungProfessional.jpg"
+                                                                 src="/item/images/121/3000x3000/121-Schreibtischstuhl-YoungProfessional.jpg"
+                                                                 style="display: inline;">
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <!-- STORE SPECIALS -->
+                                    <!-- STORE SPECIALS -->
 
-                    <div class="special-tags">
+                                    <div class="special-tags">
                 
                                         
                 
@@ -634,46 +655,47 @@
                     NEW
                 </span>
 
-            </div>
-                <!-- ./STORE SPECIALS -->
+                                    </div>
+                                    <!-- ./STORE SPECIALS -->
 
-        <!-- ITEM DETAILS -->
-        <div class="thumb-content">
-            <a href="/schreibtischstuhl-youngprofessional/121/1019" class="thumb-title small">
-                Schreibtischstuhl YoungProfessional
-                
-            </a>
-            <div class="thumb-meta">
-                                
+                                    <!-- ITEM DETAILS -->
+                                    <div class="thumb-content">
+                                        <a href="/schreibtischstuhl-youngprofessional/121/1019"
+                                           class="thumb-title small">
+                                            Schreibtischstuhl YoungProfessional
 
-                <div class="prices">
-                                            <del class="crossprice">
-                            85,00&nbsp;€
-                        </del>
-                    
-                    <div class="price">
-                        75,00&nbsp;€
-                    </div>
+                                        </a>
+                                        <div class="thumb-meta">
+
+
+                                            <div class="prices">
+                                                <del class="crossprice">
+                                                    85,00&nbsp;€
+                                                </del>
+
+                                                <div class="price">
+                                                    75,00&nbsp;€
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                    <!-- ./ITEM DETAILS  -->
+                                </div>
+                            </article>
+                        </li>
+
+
+                    </ul>
                 </div>
-
-                                
-            </div>
-        </div>
-        <!-- ./ITEM DETAILS  -->
-    </div>
-</article>                    </li>
-                                    
-                                    
-                            </ul>
             </div>
         </div>
     </div>
-</div>
 
-{#from Theme homepage + .json#}
+    {#from Theme homepage + .json#}
     <script>
-        function getJson(url)
-        {
+        function getJson(url) {
             var Httpreq = new XMLHttpRequest();
             Httpreq.open("GET", url, false);
             Httpreq.send(null);
@@ -687,17 +709,15 @@
         renderTexts();
         renderRecommendPlugins();
 
-        function renderCarousel()
-        {
+        function renderCarousel() {
             var carousel = document.getElementById("carousel-content");
 
-            for(var i = 0; i < json[currentLang].pictures.length; i++)
-            {
+            for (var i = 0; i < json[currentLang].pictures.length; i++) {
                 var contentToAddDiv = document.createElement('div');
 
-                contentToAddDiv.className = "carousel-item text-muted" + ( i == 0 ? " active" : "" ) ;
+                contentToAddDiv.className = "carousel-item text-muted" + ( i == 0 ? " active" : "" );
 
-                var contentToAdd = 	'<div class="hero-category">' +
+                var contentToAdd = '<div class="hero-category">' +
                     '<img class="img-fluid" src="' + json[currentLang].pictures[i].pictureUrl + '">' +
                     '<div class="hero-category-inner"><h4 class="hero-category-headline">' + json[currentLang].pictures[i].textSliderUnten + '</h4>' +
                     '<div class="hero-category-cta"><a href="/kontakt/">KONTAKT</a><i class="fa fa-chevron-right" aria-hidden="true"></i></div></div>' +
@@ -712,8 +732,7 @@
             }
         }
 
-        function renderTexts()
-        {
+        function renderTexts() {
             var welcomeText = document.getElementById("welcome-text");
             var shortDescription = document.getElementById("short-description");
             var recommendText = document.getElementById("recommend-text");
@@ -723,16 +742,14 @@
             recommendText.innerHTML = json[currentLang].texts.recommendText;
         }
 
-        function renderRecommendPlugins()
-        {
+        function renderRecommendPlugins() {
             var recommendedPlugins = document.getElementById("recommended-plugins");
 
-            for(var i = 0; i < json[currentLang].recommended.length; i++)
-            {
+            for (var i = 0; i < json[currentLang].recommended.length; i++) {
                 var contentToAddLi = document.createElement('li');
                 contentToAddLi.className = "flex-item";
 
-                var contentToAdd = 	'<a target="_blank" href="' + json[currentLang].recommended[i].pluginLink + '">' +
+                var contentToAdd = '<a target="_blank" href="' + json[currentLang].recommended[i].pluginLink + '">' +
                     '<img class="flex-image" src="' + json[currentLang].recommended[i].pluginIcon + '"</img>' +
                     '<div class="flex-align-bottom">' +
                     '<h1 class="flex-title">' + json[currentLang].recommended[i].pluginTitle + '</h1>' +
