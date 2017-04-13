@@ -100,7 +100,7 @@ body.menu-is-visible { overflow-y : hidden; }
 
 		li 	{
 			width : 100%;
-			min-width: 9.1rem;
+			min-width: 9rem;
 			cursor: pointer;
 
 			a 	{
@@ -204,7 +204,7 @@ body.menu-is-visible { overflow-y : hidden; }
 
 //old von electronic
 
-/*.navbar-toggleable-md.collapse.in{
+.navbar-toggleable-md.collapse.in{
 	.nav.navbar-nav {
 		margin-top: 25px;
 		background: rgba(255,255,255,.75);
@@ -225,4 +225,4 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
 
 .dropdown-item.special-case {
 	padding: 3px 5px !important;
-}*/
+}
