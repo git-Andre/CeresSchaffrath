@@ -40,5 +40,9 @@ class CeresElectronicServiceProvider extends ServiceProvider
             $partial->set('footer', 'CeresElectronic::Footer.ThemeFooter');
         }, self::EVENT_LISTENER_PRIORITY);
 
+        $eventDispatcher->listen('IO.init.templates', function (Partial $partial) {
+            $partial->set('header', 'CeresElectronic::Partials.Header.Header');
+        }, self::EVENT_LISTENER_PRIORITY);
+
     }
 }

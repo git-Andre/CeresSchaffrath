@@ -12,7 +12,7 @@
 		}
 
 		.hero-category-headline{
-			font-weight: 700;
+          font-weight: normal;
 		}
 
 		.hero-category-cta{
@@ -142,7 +142,7 @@
 
 		.hero-xtras{
 			display: flex;
-			flex-flow: row nowrap;	
+          flex-flow: row nowrap;
 		}
 
 		.hero-category{
@@ -155,7 +155,7 @@
 			border-right: .5rem solid white;
 		}
 
-		.hero-category:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .hero-category { 
+      .hero-category:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .hero-category {
 			border-left: .5rem solid white;
 		}
 	}
@@ -169,7 +169,7 @@
 		}
 
 		.hero-xtras{
-			flex-flow: column nowrap;	
+          flex-flow: column nowrap;
 			flex: 1 0 34%;
 			padding-left: 1rem;
 		}
@@ -181,8 +181,8 @@
 		.hero-category:nth-last-child(n+2):nth-last-child(-n+2):first-child{
 			border-right: none;
 		}
-		
-		.hero-category:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .hero-category { 
+
+      .hero-category:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .hero-category {
 			border-left: none;
 		}
 	}

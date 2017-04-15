@@ -175,7 +175,7 @@ function buildSass( outputFile, outputStyle )
         .pipe( sass( config.scssOptions ).on( 'error', sass.logError ) )
         .pipe( rename( outputFile ) )
         .pipe( autoprefixer( config.prefixOptions ) )
-        .pipe( minifyCSS() )
+        //.pipe( minifyCSS() )
         .pipe( sourcemaps.write( '.' ) )
         .pipe( gulp.dest( SCSS_DIST ) );
 }
