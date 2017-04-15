@@ -1,6 +1,3 @@
-/*.ddown {
-  min-width: 9rem;
-}*/
 
 .cmp-hero .hero-xtras .hero-category>img {
   width: 100%;
@@ -25,47 +22,17 @@
 }
 
 
-.navbar-brand {
-  img {
-    max-height: 5.6rem;
-    margin: -28px 3px 0;
-  }
-}
-
-.nav {
-  background-color: $brand-primary;
-}
 
 .copyright {
   background-color: $body-bg;
   color: $gray-dark;
 }
 
-//old von electronic - navigation
-
-.navbar-toggleable-md.collapse.in {
-  .nav.navbar-nav {
-    margin-top: 25px;
-    background: rgba(255, 255, 255, .75);
-  }
+.top-bar .controls-list .control-basket .toggle-basket-preview {
+  background-color: rgba($brand-primary, 0.5);
+  color: #fff;
 }
 
-.navbar {
-  padding: 0 1rem;
-}
-
-nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
-  display: block;
-  margin-top: 0px;
-}
-
-.dropdown-menu.dropdown-menu-right {
-  min-width: 100%;
-}
-
-.dropdown-item.special-case {
-  padding: 3px 5px !important;
-}
 
 // von Homepage
 
@@ -77,6 +44,7 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
 .mt-xs-0_5 {
   margin-top: 6px;
 }
+
 
 a {
   background: transparent;
@@ -111,7 +79,6 @@ a:hover {
   height: 100%;
 
 }
-
 .flex-align-bottom {
   position: absolute;
   bottom: 0;
@@ -129,7 +96,7 @@ a:hover {
 }
 
 .flex-item:hover > a > .flex-align-bottom {
-  background: rgba(201, 137, 15, 1);
+  background: rgba(201, 137, 15, 0.6);
   padding-bottom: .4em;
 
 }
@@ -154,7 +121,6 @@ a:hover {
   display: block;
 
 }
-
 .flex-text {
   margin: 0;
   padding: 0;
@@ -168,7 +134,7 @@ a:hover {
   -o-transform: scale(1, 0); /* Opera */
   font-size: 0;
   transition: transform 1s, line-height 1s, font-size 1s;
-  color: rgba(201, 137, 15, 0);
+  color: rgba(201, 137, 15, 0.5);
 }
 
 .flex-container {

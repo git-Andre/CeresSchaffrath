@@ -111,13 +111,13 @@
     margin-top: 95px;
   }
   .navbar{
+    padding: 0 0;
     & > .container-max {
-      padding-left:0;
-      padding-right:0;
+
     }
     font-family:$font-family-heading;
     text-transform: uppercase;
-    background-color: $gray-lighter2;
+    background-color: darken($gray-lighter2, 2%);
     border-bottom: 0;
     a {
       color: $white;
@@ -199,7 +199,8 @@
   display: inline-block;
 
   img {
-    max-height: 3rem;
+    max-height: 5.6rem;
+    margin: -28px 3px 0;
   }
 
   svg {

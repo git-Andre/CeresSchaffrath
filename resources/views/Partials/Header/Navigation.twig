@@ -1,9 +1,12 @@
+{% import "Ceres::Category.Macros.CategoryTree" as Tree %}
+{% set companyLogo  = config("Ceres.header.company_logo") %}
 {% set lang         = services.sessionStorage.getLang() %}
+{% set showHeaderNavBar = config("Ceres.header.show_navbars") %}
 
 <nav class="navbar">
     <div class="container-max">
         <div class="row">
-            <div class="brand-wrapper">
+            <div class="brand-wrapper" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
                 <a class="navbar-brand pull-lg-left" href="/">
                     {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
                         <img src="{{ companyLogo }}" class="img-fluid"/>
@@ -12,7 +15,7 @@
                     {% endif %}
                 </a>
 
-                <button class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse"
+                <button id="btnMainMenuToggler" class="navbar-toggler hidden-lg-up" type="button" data-toggle="collapse"
                         data-target="#mainNavbarCollapse">
                     &#9776;
                 </button>
@@ -47,6 +50,13 @@
                         {% endif %}
                     {% endfor %}
                 </ul>
+                {% if showHeaderNavBar == "top" or showHeaderNavBar == "both" or not services.template.isCategory() %}
+                    <ul class="mainmenu pull-lg-right">
+                        {% set categories = services.category.getNavigationTree("item", lang) %}
+
+                        {{ Tree.get_nav_bar(categories, "") }}
+                    </ul>
+                {% endif %}
             </div>
         </div>
     </div>
