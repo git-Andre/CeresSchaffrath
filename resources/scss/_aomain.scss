@@ -1,3 +1,30 @@
+// item
+
+.tab-content {
+  h5 {
+    font-size: 1.5rem;
+    margin: 5px 0 15px 20px;
+  }
+}
+
+.itemDefList {
+  // width: 60%;
+  margin: 0 0 0 30px;
+  dt {
+    width: 25%;
+    float: left;
+    font-weight: bold;
+  }
+  dd {
+    width: 75%;
+  }
+}
+
+// allgemein
+
+.cmp-product-thumb {
+  border: 1px solid #c9890f;
+}
 
 .cmp-hero .hero-xtras .hero-category>img {
   width: 100%;
@@ -22,7 +49,6 @@
 }
 
 
-
 .copyright {
   background-color: $body-bg;
   color: $gray-dark;
@@ -31,6 +57,11 @@
 .top-bar .controls-list .control-basket .toggle-basket-preview {
   background-color: rgba($brand-primary, 0.5);
   color: #fff;
+}
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 

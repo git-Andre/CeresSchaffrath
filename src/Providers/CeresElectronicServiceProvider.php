@@ -40,6 +40,10 @@ class CeresElectronicServiceProvider extends ServiceProvider
             $partial->set('footer', 'CeresElectronic::Footer.ThemeFooter');
         }, self::EVENT_LISTENER_PRIORITY);
 
-
+        // provide template to use for single items
+        $eventDispatcher->listen('IO.tpl.item', function (TemplateContainer $container, $templateData) {
+            $container->setTemplate("CeresElectronic::Item.SingleItem");
+            return false;
+        }, self::EVENT_LISTENER_PRIORITY);
     }
 }

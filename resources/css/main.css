@@ -16034,6 +16034,29 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
   }
 }
 
+.tab-content h5 {
+  font-size: 1.5rem;
+  margin: 5px 0 15px 20px;
+}
+
+.itemDefList {
+  margin: 0 0 0 30px;
+}
+
+.itemDefList dt {
+  width: 25%;
+  float: left;
+  font-weight: bold;
+}
+
+.itemDefList dd {
+  width: 75%;
+}
+
+.cmp-product-thumb {
+  border: 1px solid #c9890f;
+}
+
 .cmp-hero .hero-xtras .hero-category > img {
   width: 100%;
   min-height: 100%;
@@ -16063,6 +16086,11 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
 .top-bar .controls-list .control-basket .toggle-basket-preview {
   background-color: rgba(201, 137, 15, 0.5);
   color: #fff;
+}
+
+.navbar {
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .row {
