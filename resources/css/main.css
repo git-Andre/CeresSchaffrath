@@ -12421,10 +12421,15 @@ body .wrapper-right {
   background-color: white;
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  -webkit-transition: width 310ms 0ms, -webkit-transform 300ms ease-in-out;
-  transition: width 310ms 0ms, -webkit-transform 300ms ease-in-out;
-  transition: width 310ms 0ms, transform 300ms ease-in-out;
-  transition: width 310ms 0ms, transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  -webkit-transition: width 310ms 0ms,
+ -webkit-transform 300ms ease-in-out;
+  transition: width 310ms 0ms,
+ -webkit-transform 300ms ease-in-out;
+  transition: width 310ms 0ms,
+ transform 300ms ease-in-out;
+  transition: width 310ms 0ms,
+ transform 300ms ease-in-out,
+ -webkit-transform 300ms ease-in-out;
 }
 
 body .wrapper-right .wrapper-inner {
@@ -12463,10 +12468,15 @@ body.open-right .wrapper-right {
   width: 100vw;
   -webkit-transform: translateX(-100%);
           transform: translateX(-100%);
-  -webkit-transition: width 0ms, -webkit-transform 300ms 10ms ease-in-out;
-  transition: width 0ms, -webkit-transform 300ms 10ms ease-in-out;
-  transition: width 0ms, transform 300ms 10ms ease-in-out;
-  transition: width 0ms, transform 300ms 10ms ease-in-out, -webkit-transform 300ms 10ms ease-in-out;
+  -webkit-transition: width 0ms,
+ -webkit-transform 300ms 10ms ease-in-out;
+  transition: width 0ms,
+ -webkit-transform 300ms 10ms ease-in-out;
+  transition: width 0ms,
+ transform 300ms 10ms ease-in-out;
+  transition: width 0ms,
+ transform 300ms 10ms ease-in-out,
+ -webkit-transform 300ms 10ms ease-in-out;
 }
 
 @media (min-width: 544px) {
@@ -13265,8 +13275,12 @@ Custom classes
   z-index: 1080;
   opacity: 0;
   background-color: rgba(0, 0, 0, 0.6);
-  -webkit-transition: opacity 300ms, width 0ms 310ms, height 0ms 310ms;
-  transition: opacity 300ms, width 0ms 310ms, height 0ms 310ms;
+  -webkit-transition: opacity 300ms,
+ width 0ms 310ms,
+ height 0ms 310ms;
+  transition: opacity 300ms,
+ width 0ms 310ms,
+ height 0ms 310ms;
 }
 
 .cmp::after {
@@ -13294,15 +13308,21 @@ Custom classes
   width: 100%;
   height: 100%;
   opacity: 1;
-  -webkit-transition: width 0ms, height 0ms, opacity 300ms 10ms;
-  transition: width 0ms, height 0ms, opacity 300ms 10ms;
+  -webkit-transition: width 0ms,
+ height 0ms,
+ opacity 300ms 10ms;
+  transition: width 0ms,
+ height 0ms,
+ opacity 300ms 10ms;
 }
 
 .cmp.wait::after {
   opacity: 1;
   visibility: visible;
-  -webkit-transition: visibility 0ms, opacity 300ms 100ms;
-  transition: visibility 0ms, opacity 300ms 100ms;
+  -webkit-transition: visibility 0ms,
+ opacity 300ms 100ms;
+  transition: visibility 0ms,
+ opacity 300ms 100ms;
 }
 
 .cmp-accordion .accordion-control {
@@ -13654,7 +13674,7 @@ Custom classes
 
 .featured-sale .featured-category-headline {
   background-color: rgba(255, 255, 255, 0.5);
-  min-width: 8rem;
+  max-width: 10rem;
   padding: .5em;
   text-align: right;
   font-weight: 700;
