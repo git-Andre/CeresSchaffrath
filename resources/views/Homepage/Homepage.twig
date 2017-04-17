@@ -76,7 +76,7 @@
         <div class="collapse" id="collapseMore">
             <div class="card card-block">
                 <h4>{{ trans("CeresElectronic::Template.homepageLongText") }}</h4>
-                <p>Ich bin auf dem Gebiet der Numismatik schon seit vielen
+                <p class="text-abel">Ich bin auf dem Gebiet der Numismatik schon seit vielen
                     Jahren aktiv und stehe in ständiger Verbindung mit Sammlern aus der ganzen Welt. Die Faszination des
                     Sammelns hat mich schon seit meiner Kindheit erfasst... <br/>Wichtigstes Objekt der Numismatik ist
                     die Münze. Aber auch andere Geldformen wie Papiergeld, vormünzliche Zahlungsmittel und münzverwandte
@@ -421,6 +421,7 @@
                     </ul>
                 </div>
             </div>
+
         </div>
 
 
@@ -482,7 +483,7 @@
                 var contentToAddLi = document.createElement('li');
                 contentToAddLi.className = "flex-item";
 
-                var contentToAdd = '<a target="_blank" href="' + json[currentLang].recommended[i].pluginLink + '">' +
+                var contentToAdd = '<a href="' + json[currentLang].recommended[i].pluginLink + '">' +
                     '<img class="flex-image" src="' + json[currentLang].recommended[i].pluginIcon + '"</img>' +
                     '<div class="flex-align-bottom">' +
                     '<h1 class="flex-title">' + json[currentLang].recommended[i].pluginTitle + '</h1>' +
