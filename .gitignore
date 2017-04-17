@@ -7,3 +7,4 @@ sftp-config.json
 /meta/compare.scss
 /meta/compare.css
 /meta/compare_links.twig
+/resources/scss/ceres/views/Item/_single-item-ao.scss
