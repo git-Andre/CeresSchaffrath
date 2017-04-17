@@ -20,7 +20,11 @@
   }
 }
 
-// allgemein
+// allgemein (warum fehlt text-right ???
+
+.text-right {
+  text-align: right;
+}
 
 .cmp-product-thumb {
   border: 1px solid #c9890f;
@@ -33,7 +37,7 @@
 
 .hero-category-headline {
   background-color: rgba(white, .5);
-  min-width: 8rem;
+  max-width: 9rem;
   padding: .5em;
   font-weight: normal;
 }

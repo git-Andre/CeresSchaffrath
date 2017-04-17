@@ -4,3 +4,6 @@
 node_modules
 home.html
 sftp-config.json
+/meta/compare.scss
+/meta/compare.css
+/meta/compare_links.twig

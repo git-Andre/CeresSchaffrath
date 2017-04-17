@@ -7,7 +7,7 @@
     <div class="container-max">
         <div class="row">
             <div class="brand-wrapper" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
-                <a class="navbar-brand pull-lg-left" href="/">
+                <a class="navbar-brand float-lg-left" href="/">
                     {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
                         <img src="{{ companyLogo }}" class="img-fluid"/>
                     {% else %}
@@ -22,7 +22,7 @@
             </div>
 
             <div class="collapse navbar-toggleable-md" id="mainNavbarCollapse">
-                <ul class="nav navbar-nav pull-lg-right">
+                <ul class="nav navbar-nav float-lg-right">
                     {% for category in services.category.getNavigationTree("item", lang) %}
                         {% if category.children is empty %}
                             <li class="nav-item">
@@ -51,7 +51,7 @@
                     {% endfor %}
                 </ul>
                 {% if showHeaderNavBar == "top" or showHeaderNavBar == "both" or not services.template.isCategory() %}
-                    <ul class="mainmenu pull-lg-right">
+                    <ul class="mainmenu float-lg-right">
                         {% set categories = services.category.getNavigationTree("item", lang) %}
 
                         {{ Tree.get_nav_bar(categories, "") }}
