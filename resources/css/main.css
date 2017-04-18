@@ -2887,9 +2887,9 @@ input[type="button"].btn-block {
   height: 0;
   overflow: hidden;
   -webkit-transition-timing-function: ease;
-    transition-timing-function: ease;
+  transition-timing-function: ease;
   -webkit-transition-duration: .35s;
-    transition-duration: .35s;
+  transition-duration: .35s;
   -webkit-transition-property: height;
   transition-property: height;
 }
@@ -4585,8 +4585,8 @@ a.tag:focus, a.tag:hover {
   background-color: #eee;
   border: 0;
   -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   border-radius: 0.1rem;
 }
 
@@ -4675,7 +4675,7 @@ base::-moz-progress-bar,
 
 .progress-animated[value]::-webkit-progress-value {
   -webkit-animation: progress-bar-stripes 2s linear infinite;
-    animation: progress-bar-stripes 2s linear infinite;
+  animation: progress-bar-stripes 2s linear infinite;
 }
 
 .progress-animated[value]::-moz-progress-bar {
@@ -4686,7 +4686,7 @@ base::-moz-progress-bar,
 ) {
   .progress-animated .progress-bar-striped {
     -webkit-animation: progress-bar-stripes 2s linear infinite;
-      animation: progress-bar-stripes 2s linear infinite;
+    animation: progress-bar-stripes 2s linear infinite;
   }
 }
 
@@ -15525,9 +15525,9 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
   box-shadow: 0 0 0 0 transparent;
   border: 1px solid transparent;
   -webkit-transform-origin: top right;
-    transform-origin: top right;
+  transform-origin: top right;
   -webkit-transform: scaleX(1) scaleY(1);
-    transform: scaleX(1) scaleY(1);
+  transform: scaleX(1) scaleY(1);
   -webkit-transition: all 200ms ease-in-out;
   transition: all 200ms ease-in-out;
 }
@@ -15556,8 +15556,8 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .cmp-product-thumb .main-image > img {
@@ -15660,8 +15660,8 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
   }
   .cmp-product-thumb .thumb-scroll-cmd {
     -webkit-box-flex: 0;
-      -ms-flex: 0 0 auto;
-      flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
     text-align: center;
     padding: .4rem;
   }
@@ -15699,7 +15699,7 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
   .cmp-product-thumb:hover .img-fluid, .cmp-product-thumb:hover .carousel-inner > .carousel-item > img, .cmp-product-thumb:hover
   .carousel-inner > .carousel-item > a > img {
     -webkit-transform: scale(1.05);
-      transform: scale(1.05);
+    transform: scale(1.05);
   }
   .cmp-product-thumb:hover .owl-nav [class*='owl-'] {
     opacity: 1;
@@ -16304,7 +16304,7 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
 
 .list-controls .filter-toggle[aria-expanded="true"] i {
   -webkit-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+  transform: rotate(-90deg);
   -webkit-transition: all .2s ease;
   transition: all .2s ease;
 }
@@ -16388,7 +16388,7 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
   min-width: 3em;
   top: 50%;
   -webkit-transform: translateY(-50%);
-    transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 @media (min-width: 544px) {
@@ -16399,7 +16399,7 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
   .list-controls .filter-toggle {
     top: 50%;
     -webkit-transform: translateY(-50%);
-      transform: translateY(-50%);
+    transform: translateY(-50%);
     position: absolute;
     right: .5em;
   }
@@ -16595,7 +16595,7 @@ a:hover {
 }
 
 .flex-item:hover > a > .flex-align-bottom {
-  background: rgba(201, 137, 15, 0.6);
+  background: #c9890f;
   padding-bottom: .4em;
 }
 
@@ -16643,7 +16643,7 @@ a:hover {
   transition: line-height 1s, font-size 1s, -webkit-transform 1s;
   transition: transform 1s, line-height 1s, font-size 1s;
   transition: transform 1s, line-height 1s, font-size 1s, -webkit-transform 1s;
-  color: rgba(201, 137, 15, 0.5);
+  color: rgba(201, 137, 15, 0.9);
 }
 
 .flex-container {

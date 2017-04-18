@@ -11,5 +11,6 @@ class TopItemsRouteServiceProvider extends RouteServiceProvider
     public function map(Router $router)
     {
         $router->get('topitems', 'CeresElectronic\Controllers\ContentController@showTopItems');
+
     }
 }
