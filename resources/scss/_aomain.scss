@@ -129,7 +129,7 @@ a:hover {
 }
 
 .flex-item:hover > a > .flex-align-bottom {
-  background: rgba(201, 137, 15, 0.6);
+  background: rgba(201, 137, 15, 1);
   padding-bottom: .4em;
 
 }
@@ -167,7 +167,7 @@ a:hover {
   -o-transform: scale(1, 0); /* Opera */
   font-size: 0;
   transition: transform 1s, line-height 1s, font-size 1s;
-  color: rgba(201, 137, 15, 0.5);
+  color: rgba(201, 137, 15, 0.9);
 }
 
 .flex-container {

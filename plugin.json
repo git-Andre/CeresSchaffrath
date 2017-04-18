@@ -9,7 +9,7 @@
     "shortDescription"  : {"de": "Das ist ein Electronic Theme (beta) für Ceres","en":"This is a Electronic Theme (beta) for Ceres"},
     "authorIcon"        : "icon_author_xs.png",
     "categories"        : ["3518"],
-    "email"             : "dev@frontend-studios.de",
+  "email": "",
     "phone"             : "+49 561 9885097-0",
     "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "electronic", "frontend studios"],
     "type"              : "theme",
