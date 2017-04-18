@@ -1,6 +1,6 @@
 <?php
 
-namespace TopItems\Controllers;
+namespace CeresElectronic\Controllers;
 
 
 use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
