@@ -1,6 +1,6 @@
 <?php
 
-namespace TopItems\Providers;
+namespace CeresElectronic\Providers;
 
 
 use Plenty\Plugin\RouteServiceProvider;

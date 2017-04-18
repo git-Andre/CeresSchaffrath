@@ -50,6 +50,6 @@ class ContentController extends Controller
             'currentItems' => $items
         );
 
-        return $twig->render('TopItems::content.TopItems', $templateData);
+        return $twig->render('CeresElectronic::Content.TopItems', $templateData);
     }
 }
