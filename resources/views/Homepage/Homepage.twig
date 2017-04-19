@@ -136,11 +136,16 @@
 
         <p>Jetzt kommt der Block</p>
 
+        {% include{'Content.TopItems'} %}
+
+        {#
+
         {% block article %}
             <h2>Parent article</h2> <!-- test -->
 
 
         {% endblock article %}
+#}
 
         <div class="container-max">
             <hr class="my-2">

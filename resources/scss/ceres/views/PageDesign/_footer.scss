@@ -35,7 +35,7 @@
 	}
 
 	.footer-services{
-		display: flex;
+      display: none; // flex;
 		flex-flow: column nowrap;
 		
 		.services-payment,
