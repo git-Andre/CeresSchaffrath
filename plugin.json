@@ -38,12 +38,7 @@
       "name": "CeresElectronic",
       "description": "Electronic Theme for Ceres"
     }
-    {
-      "key": "CeresElectronic\\Containers\\TopItems",
-      "name": "TopItems",
-      "description": "4x TopItems auf der Hompage"
-    }
-  ]
+  ],
   "containers": [
     {
       "key": "Homepage.TopItems",
