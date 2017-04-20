@@ -1,27 +1,54 @@
 {
-    "version"           : "1.0.1",
-    "name"              : "CeresElectronic",
-    "description"       : "Das ist ein Electronic Theme (beta) für Ceres",
-    "author"            : "Frontend Studios GmbH",
-    "license"           : "AGPL-3.0",
-    "pluginIcon"        : "icon_plugin_xs.png",
-    "price"             : 0.00,
-    "shortDescription"  : {"de": "Das ist ein Electronic Theme (beta) für Ceres","en":"This is a Electronic Theme (beta) for Ceres"},
-    "authorIcon"        : "icon_author_xs.png",
-    "categories"        : ["3518"],
+  "version": "1.0.1",
+  "name": "CeresElectronic",
+  "description": "Das ist ein Electronic Theme (beta) für Ceres",
+  "author": "Frontend Studios GmbH",
+  "license": "AGPL-3.0",
+  "pluginIcon": "icon_plugin_xs.png",
+  "price": 0.00,
+  "shortDescription": {
+    "de": "Das ist ein Electronic Theme (beta) für Ceres",
+    "en": "This is a Electronic Theme (beta) for Ceres"
+  },
+  "authorIcon": "icon_author_xs.png",
+  "categories": [
+    "3518"
+  ],
   "email": "",
-    "phone"             : "+49 561 9885097-0",
-    "keywords"          : ["plentymarkets", "plugins", "layout", "theme", "ceres", "electronic", "frontend studios"],
-    "type"              : "theme",
-    "require"           : ["Ceres", "IO"],
-    "namespace"         : "CeresElectronic",
-    "serviceProvider"   : "CeresElectronic\\Providers\\CeresElectronicServiceProvider",
-    "dataProviders"     :
-    [
-      {
-        "key":"CeresElectronic\\Containers\\CeresElectronic",
-        "name":"CeresElectronic",
-        "description":"Electronic Theme for Ceres"
-      }
-    ]
+  "phone": "+49 561 9885097-0",
+  "keywords": [
+    "plentymarkets",
+    "plugins",
+    "layout",
+    "theme",
+    "ceres",
+    "electronic",
+    "frontend studios"
+  ],
+  "type": "theme",
+  "require": [
+    "Ceres",
+    "IO"
+  ],
+  "namespace": "CeresElectronic",
+  "serviceProvider": "CeresElectronic\\Providers\\CeresElectronicServiceProvider",
+  "dataProviders": [
+    {
+      "key": "CeresElectronic\\Containers\\CeresElectronic",
+      "name": "CeresElectronic",
+      "description": "Electronic Theme for Ceres"
+    }
+    {
+      "key": "CeresElectronic\\Containers\\TopItems",
+      "name": "TopItems",
+      "description": "4x TopItems auf der Hompage"
+    }
+  ]
+  "containers": [
+    {
+      "key": "Homepage.TopItems",
+      "name": "Homepage: TopItems",
+      "description": "Add 4x Artikel in Topartikel"
+    }
+  ]
 }
