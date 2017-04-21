@@ -8,6 +8,6 @@ class CeresElectronic
 {
     public function call(Twig $twig):string
     {
-        return $twig->render('CeresElectronic::CeresElectronic');
+        return $twig->render('CeresElectronic::Head-link-css');
     }
 }

@@ -1,5 +1,6 @@
 {% extends 'Ceres::Homepage.Homepage' %}
 {% set currentLang = services.sessionStorage.getLang() %}
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set LAYOUT_PATH = "https://www.schaffrathnumis.de/layout" %}
 {% set DOMAIN_PATH = "https://www.schaffrathnumis.de" %}
@@ -132,12 +133,13 @@
         </div>
 
         <!-- END Geldscheine -->
-
-        {% include "CeresElectronic::Content.TopItems" %}
+        <div class="test">
+            {{ LayoutContainer.show("CeresElectronic::Homepage.TopItems") }}
+        </div>
 
 
         {#
-
+        {% include "CeresElectronic::Content.TopItems" %}
         {% block article %}
             <h2>Parent article</h2> <!-- test -->
 

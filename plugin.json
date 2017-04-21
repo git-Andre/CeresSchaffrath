@@ -38,12 +38,5 @@
       "name": "CeresElectronic",
       "description": "Electronic Theme for Ceres"
     }
-  ],
-  "containers": [
-    {
-      "key": "Homepage.TopItems",
-      "name": "Homepage: TopItems",
-      "description": "Add 4x Artikel in Topartikel"
-    }
   ]
 }
