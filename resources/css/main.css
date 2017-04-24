@@ -14133,8 +14133,8 @@ Custom classes
 }
 
 .navbar-brand img {
-  max-height: 5.8rem;
-  margin: -29px 3px 0;
+    max-height: 5.7rem;
+    margin: -24px 55px 0;
 }
 
 .navbar-brand svg path {
@@ -16470,6 +16470,17 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
 
 .sidebar-categories ul li.active > a {
   background: #f4f4f4;
+}
+
+.top-bar {
+    background: #4D4F4D;
+    /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(left, #dedede, #efefef, #4D4F4D, #4D4F4D);
+    /*Safari 5.1-6*/
+    /*Opera 11.1-12*/
+    /*Fx 3.6-15*/
+    background: linear-gradient(to right, #dedede, #efefef, #4D4F4D, #4D4F4D);
+    /*Standard*/
 }
 
 .tab-content h5 {
