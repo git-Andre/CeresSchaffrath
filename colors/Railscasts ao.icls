@@ -1,11 +1,11 @@
-<scheme name="_@user_Railscasts" version="142" parent_scheme="Darcula">
+<scheme name="Railscasts ao" version="142" parent_scheme="Darcula">
   <option name="FONT_SCALE" value="1.0" />
   <metaInfo>
-    <property name="created">2017-04-26T20:57:32</property>
+    <property name="created">2017-04-28T15:13:18</property>
     <property name="ide">PhpStorm</property>
-    <property name="ideVersion">2017.1.2.0.0</property>
-    <property name="modified">2017-04-28T15:13:21</property>
-    <property name="originalScheme">Railscasts</property>
+    <property name="ideVersion">2017.1.3.0.0</property>
+    <property name="modified">2017-04-28T15:16:35</property>
+    <property name="originalScheme">Railscasts copy</property>
   </metaInfo>
   <option name="EDITOR_FONT_SIZE" value="13" />
   <option name="EDITOR_FONT_NAME" value="Monospaced" />
@@ -722,7 +722,7 @@
     </option>
     <option name="HTML_ATTRIBUTE_NAME">
       <value>
-        <option name="FOREGROUND" value="e8bf6a" />
+        <option name="FOREGROUND" value="c59d69" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
@@ -734,7 +734,7 @@
     </option>
     <option name="HTML_COMMENT">
       <value>
-        <option name="FOREGROUND" value="bc9458" />
+        <option name="FOREGROUND" value="8e8687" />
         <option name="FONT_TYPE" value="2" />
       </value>
     </option>
