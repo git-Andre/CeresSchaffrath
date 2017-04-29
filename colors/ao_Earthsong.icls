@@ -4,7 +4,7 @@
     <property name="created">2017-04-29T13:40:07</property>
     <property name="ide">PhpStorm</property>
     <property name="ideVersion">2017.1.3.0.0</property>
-    <property name="modified">2017-04-29T23:31:51</property>
+    <property name="modified">2017-04-29T23:49:56</property>
     <property name="originalScheme">Earthsong copy</property>
   </metaInfo>
   <option name="EDITOR_FONT_SIZE" value="16" />
@@ -449,6 +449,11 @@
         <option name="FOREGROUND" value="db784d" />
       </value>
     </option>
+    <option name="DEFAULT_INTERFACE_NAME">
+      <value>
+        <option name="FOREGROUND" value="ebd1b7" />
+      </value>
+    </option>
     <option name="DEFAULT_INVALID_STRING_ESCAPE">
       <value>
         <option name="FOREGROUND" value="dee3ec" />
@@ -742,6 +747,12 @@
     <option name="INJECTED_LANGUAGE_FRAGMENT">
       <value>
         <option name="BACKGROUND" value="36312c" />
+      </value>
+    </option>
+    <option name="INLINE_PARAMETER_HINT">
+      <value>
+        <option name="FOREGROUND" value="7a7a7a" />
+        <option name="BACKGROUND" value="464646" />
       </value>
     </option>
     <option name="INSPECTION_MULTIPLE_RESOLVE_WARNING_ID">
