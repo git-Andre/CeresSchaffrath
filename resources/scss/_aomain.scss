@@ -1,11 +1,11 @@
 //topbar gradient ???!!
 
 .top-bar {
-  background: #4D4F4D; /* For browsers that do not support gradients */
-  background: -webkit-linear-gradient(left, #dedede, #efefef, #4D4F4D, #4D4F4D); /*Safari 5.1-6*/
-  background: -o-linear-gradient(right, #dedede, #efefef, #4D4F4D, #4D4F4D); /*Opera 11.1-12*/
-  background: -moz-linear-gradient(right, #dedede, #efefef, #4D4F4D, #4D4F4D); /*Fx 3.6-15*/
-  background: linear-gradient(to right, #dedede, #efefef, #4D4F4D, #4D4F4D); /*Standard*/
+  background: $gray-dark; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #dedede, #efefef, $gray-dark, $gray-dark); /*Safari 5.1-6*/
+  background: -o-linear-gradient(right, #dedede, #efefef, $gray-dark, $gray-dark); /*Opera 11.1-12*/
+  background: -moz-linear-gradient(right, #dedede, #efefef, $gray-dark, $gray-dark); /*Fx 3.6-15*/
+  background: linear-gradient(to right, #dedede, #efefef, $gray-dark, $gray-dark); /*Standard*/
 }
 
 
@@ -19,6 +19,7 @@
 }
 
 .itemDefList {
+  display: block;
   // width: 60%;
   margin: 0 0 0 30px;
   dt {
@@ -42,9 +43,17 @@
 }
 
 .cmp-product-thumb {
-  border: 1px solid #c9890f;
+  border: 1px solid $brand-primary;
+  box-shadow: 3px 3px 9px 1px $gray-light;
 }
 
+/*.thumb-content {
+  background-image: linear-gradient(white, white, $brand-primary);
+}*/
+
+/*.prices {
+  color: white;
+}*/
 .cmp-hero .hero-xtras .hero-category>img {
   width: 100%;
   min-height: 100%;

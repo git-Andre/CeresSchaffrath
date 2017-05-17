@@ -133,19 +133,17 @@
         </div>
 
         <!-- END Geldscheine -->
-        {#        <div class="test">
-                    {{ LayoutContainer.show("CeresElectronic::Homepage.TopItems") }}
-                </div>#}
-
 
         {#{% include "CeresElectronic::Content.TopItems" %}#}
 
-        {% block topArticle %}
-            <h2>Parent article</h2> <!-- test -->
+        {#
+                {% block topArticle %}
+                    <h2>Parent article</h2> <!-- test -->
 
 
-        {% endblock %}
-#}
+                {% endblock %}
+        #}
+        {% use "CeresElectronic::Content.TopItems" %}
 
         <div class="container-max">
             <hr class="my-2">

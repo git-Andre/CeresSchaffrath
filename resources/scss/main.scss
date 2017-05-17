@@ -25,12 +25,12 @@
 @import "ceres/common/shariff-theme-minimal";
 
 //TODO's
-@import "ceres/common/buttons";
-@import "ceres/common/card";
+//@import "ceres/common/buttons";
+//@import "ceres/common/card";
 
 // External plugins overrides
-@import "ceres/plugins/lightbox";
-@import "ceres/plugins/owl-carousel";
+//@import "ceres/plugins/lightbox";
+//@import "ceres/plugins/owl-carousel";
 
 // Components
 @import "ceres/components/component-base";
@@ -52,21 +52,21 @@
 @import "ceres/views/PageDesign/breadcrumb";
 @import "ceres/views/PageDesign/footer";
 // Templates--
-@import "ceres/views/Confirmation/confirmation-order-item";
-@import "ceres/views/Templates/AddressSelect/address-select";
-@import "ceres/views/Templates/BasketItemList/basket-item";
-@import "ceres/views/Templates/BasketPreview/basket-preview-item";
-@import "ceres/views/Templates/BasketPreview/basket-preview";
-@import "ceres/views/Templates/BasketTotalSum/basket-total-sum";
-@import "ceres/views/Templates/CategoryListItem/category-list-item";
-@import 'ceres/views/Templates/CategoryViewFilter/category-view-filter';
-@import "ceres/views/Templates/Hero/component-hero";
-@import "ceres/views/Templates/ItemListSort/pagination";
-@import "ceres/views/Templates/ItemRating/item-rating-roll";
-@import "ceres/views/Templates/ItemRating/item-rating-section";
-@import "ceres/views/Templates/OrderItem/order-item";
-@import "ceres/views/Templates/PaymentShippingSelect/payment-shipping-select";
-@import "ceres/views/Templates/ToggleCategoryListView/toggle-list-view";
+//@import "ceres/views/Confirmation/confirmation-order-item";
+//@import "ceres/views/Templates/AddressSelect/address-select";
+//@import "ceres/views/Templates/BasketItemList/basket-item";
+//@import "ceres/views/Templates/BasketPreview/basket-preview-item";
+//@import "ceres/views/Templates/BasketPreview/basket-preview";
+//@import "ceres/views/Templates/BasketTotalSum/basket-total-sum";
+//@import "ceres/views/Templates/CategoryListItem/category-list-item";
+//@import 'ceres/views/Templates/CategoryViewFilter/category-view-filter';
+//@import "ceres/views/Templates/Hero/component-hero";
+//@import "ceres/views/Templates/ItemListSort/pagination";
+//@import "ceres/views/Templates/ItemRating/item-rating-roll";
+//@import "ceres/views/Templates/ItemRating/item-rating-section";
+//@import "ceres/views/Templates/OrderItem/order-item";
+//@import "ceres/views/Templates/PaymentShippingSelect/payment-shipping-select";
+//@import "ceres/views/Templates/ToggleCategoryListView/toggle-list-view";
 
 // Pages
 @import "ceres/views/Home/home";

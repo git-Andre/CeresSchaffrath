@@ -7,6 +7,7 @@ use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 use Plenty\Plugin\Controller;
 use Plenty\Plugin\Templates\Twig;
 
+
 class TopItemsController extends Controller
 {
     public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository): string

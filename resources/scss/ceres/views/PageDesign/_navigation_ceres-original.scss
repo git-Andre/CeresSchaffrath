@@ -19,7 +19,7 @@ nav.navbar ul.nav li.dropdown:hover .dropdown-menu {
 // mobile
 $menu-h-sm  			: 100%;
 $menu-w-sm  			: 100%;
-$menu-bg-sm 			: $brand-primary;
+$menu-bg-sm: $gray-lighter2; // $brand-primary;
 $menu-breadcrumb-bg 	: $gray-darker;
 $menu-breadcrumb-color 	: $white;
 $menu-color-sm 			: $white;
@@ -29,7 +29,7 @@ $menu-font-f-sm  		: $font-family-serif;
 // desktop
 $menu-h-lg  			: 100%;
 $menu-w-lg  			: 100%;
-$menu-bg-lg 			: transparent;
+$menu-bg-lg: $gray-lighter2; // transparent;
 $menu-color-lg 			: $brand-primary;
 $menu-font-s-lg  		: 1em;
 $menu-font-f-lg  		: $font-family-serif;
@@ -37,7 +37,7 @@ $menu-li-bg-hover		: $brand-primary;
 $menu-li-color-hover	: $white;
 // bigmenu
 $menu-big-menu-bg 				: darken($brand-primary,10%);
-$menu-big-menu-li-bg			: transparent;
+$menu-big-menu-li-bg: $gray-lighter2; // transparent;
 $menu-big-menu-li-bg-hover		: $brand-primary;
 $menu-big-menu-li-color			: $white;
 $menu-big-menu-li-color-hover	: $text-color;
@@ -97,6 +97,7 @@ body.menu-is-visible { overflow-y : hidden; }
 		margin 		: 0;
 		padding 	: 0;
 		position 	: relative;
+      background: $menu-bg-sm;
 
 		li 	{
 			width : 100%;
