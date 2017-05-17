@@ -7,38 +7,38 @@
 
 
 {% block ThemeHomepage %}
-    <div style="visibility: hidden" id="currentLang">{{ currentLang }}</div>
+    <div style = "visibility: hidden" id = "currentLang">{{ currentLang }}</div>
 
-    <div class="home page-content container-max">
+    <div class = "home page-content container-max">
 
-        <div class="cmp cmp-hero">
+        <div class = "cmp cmp-hero">
 
-            <div class="hero-main">
-                <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-slider">
-                    <div class="carousel-inner" id="carousel-content">
+            <div class = "hero-main">
+                <div class = "carousel slide" data-interval = "5000" data-ride = "carousel" id = "carousel-slider">
+                    <div class = "carousel-inner" id = "carousel-content">
                         <!-- dynamic add content -->
                     </div>
-                    <a class="left carousel-control" href="#carousel-slider" data-slide="prev"><i
-                                class="icon-prev  fa fa-angle-left"></i></a>
-                    <a class="right carousel-control" href="#carousel-slider" data-slide="next"><i
-                                class="icon-next fa fa-angle-right"></i></a>
+                    <a class = "left carousel-control" href = "#carousel-slider" data-slide = "prev"><i
+                                class = "icon-prev  fa fa-angle-left"></i></a>
+                    <a class = "right carousel-control" href = "#carousel-slider" data-slide = "next"><i
+                                class = "icon-next fa fa-angle-right"></i></a>
                 </div>
             </div>
 
-            <div class="hero-xtras">
-                <a class="hero-category" href="{{ DOMAIN_PATH }}/medaillen/">
-                    <img src="{{ LAYOUT_PATH }}/img/categorie2.jpg" alt="Medaillen">
-                    <div class="hero-category-inner">
-                        <h4 class="hero-category-headline">
+            <div class = "hero-xtras">
+                <a class = "hero-category" href = "{{ DOMAIN_PATH }}/medaillen/">
+                    <img src = "{{ LAYOUT_PATH }}/img/categorie2.jpg" alt = "Medaillen">
+                    <div class = "hero-category-inner">
+                        <h4 class = "hero-category-headline">
                             {{ trans("CeresElectronic::Template.homepageKategorieMedaillen") }}
                         </h4>
                     </div>
                 </a>
-                <a class="hero-category" href="{{ DOMAIN_PATH }}/muenzen/">
-                    <img src="{{ LAYOUT_PATH }}/img/categorie1.jpg" alt="Münzen">
+                <a class = "hero-category" href = "{{ DOMAIN_PATH }}/muenzen/">
+                    <img src = "{{ LAYOUT_PATH }}/img/categorie1.jpg" alt = "Münzen">
 
-                    <div class="hero-category-inner">
-                        <h4 class="hero-category-headline">
+                    <div class = "hero-category-inner">
+                        <h4 class = "hero-category-headline">
                             {{ trans("CeresElectronic::Template.homepageKategorieMuenzen") }}
                         </h4>
 
@@ -48,80 +48,102 @@
 
         </div>
         {#TEXT#}
-        <div class="row">
-            <div class="col-lg-6">
-                <h1 style="font-size: 3rem" id="welcome-text"><!-- welcome text --></h1>
+        <div class = "row">
+            <div class = "col-lg-6">
+                <h1 style = "font-size: 3rem" id = "welcome-text"><!-- welcome text --></h1>
             </div>
-            <div class="col-lg-6">
-                <p id="short-description"><!-- short description --></p>
+            <div class = "col-lg-6">
+                <p id = "short-description"><!-- short description --></p>
             </div>
         </div>
 
-        <hr class="my-2">
+        <hr class = "my-2">
         <!-- Abschnitt recommended plugins -->
 
-        <div class="row">
-            <div class="col-lg-1">
-                <a class="btn btn-secondary" data-toggle="collapse" href="#collapseMore" aria-expanded="false"
-                   aria-controls="collapseMore">
+        <div class = "row">
+            <div class = "col-lg-1">
+                <a class = "btn btn-secondary" data-toggle = "collapse" href = "#collapseMore" aria-expanded = "false"
+                   aria-controls = "collapseMore">
                     {{ trans("CeresElectronic::Template.homepageMoreButton") }}
                 </a>
             </div>
-            <div class="col-lg-11 ">
-                <h2 style="text-align: center" id="recommend-text"><!-- recommend text --></h2>
+            <div class = "col-lg-11 ">
+                <h2 style = "text-align: center" id = "recommend-text"><!-- recommend text --></h2>
             </div>
         </div>
-        <hr class="my-2">
+        <hr class = "my-2">
 
 
-        <div class="collapse" id="collapseMore">
-            <div class="card card-block">
+        <div class = "collapse" id = "collapseMore">
+            <div class = "card card-block">
                 <h4>{{ trans("CeresElectronic::Template.homepageLongText") }}</h4>
-                <p class="text-abel">Ich bin auf dem Gebiet der Numismatik schon seit vielen Jahren aktiv und stehe in
-                    ständiger Verbindung mit Sammlern aus der ganzen Welt. Die Faszination des Sammelns hat mich schon
-                    seit meiner Kindheit erfasst... <br/>
-                    Wichtigstes Objekt der Numismatik ist die Münze. Aber auch andere Geldformen wie Papiergeld,
-                    vormünzliche Zahlungsmittel und münzverwandte Objekte wie Medaillen, Jetons oder religiöse Medaillen
-                    bis hin zu tesserae (Marken, beispielsweise Färbermarken) werden von der Numismatik untersucht. Bei
-                    den münzverwandten Objekten spricht man auch von Paranumismatik oder Exonumia. Bei Epochen, aus
-                    denen wenige schriftliche Quellen überliefert sind, haben Münzen einen hohen Wert als Primärquellen
-                    zur Chronologie sowie zur Wirtschafts- und Kulturgeschichte.
-                    Dies gilt besonders für das griechische und römische Altertum und für Gebiete außerhalb der antiken
-                    Mittelmeerkulturen (etwa die Reiche der Parther und Skythen), aber auch für das Früh- und
-                    Hochmittelalter. Für diese Perioden sind vor allem Münzfunde, also Münzen, die bei Ausgrabungen
-                    zusammen
-                    mit anderen Objekten gefunden werden oder als Schatzfunde zufällig entdeckt werden, nicht nur
-                    wichtige
-                    Datierungshilfen für die zeitliche Einordnung archäologischer Befunde, sondern eine erstrangige
-                    historische Quelle. Hier hat sich eine eigentliche Fundmünzennumismatik herausgebildet, die heute
-                    den
-                    dynamischsten und methodisch innovativsten Teil des Fachs bildet, denn bis heute vermehrt sich das
-                    Quellenmaterial der Münzfunde ständig. <br/>In jüngerer Zeit gewinnen auch die einzeln gefundenen
-                    Münzen
-                    (Einzelfunde, Verlustfunde) an Beachtung und werden bei Fundinventaren ebenfalls erfasst. Seit dem
-                    Mittelalter ist die Numismatik mit der zunehmenden Dichte an schriftlichen Quellen besonders
-                    verzahnt
-                    mit der Geldgeschichte, für die es sowohl historische als auch volkswirtschaftliche
-                    Erscheinungsformen
-                    gibt. Einen gewissen Endpunkt für die Numismatik setzt die neueste Zeit mit der stark zurückgehenden
-                    Bedeutung des Münzgeldes. Einerseits eine hochspezialisierte historische und archäologische
-                    Teildisziplin, hat die Numismatik andererseits zahlreiche Verbindungen zu Nachbarfächern wie der
-                    Wirtschafts- und Sozialgeschichte, der Kunstgeschichte oder der Namenkunde. Speziell im Rahmen des
-                    Faches Alte Geschichte ist Numismatik traditionell eine der wichtigsten Hilfswissenschaften.</p>
-                <p class="small text-muted text-right">Zusätzliche Quelle: wikipedia.org/wiki/Numismatik</p>
+                <p class = "text-abel">Ich bin auf dem Gebiet der Numismatik schon seit vielen Jahren aktiv und stehe in
+                                       ständiger Verbindung mit Sammlern aus der ganzen Welt. Die Faszination des
+                                       Sammelns hat mich schon
+                                       seit meiner Kindheit erfasst... <br/>
+                                       Wichtigstes Objekt der Numismatik ist die Münze. Aber auch andere Geldformen wie
+                                       Papiergeld,
+                                       vormünzliche Zahlungsmittel und münzverwandte Objekte wie Medaillen, Jetons oder
+                                       religiöse Medaillen
+                                       bis hin zu tesserae (Marken, beispielsweise Färbermarken) werden von der
+                                       Numismatik untersucht. Bei
+                                       den münzverwandten Objekten spricht man auch von Paranumismatik oder Exonumia.
+                                       Bei Epochen, aus
+                                       denen wenige schriftliche Quellen überliefert sind, haben Münzen einen hohen Wert
+                                       als Primärquellen
+                                       zur Chronologie sowie zur Wirtschafts- und Kulturgeschichte.
+                                       Dies gilt besonders für das griechische und römische Altertum und für Gebiete
+                                       außerhalb der antiken
+                                       Mittelmeerkulturen (etwa die Reiche der Parther und Skythen), aber auch für das
+                                       Früh- und
+                                       Hochmittelalter. Für diese Perioden sind vor allem Münzfunde, also Münzen, die
+                                       bei Ausgrabungen
+                                       zusammen
+                                       mit anderen Objekten gefunden werden oder als Schatzfunde zufällig entdeckt
+                                       werden, nicht nur
+                                       wichtige
+                                       Datierungshilfen für die zeitliche Einordnung archäologischer Befunde, sondern
+                                       eine erstrangige
+                                       historische Quelle. Hier hat sich eine eigentliche Fundmünzennumismatik
+                                       herausgebildet, die heute
+                                       den
+                                       dynamischsten und methodisch innovativsten Teil des Fachs bildet, denn bis heute
+                                       vermehrt sich das
+                                       Quellenmaterial der Münzfunde ständig. <br/>In jüngerer Zeit gewinnen auch die
+                                       einzeln gefundenen
+                                       Münzen
+                                       (Einzelfunde, Verlustfunde) an Beachtung und werden bei Fundinventaren ebenfalls
+                                       erfasst. Seit dem
+                                       Mittelalter ist die Numismatik mit der zunehmenden Dichte an schriftlichen
+                                       Quellen besonders
+                                       verzahnt
+                                       mit der Geldgeschichte, für die es sowohl historische als auch
+                                       volkswirtschaftliche
+                                       Erscheinungsformen
+                                       gibt. Einen gewissen Endpunkt für die Numismatik setzt die neueste Zeit mit der
+                                       stark zurückgehenden
+                                       Bedeutung des Münzgeldes. Einerseits eine hochspezialisierte historische und
+                                       archäologische
+                                       Teildisziplin, hat die Numismatik andererseits zahlreiche Verbindungen zu
+                                       Nachbarfächern wie der
+                                       Wirtschafts- und Sozialgeschichte, der Kunstgeschichte oder der Namenkunde.
+                                       Speziell im Rahmen des
+                                       Faches Alte Geschichte ist Numismatik traditionell eine der wichtigsten
+                                       Hilfswissenschaften.</p>
+                <p class = "small text-muted text-right">Zusätzliche Quelle: wikipedia.org/wiki/Numismatik</p>
             </div>
         </div>
 
         <!-- Geldscheine -->
 
-        <div class="row prop-row">
-            <div class="col-xs-12">
-                <div class="prop-xs-2-1 prop-sm-4-1 prop-md-6-1">
-                    <div class="prop-inner">
-                        <a class="featured-sale" href="{{ DOMAIN_PATH }}/geldscheine/">
-                            <img src="{{ LAYOUT_PATH }}/img/categorie3.jpg" alt="First slide">
-                            <div class="featured-category-inner">
-                                <h4 class="featured-category-headline">
+        <div class = "row prop-row">
+            <div class = "col-xs-12">
+                <div class = "prop-xs-2-1 prop-sm-4-1 prop-md-6-1">
+                    <div class = "prop-inner">
+                        <a class = "featured-sale" href = "{{ DOMAIN_PATH }}/geldscheine/">
+                            <img src = "{{ LAYOUT_PATH }}/img/categorie3.jpg" alt = "First slide">
+                            <div class = "featured-category-inner">
+                                <h4 class = "featured-category-headline">
                                     {{ trans("CeresElectronic::Template.homepageKategorieGeld") }}
                                 </h4>
 
@@ -143,12 +165,12 @@
         {% endblock %}
         {#{% use "CeresElectronic::Content.TopItems" %}#}
 
-        <div class="container-max">
-            <hr class="my-2">
+        <div class = "container-max">
+            <hr class = "my-2">
 
-            <div class="row">
-                <div class="row mt-xs-0_5">
-                    <ul class="flex-container" id="recommended-plugins">
+            <div class = "row">
+                <div class = "row mt-xs-0_5">
+                    <ul class = "flex-container" id = "recommended-plugins">
                         <!-- recommended plugins -->
                     </ul>
                 </div>

@@ -7,13 +7,13 @@
  */
 
 
-namespace TopItems\Providers;
+namespace CeresElectronic\Providers;
 
 
 use Plenty\Plugin\RouteServiceProvider;
 use Plenty\Plugin\Routing\Router;
 
-class TopItemsRouteServiceProvider extends RouteServiceProvider {
+class CeresElectronicRouteServiceProvider extends RouteServiceProvider {
 
     public function map(Router $router)
     {

@@ -18,7 +18,7 @@ class CeresElectronicServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->getApplication()->register(TopItemsRouteServiceProvider::class);
+        $this->getApplication()->register(CeresElectronicRouteServiceProvider::class);
     }
 
     public function boot(Twig $twig, Dispatcher $eventDispatcher)
@@ -26,7 +26,7 @@ class CeresElectronicServiceProvider extends ServiceProvider
 
         // provide template to use for homepage
         $eventDispatcher->listen('IO.tpl.home', function (TemplateContainer $container, $templateData) {
-            $container->setTemplate("CeresElectronic::Content.TopItems");
+            $container->setTemplate("CeresElectronic::Homepage.Homepage");
             return false;
         }, self::EVENT_LISTENER_PRIORITY);
 
