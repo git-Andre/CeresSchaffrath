@@ -12,7 +12,6 @@ class TopItemsController extends Controller
 {
     public function showTopItems(Twig $twig, ItemDataLayerRepositoryContract $itemRepository): string
     {
-        dd($itemRepository);
 
         $itemColumns = [
             'itemDescription' => [
