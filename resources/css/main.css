@@ -13778,7 +13778,7 @@ body.menu-is-visible {
 #mainNavbarCollapsable ul.mainmenu li.ddown > a:after {
   border: none;
   content: "\f0da";
-  float: right;
+    float: none;
   font-family: FontAwesome;
   font-size: 1.5rem;
   height: auto;
