@@ -3,11 +3,7 @@
 namespace CeresElectronic\Providers;
 
 use IO\Extensions\Functions\Partial;
-use IO\Helper\CategoryKey;
-use IO\Helper\CategoryMap;
-use IO\Helper\ComponentContainer;
 use IO\Helper\TemplateContainer;
-use Plenty\Plugin\ConfigRepository;
 use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
@@ -30,7 +26,7 @@ class CeresElectronicServiceProvider extends ServiceProvider
 
         // provide template to use for homepage
         $eventDispatcher->listen('IO.tpl.home', function (TemplateContainer $container, $templateData) {
-            $container->setTemplate("CeresElectronic::Homepage.Homepage");
+            $container->setTemplate("CeresElectronic::Content.TopItems");
             return false;
         }, self::EVENT_LISTENER_PRIORITY);
 

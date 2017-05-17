@@ -136,14 +136,12 @@
 
         {#{% include "CeresElectronic::Content.TopItems" %}#}
 
-        {#
-                {% block topArticle %}
-                    <h2>Parent article</h2> <!-- test -->
+        {% block topArticle %}
+            <h2>Parent article</h2> <!-- test -->
 
 
-                {% endblock %}
-        #}
-        {% use "CeresElectronic::Content.TopItems" %}
+        {% endblock %}
+        {#{% use "CeresElectronic::Content.TopItems" %}#}
 
         <div class="container-max">
             <hr class="my-2">
