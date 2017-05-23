@@ -115,8 +115,8 @@ $availability_5:        $brand-danger;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg:               #e4e4e4;
-//$body-color:            $gray-dark;
+$body-bg: red; // #e4e4e4;
+$body-color: $gray-dark;
 //** Global text color on `<body>`.
 $text-color:            $gray-dark;
 
@@ -136,7 +136,7 @@ $link-hover-color:      darken($link-color, 15%);
 //## Font, line-height, and color for body text, headings, and more.
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
-$font-family-sans-serif:'Open Sans', Helvetica, Arial, sans-serif;
+$font-family-sans-serif: 'Abel', sans-serif;
 $font-family-helvetica: $font-family-sans-serif;
 $font-family-serif:     Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
@@ -775,17 +775,12 @@ $carousel-indicator-active-size:              12px !default;
 $carousel-indicator-active-bg:                #fff !default;
 $carousel-indicator-border-color:             #fff !default;
 
-/*$carousel-caption-width:                      70% !default;
+$carousel-caption-width: 70% !default;
 $carousel-caption-sm-up-width:                60% !default;
 $carousel-caption-color:                      #fff !default;
 
-$carousel-icon-width:                         20px !default;*/
+$carousel-icon-width: 20px !default;
 
-$carousel-caption-width:                      70%;
-$carousel-caption-sm-up-width:                60%;
-$carousel-caption-color:                      #fff;
-
-$carousel-icon-width:                         20px;
 
 
 // Close
