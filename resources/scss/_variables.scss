@@ -77,6 +77,7 @@ $gray-light:            #b2b1a7;
 $gray-lighter:          #dcdbd8;
 $gray-lighter2:         #f4f4f4;
 $gray-lightest:         #f7f7f9;
+$gray-ao: #e4e4e4; // 20% darken von irgendwas ? ?!!
 
 $white:                 #fff;
 
@@ -115,8 +116,9 @@ $availability_5:        $brand-danger;
 // ## Settings for some of the most global styles.
 
 //** Background color for `<body>`.
-$body-bg: red; // #e4e4e4;
+$body-bg: $gray-ao; // #e4e4e4;
 $body-color: $gray-dark;
+
 //** Global text color on `<body>`.
 $text-color:            $gray-dark;
 

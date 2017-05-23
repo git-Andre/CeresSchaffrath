@@ -18,7 +18,7 @@ class CeresElectronicServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this->getApplication()->register(CeresElectronicRouteServiceProvider::class);
+        // $this->getApplication()->register(CeresElectronicRouteServiceProvider::class);
     }
 
     public function boot(Twig $twig, Dispatcher $eventDispatcher)

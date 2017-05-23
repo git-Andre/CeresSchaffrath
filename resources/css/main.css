@@ -323,7 +323,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #4D4F4D;
-  background-color: red;
+  background-color: #e4e4e4;
 }
 
 [tabindex="-1"]:focus {
@@ -669,7 +669,7 @@ dl.row > dd + dt {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: red;
+  background-color: #e4e4e4;
   border: 1px solid #ddd;
   border-radius: 0.1rem;
   transition: all .2s ease-in-out;
@@ -1705,7 +1705,7 @@ pre code {
 }
 
 .table .table {
-  background-color: red;
+  background-color: #e4e4e4;
 }
 
 .table-sm th,
@@ -3625,7 +3625,7 @@ input[type="button"].btn-block {
 .nav-tabs .nav-item.open .nav-link:focus,
 .nav-tabs .nav-item.open .nav-link:hover {
   color: #7a7f7f;
-  background-color: red;
+  background-color: #e4e4e4;
   border-color: #ddd #ddd transparent;
 }
 
@@ -12269,7 +12269,7 @@ a.text-danger:focus, a.text-danger:hover {
 }
 
 body {
-  background-color: red !important;
+  background-color: #e4e4e4 !important;
 }
 
 .page-content {
@@ -14774,7 +14774,7 @@ body.menu-is-visible {
 }
 */
 #short-description {
-  font-size: 1.33em;
+  font-size: 1.25em;
 }
 
 /*.prices {
@@ -14800,7 +14800,7 @@ body.menu-is-visible {
 }
 */
 .copyright {
-  background-color: red;
+  background-color: #e4e4e4;
   color: #4D4F4D;
 }
 
