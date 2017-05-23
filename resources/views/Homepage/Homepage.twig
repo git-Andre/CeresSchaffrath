@@ -1,13 +1,39 @@
 {% extends 'Ceres::Homepage.Homepage' %}
 {% set currentLang = services.sessionStorage.getLang() %}
+
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set LAYOUT_PATH = "https://www.schaffrathnumis.de/layout" %}
 {% set DOMAIN_PATH = "https://www.schaffrathnumis.de" %}
 
+{#von CERES#}
+{% block PartialHead %}
+    <meta property="og:title" content="{{ companyName }}"/>
+    <meta property="og:type" content="article"/>
+    <meta property="og:url" content="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}"/>
+    <meta property="og:image"
+          content="{% if ('http' in companyLogo) or ('layout/' in companyLogo) %}{{ companyLogo }}{% else %}{{ plugin_path('Ceres') }}/{{ companyLogo }}{% endif %}"/>
+
+    <link rel="canonical"
+          href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
+
+    <script type="application/ld+json">
+        {"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
+        ","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
+        /search?query={search_term}","query-input": "required name=search_term"}}
+
+
+    </script>
+{% endblock %}
+
 
 {% block ThemeHomepage %}
     <div style = "visibility: hidden" id = "currentLang">{{ currentLang }}</div>
+
+    {{ component( "Ceres::ItemList.Components.ItemList") }}
+    {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
+    {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
+
 
     <div class = "home page-content container-max">
 
@@ -163,6 +189,36 @@
 
 
         {% endblock %}
+
+        {#von CERES #}
+        {% set homepageContainer9 = LayoutContainer.show("Ceres::Homepage.Container9") %}
+        {% if categoryList2 is not empty or homepageContainer9 | trim is not empty %}
+            <div class="m-b-2 clearfix">
+                {% if homepageContainer9 | trim is empty %}
+                    <div class="section-header m-b-1">
+                        <h4>{{ category6.details[0].name }}</h4>
+                        <a href="{{ services.category.getURL(category6, lang) }}"
+                           class="section-link-all"><i
+                                    class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i> {{ trans("Ceres::Template.homepageShowAll") }}</a>
+                    </div>
+                    <!-- crosssell start -->
+                    <ul class="product-list row grid">
+                        {% for item in categoryList2 %}
+                            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    {{ homepageContainer9 }}
+                {% endif %}
+            </div>
+        {% endif %}
+
+        {{ LayoutContainer.show("Ceres::Homepage.Container10") }}
+
+
         {#{% use "CeresElectronic::Content.TopItems" %}#}
 
         <div class = "container-max">
