@@ -138,7 +138,7 @@ $link-hover-color:      darken($link-color, 15%);
 //## Font, line-height, and color for body text, headings, and more.
 @import url('https://fonts.googleapis.com/css?family=Abel');
 
-$font-family-sans-serif: 'Abel', sans-serif;
+$font-family-sans-serif: 'Open Sans', Helvetica, Arial, sans-serif;
 $font-family-helvetica: $font-family-sans-serif;
 $font-family-serif:     Georgia, "Times New Roman", Times, serif;
 //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.

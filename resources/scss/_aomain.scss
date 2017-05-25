@@ -54,13 +54,14 @@
 */
 
 #short-description {
+  font-family: $font-family-heading;
   font-size: 1.25em;
 }
 
-
-/*.prices {
-  color: white;
-}*/
+.prices {
+  // color: white;
+  font-family: $font-family-heading;
+}
 /*
 .cmp-hero .hero-xtras .hero-category>img {
   width: 100%;
