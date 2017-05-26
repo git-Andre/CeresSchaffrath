@@ -24,6 +24,7 @@
 
 
 
+
     </script>
 {% endblock %}
 
@@ -43,7 +44,8 @@
     services.itemLoader.loadForTemplate(
     'Ceres::ItemList.ItemListView',
     itemLoaderPresets.categoryList,
-    {'categoryId': category6.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
+    {'categoryId': category6.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}
+    ) %}
 
     {% set categoryList1 = paginatedCategoryList1.documents %}
     {% set categoryList2 = paginatedCategoryList2.documents %}
@@ -203,16 +205,16 @@
         {% set topItems = LayoutContainer.show("Ceres::Homepage.Container10") %}
         <div class="row">
             {{ topItems }}
+            <h1>topItems</h1>
         </div>
 
         {#von CERES #}
 
         {% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}
-        <h2>{{ categoryList1 }}</h2>
-        <h2>{{ homepageContainer6 }}</h2>
         {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
             <div class="m-b-2 clearfix">
                 {% if homepageContainer6 | trim is empty %}
+                    <h2>IF 1</h2>
                     <div class="section-header m-b-1">
                         <h4>{{ category3.details[0].name }}</h4>
                         <a href="documents/{{ services.category.getURL(category3.id, lang) }}"
@@ -228,19 +230,20 @@
                         {% endfor %}
                     </ul>
                 {% else %}
+                    <h1>else !!!</h1>
                     {{ homepageContainer6 }}
                 {% endif %}
             </div>
         {% endif %}
 
 
-
+        {# 4 Artikel aus beliebiger Kategorie... siehe CERES Konfiguration 'Homepage' letzte Zeile (categorie6) #}
         {% set homepageContainer9 = LayoutContainer.show("Ceres::Homepage.Container9") %}
         {% if categoryList2 is not empty or homepageContainer9 | trim is not empty %}
             <div class="m-b-2 clearfix">
                 {% if homepageContainer9 | trim is empty %}
                     <div class="section-header m-b-1">
-                        <h4>{{ category6.details[0].name }} !! categorie6 !!</h4>
+                        <h4>{{ category6.details[0].name }}</h4>
                         <a href="{{ services.category.getURL(category6, lang) }}"
                            class="section-link-all"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             {{ trans("Ceres::Template.homepageShowAll") }}
@@ -261,9 +264,7 @@
         {% endif %}
 
 
-
-        {#{% use "CeresElectronic::Content.TopItems" %}#}
-
+        <!-- recommended plugins unten -->
         <div class="container-max">
             <hr class="my-2">
 
