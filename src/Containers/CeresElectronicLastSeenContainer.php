@@ -1,6 +1,6 @@
 <?php
 
-    namespace Ceres\Containers;
+    namespace CeresElectronic\Containers;
 
     use Plenty\Plugin\Templates\Twig;
 
