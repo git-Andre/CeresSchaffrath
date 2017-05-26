@@ -25,6 +25,7 @@
 
 
 
+
     </script>
 {% endblock %}
 
@@ -203,14 +204,40 @@
 
         <!-- END Geldscheine -->
 
-        {#{% set topItems = LayoutContainer.show("Ceres::Homepage.Container10") %}#}
-        {#<div class="row">#}
-        {#{{ topItems }}#}
-        {#<h1>topItems</h1>#}
-        {#</div>#}
+        {% set topItems = LayoutContainer.show("Ceres::Homepage.Container10") %}
+        {% if topItems %}
+            <div class="row">
+                {{ topItems }}
+                <h1>topItems</h1>
+            </div>
+        {% endif %}
 
         {#von CERES #}
 
+        {# 4 Artikel aus beliebiger Kategorie... siehe CERES Konfiguration 'Homepage' categorie3 #}
+        {% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}
+        {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
+            <div class="m-b-2 clearfix">
+                {% if homepageContainer6 | trim is empty %}
+                    <div class="section-header m-b-1">
+                        <h4>{{ category3.details[0].name }}</h4>
+                        <a href="documents/{{ services.category.getURL(category3.id, lang) }}"
+                           class="section-link-all"><i
+                                    class="fa fa-angle-double-right"
+                                    aria-hidden="true"></i> {{ trans("Ceres::Template.homepageShowAll") }}</a>
+                    </div>
+                    <ul class="product-list row grid">
+                        {% for item in categoryList1 %}
+                            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+                                {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    {{ homepageContainer6 }}
+                {% endif %}
+            </div>
+        {% endif %}
 
 
         {# 4 Artikel aus beliebiger Kategorie... siehe CERES Konfiguration 'Homepage' letzte Zeile (categorie6) #}
@@ -239,30 +266,6 @@
             </div>
         {% endif %}
 
-        {#Inhalt von CERES 'Last seen Items'#}
-        {% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}
-        {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
-            <div class="m-b-2 clearfix">
-                {% if homepageContainer6 | trim is empty %}
-                    <div class="section-header m-b-1">
-                        <h4>{{ category3.details[0].name }}</h4>
-                        <a href="documents/{{ services.category.getURL(category3.id, lang) }}"
-                           class="section-link-all"><i
-                                    class="fa fa-angle-double-right"
-                                    aria-hidden="true"></i> {{ trans("Ceres::Template.homepageShowAll") }}</a>
-                    </div>
-                    <ul class="product-list row grid">
-                        {% for item in categoryList1 %}
-                            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    {{ homepageContainer6 }}
-                {% endif %}
-            </div>
-        {% endif %}
 
         <!-- recommended plugins unten -->
         <div class="container-max">
