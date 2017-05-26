@@ -238,7 +238,7 @@
             <div class="m-b-2 clearfix">
                 {% if homepageContainer9 | trim is empty %}
                     <div class="section-header m-b-1">
-                        <h4>{{ category6.details[0].name }}</h4>
+                        <h4><span class="small">z.B. </span>{{ category6.details[0].name }}</h4>
                         <a href="{{ services.category.getURL(category6, lang) }}"
                            class="section-link-all"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             {{ trans("Ceres::Template.homepageShowAll") }}
