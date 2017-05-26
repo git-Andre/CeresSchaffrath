@@ -4,7 +4,7 @@
 
     use Plenty\Plugin\Templates\Twig;
 
-    class CeresElectronic {
+    class DiffSteuerContainer {
 
         public function call(Twig $twig) : string
         {
