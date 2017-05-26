@@ -4,7 +4,7 @@
 
     use Plenty\Plugin\Templates\Twig;
 
-    class CeresLastSeenContainer {
+    class CeresElectronicLastSeenContainer {
 
         public function call(Twig $twig) : string
         {

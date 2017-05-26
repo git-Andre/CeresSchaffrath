@@ -34,7 +34,7 @@
   "serviceProvider": "CeresElectronic\\Providers\\CeresElectronicServiceProvider",
   "dataProviders": [
     {
-      "key": "CeresElectronic\\Containers\\CeresLastSeenContainer",
+      "key": "CeresElectronic\\Containers\\CeresElectronicLastSeenContainer",
       "name": "Last seen items",
       "description": "Display a list of last seen items in your online store"
     },
