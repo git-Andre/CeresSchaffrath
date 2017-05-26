@@ -7,7 +7,7 @@
     use Plenty\Plugin\Templates\Twig;
 
 
-    class TopItems {
+    class TopItemsContainer {
 
         public function call(Twig $twig, ItemDataLayerRepositoryContract $itemRepository) : string
         {

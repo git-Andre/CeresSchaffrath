@@ -200,13 +200,16 @@
 
         <!-- END Geldscheine -->
 
-        {% set topItems = LayoutContainer.show("Ceres::Template.Style") %}
-        {{ topItems }}
-        <h1>YEEAAAAH</h1>
+        {% set topItems = LayoutContainer.show("Ceres::Homepage.Container10") %}
+        <div class="row">
+            {{ topItems }}
+        </div>
 
         {#von CERES #}
 
         {% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}
+        <h2>{{ categoryList1 }}</h2>
+        <h2>{{ homepageContainer6 }}</h2>
         {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
             <div class="m-b-2 clearfix">
                 {% if homepageContainer6 | trim is empty %}
@@ -257,7 +260,6 @@
             </div>
         {% endif %}
 
-        {{ LayoutContainer.show("Ceres::Homepage.Container10") }}
 
 
         {#{% use "CeresElectronic::Content.TopItems" %}#}
