@@ -4,7 +4,7 @@ namespace CeresElectronic\Containers;
 
 use Plenty\Plugin\Templates\Twig;
 
-class CeresElectronic
+class CeresElectronicCss
 {
     public function call(Twig $twig):string
     {

@@ -8,6 +8,6 @@
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresElectronic::Content.DiffSteuer');
+            return $twig -> render('CeresElectronic::Containers.DiffSteuer');
         }
     }

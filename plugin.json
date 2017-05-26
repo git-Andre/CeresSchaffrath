@@ -34,8 +34,13 @@
   "serviceProvider": "CeresElectronic\\Providers\\CeresElectronicServiceProvider",
   "dataProviders": [
     {
-      "key": "CeresElectronic\\Containers\\CeresElectronic",
-      "name": "CeresElectronic",
+      "key": "CeresElectronic\\Containers\\CeresLastSeenContainer",
+      "name": "Last seen items",
+      "description": "Display a list of last seen items in your online store"
+    },
+    {
+      "key": "CeresElectronic\\Containers\\CeresElectronicCss",
+      "name": "CeresElectronicCss",
       "description": "Electronic Theme for Ceres"
     },
     {
