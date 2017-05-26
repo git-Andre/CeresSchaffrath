@@ -39,9 +39,14 @@
       "description": "Electronic Theme for Ceres"
     },
     {
-      "key": "CeresElectronic\\Containers\\TopItems",
+      "key": "CeresElectronic\\Containers\\TopItemsContainer",
       "name": "TopItems",
       "description": "TopItems für die Homepage"
+    },
+    {
+      "key": "CeresElectronic\\Containers\\DiffSteuerContainer",
+      "name": "DiffSteuer",
+      "description": "Hinweis für die Differenzbesteuereung"
     }
   ]
 }
