@@ -204,13 +204,6 @@
 
         <!-- END Geldscheine -->
 
-        {% set topItems = LayoutContainer.show("Ceres::Homepage.Container10") %}
-        {% if topItems %}
-            <div class="row">
-                {{ topItems }}
-            </div>
-        {% endif %}
-
         {#von CERES #}
 
         {# 4 Artikel aus beliebiger Kategorie... siehe CERES Konfiguration 'Homepage' categorie3 #}
@@ -264,6 +257,16 @@
                 {% endif %}
             </div>
         {% endif %}
+
+
+        {#TopItems zuletzt gesehen#}
+        {% set topItems = LayoutContainer.show("Ceres::Homepage.Container10") %}
+        {% if topItems %}
+            <div class="row">
+                {{ topItems }}
+            </div>
+        {% endif %}
+
 
 
         <!-- recommended plugins unten -->

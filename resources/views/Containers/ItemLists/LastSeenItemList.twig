@@ -1,12 +1,12 @@
 {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
 {{ component( "Ceres::ItemList.Components.ItemLazyImg" ) }}
 
-{% set itemList = services.itemLoader.loadForTemplate('Ceres::Containers.ItemLists.LastSeenItemList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
+{% set itemList = services.itemLoader.loadForTemplate('CeresElectronic::Containers.ItemLists.LastSeenItemList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
 
 <hr>
 
 <div class="section-header m-b-1">
-    <h1 class="h3">{{ trans("Ceres::Template.itemListLastSeen") }}</h1>
+    <h4>{{ trans("Ceres::Template.itemListLastSeen") }}</h4>
 </div>
 
 <div class="m-b-2 clearfix">
