@@ -3,7 +3,7 @@
 
 {% set itemList = services.itemLoader.loadForTemplate('CeresElectronic::Containers.ItemLists.LastSeenItemList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
 {% if itemList %}
-    <div class="clearfix">
+    <div class="m-b-1 clearfix">
 
         <div class="section-header m-b-1">
             <h4>{{ trans("Ceres::Template.itemListLastSeen") }}</h4>

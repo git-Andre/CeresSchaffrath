@@ -8,14 +8,13 @@
 
     namespace CeresElectronic\Controllers;
 
-    use PhpParser\Node\Scalar\String_;
     use Plenty\Plugin\Controller;
     use Plenty\Plugin\Templates\Twig;
 
     class StaticPagesController extends Controller {
 
-        public function call(Twig $twig, String $ziel) : string
+        public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresElectronic::Content.Test', $ziel);
+            return $twig -> render('CeresElectronic::Content.Test');
         }
     }

@@ -18,7 +18,7 @@ class CeresElectronicServiceProvider extends ServiceProvider
 
     public function register()
     {
-        // $this -> getApplication() -> register(CeresElectronicRouteServiceProvider::class);
+        $this -> getApplication() -> register(CeresElectronicRouteServiceProvider::class);
     }
 
     public function boot(Twig $twig, Dispatcher $eventDispatcher)
@@ -38,7 +38,6 @@ class CeresElectronicServiceProvider extends ServiceProvider
         // provide template to use for single items
         $eventDispatcher -> listen('IO.tpl.item', function (TemplateContainer $container, $templateData) {
             $container -> setTemplate("CeresElectronic::Item.SingleItem");
-
             return false;
         }, self::EVENT_LISTENER_PRIORITY);
     }

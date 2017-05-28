@@ -17,8 +17,6 @@
                 {% for i in 1..numberOfFeatures %}
                     <div class="col-xs-12 col-sm-4 text-xs-center">
                         <i class="fa fa-check text-success" aria-hidden="true"></i>
-                        {{ config('Ceres.footer.store_feature_' ~ i) }}
-                        {{ trans("CeresElectronic::Template.footerFeature" ~ i) }}
                         {{ trans('CeresElectronic::Template.footerFeature' ~ i) }}
                         {#
                                                 <div>
@@ -80,7 +78,7 @@
                                         <a href="{{ services.category.getURL( cat ) }}">
                                             {{ cat.details.first.name }}</a>
 
-                                        <a href="/login">{{ trans("Ceres::Customer.Login") }}</a>
+                                        {#<a href="/login">{{ trans("Ceres::Customer.Login") }}</a>#}
 
                                     </li>
                                 {% endif %}
