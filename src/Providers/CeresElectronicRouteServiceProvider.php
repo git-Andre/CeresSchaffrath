@@ -18,6 +18,8 @@
         public function map(Router $router)
         {
             // $router->get('topitems', 'CeresElectronic\Controllers\TopItemsController@showTopItems');
-            $router -> get('agb', function () { return view('Ceres::StaticPages.TermsAndConditions'); });
+
+
+            // $router->get('agb', 'CeresElectronic\Controllers\StaticPagesController@call;
         }
     }
