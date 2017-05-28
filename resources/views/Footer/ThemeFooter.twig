@@ -87,21 +87,21 @@ col_3_url_4: "/gtc"
             {% for col in 1..numberOfCols %}
                 <div class="col-xs-6 col-sm-3 col-lg-2">
                     <nav class="footer-column m-b-2 text-abel">
-                        <h5>{{ trans('CeresElectronic::Template.footerColTitle' ~ i) }}</h5>
+                        <h5>{{ trans('CeresElectronic::Template.footerColTitle' ~ col) }}</h5>
                         <ul class="list-unstyled">
 
                             {#{% set footerCategories = config('Ceres.footer.col_' ~ col ~ '_categories') | find("[0-9]+") %}#}
 
                             {#{% for catID in footerCategories %}#}
                             {% for row in 1..numberOfRows %}
-                                {% set url = ('col_' . col . '_url_' . row) %}
-                                {% set url2 = footerLinks.col_1_url_4 %}
+
+                                {% set cell = ('col_' ~ col ~ '_url_' ~ row) %}
+                                {% set url = footerLinks.[cell] %}
 
                                 {% if url is not null %}
                                     {#{% set displayedCategories = displayedCategories | merge([catID]) %}#}
                                     <li>
-                                        <a href="{{ url }}"> url: {{ url }} url2:{{ url2 }} -
-                                            {{ trans('CeresElectronic::Template.footerCol' ~ col ~ 'LinkTitle' ~ row) }}</a>
+                                        <a href="{{ url }}">{{ trans('CeresElectronic::Template.footerCol' ~ col ~ 'LinkTitle' ~ row) }}</a>
                                         {#<a href="/login">{{ trans('CeresElectronic::Template.footerFeature' ~ i) }}</a>#}
 
                                     </li>
