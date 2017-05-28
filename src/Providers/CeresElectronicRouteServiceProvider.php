@@ -20,6 +20,6 @@
             // $router->get('topitems', 'CeresElectronic\Controllers\TopItemsController@showTopItems');
 
 
-            // $router->get('agb', 'CeresElectronic\Controllers\StaticPagesController@call;
+            $router -> get('agb', 'CeresElectronic\Controllers\StaticPagesController@call');
         }
     }
