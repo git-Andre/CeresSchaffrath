@@ -22,6 +22,12 @@ col_3_url_3: "/privacy-policy",
 col_3_url_4: "/gtc"
 } %}
 
+{% set icons = {
+1: 'fa-dropbox',
+2: 'fa-money',
+3: 'fa-credit-card'
+} %}
+
 <div class="footer">
     <div id="detlef" class="to-top hidden-md-up">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
@@ -36,8 +42,8 @@ col_3_url_4: "/gtc"
                             <i class="fa fa-check text-success" aria-hidden="true"></i>
                             {{ trans('CeresElectronic::Template.footerFeature' ~ i) }}
                             <div>
-                                <a href="#">
-                                    <i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>
+                                <a href="{{ icons[i] }}">
+                                    <i class="'fa ' ~ {{ icons[i] }} ~ ' fa-3x ao-features'" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
@@ -63,9 +69,6 @@ col_3_url_4: "/gtc"
                     {% if shippingContent|trim is not empty %}
                         <div class="services-shipping m-b-1">
                             <strong class="services-title">{{ trans("Ceres::Template.generalOrderShippedBy") }}</strong>
-                            <div>
-                                <i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>
-                            </div>
                             {{ shippingContent }}
                         </div>
                     {% endif %}
@@ -73,9 +76,6 @@ col_3_url_4: "/gtc"
                     {% if certifiedContent|trim is not empty %}
                         <div class="services-certificate m-b-1">
                             <strong class="services-title">{{ trans("Ceres::Template.generalCertifiedBy") }}</strong>
-                            <div>
-                                <i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>
-                            </div>
                             {{ certifiedContent }}
                         </div>
                     {% endif %}
