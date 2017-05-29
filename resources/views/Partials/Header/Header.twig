@@ -54,6 +54,20 @@
 <!-- breadcrumb -->
 {% if not services.template.isHome() and not services.template.isMyAccount() and not services.template.isCheckout() %}
     {% include "Ceres::PageDesign.Partials.Header.Breadcrumb" %}
+
+{% else %}
+
+    <nav id="twig-rendered-breadcrumbs" class="container-max small hidden-sm-down" v-is-loading-breadcrumbs-watcher>
+        <ul class="breadcrumb">
+            <li class="breadcrumb-item">
+                <a href="/">
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
 {% endif %}
 
 <div class="container-max page-header">

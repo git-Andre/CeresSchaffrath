@@ -14780,25 +14780,12 @@ body.menu-is-visible {
     font-family: "Abel", sans-serif;
 }
 
-/*
-.cmp-hero .hero-xtras .hero-category>img {
-  width: 100%;
-  min-height: 100%; 
+.ao-features {
+    color: #fff;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
 }
 
-.carousel-control {
-  bottom: 50px;
-}
-
-*/
-/*
-.carousel-caption {
-  padding-bottom: 0px;
-  padding-top: 7px;
-  bottom: 6.5rem;
-   background-color: rgba(233,233,233,0.5);
-}
-*/
 .copyright {
   background-color: #e4e4e4;
   color: #4D4F4D;
