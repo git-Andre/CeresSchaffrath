@@ -23,9 +23,14 @@ col_3_url_4: "/gtc"
 } %}
 
 {% set icons = {
-1: 'fa-dropbox',
-2: 'fa-money',
-3: 'fa-credit-card'
+1: 'fa-credit-card',
+2: 'fa-truck',
+3: 'fa-money'
+} %}
+{% set iconurl = {
+1: '/zahlungsarten',
+2: '/versandkosten',
+3: '/zahlungsarten'
 } %}
 
 <div class="footer">
@@ -42,8 +47,8 @@ col_3_url_4: "/gtc"
                             <i class="fa fa-check text-success" aria-hidden="true"></i>
                             {{ trans('CeresElectronic::Template.footerFeature' ~ i) }}
                             <div>
-                                <a href="{{ icons[i] }}">
-                                    <i class="'fa ' ~ {{ icons[i] }} ~ ' fa-3x ao-features'" aria-hidden="true"></i>
+                                <a href="{{ iconurl[i] }}">
+                                    <i class="fa {{ icons[i] }} fa-3x ao-features" aria-hidden="true"></i>
                                 </a>
                             </div>
                         </div>
