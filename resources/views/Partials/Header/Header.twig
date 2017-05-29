@@ -55,7 +55,7 @@
 {% if not services.template.isHome() and not services.template.isMyAccount() and not services.template.isCheckout() %}
     {% include "Ceres::PageDesign.Partials.Header.Breadcrumb" %}
 
-{% else %}
+{% elseif not services.template.isHome() %}
 
     <nav id="twig-rendered-breadcrumbs" class="container-max small hidden-sm-down">
         <ul class="breadcrumb">
