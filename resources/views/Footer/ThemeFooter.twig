@@ -44,42 +44,42 @@ col_3_url_4: "/gtc"
 
 
     <div class="container-max footer-content">
-        {#<div class="row">#}
-        {#<div class="col-xs-12">#}
-        {#<div class="footer-services m-t-2">#}
-        {#{% set paymentMethodContent = LayoutContainer.show("Ceres::Homepage.PaymentMethods") %}#}
-        {#<div>#}
-        {#<i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>#}
-        {#</div>#}
-        {#{% if paymentMethodContent|trim is not empty %}#}
-        {#<div class="services-payment m-b-1">#}
-        {#<strong class="services-title">{{ trans("Ceres::Template.orderPaymentMethods") }}</strong>#}
-        {#{{ paymentMethodContent }}#}
-        {#</div>#}
-        {#{% endif %}#}
-        {#{% set shippingContent = LayoutContainer.show("Ceres::Homepage.Shipping") %}#}
-        {#{% if shippingContent|trim is not empty %}#}
-        {#<div class="services-shipping m-b-1">#}
-        {#<strong class="services-title">{{ trans("Ceres::Template.generalOrderShippedBy") }}</strong>#}
-        {#<div>#}
-        {#<i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>#}
-        {#</div>#}
-        {#{{ shippingContent }}#}
-        {#</div>#}
-        {#{% endif %}#}
-        {#{% set certifiedContent = LayoutContainer.show("Ceres::Homepage.Certified") %}#}
-        {#{% if certifiedContent|trim is not empty %}#}
-        {#<div class="services-certificate m-b-1">#}
-        {#<strong class="services-title">{{ trans("Ceres::Template.generalCertifiedBy") }}</strong>#}
-        {#<div>#}
-        {#<i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>#}
-        {#</div>#}
-        {#{{ certifiedContent }}#}
-        {#</div>#}
-        {#{% endif %}#}
-        {#</div>#}
-        {#</div>#}
-        {#</div>#}
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="footer-services m-t-2">
+                    {% set paymentMethodContent = LayoutContainer.show("Ceres::Homepage.PaymentMethods") %}
+                    <div>
+                        <i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>
+                    </div>
+                    {% if paymentMethodContent|trim is not empty %}
+                        <div class="services-payment m-b-1">
+                            <strong class="services-title">{{ trans("Ceres::Template.orderPaymentMethods") }}</strong>
+                            {{ paymentMethodContent }}
+                        </div>
+                    {% endif %}
+                    {% set shippingContent = LayoutContainer.show("Ceres::Homepage.Shipping") %}
+                    {% if shippingContent|trim is not empty %}
+                        <div class="services-shipping m-b-1">
+                            <strong class="services-title">{{ trans("Ceres::Template.generalOrderShippedBy") }}</strong>
+                            <div>
+                                <i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>
+                            </div>
+                            {{ shippingContent }}
+                        </div>
+                    {% endif %}
+                    {% set certifiedContent = LayoutContainer.show("Ceres::Homepage.Certified") %}
+                    {% if certifiedContent|trim is not empty %}
+                        <div class="services-certificate m-b-1">
+                            <strong class="services-title">{{ trans("Ceres::Template.generalCertifiedBy") }}</strong>
+                            <div>
+                                <i class="fa fa-dropbox fa-3x ao-features" aria-hidden="true"></i>
+                            </div>
+                            {{ certifiedContent }}
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
 
         <div class="row justify-content-center">
             <hr class="m-y-2">
@@ -99,10 +99,6 @@ col_3_url_4: "/gtc"
                                 {% if url is not null %}
                                     <li>
                                         <a href="{{ url }}">{{ trans('CeresElectronic::Template.footerCol' ~ col ~ 'LinkTitle' ~ row) }}</a>
-                                        <div>
-                                            <i class="fa fa-dropbox fa-2x ao-features" aria-hidden="true"></i>
-                                        </div>
-
                                     </li>
                                 {% endif %}
 
