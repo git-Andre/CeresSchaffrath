@@ -59,7 +59,6 @@
         }
       }
       .carousel-control {
-        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
         height: 88.7%;
         span {
           text-shadow: none;
@@ -67,11 +66,15 @@
           top: 50%;
           transform: translateY(-50%);
         }
-        .icon-ao-left {
-          margin: auto;
+        .hoover-ao-left {
+          background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
         }
-        .icon-ao-right {
-          margin: auto;
+        .hoover-ao-right {
+          background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+        }
+        .icon-ao {
+          position: absolute;
+          top: 50%;
         }
       }
     }

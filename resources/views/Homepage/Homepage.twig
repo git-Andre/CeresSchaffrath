@@ -26,12 +26,13 @@
 
 
 
+
     </script>
 {% endblock %}
 
 
 {% block ThemeHomepage %}
-    <div style="visibility: hidden" id="currentLang">{{ currentLang }}</div>
+    <div style="display: none" id="currentLang">{{ currentLang }}</div>
 
     {% set category3 = services.category.get(config("Ceres.homepage.homepageCategory3"), lang) %}
     {% set category6 = services.category.get(config("Ceres.homepage.homepageCategory6"), lang) %}
@@ -66,10 +67,10 @@
                     <div class="carousel-inner" id="carousel-content">
                         <!-- dynamic add content -->
                     </div>
-                    <a class="left carousel-control" href="#carousel-slider" data-slide="prev"><i
-                                class="icon-ao-left  fa fa-angle-left"></i></a>
-                    <a class="right carousel-control" href="#carousel-slider" data-slide="next"><i
-                                class="icon-ao-right fa fa-angle-right"></i></a>
+                    <a class="left carousel-control hoover-ao-left" href="#carousel-slider" data-slide="prev">
+                        <i class="icon-ao  fa fa-2x fa-angle-left"></i></a>
+                    <a class="right carousel-control hoover-ao-right" href="#carousel-slider" data-slide="next">
+                        <i class="icon-ao fa fa-2x fa-angle-right"></i></a>
                 </div>
             </div>
 
@@ -211,9 +212,8 @@
         {#TopItems zuletzt gesehen#}
         {% set topItems = LayoutContainer.show("Ceres::Homepage.Container10") %}
         {% if topItems %}
-                {{ topItems }}
+            {{ topItems }}
         {% endif %}
-
 
 
         <!-- recommended plugins unten -->
