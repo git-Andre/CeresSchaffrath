@@ -58,6 +58,12 @@
           }
         }
       }
+      .hoover-ao-left {
+        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+      }
+      .hoover-ao-right {
+        background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+      }
       .carousel-control {
         height: 88.7%;
         span {
@@ -65,12 +71,6 @@
           font-size: 30px;
           top: 50%;
           transform: translateY(-50%);
-        }
-        .hoover-ao-left {
-          background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-        }
-        .hoover-ao-right {
-          background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
         }
         .icon-ao {
           position: absolute;

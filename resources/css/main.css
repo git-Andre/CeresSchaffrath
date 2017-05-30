@@ -10679,7 +10679,7 @@ Custom classes
   max-width: 1200px;
   left: 50%;
   -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 .cmp-country-settings .country-settings-inner {
@@ -10689,8 +10689,8 @@ Custom classes
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-    -ms-flex-flow: row nowrap;
-    flex-flow: row nowrap;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -11142,6 +11142,14 @@ body.menu-is-visible {
   background: #c9890f;
 }
 
+.cmp-hero .hero-main .carousel .hoover-ao-left {
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+}
+
+.cmp-hero .hero-main .carousel .hoover-ao-right {
+  background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+}
+
 .cmp-hero .hero-main .carousel .carousel-control {
   height: 88.7%;
 }
@@ -11154,17 +11162,9 @@ body.menu-is-visible {
           transform: translateY(-50%);
 }
 
-.cmp-hero .hero-main .carousel .carousel-control .hoover-ao-left {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-}
-
-.cmp-hero .hero-main .carousel .carousel-control .hoover-ao-right {
-    background-image: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
-}
-
 .cmp-hero .hero-main .carousel .carousel-control .icon-ao {
-    position: absolute;
-    top: 50%;
+  position: absolute;
+  top: 50%;
 }
 
 .cmp-hero .hero-xtras .hero-category .hero-category-inner {
