@@ -44,19 +44,19 @@
     "recommended":
     [
       {
-        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/Zahlung_Vorkasse_Bar.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/homepage/Zahlung_Vorkasse_Bar.png",
         "pluginText": "Barzahlung bei Abholung oder Vorkasse per Überweisung",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "Zahlung"
       },
       {
-        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/Versand.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/homepage/Versand.png",
         "pluginText": "...mit Deutsche Post oder DHL",
         "pluginLink": "/versandkosten",
         "pluginTitle": "Versand"
       },
       {
-        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/Zahlung_PayPal.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/homepage/Zahlung_PayPal.png",
         "pluginText": "incl. Lastschrift, Kreditkartenzahlung ohne PayPayl Anmeldung",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "PayPal"
@@ -109,19 +109,19 @@
     "recommended":
     [
       {
-        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/Zahlung_Vorkasse_Bar.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/homepage/Zahlung_Vorkasse_Bar.png",
         "pluginText": "Cash payment at pickup or prepayment by transfer",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "Payment"
       },
       {
-        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/Versand.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/homepage/Versand.png",
         "pluginText": "...with Deutsche Post or DHL",
         "pluginLink": "/versandkosten",
         "pluginTitle": "Shipping"
       },
       {
-        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/Zahlung_PayPal.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/homepage/Zahlung_PayPal.png",
         "pluginText": "incl. Direct debit, credit card payment without PayPal registration",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "PayPal"
