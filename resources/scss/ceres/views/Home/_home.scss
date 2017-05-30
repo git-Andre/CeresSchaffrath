@@ -59,20 +59,19 @@
         }
       }
       .carousel-control {
-        background-image: none;
+        background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+        height: 88.7%;
         span {
           text-shadow: none;
           font-size: 30px;
           top: 50%;
           transform: translateY(-50%);
         }
-        span:before {
-          font-family: 'FontAwesome';
-          content: "\f053";
-          color: $brand-primary;
+        .icon-ao-left {
+          margin: auto;
         }
-        .icon-next:before {
-          content: "\f054";
+        .icon-ao-right {
+          margin: auto;
         }
       }
     }
