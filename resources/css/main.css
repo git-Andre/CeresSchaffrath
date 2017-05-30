@@ -10667,6 +10667,79 @@ Custom classes
   min-width: 100%;
 }
 
+.cmp-country-settings {
+  background-color: #282d2f;
+  color: #fff;
+  border-bottom: 0;
+  z-index: 1070;
+  position: fixed;
+  top: 30px;
+  right: 0;
+  width: 100%;
+  max-width: 1200px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.cmp-country-settings .country-settings-inner {
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cmp-country-settings ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cmp-country-settings ul li {
+  width: 100%;
+  padding: 0;
+  display: inline-block;
+  float: left;
+}
+
+.cmp-country-settings ul li a {
+  display: inline-block;
+  padding: .4rem;
+  color: #fff;
+}
+
+.cmp-country-settings ul li a:hover {
+  background: #c9890f;
+  color: #fff;
+}
+
+.cmp-country-settings ul li.active a {
+  background-color: #c9890f;
+}
+
+@media (min-width: 768px) {
+  .cmp-country-settings ul li {
+    width: 50%;
+    padding-right: .8rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .cmp-country-settings ul li {
+    width: 33.33%;
+  }
+}
+
+.flag-icon-en {
+  background-image: url(../images/flags/4x3/gb.svg);
+}
+
 /* settings */
 body.menu-is-visible {
   overflow-y: hidden;
