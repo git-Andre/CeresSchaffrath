@@ -4,31 +4,31 @@
     "pictures":
     [
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider1.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider1.jpg?raw=true",
         "text": "Sammeln ist Leidenschaft...",
         "textSliderUnten": "Besuchen Sie auch unser Ladengeschäft...",
         "pictureLink": "#"
       },
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider3.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider3.jpg?raw=true",
         "text": "...Leidenschaft für Lebensfreude und für die Kapitalanlage!",
         "textSliderUnten": "Schreiben Sie uns...",
         "pictureLink": "#"
       },
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider5.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider5.jpg?raw=true",
         "text": "Sammelleidenschaft gibt es schon seit Menschengedenken.",
         "textSliderUnten": "...oder rufen Sie uns an!",
         "pictureLink": "#"
       },
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider2.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider2.jpg?raw=true",
         "text": "Wir bieten Münzen und...",
         "textSliderUnten": "Besuchen Sie auch unser Ladengeschäft...",
         "pictureLink": "#"
       },
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider4.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider4.jpg?raw=true",
         "text": "...Geldscheine aus aller Welt!",
         "textSliderUnten": "...hier finden Sie uns -->",
         "pictureLink": ""
@@ -44,19 +44,19 @@
     "recommended":
     [
       {
-        "pluginIcon": "https://test-ceres-ao.plentymarkets-cloud01.com/layout/images/Zahlung_Vorkasse_Bar.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/images/Zahlung_Vorkasse_Bar.png",
         "pluginText": "Barzahlung bei Abholung oder Vorkasse per Überweisung",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "Zahlung"
       },
       {
-        "pluginIcon": "https://test-ceres-ao.plentymarkets-cloud01.com/layout/images/Versand.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/images/Versand.png",
         "pluginText": "...mit Deutsche Post oder DHL",
         "pluginLink": "/versandkosten",
         "pluginTitle": "Versand"
       },
       {
-        "pluginIcon": "https://test-ceres-ao.plentymarkets-cloud01.com/layout/images/Zahlung_PayPal.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/images/Zahlung_PayPal.png",
         "pluginText": "incl. Lastschrift, Kreditkartenzahlung ohne PayPayl Anmeldung",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "PayPal"
@@ -69,31 +69,31 @@
     "pictures":
     [
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider1.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider1.jpg?raw=true",
         "text": "Collecting is passion...",
         "textSliderUnten": "Also visit our shop...",
         "pictureLink": "#"
       },
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider3.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider3.jpg?raw=true",
         "text": "...A passion for life and investment!",
         "textSliderUnten": "Write us an Email...",
         "pictureLink": "#"
       },
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider5.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider5.jpg?raw=true",
         "text": "Collective passion has existed since the time of human thought.",
         "textSliderUnten": "...or call us!",
         "pictureLink": "#"
       },
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider2.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider2.jpg?raw=true",
         "text": "We offer coins and...",
         "textSliderUnten": "Also visit our shop...",
         "pictureLink": "#"
       },
       {
-        "pictureUrl": "https://www.schaffrathnumis.de/layout/img/slider4.jpg?raw=true",
+        "pictureUrl": "https://www.schaffrathnumis.de/layout/images/homepage/slider4.jpg?raw=true",
         "text": "...banknotes from all over the world!",
         "textSliderUnten": "...You'll find us here -->",
         "pictureLink": ""
@@ -109,19 +109,19 @@
     "recommended":
     [
       {
-        "pluginIcon": "https://test-ceres-ao.plentymarkets-cloud01.com/layout/images/Zahlung_Vorkasse_Bar.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/images/Zahlung_Vorkasse_Bar.png",
         "pluginText": "Cash payment at pickup or prepayment by transfer",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "Payment"
       },
       {
-        "pluginIcon": "https://test-ceres-ao.plentymarkets-cloud01.com/layout/images/Versand.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/images/Versand.png",
         "pluginText": "...with Deutsche Post or DHL",
         "pluginLink": "/versandkosten",
         "pluginTitle": "Shipping"
       },
       {
-        "pluginIcon": "https://test-ceres-ao.plentymarkets-cloud01.com/layout/images/Zahlung_PayPal.png",
+        "pluginIcon": "https://www.schaffrathnumis.de/layout/images/Zahlung_PayPal.png",
         "pluginText": "incl. Direct debit, credit card payment without PayPal registration",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "PayPal"

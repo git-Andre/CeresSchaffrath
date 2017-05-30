@@ -23,14 +23,14 @@ col_3_url_4: "/gtc"
 } %}
 
 {% set icons = {
-1: 'fa-credit-card',
+1: 'fa-calender-check-o',
 2: 'fa-truck',
-3: 'fa-money'
+3: 'fa-mail-reply'
 } %}
 {% set iconurl = {
 1: '/zahlungsarten',
 2: '/versandkosten',
-3: '/zahlungsarten'
+3: '/cancellation-rights'
 } %}
 
 <div class="footer">
@@ -89,7 +89,7 @@ col_3_url_4: "/gtc"
         </div>
 
         <div class="row justify-content-center">
-            <hr class="m-y-2">
+            <hr class="m-b-2 m-t-0">
 
             {% for col in 1..numberOfCols %}
 
@@ -174,7 +174,7 @@ col_3_url_4: "/gtc"
             </div>
             <a href="https://www.schaffrathnumis.de">
                 <img class="svg plenty-brand"
-                     src="https://www.schaffrathnumis.de/layout/img/logo-SchaffrathNumis_Text.png">
+                     src="https://www.schaffrathnumis.de/layout/images/logo-SchaffrathNumis_Text.png">
             </a>
             <br>
             <small>&copy; Copyright 2017 | {{ trans("Ceres::Template.generalAllRightsReserved") }}</small>
