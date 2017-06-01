@@ -1,58 +1,5 @@
 [	
 	{
-		"tab": "Footer",
-		"key": "footer.number_of_cols",
-		"label": "Number of columns",
-		"type": "dropdown",
-		"possibleValues": {
-			"2": "2",
-			"3": "3"
-		},
-		"default": "3"
-	},
-	{
-		"tab": "Footer",
-		"key": "footer.col_1_title",
-		"label": "Title of first column",
-		"type": "text",
-		"default": "Shop"
-	},
-	{
-		"tab": "Footer",
-		"key": "footer.col_1_categories",
-		"label": "List of IDs of categories to display in first column",
-		"type": "text",
-		"default": ""
-	},
-	{
-		"tab": "Footer",
-		"key": "footer.col_2_title",
-		"label": "Title of second column",
-		"type": "text",
-		"default": "My account"
-	},
-	{
-		"tab": "Footer",
-		"key": "footer.col_2_categories",
-		"label": "List of IDs of categories to display in second column",
-		"type": "text",
-		"default": ""
-	},
-	{
-		"tab": "Footer",
-		"key": "footer.col_3_title",
-		"label": "Title of third column",
-		"type": "text",
-		"default": "Service"
-	},
-	{
-		"tab": "Footer",
-		"key": "footer.col_3_categories",
-		"label": "List of IDs of categories to display in third column",
-		"type": "text",
-		"default": ""
-	},
-	{
 		"tab": "Header",
 		"key": "header.company_logo",
 		"label": "URL to your company logo",

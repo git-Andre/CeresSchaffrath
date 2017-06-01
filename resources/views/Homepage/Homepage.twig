@@ -27,8 +27,6 @@
 {% block ThemeHomepage %}
     <div style="display: none" id="currentLang">{{ currentLang }}</div> {# nur noch für die js Abfragr unten #}
 
-    <h2>{{ DOMAIN_PATH }}</h2>
-
     {% set lang = services.sessionStorage.getLang() %}
     {% set configItemName = config("Ceres.item.name") %}
 
