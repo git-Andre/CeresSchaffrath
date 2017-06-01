@@ -9,16 +9,16 @@
 {% block PartialHead %}
     <meta property="og:title" content="{{ companyName }}"/>
     <meta property="og:type" content="article"/>
-    <meta property="og:url" content="DOMAIN_PATH"/>
+    <meta property="og:url" content="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}"/>
     <meta property="og:image"
           content="{% if ('http' in companyLogo) or ('layout/' in companyLogo) %}{{ companyLogo }}{% else %}{{ plugin_path('Ceres') }}/{{ companyLogo }}{% endif %}"/>
 
     <link rel="canonical"
-          href="DOMAIN_PATH{{ item.documents[0].data | itemURL }}">
+          href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
 
     <script type="application/ld+json">
-        {"@context": "http://schema.org","@type": "WebSite","url": "DOMAIN_PATH
-        ","potentialAction":{"@type": "SearchAction","target": "DOMAIN_PATH
+        {"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
+        ","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         /search?query={search_term}","query-input": "required name=search_term"}}
     </script>
 {% endblock %}
@@ -26,6 +26,8 @@
 
 {% block ThemeHomepage %}
     <div style="display: none" id="currentLang">{{ currentLang }}</div> {# nur noch für die js Abfragr unten #}
+
+    <h2>{{ DOMAIN_PATH }}</h2>
 
     {% set lang = services.sessionStorage.getLang() %}
     {% set configItemName = config("Ceres.item.name") %}
