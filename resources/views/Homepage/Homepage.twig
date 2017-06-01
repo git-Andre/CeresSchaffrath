@@ -3,7 +3,6 @@
 
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
-{% set LAYOUT_PATH = "https://www.schaffrathnumis.de/layout" %}
 {% set DOMAIN_PATH = "https://www.schaffrathnumis.de" %}
 
 {#von CERES#}
@@ -26,7 +25,12 @@
 
 
 {% block ThemeHomepage %}
-    <div style="display: none" id="currentLang">{{ currentLang }}</div>
+    <div style="display: none" id="currentLang">{{ currentLang }}</div> {# nur noch für die js Abfragr unten #}
+
+    <h2>{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}</h2>
+
+    {% set lang = services.sessionStorage.getLang() %}
+    {% set configItemName = config("Ceres.item.name") %}
 
     {% set category3 = services.category.get(config("Ceres.homepage.homepageCategory3"), lang) %}
     {% set category6 = services.category.get(config("Ceres.homepage.homepageCategory6"), lang) %}
@@ -70,7 +74,7 @@
 
             <div class="hero-xtras">
                 <a class="hero-category" href="{{ DOMAIN_PATH }}/medaillen/">
-                    <img src="{{ LAYOUT_PATH }}/theme/images/homepage/categorie2.jpg" alt="Medaillen">
+                    <img src="{{ DOMAIN_PATHDOMAIN_PATH }}/layout/theme/images/homepage/categorie2.jpg" alt="Medaillen">
                     <div class="hero-category-inner">
                         <h4 class="hero-category-headline">
                             {{ trans("CeresElectronic::Template.homepageKategorieMedaillen") }}
@@ -78,7 +82,7 @@
                     </div>
                 </a>
                 <a class="hero-category" href="{{ DOMAIN_PATH }}/muenzen/">
-                    <img src="{{ LAYOUT_PATH }}/theme/images/homepage/categorie1.jpg" alt="Münzen">
+                    <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/categorie1.jpg" alt="Münzen">
 
                     <div class="hero-category-inner">
                         <h4 class="hero-category-headline">
@@ -133,7 +137,7 @@
                 <div class="prop-xs-2-1 prop-sm-4-1 prop-md-6-1">
                     <div class="prop-inner">
                         <a class="featured-sale" href="{{ DOMAIN_PATH }}/geldscheine/">
-                            <img src="{{ LAYOUT_PATH }}/theme/images/homepage/categorie3.jpg" alt="First slide">
+                            <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/categorie3.jpg" alt="First slide">
                             <div class="featured-category-inner">
                                 <h4 class="featured-category-headline">
                                     {{ trans("CeresElectronic::Template.homepageKategorieGeld") }}

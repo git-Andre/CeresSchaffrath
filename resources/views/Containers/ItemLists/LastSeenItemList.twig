@@ -1,7 +1,8 @@
 {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
 {{ component( "Ceres::ItemList.Components.ItemLazyImg" ) }}
 
-{% set itemList = services.itemLoader.loadForTemplate('CeresElectronic::Containers.ItemLists.LastSeenItemList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
+{% set itemList = services.itemLoader.loadForTemplate('CeresElectronic::Containers.ItemLists.LastSeenItemList',
+, {'items':itemsPerPage}).documents %}
 {% if itemList %}
     <div class="m-b-1 clearfix">
 
@@ -11,17 +12,12 @@
 
         <div class="m-b-1 clearfix">
 
-                <h2>{{ itemlist.count }}</h2>
-
             <ul id="twig-rendered-item-list" class="product-list row grid">
-                {% set i = 1 %}
-                {% for key, item in itemList %}
+                {% for key, item in itemList if (key < 4) %}
                     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
-                        {{ i = i + 1 }} {{ key }}
                         {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
                     </li>
                 {% endfor %}
-                <h1>{{ i }}</h1>
             </ul>
 
         </div>
