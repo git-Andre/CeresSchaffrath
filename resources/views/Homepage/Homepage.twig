@@ -29,7 +29,7 @@
 {% block ThemeHomepage %}
     <div style="display: none" id="currentLang">{{ currentLang }}</div> {# nur noch für die js Abfragr unten #}
 
-    {% set randomCategory = ([ 370, 383, 369, 381 ]) %}
+    {% set randomCategory = random([ 370, 383, 369, 381 ]) %}
 
     {% set lang = services.sessionStorage.getLang() %}
 
