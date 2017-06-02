@@ -1,10 +1,10 @@
-# Ceres Electronic – Ceres Plugin in Electronic-Style
+# Ceres Schaffrath – Ceres Plugin in Schaffrath-Style
 
 <div class="container-toc"></div>
 
-## Activate Electronic Theme
+## Activate Schaffrath Theme
 
-Go to plentymarkets Backend Plugin Area. You have to provide the Electronic theme in productive and assign the client (store). Switch to "Content" tab and check the "Template: Style" entry in "CeresElectronic" section. Save, finished!
+Go to plentymarkets Backend Plugin Area. You have to provide the Schaffrath theme in productive and assign the client (store). Switch to "Content" tab and check the "Template: Style" entry in "CeresSchaffrath" section. Save, finished!
 
 <div class="alert alert-info" role="alert">
     Ceres and IO Plugin are required.

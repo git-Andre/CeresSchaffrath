@@ -1,6 +1,6 @@
 <?php
 
-    namespace CeresElectronic\Containers;
+    namespace CeresSchaffrath\Containers;
 
     use Plenty\Plugin\Templates\Twig;
 
@@ -8,6 +8,6 @@
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresElectronic::Containers.DiffSteuer');
+            return $twig -> render('CeresSchaffrath::Containers.DiffSteuer');
         }
     }

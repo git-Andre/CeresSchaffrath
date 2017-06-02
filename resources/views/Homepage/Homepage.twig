@@ -1,6 +1,4 @@
 {% extends 'Ceres::Homepage.Homepage' %}
-{#{% set currentLang = services.sessionStorage.getLang() %}#}
-{{ lang }}
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set DOMAIN_PATH = services.webstoreConfig.getWebstoreConfig().domainSsl %}
@@ -75,7 +73,7 @@
                     <img src="{{ DOMAIN_PATHDOMAIN_PATH }}/layout/theme/images/homepage/categorie2.jpg" alt="Medaillen">
                     <div class="hero-category-inner">
                         <h4 class="hero-category-headline">
-                            {{ trans("CeresElectronic::Template.homepageKategorieMedaillen") }}
+                            {{ trans("CeresSchaffrath::Template.homepageKategorieMedaillen") }}
                         </h4>
                     </div>
                 </a>
@@ -84,7 +82,7 @@
 
                     <div class="hero-category-inner">
                         <h4 class="hero-category-headline">
-                            {{ trans("CeresElectronic::Template.homepageKategorieMuenzen") }}
+                            {{ trans("CeresSchaffrath::Template.homepageKategorieMuenzen") }}
                         </h4>
 
                     </div>
@@ -109,7 +107,7 @@
             <div class="col-lg-1">
                 <a class="btn btn-secondary" data-toggle="collapse" href="#collapseMore" aria-expanded="false"
                    aria-controls="collapseMore">
-                    {{ trans("CeresElectronic::Template.homepageMoreButton") }}
+                    {{ trans("CeresSchaffrath::Template.homepageMoreButton") }}
                 </a>
             </div>
             <div class="col-lg-11 ">
@@ -121,9 +119,9 @@
 
         <div class="collapse" id="collapseMore">
             <div class="card card-block">
-                <h4>{{ trans("CeresElectronic::Template.homepageLongTextTitle") }}</h4>
-                <p class="text-abel">{{ trans("CeresElectronic::Template.homepageLongText") | raw }}</p>
-                <p class="small text-muted text-right">{{ trans("CeresElectronic::Template.homepageLongTextQuelle") }}:
+                <h4>{{ trans("CeresSchaffrath::Template.homepageLongTextTitle") }}</h4>
+                <p class="text-abel">{{ trans("CeresSchaffrath::Template.homepageLongText") | raw }}</p>
+                <p class="small text-muted text-right">{{ trans("CeresSchaffrath::Template.homepageLongTextQuelle") }}:
                     wikipedia.org/wiki/Numismatik</p>
             </div>
         </div>
@@ -138,7 +136,7 @@
                             <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/categorie3.jpg" alt="First slide">
                             <div class="featured-category-inner">
                                 <h4 class="featured-category-headline">
-                                    {{ trans("CeresElectronic::Template.homepageKategorieGeld") }}
+                                    {{ trans("CeresSchaffrath::Template.homepageKategorieGeld") }}
                                 </h4>
 
                             </div>

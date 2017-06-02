@@ -1,6 +1,6 @@
 <?php
 
-namespace CeresElectronic\Providers;
+    namespace CeresSchaffrath\Providers;
 
 use IO\Extensions\Functions\Partial;
 use IO\Helper\TemplateContainer;
@@ -8,7 +8,7 @@ use Plenty\Plugin\Events\Dispatcher;
 use Plenty\Plugin\ServiceProvider;
 use Plenty\Plugin\Templates\Twig;
 
-class CeresElectronicServiceProvider extends ServiceProvider
+class CeresSchaffrathServiceProvider extends ServiceProvider
 {
     const EVENT_LISTENER_PRIORITY = 90;
 
@@ -18,7 +18,7 @@ class CeresElectronicServiceProvider extends ServiceProvider
 
     public function register()
     {
-        $this -> getApplication() -> register(CeresElectronicRouteServiceProvider::class);
+        $this -> getApplication() -> register(CeresSchaffrathRouteServiceProvider::class);
     }
 
     public function boot(Twig $twig, Dispatcher $eventDispatcher)
@@ -26,18 +26,18 @@ class CeresElectronicServiceProvider extends ServiceProvider
 
         // provide template to use for homepage
         $eventDispatcher->listen('IO.tpl.home', function (TemplateContainer $container, $templateData) {
-            $container->setTemplate("CeresElectronic::Homepage.Homepage");
+            $container -> setTemplate("CeresSchaffrath::Homepage.Homepage");
             return false;
         }, self::EVENT_LISTENER_PRIORITY);
 
 
         $eventDispatcher->listen('IO.init.templates', function (Partial $partial) {
-            $partial->set('footer', 'CeresElectronic::Footer.ThemeFooter');
+            $partial -> set('footer', 'CeresSchaffrath::Footer.ThemeFooter');
         }, self::EVENT_LISTENER_PRIORITY);
 
         // provide template to use for single items
         $eventDispatcher -> listen('IO.tpl.item', function (TemplateContainer $container, $templateData) {
-            $container -> setTemplate("CeresElectronic::Item.SingleItem");
+            $container -> setTemplate("CeresSchaffrath::Item.SingleItem");
             return false;
         }, self::EVENT_LISTENER_PRIORITY);
     }

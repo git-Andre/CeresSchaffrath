@@ -1,4 +1,4 @@
-# Release Notes für Electronic Theme
+# Release Notes für schaffrath Theme
 
 ## v1.0.1 Beta-Status (2017-02-27)
 
@@ -12,4 +12,4 @@
 
 - basiert auf dem Standard-Ceres
 - Komplett Update-fähig
-- Redesign des Ceres in Electronic-Style
+- Redesign des Ceres in schaffrath-Style

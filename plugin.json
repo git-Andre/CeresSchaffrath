@@ -1,50 +1,49 @@
 {
-  "version": "1.0.1",
-  "name": "CeresElectronic",
-  "description": "Das ist ein Electronic Theme (beta) für Ceres",
-  "author": "Frontend Studios GmbH",
+  "version": "1.0.0",
+  "name": "CeresSchaffrath",
+  "description": "Das ist das SchaffrathNumis Theme für Ceres",
+  "author": "ao based on Frontend Studios GmbH",
   "license": "AGPL-3.0",
   "pluginIcon": "icon_plugin_xs.png",
   "price": 0.00,
   "shortDescription": {
-    "de": "Das ist ein Electronic Theme (beta) für Ceres",
-    "en": "This is a Electronic Theme (beta) for Ceres"
+    "de": "Das ist das SchaffrathNumis Theme für Ceres",
+    "en": "This is a SchaffrathNumis Theme for Ceres"
   },
   "authorIcon": "icon_author_xs.png",
   "categories": [
     "3518"
   ],
   "email": "",
-  "phone": "+49 561 9885097-0",
+  "phone": "",
   "keywords": [
     "plentymarkets",
     "plugins",
     "layout",
     "theme",
     "ceres",
-    "electronic",
-    "frontend studios"
+    "schaffrath"
   ],
   "type": "theme",
   "require": [
     "Ceres",
     "IO"
   ],
-  "namespace": "CeresElectronic",
-  "serviceProvider": "CeresElectronic\\Providers\\CeresElectronicServiceProvider",
+  "namespace": "CeresSchaffrath",
+  "serviceProvider": "CeresSchaffrath\\Providers\\CeresSchaffrathServiceProvider",
   "dataProviders": [
     {
-      "key": "CeresElectronic\\Containers\\CeresElectronicLastSeenContainer",
+      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathLastSeenContainer",
       "name": "Last seen items",
       "description": "Display a list of last seen items in your online store"
     },
     {
-      "key": "CeresElectronic\\Containers\\CeresElectronicCss",
-      "name": "CeresElectronicCss",
-      "description": "Electronic Theme for Ceres"
+      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathCss",
+      "name": "CeresSchaffrathCss",
+      "description": "Schaffrath Theme for Ceres"
     },
     {
-      "key": "CeresElectronic\\Containers\\DiffSteuerContainer",
+      "key": "CeresSchaffrath\\Containers\\DiffSteuerContainer",
       "name": "DiffSteuer",
       "description": "Hinweis für die Differenzbesteuereung"
     }

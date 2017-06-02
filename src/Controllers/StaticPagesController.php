@@ -6,7 +6,7 @@
      * Time: 23:17
      */
 
-    namespace CeresElectronic\Controllers;
+    namespace CeresSchaffrath\Controllers;
 
     use Plenty\Plugin\Controller;
     use Plenty\Plugin\Templates\Twig;
@@ -15,6 +15,6 @@
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresElectronic::Content.Test');
+            return $twig -> render('CeresSchaffrath::Content.Test');
         }
     }

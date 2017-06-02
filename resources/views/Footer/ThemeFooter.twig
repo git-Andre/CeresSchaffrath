@@ -45,7 +45,7 @@ col_3_url_4: "/gtc"
                     {% for i in 1..numberOfFeatures %}
                         <div class="col-xs-12 col-sm-4 text-xs-center">
                             <i class="fa fa-check text-success" aria-hidden="true"></i>
-                            {{ trans('CeresElectronic::Template.footerFeature' ~ i) }}
+                            {{ trans('CeresSchaffrath::Template.footerFeature' ~ i) }}
                             <div>
                                 <a href="{{ iconurl[i] }}">
                                     <i class="fa {{ icons[i] }} fa-3x ao-features" aria-hidden="true"></i>
@@ -95,7 +95,7 @@ col_3_url_4: "/gtc"
 
                 <div class="col-xs-6 col-sm-3 col-lg-2">
                     <nav class="footer-column m-b-2 text-abel">
-                        <h5>{{ trans('CeresElectronic::Template.footerColTitle' ~ col) }}</h5>
+                        <h5>{{ trans('CeresSchaffrath::Template.footerColTitle' ~ col) }}</h5>
                         <ul class="list-unstyled">
 
                             {% for row in 1..numberOfRows %}
@@ -105,7 +105,7 @@ col_3_url_4: "/gtc"
 
                                 {% if url is not null %}
                                     <li>
-                                        <a href="{{ url }}">{{ trans('CeresElectronic::Template.footerCol' ~ col ~ 'LinkTitle' ~ row) }}</a>
+                                        <a href="{{ url }}">{{ trans('CeresSchaffrath::Template.footerCol' ~ col ~ 'LinkTitle' ~ row) }}</a>
                                     </li>
                                 {% endif %}
 
@@ -117,7 +117,7 @@ col_3_url_4: "/gtc"
             {% endfor %}
             <div class="col-lg-6 col-md-8 col-md-offset-2 col-sm-12 col-xs-12">
                 <p class="h4 center"
-                   style="color: white; text-align: center;">{{ trans('CeresElectronic::Template.homepageEbay') }}</p>
+                   style="color: white; text-align: center;">{{ trans('CeresSchaffrath::Template.homepageEbay') }}</p>
                 <a href="http://www.salessurvey.de/Name/schaffrathnumis/"
                    title="Auktionen und Bewertungen von schaffrathnumis" target="_blank">
                     <img src="//www.salessurvey.de/Image/3/schaffrathnumis"
@@ -165,7 +165,7 @@ col_3_url_4: "/gtc"
                         {% set url = footerLinks[cell] %}
 
                         {% if url is not null %}
-                            <a href="{{ url }}">{{ trans('CeresElectronic::Template.footerCol3LinkTitle' ~ row) }}</a>
+                            <a href="{{ url }}">{{ trans('CeresSchaffrath::Template.footerCol3LinkTitle' ~ row) }}</a>
                         {% endif %}
 
                     {% endfor %}

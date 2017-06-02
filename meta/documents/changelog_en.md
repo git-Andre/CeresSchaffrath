@@ -1,4 +1,4 @@
-# Release Notes for Electronic Ceres
+# Release Notes for schaffrath Ceres
 
 ## v1.0.1 Beta-Status (2017-02-27)
 
@@ -12,4 +12,4 @@
 
 - based on basic Ceres Plugin
 - Completley Updatable
-- Redesigned Ceres in Electronic-Style
+- Redesigned Ceres in schaffrath-Style

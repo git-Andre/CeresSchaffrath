@@ -1,13 +1,13 @@
 <?php
 
-    namespace CeresElectronic\Containers;
+    namespace CeresSchaffrath\Containers;
 
     use Plenty\Plugin\Templates\Twig;
 
-    class CeresElectronicLastSeenContainer {
+    class CeresSchaffrathLastSeenContainer {
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresElectronic::Containers.ItemLists.LastSeenItemList');
+            return $twig -> render('CeresSchaffrath::Containers.ItemLists.LastSeenItemList');
         }
     }

@@ -7,16 +7,16 @@
      */
 
 
-    namespace CeresElectronic\Providers;
+    namespace CeresSchaffrath\Providers;
 
 
     use Plenty\Plugin\RouteServiceProvider;
     use Plenty\Plugin\Routing\Router;
 
-    class CeresElectronicRouteServiceProvider extends RouteServiceProvider {
+    class CeresSchaffrathRouteServiceProvider extends RouteServiceProvider {
 
         public function map(Router $router)
         {
-            $router -> get('/agb', 'CeresElectronic\Controllers\StaticPagesController@call');
+            $router -> get('/agb', 'CeresSchaffrath\Controllers\StaticPagesController@call');
         }
     }
