@@ -26,13 +26,19 @@
 
 {% block ThemeHomepage %}
     <div style="display: none" id="currentLang">{{ currentLang }}</div> {# nur noch für die js Abfragr unten #}
-    <h1>{{ lang }}</h1>
-    <h2>{{ currentLang }}</h2>
+
+
     {% set lang = services.sessionStorage.getLang() %}
     {% set configItemName = config("Ceres.item.name") %}
 
     {% set category3 = services.category.get(config("Ceres.homepage.homepageCategory3"), lang) %}
     {% set category6 = services.category.get(config("Ceres.homepage.homepageCategory6"), lang) %}
+
+    <h1>{{ lang }}</h1>
+    <h2>{{ currentLang }}</h2>
+    <h2>{{ category6 }}</h2>
+
+
 
     {% set paginatedCategoryList1 =
     services.itemLoader.loadForTemplate(
