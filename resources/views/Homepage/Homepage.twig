@@ -21,6 +21,7 @@
         /search?query={search_term}","query-input": "required name=search_term"}}
 
 
+
     </script>
 {% endblock %}
 
@@ -28,30 +29,25 @@
 {% block ThemeHomepage %}
     <div style="display: none" id="currentLang">{{ currentLang }}</div> {# nur noch für die js Abfragr unten #}
 
+    {% set randomCategory = ([ 370, 383, 369, 381 ]) %}
 
     {% set lang = services.sessionStorage.getLang() %}
 
-    {% set category3 = services.category.get(370) %}
-    {% set category6 = services.category.get(config("Ceres.homepage.homepageCategory6"), lang) %}
+    {% set category6 = services.category.get(randomCategory) %}
+    {#{% set category3 = services.category.get(config("Ceres.homepage.homepageCategory6"), lang) %}#}
 
-    <h3>{{ category6.details.name }}</h3>
-    <h1>test2</h1>
-    <h2>{{ category3 }}</h2>
-
-
-
-    {% set paginatedCategoryList1 =
-    services.itemLoader.loadForTemplate(
-    'Ceres::ItemList.ItemListView',
-    itemLoaderPresets.categoryList,
-    {'categoryId': category3.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
+    {#{% set paginatedCategoryList1 =#}
+    {#services.itemLoader.loadForTemplate(#}
+    {#'Ceres::ItemList.ItemListView',#}
+    {#itemLoaderPresets.categoryList,#}
+    {#{'categoryId': category3.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}#}
 
     {% set paginatedCategoryList2 = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView',
     itemLoaderPresets.categoryList,
     {'categoryId': category6.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}
     ) %}
 
-    {% set categoryList1 = paginatedCategoryList1.documents %}
+    {#{% set categoryList1 = paginatedCategoryList1.documents %}#}
     {% set categoryList2 = paginatedCategoryList2.documents %}
 
     {{ component( "Ceres::ItemList.Components.ItemList") }}
@@ -62,12 +58,7 @@
     <div class="home page-content container-max">
 
         <div class="cmp cmp-hero">
-
-            {% for key, category in categoryList1 %}
-                <h1>{{ key }}</h1>
-            {% endfor %}
-
-
+            <h1>{{ randomCategory }}</h1>
             <div class="hero-main">
                 <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-slider">
                     <div class="carousel-inner" id="carousel-content">
@@ -163,29 +154,30 @@
         {#von CERES #}
 
         {# 4 Artikel aus beliebiger Kategorie... siehe CERES Konfiguration 'Homepage' categorie3 #}
-        {% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}
-        {% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}
-            <div class="m-b-2 clearfix">
-                {% if homepageContainer6 | trim is empty %}
-                    <div class="section-header m-b-1">
-                        <h4>{{ category3.details[0].name }}</h4>
-                        <a href="documents/{{ services.category.getURL(category3.id, lang) }}"
-                           class="section-link-all"><i
-                                    class="fa fa-angle-double-right"
-                                    aria-hidden="true"></i> {{ trans("Ceres::Template.homepageShowAll") }}</a>
-                    </div>
-                    <ul class="product-list row grid">
-                        {% for item in categoryList1 %}
-                            <li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
-                                {% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}
-                            </li>
-                        {% endfor %}
-                    </ul>
-                {% else %}
-                    {{ homepageContainer6 }}
-                {% endif %}
-            </div>
-        {% endif %}
+
+        {#{% set homepageContainer6 = LayoutContainer.show("Ceres::Homepage.Container6") %}#}
+        {#{% if categoryList1 is not empty or homepageContainer6 | trim is not empty %}#}
+        {#<div class="m-b-2 clearfix">#}
+        {#{% if homepageContainer6 | trim is empty %}#}
+        {#<div class="section-header m-b-1">#}
+        {#<h4>{{ category3.details[0].name }}</h4>#}
+        {#<a href="documents/{{ services.category.getURL(category3.id, lang) }}"#}
+        {#class="section-link-all"><i#}
+        {#class="fa fa-angle-double-right"#}
+        {#aria-hidden="true"></i> {{ trans("Ceres::Template.homepageShowAll") }}</a>#}
+        {#</div>#}
+        {#<ul class="product-list row grid">#}
+        {#{% for item in categoryList1 %}#}
+        {#<li class="col-xs-12 col-sm-6 col-md-6 col-lg-3">#}
+        {#{% include "Ceres::Category.Item.Partials.CategoryListItem" with { 'item': item } %}#}
+        {#</li>#}
+        {#{% endfor %}#}
+        {#</ul>#}
+        {#{% else %}#}
+        {#{{ homepageContainer6 }}#}
+        {#{% endif %}#}
+        {#</div>#}
+        {#{% endif %}#}
 
 
         {# 4 Artikel aus beliebiger Kategorie... siehe CERES Konfiguration 'Homepage' letzte Zeile (categorie6) #}
