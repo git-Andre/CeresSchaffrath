@@ -1,4 +1,4 @@
-# Ceres Schaffrath – Das Ceres Plugin in Schaffrath-Style
+# Ceres Schaffrath – Das Ceres Plugin im Schaffrath-Style
 
 <div class="container-toc"></div>
 

@@ -2,6 +2,7 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set DOMAIN_PATH = services.webstoreConfig.getWebstoreConfig().domainSsl %}
+{% set currentLang = services.sessionStorage.getLang() %}
 
 {#von CERES#}
 {% block PartialHead %}
@@ -70,7 +71,7 @@
 
             <div class="hero-xtras">
                 <a class="hero-category" href="{{ DOMAIN_PATH }}/medaillen/">
-                    <img src="{{ DOMAIN_PATHDOMAIN_PATH }}/layout/theme/images/homepage/categorie2.jpg" alt="Medaillen">
+                    <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/categorie2.jpg" alt="Medaillen">
                     <div class="hero-category-inner">
                         <h4 class="hero-category-headline">
                             {{ trans("CeresSchaffrath::Template.homepageKategorieMedaillen") }}

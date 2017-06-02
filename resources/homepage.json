@@ -1,8 +1,7 @@
 {
   "de":
   {
-    "pictures":
-    [
+    "pictures": [
       {
         "pictureUrl": "https://www.schaffrathnumis.de/layout/theme/images/homepage/slider1.jpg?raw=true",
         "text": "Sammeln ist Leidenschaft...",
@@ -126,7 +125,6 @@
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "PayPal"
       }
-
     ]
   }
 }
