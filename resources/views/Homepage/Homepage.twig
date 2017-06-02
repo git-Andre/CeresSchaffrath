@@ -35,9 +35,8 @@
     {% set category3 = services.category.get(config("Ceres.homepage.homepageCategory3"), lang) %}
     {% set category6 = services.category.get(config("Ceres.homepage.homepageCategory6"), lang) %}
 
-    <h2>{{ category6.details }}</h2>
-    <h3>{{ category6.name }}</h3>
-    <h3>{{ category6.updatedAt }}</h3>
+    <h3>{{ configItemName }}</h3>
+    <h3>{{ category6.details.updatedAt }}</h3>
 
 
 
@@ -64,8 +63,8 @@
 
         <div class="cmp cmp-hero">
 
-            {% for category in categoryList1 %}
-                <h1>{{ category }}</h1>
+            {% for key, category in categoryList1 %}
+                <h1>{{ key }}</h1>
             {% endfor %}
 
 
