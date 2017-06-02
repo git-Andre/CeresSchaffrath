@@ -1,6 +1,6 @@
 {% extends 'Ceres::Homepage.Homepage' %}
-{% set currentLang = services.sessionStorage.getLang() %}
-
+{#{% set currentLang = services.sessionStorage.getLang() %}#}
+{{ lang }}
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set DOMAIN_PATH = services.webstoreConfig.getWebstoreConfig().domainSsl %}
