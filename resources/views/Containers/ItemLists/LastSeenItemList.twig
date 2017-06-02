@@ -3,9 +3,11 @@
 
 {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Containers.ItemLists.LastSeenItemList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
 {% if itemList %}
-    <div class="m-b-1 clearfix">
 
-        <h1>{{ itemList }}</h1>
+    {% if itemList.[2] %}
+        <h1>Aha</h1>
+    {% endif %}
+    <div class="m-b-1 clearfix">
 
         <div class="section-header m-b-1">
             <h4>{{ trans("Ceres::Template.itemListLastSeen") }}</h4>
