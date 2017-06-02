@@ -20,6 +20,7 @@
         ","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         /search?query={search_term}","query-input": "required name=search_term"}}
 
+
     </script>
 {% endblock %}
 
@@ -34,9 +35,9 @@
     {% set category3 = services.category.get(config("Ceres.homepage.homepageCategory3"), lang) %}
     {% set category6 = services.category.get(config("Ceres.homepage.homepageCategory6"), lang) %}
 
-    <h1>{{ lang }}</h1>
-    <h2>{{ currentLang }}</h2>
-    <h2>{{ category6 }}</h2>
+    <h2>{{ category6.details }}</h2>
+    <h3>{{ category6.name }}</h3>
+    <h3>{{ category6.updatedAt }}</h3>
 
 
 
@@ -63,7 +64,9 @@
 
         <div class="cmp cmp-hero">
 
-            <h1>{{ categoryList1 }}</h1>
+            {% for category in categoryList1 %}
+                <h1>{{ category }}</h1>
+            {% endfor %}
 
 
             <div class="hero-main">
