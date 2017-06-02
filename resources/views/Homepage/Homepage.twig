@@ -19,13 +19,15 @@
         {"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         ","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         /search?query={search_term}","query-input": "required name=search_term"}}
+
     </script>
 {% endblock %}
 
 
 {% block ThemeHomepage %}
     <div style="display: none" id="currentLang">{{ currentLang }}</div> {# nur noch für die js Abfragr unten #}
-
+    <h1>{{ lang }}</h1>
+    <h2>{{ currentLang }}</h2>
     {% set lang = services.sessionStorage.getLang() %}
     {% set configItemName = config("Ceres.item.name") %}
 
@@ -38,9 +40,7 @@
     itemLoaderPresets.categoryList,
     {'categoryId': category3.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}) %}
 
-    {% set paginatedCategoryList2 =
-    services.itemLoader.loadForTemplate(
-    'Ceres::ItemList.ItemListView',
+    {% set paginatedCategoryList2 = services.itemLoader.loadForTemplate('Ceres::ItemList.ItemListView',
     itemLoaderPresets.categoryList,
     {'categoryId': category6.id, 'page':1, 'items':4, 'sorting': itemSort, 'variationShowType': config("Ceres.item.variation_show_type")}
     ) %}
@@ -56,6 +56,9 @@
     <div class="home page-content container-max">
 
         <div class="cmp cmp-hero">
+
+            <h1>{{ }}</h1>
+
 
             <div class="hero-main">
                 <div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-slider">
