@@ -2,7 +2,7 @@
 {{ component( "Ceres::ItemList.Components.ItemLazyImg" ) }}
 
 {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Containers.ItemLists.LastSeenItemList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
-    {% if itemList.[2] %}
+    {% if itemList[2] %}
         <h1>Aha</h1>
     {% endif %}
 {% if itemList %}
