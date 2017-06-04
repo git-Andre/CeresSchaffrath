@@ -2,7 +2,6 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set DOMAIN_PATH = services.webstoreConfig.getWebstoreConfig().domainSsl %}
-{% set currentLang = services.sessionStorage.getLang() %}
 
 {#von CERES#}
 {% block PartialHead %}
@@ -26,7 +25,6 @@
 
 
 {% block ThemeHomepage %}
-    <div style="display: none" id="currentLang">{{ currentLang }}</div> {# nur noch für die js Abfragr unten #}
 
     {% set randomCategory = random([ 371, 383, 369, 381 ]) %}
 
