@@ -25,7 +25,7 @@ $menu-li-bg-hover: $brand-primary-dark; //$brand-primary;
 $menu-li-color-hover: $white;
 
 // bigmenu - aufgeklappt...
-$menu-big-menu-bg: $brand-primary;
+$menu-big-menu-bg: $white;
 $menu-big-menu-li-bg: $white; //transparent;
 $menu-big-menu-li-bg-hover: $brand-primary; // $brand-primary;
 $menu-big-menu-li-color: $text-color; //$white;
@@ -111,7 +111,7 @@ body.menu-is-visible {
       }
 
       ul {
-        background: $menu-bg-sm;
+        background: $white;
         display: none;
         left: 0;
         list-style: none;
@@ -121,6 +121,7 @@ body.menu-is-visible {
         position: absolute;
         top: 0;
         width: 100%;
+        transform: translateX(0%);
       }
       &.open > ul {
         display: block;
@@ -184,7 +185,7 @@ body.menu-is-visible {
             background: $menu-big-menu-li-bg;
             color: $menu-big-menu-li-color;
             transition: all .1s ease;
-            width: $menu-list-width;
+            width: 100%;
             //test  ao
             a:before {
               content: "\f0da";
@@ -195,8 +196,9 @@ body.menu-is-visible {
             }
             &:last-of-type:after {
               display: block;
-              border-bottom: 10px solid $brand-primary;
+              border-bottom: 8px solid $brand-primary;
               content: ' ';
+              width: auto;
             }
           ;
 
