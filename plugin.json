@@ -32,11 +32,11 @@
   "namespace": "CeresSchaffrath",
   "serviceProvider": "CeresSchaffrath\\Providers\\CeresSchaffrathServiceProvider",
   "dataProviders": [
-    {
-      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathLastSeenContainer",
-      "name": "Last seen items",
-      "description": "Display a list of last seen items in your online store"
-    },
+    //    {
+    //      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathLastSeenContainer",
+    //      "name": "Last seen items",
+    //      "description": "Display a list of last seen items in your online store"
+    //    },
     {
       "key": "CeresSchaffrath\\Containers\\CeresSchaffrathCss",
       "name": "CeresSchaffrathCss",
