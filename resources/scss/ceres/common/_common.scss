@@ -1,0 +1,83 @@
+body {
+  background-color: $body-bg !important;
+}
+
+.main {
+
+}
+
+.page-content {
+  @extend .p-t-1;
+  background-color: $white;
+  color: $gray-dark;
+}
+
+.container-max {
+  @extend .container-fluid;
+  max-width: 1200px;
+  z-index: auto;
+  &.login {
+    margin-top: 2rem;
+  }
+}
+
+.modal {
+  color: $gray-darker;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:focus,
+a:active {
+  text-decoration: none;
+}
+
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+  font-family: $font-family-heading;
+  text-transform: uppercase;
+}
+
+.rating {
+  line-height: 1;
+
+  .tag {
+    padding-right: 0;
+    overflow: hidden;
+    cursor: pointer;
+
+    .amount {
+      padding: 0.1rem .6rem 0.1rem .4rem;
+      margin-left: .2rem;
+      background-color: $gray;
+    }
+  }
+}
+
+dt {
+  font-weight: 400;
+}
+
+.border-left {
+  border-left: 1px solid $gray-dark;
+}
+
+@include media-breakpoint-up(md) {
+  .row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+  .row.is-flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .row.is-flex > [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+}
