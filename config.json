@@ -1,9 +1,0 @@
-[	
-	{
-		"tab": "Header",
-		"key": "header.company_logo",
-		"label": "URL to your company logo",
-		"type": "text",
-		"default": "/layout/images/ceres-logo.svg"
-	}
-]
