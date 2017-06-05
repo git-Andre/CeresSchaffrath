@@ -1,0 +1,51 @@
+{
+  "version": "1.1.0",
+  "name": "CeresSchaffrath",
+  "description": "Das ist das SchaffrathNumis Theme für Ceres",
+  "author": "ao (based on Frontend)",
+  "license": "AGPL-3.0",
+  "pluginIcon": "icon_plugin_xs.png",
+  "price": 0.00,
+  "shortDescription": {
+    "de": "Das ist das SchaffrathNumis Theme für Ceres",
+    "en": "This is a SchaffrathNumis Theme for Ceres"
+  },
+  "authorIcon": "icon_author_xs.png",
+  "categories": [
+    "3518"
+  ],
+  "email": "web@andre-oelschlaegel.de",
+  "phone": "",
+  "keywords": [
+    "plentymarkets",
+    "plugins",
+    "layout",
+    "theme",
+    "ceres",
+    "schaffrath"
+  ],
+  "type": "theme",
+  "require": [
+    "Ceres",
+    "IO"
+  ],
+  "namespace": "CeresSchaffrath",
+  "serviceProvider": "CeresSchaffrath\\Providers\\CeresSchaffrathServiceProvider",
+  "dataProviders": [
+    //    {
+    //      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathLastSeenContainer",
+    //      "name": "Last seen items",
+    //      "description": "Display a list of last seen items in your online store"
+    //    },
+    {
+      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathCss",
+      "name": "CeresSchaffrathCss",
+      "description": "Schaffrath Theme for Ceres"
+    },
+    {
+      "key": "CeresSchaffrath\\Containers\\DiffSteuerContainer",
+      "name": "DiffSteuer",
+      "description": "Hinweis für die Differenzbesteuereung"
+    }
+  ]
+}
