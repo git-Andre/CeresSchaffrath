@@ -17,6 +17,6 @@
 
         public function map(Router $router)
         {
-            $router -> get('/terms-condition', 'IO\Controllers\StaticPagesController@showTermsAndConditions');
+            $router -> get('/terms-condition', 'CeresSchaffrath::Controllers.StaticPagesController@showTermsAndConditions');
         }
     }

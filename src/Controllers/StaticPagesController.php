@@ -13,8 +13,8 @@
 
     class StaticPagesController extends Controller {
 
-        public function call(Twig $twig) : string
+        public function showTermsAndConditions(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::Content.Test');
+            return $twig -> render('Ceres::StaticPages.TermsAndConditions');
         }
     }
