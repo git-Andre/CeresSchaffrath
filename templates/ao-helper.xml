@@ -1,0 +1,5 @@
+<templateSet group="ao-helper">
+  <template name="++dd" value="dd($end$);" shortcut="ENTER" description="dd dump" toReformat="false" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+  </template>
+</templateSet>

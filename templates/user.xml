@@ -1,0 +1,17 @@
+<templateSet group="user">
+  <template name="+ext" value="{% extends &quot;page-design&quot; %}&#10;&#10;{% block content %}&#10;&#10;    $end$&#10;&#10;{% endblock %}&#10;" description="extends + block 'content'" toReformat="true" toShortenFQNames="true">
+    <variable name="end" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="Twig" value="true" />
+    </context>
+  </template>
+  <template name="+form-gr" value="        &lt;div class=&quot;form-group&quot;&gt;&#10;            &lt;label for=&quot;$Name2$&quot;&gt;$Name$&lt;/label&gt;&#10;            &lt;input type=&quot;text&quot; name=&quot;$Name2$&quot; id=&quot;$Name2$&quot; class=&quot;form-control&quot;&gt;&#10;        &lt;/div&gt;&#10;" description="div form-group text INPUT" toReformat="true" toShortenFQNames="true">
+    <variable name="Name2" expression="" defaultValue="name" alwaysStopAt="true" />
+    <variable name="Name" expression="" defaultValue="Name:" alwaysStopAt="true" />
+    <context>
+      <option name="HTML" value="true" />
+      <option name="Twig" value="true" />
+    </context>
+  </template>
+</templateSet>
