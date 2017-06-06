@@ -17,4 +17,10 @@
         {
             return $twig -> render('Ceres::StaticPages.TermsAndConditions');
         }
+
+        public function showVersandKosten(Twig $twig) : string
+        {
+            return $twig -> render('CeresSchaffrath::StaticPages.Versandkosten');
+        }
+
     }
