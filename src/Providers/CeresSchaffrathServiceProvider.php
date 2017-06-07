@@ -31,6 +31,14 @@
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
 
+            // provide template to use for homepage
+            $eventDispatcher -> listen('IO.tpl.terms-conditions', function (
+                TemplateContainer $container, $templateData) {
+                $container -> setTemplate("Ceres::StaticPages.TermsAndConditions");
+
+                return false;
+            }, self::EVENT_LISTENER_PRIORITY);
+
 
             $eventDispatcher -> listen('IO.init.templates', function (Partial $partial) {
                 $partial -> set('footer', 'CeresSchaffrath::Footer.ThemeFooter');

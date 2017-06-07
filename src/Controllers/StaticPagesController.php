@@ -13,11 +13,6 @@
 
     class StaticPagesController extends Controller {
 
-        public function showTermsAndConditions(Twig $twig) : string
-        {
-            return $twig -> render('Ceres::StaticPages.TermsAndConditions');
-
-        }
 
         public function showVersandkosten(Twig $twig) : string
         {
