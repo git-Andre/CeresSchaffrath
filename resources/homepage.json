@@ -53,7 +53,7 @@
       },
       {
         "pluginIcon": "https://www.schaffrathnumis.de/layout/theme/images/homepage/Zahlung_PayPal.png",
-        "pluginText": "incl. Lastschrift, Kreditkartenzahlung ohne PayPayl Anmeldung",
+        "pluginText": "incl. Lastschrift, Kreditkartenzahlung auch ohne PayPayl Anmeldung",
         "pluginLink": "/zahlungsarten",
         "pluginTitle": "PayPal"
       }
