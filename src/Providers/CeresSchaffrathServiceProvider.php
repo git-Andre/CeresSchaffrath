@@ -43,7 +43,7 @@
 
             // provide template to use for Ersatz für /gtc (IO Plugin)
             $eventDispatcher -> listen('IO.tpl.privacy-policy', function (TemplateContainer $container) {
-                $container -> setTemplate('CeresSchaffrath::StaticPages.Versandkosten');
+                $container -> setTemplate('Ceres::StaticPages.TermsAndConditions');
 
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
