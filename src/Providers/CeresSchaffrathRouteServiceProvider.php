@@ -1,10 +1,4 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: Andre Oelschlaegel
-     * Date: 17.05.2017
-     * Time: 19:21
-     */
 
 
     namespace CeresSchaffrath\Providers;
@@ -15,9 +9,15 @@
 
     class CeresSchaffrathRouteServiceProvider extends RouteServiceProvider {
 
+        public function register()
+        {
+        }
+
         public function map(Router $router)
         {
             $router -> get('versandkosten', 'CeresSchaffrath::Controllers.StaticPagesController@showVersandkosten');
+
+            // $router->get('gtc', 'IO\Controllers\StaticPagesController@showTermsAndConditions');
 
         }
     }

@@ -42,7 +42,7 @@
             }, self::EVENT_LISTENER_PRIORITY);
 
             // provide template to use for Ersatz für /gtc (IO Plugin)
-            $eventDispatcher -> listen('IO.tpl.privacy-policy', function (TemplateContainer $container) {
+            $eventDispatcher -> listen('IO.tpl.gtc', function (TemplateContainer $container) {
                 $container -> setTemplate('Ceres::StaticPages.TermsAndConditions');
 
                 return false;
