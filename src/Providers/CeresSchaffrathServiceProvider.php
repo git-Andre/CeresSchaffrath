@@ -8,9 +8,19 @@
     use Plenty\Plugin\ServiceProvider;
     use Plenty\Plugin\Templates\Twig;
 
+// CERES Original
+    // use IO\Extensions\Functions\Partial;
+    // use IO\Helper\CategoryKey;
+    // use IO\Helper\CategoryMap;
+    // use IO\Helper\TemplateContainer;
+    // use Plenty\Plugin\ServiceProvider;
+    // use Plenty\Plugin\Templates\Twig;
+    // use Plenty\Plugin\Events\Dispatcher;
+    // use Plenty\Plugin\ConfigRepository;
+
     class CeresSchaffrathServiceProvider extends ServiceProvider {
 
-        const EVENT_LISTENER_PRIORITY = 90;
+        const EVENT_LISTENER_PRIORITY = 40;
 
         /**
          * Register the service provider.
@@ -31,10 +41,9 @@
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
 
-            // provide template to use for homepage
-            $eventDispatcher -> listen('IO.tpl.terms-conditions', function (
-                TemplateContainer $container, $templateData) {
-                $container -> setTemplate("Ceres::StaticPages.TermsAndConditions");
+            // provide template to use for Ersatz für /gtc (IO Plugin)
+            $eventDispatcher -> listen('IO.tpl.terms-conditions', function (TemplateContainer $container) {
+                $container -> setTemplate('Ceres::StaticPages.TermsAndConditions');
 
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
