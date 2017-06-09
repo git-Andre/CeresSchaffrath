@@ -22,7 +22,9 @@
 
         public function showTest(Twig $twig) : string
         {
-            return $twig -> render("CeresSchaffrath::test");
+            $data = 'HAAAALOOO';
+
+            return $twig -> render("CeresSchaffrath::test", $data);
             // return $twig -> render('Ceres::Containers.ItemLists.LastSeenItemList');
 
         }
