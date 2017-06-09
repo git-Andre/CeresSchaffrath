@@ -41,7 +41,7 @@
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
 
-            // provide template to use for Ersatz für /gtc (IO Plugin)
+            // provide template to use for ...Ersatz für /gtc (CERES Plugin)
             $eventDispatcher -> listen('IO.tpl.gtc', function (TemplateContainer $container) {
                 $container -> setTemplate('Ceres::StaticPages.TermsAndConditions');
 

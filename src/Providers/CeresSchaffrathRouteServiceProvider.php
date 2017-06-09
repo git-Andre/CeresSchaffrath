@@ -16,8 +16,8 @@
         public function map(Router $router)
         {
             $router -> get('versandkosten', 'CeresSchaffrath::Controllers.StaticPagesController@showVersandkosten');
-
-            // $router->get('gtc', 'IO\Controllers\StaticPagesController@showTermsAndConditions');
+            $router -> get('test', 'IO\Controllers\StaticPagesController@showTermsAndConditions');
+            $router -> get('test2', 'CeresSchaffrath::Controllers.StaticPagesController@showTest');
 
         }
     }

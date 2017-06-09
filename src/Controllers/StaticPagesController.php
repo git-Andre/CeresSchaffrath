@@ -19,4 +19,10 @@
             return $twig -> render('CeresSchaffrath::StaticPages.Versandkosten');
         }
 
+        public function showTest(Twig $twig) : string
+        {
+            return $twig -> render('Ceres::StaticPages.PrivacyPolicy');
+        }
+
+
     }
