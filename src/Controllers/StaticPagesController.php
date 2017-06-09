@@ -17,14 +17,15 @@
 
         public function showVersandkosten(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::StaticPages.Versandkosten');
+            // return $twig -> render('CeresSchaffrath::StaticPages.Versandkosten');
+            return $twig -> render('Ceres::StaticPages.CancellationRights');
         }
 
         public function showTest(Twig $twig) : string
         {
             $data = ['test', 'HAAAALOOO'];
 
-            return $twig -> render("CeresSchaffrath::test", $data);
+            return $twig -> render('CeresSchaffrath::test', $data);
             // return $twig -> render('Ceres::Containers.ItemLists.LastSeenItemList');
 
         }
