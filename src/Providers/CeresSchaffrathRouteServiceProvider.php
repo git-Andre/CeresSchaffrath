@@ -12,7 +12,7 @@
         public function map(Router $router)
         {
             $router -> get('versandkosten', 'CeresSchaffrath\Controllers\StaticPagesController@showVersandkosten');
-            $router -> get('test', 'CeresSchaffrath\Controllers\StaticPagesController@showTest');
+            $router -> get('test', "CeresSchaffrath\Controllers\StaticPagesController@showTest");
 
         }
     }
