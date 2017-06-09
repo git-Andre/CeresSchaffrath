@@ -11,6 +11,7 @@
     use Plenty\Plugin\Controller;
     use Plenty\Plugin\Templates\Twig;
 
+
     class StaticPagesController extends Controller {
 
 
