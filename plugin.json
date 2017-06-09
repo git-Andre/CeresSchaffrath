@@ -24,7 +24,7 @@
     "ceres",
     "schaffrath"
   ],
-  "type": "theme",
+  "type": "template",
   "require": [
     "Ceres",
     "IO"
