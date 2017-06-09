@@ -22,7 +22,7 @@
 
         public function showTest(Twig $twig) : string
         {
-            return $twig -> render("Ceres::StaticPages.PrivacyPolicy");
+            return $twig -> render("CeresSchaffrath::test");
             // return $twig -> render('Ceres::Containers.ItemLists.LastSeenItemList');
 
         }
