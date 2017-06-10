@@ -4,7 +4,7 @@
 
 {% block PageBody %}
 
-    {% set categoryVersand = services.category.get(455) %}
+    {% set categoryVersand = services.category.get(168) %}
 
     {#{% set privacyPolicy = services.legalInformation.getPrivacyPolicy() %}#}
 
@@ -16,8 +16,7 @@
                 {% endautoescape %}
 
                 <hr class="m-y-3">
-                <div class="test1">{{ categoryVersand.details.first.description | raw }}</div>
-                <div class="test2">{{ categoryVersand.template }}</div>
+                <div class="test1">{{ categoryVersand.details.second.description | raw }}</div>
 
                 {#{% if privacyPolicy.htmlText %}#}
                 {#{{ privacyPolicy.htmlText | raw }}#}
@@ -25,7 +24,7 @@
                 {#<p class="static-page-plain-text">{{ privacyPolicy.plainText }}</p>#}
                 {#{% endif %}#}
 
-                {{ LayoutContainer.show("Ceres::StaticPages.PrivacyPolicy") }}
+                {#{{ LayoutContainer.show("Ceres::StaticPages.PrivacyPolicy") }}#}
             </div>
         </div>
     </div>
