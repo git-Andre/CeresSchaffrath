@@ -31,33 +31,33 @@
             $this -> getApplication() -> register(CeresSchaffrathRouteServiceProvider::class);
         }
 
-        public function boot(Twig $twig, Dispatcher $eventDispatcher)
-        {
-
-            // provide template to use for homepage
-            $eventDispatcher -> listen('IO.tpl.home', function (TemplateContainer $container, $templateData) {
-                $container -> setTemplate("CeresSchaffrath::Homepage.Homepage");
-
-                return false;
-            }, self::EVENT_LISTENER_PRIORITY);
-
-            // provide template to use for ...Ersatz für /gtc (CERES Plugin)
-            $eventDispatcher -> listen('IO.tpl.gtc', function (TemplateContainer $container) {
-                $container -> setTemplate('Ceres::StaticPages.TermsAndConditions');
-
-                return false;
-            }, self::EVENT_LISTENER_PRIORITY);
-
-
-            $eventDispatcher -> listen('IO.init.templates', function (Partial $partial) {
-                $partial -> set('footer', 'CeresSchaffrath::Footer.ThemeFooter');
-            }, self::EVENT_LISTENER_PRIORITY);
-
-            // provide template to use for single items
-            // $eventDispatcher -> listen('IO.tpl.item', function (TemplateContainer $container, $templateData) {
-            //     $container -> setTemplate("CeresSchaffrath::Item.SingleItem");
-            //
-            //     return false;
-            // }, self::EVENT_LISTENER_PRIORITY);
-        }
+        // public function boot(Twig $twig, Dispatcher $eventDispatcher)
+        // {
+        //
+        //     // provide template to use for homepage
+        //     $eventDispatcher -> listen('IO.tpl.home', function (TemplateContainer $container, $templateData) {
+        //         $container -> setTemplate("CeresSchaffrath::Homepage.Homepage");
+        //
+        //         return false;
+        //     }, self::EVENT_LISTENER_PRIORITY);
+        //
+        //     // provide template to use for ...Ersatz für /gtc (CERES Plugin)
+        //     $eventDispatcher -> listen('IO.tpl.gtc', function (TemplateContainer $container) {
+        //         $container -> setTemplate('Ceres::StaticPages.TermsAndConditions');
+        //
+        //         return false;
+        //     }, self::EVENT_LISTENER_PRIORITY);
+        //
+        //
+        //     $eventDispatcher -> listen('IO.init.templates', function (Partial $partial) {
+        //         $partial -> set('footer', 'CeresSchaffrath::Footer.ThemeFooter');
+        //     }, self::EVENT_LISTENER_PRIORITY);
+        //
+        //     // provide template to use for single items
+        //     // $eventDispatcher -> listen('IO.tpl.item', function (TemplateContainer $container, $templateData) {
+        //     //     $container -> setTemplate("CeresSchaffrath::Item.SingleItem");
+        //     //
+        //     //     return false;
+        //     // }, self::EVENT_LISTENER_PRIORITY);
+        // }
     }
