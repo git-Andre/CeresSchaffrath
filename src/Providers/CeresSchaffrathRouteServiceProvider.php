@@ -13,7 +13,7 @@
         {
             $router -> get('versandkosten', 'CeresSchaffrath\Controllers\StaticPagesController@showVersandkosten');
 
-            $router -> get('/hilfe', "CeresSchaffrath\Controllers\StaticPagesController@showTest");
+            $router -> get('hilfe', "CeresSchaffrath\Controllers\StaticPagesController@getTest");
 
         }
     }

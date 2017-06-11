@@ -21,11 +21,11 @@
             return $twig -> render('Ceres::StaticPages.CancellationRights');
         }
 
-        public function showTest(Twig $twig) : string
+        public function getTest(Twig $twig) : string
         {
-            $data = ['test', 'HAAAALOOO'];
+            // $data = ['test', 'HAAAALOOO'];
 
-            return $twig -> render('CeresSchaffrath::test', $data);
+            return $twig -> render('CeresSchaffrath::Test');
             // return $twig -> render('Ceres::Containers.ItemLists.LastSeenItemList');
 
         }
