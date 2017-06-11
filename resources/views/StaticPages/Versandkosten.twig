@@ -1,1 +1,32 @@
-<h1>Versandkosten</h1>
+{% extends 'Ceres::PageDesign.PageDesign' %}
+
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
+{% block PageBody %}
+
+    {% set categoryVersand = services.category.get(168) %}
+
+    {#{% set privacyPolicy = services.legalInformation.getPrivacyPolicy() %}#}
+
+    <div class="container-max page-content">
+        <div class="row">
+            <div class="col-xs-12">
+                {% autoescape false %}
+                    <h1>{{ trans("CeresSchaffrath::Template.versandkostenTitle") }}</h1>
+                {% endautoescape %}
+
+                <hr class="m-y-3">
+                <div class="test1">{{ categoryVersand.details.first.description | raw }}</div>
+
+                {#{% if privacyPolicy.htmlText %}#}
+                {#{{ privacyPolicy.htmlText | raw }}#}
+                {#{% else %}#}
+                {#<p class="static-page-plain-text">{{ privacyPolicy.plainText }}</p>#}
+                {#{% endif %}#}
+
+                {#{{ LayoutContainer.show("Ceres::StaticPages.PrivacyPolicy") }}#}
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,10 +1,4 @@
 <?php
-    /**
-     * Created by PhpStorm.
-     * User: Andre Oelschlaegel
-     * Date: 17.05.2017
-     * Time: 19:21
-     */
 
 
     namespace CeresSchaffrath\Providers;
@@ -17,6 +11,9 @@
 
         public function map(Router $router)
         {
-            $router -> get('/terms-condition', 'CeresSchaffrath::Controllers.StaticPagesController@showTermsAndConditions');
+            $router -> get('versandkosten', 'CeresSchaffrath\Controllers\StaticPagesController@showVersandkosten');
+
+            $router -> get('hilfe', "CeresSchaffrath\Controllers\StaticPagesController@getTest");
+
         }
     }

@@ -1,0 +1,676 @@
+
+.headerBox {
+  background-Color: #c9890f;
+}
+
+h1 {
+  Color: #c9890f;
+  font-size: 2.35em;
+  line-height: 120%;
+}
+
+#description h1 {
+  font-size: 2em;
+  color: gray;
+}
+
+#description h2 {
+  font-size: 2.3em;
+  color: #c9890f;
+}
+
+#description h3 {
+  font-size: 2em;
+  color: gray;
+  line-height: 116%;
+  margin-top: 0.8em;
+  margin-bottom: 0.33em;
+}
+
+#description h4 {
+  font-size: 1.41em;
+  color: gray;
+  line-height: 116%;
+  margin-top: 0.8em;
+  margin-bottom: 1em;
+}
+
+#description h5 {
+  line-height: 112%;
+  margin-top: 1.2em;
+  color: gray;
+}
+
+#description li {
+  line-height: 100%;
+  margin-bottom: 0.8em;
+}
+
+/* ao-css */
+.ao-claimer-diff-steuer {
+  color: #999;
+  line-height: 1.28em;
+}
+
+.ao-description-disclaimer {
+  margin: 10px 14px 5px;
+}
+
+.ao-description-disclaimer h3 {
+  margin: 12px 0px 0px 0px;
+  font-size: 1.6em;
+  line-height: 120%;
+  color: #c9890f;
+}
+
+.ao-description-disclaimer h4 {
+  margin: 5px 0px 0px 0px;
+  font-size: 1.4em;
+  line-height: 125%;
+}
+
+.ao-description-disclaimer p {
+  margin: 5px 0px 0px 0px;
+  font-size: 1em;
+  line-height: 134%;
+}
+
+.ao-properties-list {
+  margin: 20px 0px 20px;
+}
+
+.ao-small {
+  font-size: 0.66em;
+  color: #aaa;
+}
+
+.ao-claimer {
+  margin: 12px 0px 20px 0px;
+}
+
+.ao-claimer p {
+  margin: 8px 0px 0px 0px;
+  font-size: 1em;
+  line-height: 134%;
+  color: #555;
+
+}
+
+.ao-claimer h4 {
+  margin: 12px 0px 3px 0px;
+}
+
+.ao-note-image-scroll {
+  margin: 10px 0px -16px 0px;
+  font-size: 1.0em;
+  color: gray;
+}
+
+.ao-item-description {
+  padding: 10px 30px;
+}
+
+.navbar-brand {
+  padding: 0px 0px 25px 10px;
+}
+
+.mainNavigation > .navbar-nav {
+  background: #f8f8f8;
+
+}
+
+.ao-sidebar {
+  background: #f8f8f8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #ddd;
+}
+
+.ao-footer {
+  background: #f8f8f8;
+  border-style: none solid none solid;
+  border-width: 1px;
+  border-color: #ddd;
+  padding: 5px;
+}
+
+.imgwrapper {
+  background: #f8f8f8;
+}
+
+.tab-content {
+  padding: 0px 0px 0px;
+}
+
+#description {
+  background: #f8f8f8;
+  padding: 10px;
+}
+
+.bild-ao {
+  margin: 20px 0px 20px 0px;
+}
+
+.ao-werbung {
+  background: #eeeeee;
+  padding: 10px 20px;
+}
+
+.ao-abstand {
+  margin: 20px 0px 20px 0px;
+}
+
+.navigationTree a.treeLink {
+  font-size: 12px;
+}
+
+/* Merkmale */
+.ao-CharacterList {
+  width: 60%;
+  margin: 0px 10px 0px 10px;
+}
+
+.PlentyArticleCharacterList {
+  /* width: 70%;
+  display: inline-block; */
+  margin: 5px 0px 0px 0px;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+.itemDefList {
+  width: 60%;
+  margin: 0 0 0 30px;
+}
+
+.itemDefList dt {
+  width: 30%;
+}
+
+.itemDefList dd {
+  width: 70%;
+}
+
+.PlentyArticleCharacterGroup {
+
+}
+
+.PlentyArticleCharacterGroupName {
+  display: none;
+}
+
+.PlentyArticleCharacters {
+
+}
+
+.PlentyArticleCharacter {
+
+}
+
+.PlentyArticleCharacterName {
+  width: 30%;
+  font-weight: bold;
+  float: left;
+  clear: left;
+}
+
+.PlentyArticleCharacterValue {
+  width: 70%;
+  float: right;
+  clear: right;
+}
+
+.PlentyArticleCharacterUnit {
+
+}
+
+/* body, div, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+body {
+	-epub-hyphens:auto;
+}
+
+ Portotabelle */
+/*
+
+.portotabelle {
+  width: 77%;
+  margin: 20px 0px 20px;
+}
+
+table.Grau-Zeilen {
+  border-collapse: collapse;
+  border-color: #b2b2b2;
+  border-style: none;
+  border-width: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+td.Grau-Zeilen {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #000000;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #000000;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #000000;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #000000;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  vertical-align: middle;
+}
+
+td.grau-Titel {
+  background-color: #706f6f;
+  border-bottom-color: #707173;
+  border-bottom-width: 1px;
+  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 6px;
+  vertical-align: middle;
+}
+
+td.grau-norm {
+  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 6px;
+  vertical-align: middle;
+}
+
+p.Preis {
+  color: #000000;
+  font-family: "HelveticaNeueLT Std Lt", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1;
+}
+
+p.Titel {
+  color: #ffffff;
+  font-family: "HelveticaNeueLT Std", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1;
+}
+
+p.norm {
+  color: #000000;
+  font-family: "HelveticaNeueLT Std Lt", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1;
+}
+
+col._idGenTableRowColumn-1 {
+  width: 334px;
+}
+
+col._idGenTableRowColumn-2 {
+  width: 82px;
+}
+
+tr._idGenTableRowColumn-3 {
+  min-height: 20px;
+}
+
+tr._idGenTableRowColumn-4 {
+  min-height: 19px;
+}
+
+tr._idGenTableRowColumn-5 {
+  background-color: #ededed;
+  min-height: 19px;
+}
+*/
+
+/* NEW ATTRIBUTE SELECT */
+
+/* clear */
+.clear {
+  clear: both;
+}
+
+/* wrapper */
+.plentyAttributeSelectWrapper {
+  margin-bottom: 5px;
+}
+
+/* wrapper title */
+.plentyAttributeSelectWrapperTitle {
+}
+
+/* wrapper content */
+.plentyAttributeSelectWrapperContent {
+  display: inline-block;
+}
+
+/* ul (all) */
+
+/* ul */
+.plentyAttributeSelectWrapperContent ul {
+  padding-left: 0;
+}
+
+/* li */
+.plentyAttributeSelectWrapperContent ul > li {
+  list-style: none;
+  margin-left: 0;
+  overflow: hidden;
+}
+
+/* disabled */
+li.plentyAttributeSelectDisabled {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: alpha(opacity=50);
+  -moz-opacity: 0.5;
+  -khtml-opacity: 0.5;
+  opacity: 0.5;
+  cursor: default !important;
+}
+
+li.plentyAttributeSelectDisabled a {
+  cursor: default !important;
+}
+
+/* DROPDOWN */
+
+/* dropdown container */
+.plentyAttributeSelectHasDropdown {
+  position: relative;
+}
+
+/* height if dropdown closed */
+.plentyAttributeSelectHasDropdown,
+.plentyAttributeSelectHasDropdown > div,
+.plentyAttributeSelectHasDropdown > .plentyAttributeSelectWrapperInnerClosed:hover {
+  height: 18px;
+}
+
+/* openable container */
+.plentyAttributeSelectHasDropdown > div {
+  position: absolute;
+  /*width: 100%;*/
+  /*has conflict with parent clearfix*/
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #cccccc;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+}
+
+/* open dropdown if hovered */
+.plentyAttributeSelectHasDropdown:hover > div {
+  height: auto;
+  z-index: 10000;
+  -moz-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* selectet item */
+
+/* value (all) */
+.plentyAttributeSelectedValue,
+.plentyAttributeSelectValue > a {
+  padding: 0 0 0 7px;
+  white-space: nowrap;
+}
+
+/* value selected */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectedValue {
+  position: relative;
+  padding-right: 20px;
+}
+
+/* arrow container */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectedValue > .plentyAttributeSelectedArrow {
+  position: absolute;
+  right: 2px;
+  top: 2px;
+  width: 12px;
+  height: 12px;
+}
+
+/* arrow inner */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectedValue > .plentyAttributeSelectedArrow > span {
+  display: none;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #999999 transparent transparent;
+}
+
+/* arrow hover */
+.plentyAttributeSelectHasDropdown > div:hover .plentyAttributeSelectedValue > .plentyAttributeSelectedArrow > span {
+  border-color: #777777 transparent transparent;
+}
+
+/* list */
+
+/* list wrapper */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper {
+  max-height: 108px; /*adapt to height of li*/
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* ul */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper > ul {
+}
+
+/* li */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper > ul > li {
+  height: 18px;
+}
+
+/* a */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper > ul > li a {
+  display: block;
+  padding-right: 20px;
+  white-space: nowrap;
+}
+
+/* li hover / a focus */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper > ul > li:hover a,
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper > ul > li a:focus {
+  background: #eeeeee;
+  color: #000000;
+  cursor: pointer;
+}
+
+/* reset li hover / a focus if disabled */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper > ul > li.plentyAttributeSelectDisabled:hover a,
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper > ul > li.plentyAttributeSelectDisabled a:focus {
+  background: transparent;
+  color: #000000;
+}
+
+/* li / a selected */
+.plentyAttributeSelectHasDropdown .plentyAttributeSelectListWrapper > ul > li.plentyAttributeSelectSelected a {
+  background: #eeeeee;
+}
+
+/* value & markup */
+.plentyAttributeSelectValueName {
+  /*float: left;*/
+}
+
+.plentyAttributeSelectValueMarkup {
+  padding-left: 5px;
+  /*float: right;*/
+}
+
+/* IMAGE GALLERY / TEXT BOX */
+
+/* ul */
+.plentyAttributeSelectHasImageGallery ul,
+.plentyAttributeSelectHasTextList ul {
+  margin: 0 -5px -5px 0;
+}
+
+/* ul image gallery / text boxes */
+.plentyAttributeSelectHasImageGallery ul,
+.plentyAttributeSelectHasTextList ul {
+  line-height: 0;
+}
+
+/* ul text boxes */
+.plentyAttributeSelectHasTextList ul > li {
+  line-height: 1.5em;
+}
+
+/* image box size */
+.plentyAttributeSelectHasImageGallery ul > li,
+.plentyAttributeSelectHasImageGallery ul > li > a {
+  width: 60px; /*adapt box dimension to image dimension*/
+  height: 60px;
+}
+
+/* li */
+.plentyAttributeSelectHasImageGallery ul > li,
+.plentyAttributeSelectHasTextList ul > li,
+.plentyAttributeSelectHasImageGallery ul > li.plentyAttributeSelectDisabled:hover,
+.plentyAttributeSelectHasTextList ul > li.plentyAttributeSelectDisabled:hover {
+  display: inline-block;
+  margin: 0 5px 5px 0;
+  border: 1px solid #DDDDDD;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+/* li hover / selected */
+.plentyAttributeSelectHasImageGallery ul > li:hover,
+.plentyAttributeSelectHasTextList ul > li:hover,
+.plentyAttributeSelectHasImageGallery ul > li.plentyAttributeSelectSelected,
+.plentyAttributeSelectHasTextList ul > li.plentyAttributeSelectSelected {
+  border-color: #999999;
+  cursor: pointer;
+  -moz-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 3px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* li selected image gallery */
+.plentyAttributeSelectHasImageGallery ul > li.plentyAttributeSelectSelected {
+  background: #DDDDDD;
+}
+
+/* li selected text box */
+.plentyAttributeSelectHasTextList ul > li.plentyAttributeSelectSelected {
+  background: #eeeeee;
+}
+
+/* reset li hover / selected if selected */
+.plentyAttributeSelectHasImageGallery ul > li.plentyAttributeSelectDisabled:hover,
+.plentyAttributeSelectHasTextList ul > li.plentyAttributeSelectDisabled:hover {
+  border-color: #DDDDDD;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+/* a */
+.plentyAttributeSelectHasImageGallery ul > li > a {
+  display: block;
+  overflow: hidden;
+}
+
+/* img */
+.plentyAttributeSelectHasImageGallery ul > li > a > img {
+  border: none;
+}
+
+/* a hover / a focus text box */
+.plentyAttributeSelectHasTextList ul > li a:hover,
+.plentyAttributeSelectHasTextList ul > li a:focus {
+  color: #000000;
+}
+
+/* value text boxes */
+.plentyAttributeSelectHasTextList .plentyAttributeSelectValue {
+  padding-left: 5px;
+}
+
+/* value text boxes */
+.plentyAttributeSelectHasTextList .plentyAttributeSelectValue {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+/* UPDATE (FIX FOR ANY DOCTYPE) */
+.plentyAttributeSelectedArrow > span {
+  position: absolute;
+  top: 5px;
+}
+
+/* DROPDOWN RESET FOR FARBFINAL OR OTHER LAYOUTS  */
+
+.plentyAttributeSelectHasDropdown > div {
+  text-align: left;
+  line-height: 18px;
+}
+
+#ff01_maincontent .plentyAttributeSelectHasDropdown > div {
+  right: 0; /* use only if text-align of dropdown parent container is right */
+}
+
+.plentyAttributeSelectWrapperContent.plentyAttributeSelectHasDropdown ul {
+  margin: 0 !important;
+  padding: 0 !important;
+}

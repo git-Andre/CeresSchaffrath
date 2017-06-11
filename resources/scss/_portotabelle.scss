@@ -1,0 +1,140 @@
+
+.portotabelle {
+  width: 77%;
+  margin: 20px 0px 20px;
+}
+
+table.Grau-Zeilen {
+  border-collapse: collapse;
+  border-color: #b2b2b2;
+  border-style: none;
+  border-width: 0px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+td.Grau-Zeilen {
+  border-left-width: 1px;
+  border-left-style: solid;
+  border-left-color: #000000;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: #000000;
+  border-right-width: 1px;
+  border-right-style: solid;
+  border-right-color: #000000;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: #000000;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  vertical-align: middle;
+}
+
+td.grau-Titel {
+  background-color: #706f6f;
+  border-bottom-color: #707173;
+  border-bottom-width: 1px;
+  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 6px;
+  vertical-align: middle;
+}
+
+td.grau-norm {
+  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 6px;
+  vertical-align: middle;
+}
+
+p.Preis {
+  color: #000000;
+  font-family: "HelveticaNeueLT Std Lt", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: center;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1;
+}
+
+p.Titel {
+  color: #ffffff;
+  font-family: "HelveticaNeueLT Std", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1;
+}
+
+p.norm {
+  color: #000000;
+  font-family: "HelveticaNeueLT Std Lt", sans-serif;
+  font-size: 11px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 1.2;
+  margin-bottom: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
+  orphans: 1;
+  page-break-after: auto;
+  page-break-before: auto;
+  text-align: left;
+  text-decoration: none;
+  text-indent: 0;
+  text-transform: none;
+  widows: 1;
+}
+
+col._idGenTableRowColumn-1 {
+  width: 334px;
+}
+
+col._idGenTableRowColumn-2 {
+  width: 82px;
+}
+
+tr._idGenTableRowColumn-3 {
+  min-height: 20px;
+}
+
+tr._idGenTableRowColumn-4 {
+  min-height: 19px;
+}
+
+tr._idGenTableRowColumn-5 {
+  background-color: #ededed;
+  min-height: 19px;
+}
