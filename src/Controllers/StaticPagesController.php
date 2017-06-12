@@ -26,7 +26,9 @@
 
         public function showHilfe(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::StaticPages.Hilfe');
+            $data = 164; // Category: static/Hilfe
+
+            return $twig -> render('CeresSchaffrath::StaticPages.StaticCategory', $data);
         }
 
         public function showZahlungsarten(Twig $twig) : string
