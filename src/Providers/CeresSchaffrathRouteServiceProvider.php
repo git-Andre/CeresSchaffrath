@@ -11,9 +11,10 @@
 
         public function map(Router $router)
         {
-            $router -> get('versandkosten', 'CeresSchaffrath\Controllers\StaticPagesController@showVersandkosten');
-
-            $router -> get('hilfe', "CeresSchaffrath\Controllers\StaticPagesController@getTest");
+            $router -> get('versandkosten', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showVersandkosten');
+            $router -> get('zahlungsarten', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showZahlungsarten');
+            $router -> get('kontakt', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showKontakt');
+            $router -> get('hilfe', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showHilfe');
 
         }
     }
