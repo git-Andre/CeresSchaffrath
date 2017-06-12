@@ -2,17 +2,13 @@
 
 {% block PageBody %}
 
-    {% set categoryByRoute = services.category.get({{categoryId.category)}}) %}
+    {% set categoryByRoute = services.category.get({{category)}}) %}
 
     {#{% set privacyPolicy = services.legalInformation.getPrivacyPolicy() %}#}
 
     <div class="container-max page-content">
         <div class="row">
             <div class="col-xs-12">
-                {% autoescape false %}
-                    <h1>{{ trans("CeresSchaffrath::Template.versandkostenTitle") }}</h1>
-                {% endautoescape %}
-
                 <hr class="m-y-3">
                 <div class="staticPages">{{ categoryByRoute.details.first.description | raw }}</div>
 
