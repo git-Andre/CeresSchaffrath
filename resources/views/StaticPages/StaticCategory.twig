@@ -2,15 +2,26 @@
 
 {% block PageBody %}
 
-    {% set categoryByRoute = services.category.get({{category)}}) %}
+    {% set categoryByRoute = services.category.get(category) %}
 
     {#{% set privacyPolicy = services.legalInformation.getPrivacyPolicy() %}#}
 
     <div class="container-max page-content">
         <div class="row">
-            <div class="col-xs-12">
-                <hr class="m-y-3">
-                <div class="staticPages">{{ categoryByRoute.details.first.description | raw }}</div>
+            <div class="col-xs-12 col-lg-10 offset-lg-1 m-t-1">
+                {% autoescape false %}
+                    <h1>{{ categoryByRoute.settings.name }}</h1>
+                    <h4>{{ categoryByRoute.settings.first.name }}</h4>
+                    <h2>{{ categoryByRoute.id }}</h2>
+                    <h3>{{ categoryByRoute.type }}</h3>
+
+                {% endautoescape %}
+
+                <hr class="m-y-2">
+
+                <div class="col-lg-8 offset-lg-1 m-y-2">
+                    {{ categoryByRoute.details.first.description | raw }}
+                </div>
 
             </div>
         </div>
