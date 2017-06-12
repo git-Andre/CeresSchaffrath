@@ -26,7 +26,7 @@
 
         public function showHilfe(Twig $twig) : string
         {
-            $data = 164; // Category: static/Hilfe
+            $data = [164]; // Category: static/Hilfe
 
             return $twig -> render('CeresSchaffrath::StaticPages.StaticCategory', $data);
         }
