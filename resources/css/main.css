@@ -7,7 +7,6 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
-@import url(../../node_modules/owlcarousel/owl-carousel/owl.carousel.css);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -11758,7 +11757,14 @@ a:hover {
 }
 
 .staticPages {
-    margin: 0;
+  margin: 0;
+}
+
+.icon-text-list > li {
+  margin: 10px 0;
+  list-style-type: none;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #e0e0e0;
 }
 
 /*# sourceMappingURL=main.css.map */
