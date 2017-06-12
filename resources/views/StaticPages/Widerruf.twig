@@ -2,22 +2,21 @@
 
 {% block PageBody %}
 
-    {% set lang = services.sessionStorage.getLang() %}
+    {% set cancellationRights = services.legalInformation.getCancellationRights() %}
 
-    {% set categoryByRoute = services.category.get(category, lang) %}
 
     <div class="container-max page-content">
         <div class="row">
             <div class="col-xs-12 col-lg-10 offset-lg-1 m-t-1">
 
                 {% autoescape false %}
-                    <h1>{{ categoryByRoute.details[0].name }}</h1>
+                    <h1>{{ trans("Ceres::Template.generalCancellationRight") }}</h1>
                 {% endautoescape %}
 
                 <hr class="m-y-2">
 
                 <div class="col-lg-8 offset-lg-1 m-y-2">
-                    {{ categoryByRoute.details.first.description | raw }}
+                    {{ cancellationRights.htmlText | raw }}
                 </div>
 
             </div>
