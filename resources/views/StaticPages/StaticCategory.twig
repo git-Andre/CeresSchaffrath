@@ -2,21 +2,18 @@
 
 {% block PageBody %}
 
-    {% set categoryByRoute = services.category.get(category) %}
+    {% set lang = services.sessionStorage.getLang() %}
+
+    {% set categoryByRoute = services.category.get(category, lang) %}
 
     {#{% set privacyPolicy = services.legalInformation.getPrivacyPolicy() %}#}
 
     <div class="container-max page-content">
         <div class="row">
             <div class="col-xs-12 col-lg-10 offset-lg-1 m-t-1">
-                {% autoescape false %}
-                    <h1>{{ categoryByRoute.details[0].name }}</h1>
-                    <h4>{{ categoryByRoute.details[0].title }}</h4>
-                    <h2>{{ categoryByRoute.details[0].url-name }}</h2>
-                    <h3>{{ categoryByRoute.details[0].position }}</h3>
-                    <h2>{{ categoryByRoute.id }}</h2>
-                    <h3>{{ categoryByRoute.type }}</h3>
 
+                {% autoescape false %}
+                    <h1>{{ categoryByRoute.details[0].name, lang }}</h1>
                 {% endautoescape %}
 
                 <hr class="m-y-2">
