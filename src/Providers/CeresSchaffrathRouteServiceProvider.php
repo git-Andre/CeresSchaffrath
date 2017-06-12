@@ -11,10 +11,10 @@
 
         public function map(Router $router)
         {
-            $router -> get('versandkosten', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showVersandkosten');
-            $router -> get('zahlungsarten', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showZahlungsarten');
-            $router -> get('kontakt', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showKontakt');
-            $router -> get('hilfe', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showHilfe');
+            // $router -> get('versandkosten', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showVersandkosten');
+            // $router -> get('zahlungsarten', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showZahlungsarten');
+            // $router -> get('kontakt', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showKontakt');
+            // $router -> get('hilfe', 'StaticPagesRoutes\Controllers\StaticPagesRoutesController@showHilfe');
 
         }
     }
