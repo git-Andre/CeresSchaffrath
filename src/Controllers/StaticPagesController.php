@@ -19,27 +19,29 @@
          * @param Twig $twig
          * @return string
          */
-        public function showVersandkosten(Twig $twig) : string
-        {
-            return $twig -> render('CeresSchaffrath::StaticPages.Versandkosten');
-        }
-
-        public function showHilfe(Twig $twig) : string
-        {
-            $data = [164]; // Category: static/Hilfe
-
-            return $twig -> render('CeresSchaffrath::StaticPages.StaticCategory', $data);
-        }
-
-        public function showZahlungsarten(Twig $twig) : string
-        {
-            return $twig -> render('CeresSchaffrath::StaticPages.Zahlungsarten');
-        }
-
-        public function showKontakt(Twig $twig) : string
-        {
-            return $twig -> render('CeresSchaffrath::StaticPages.Kontakt');
-        }
+        // private  $data = ['hilfe', 164]; // Category: static/Hilfe
+        //
+        //
+        // public function showVersandkosten(Twig $twig) : string
+        // {
+        //     return $twig -> render('CeresSchaffrath::StaticPages.Versandkosten');
+        // }
+        //
+        // public function showHilfe(Twig $twig) : string
+        // {
+        //
+        //     return $twig -> render('CeresSchaffrath::StaticPages.StaticCategory', this.$this->data('hilfe'));
+        // }
+        //
+        // public function showZahlungsarten(Twig $twig) : string
+        // {
+        //     return $twig -> render('CeresSchaffrath::StaticPages.Zahlungsarten');
+        // }
+        //
+        // public function showKontakt(Twig $twig) : string
+        // {
+        //     return $twig -> render('CeresSchaffrath::StaticPages.Kontakt');
+        // }
 
 
     }

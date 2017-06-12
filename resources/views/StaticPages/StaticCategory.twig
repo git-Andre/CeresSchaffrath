@@ -2,7 +2,7 @@
 
 {% block PageBody %}
 
-    {% set categoryByRoute = services.category.get({{data[0]}}) %}
+    {% set categoryByRoute = services.category.get({{categoryId('category')}}) %}
 
     {#{% set privacyPolicy = services.legalInformation.getPrivacyPolicy() %}#}
 

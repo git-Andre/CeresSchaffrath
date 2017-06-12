@@ -28,7 +28,7 @@
 
         public function register()
         {
-            $this -> getApplication() -> register(CeresSchaffrathRouteServiceProvider::class);
+            // $this -> getApplication() -> register(CeresSchaffrathRouteServiceProvider::class);
         }
 
         public function boot(Twig $twig, Dispatcher $eventDispatcher)
