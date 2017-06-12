@@ -1,0 +1,11 @@
+<application>
+  <component name="PhpInterpreters">
+    <interpreters>
+      <interpreter home="/usr/local/bin/php" id="4c69f23d-cb39-4714-a2b0-bd36ba0d5fdd" name="PHP 7.1" debugger_id="php.debugger.XDebug" />
+    </interpreters>
+  </component>
+  <component name="PhpSmartKeysConfiguration">
+    <option name="selectVariableNameWithoutDollar" value="true" />
+    <option name="smartFunctionParametersCompletion" value="true" />
+  </component>
+</application>
