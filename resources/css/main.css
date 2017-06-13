@@ -11421,7 +11421,7 @@ body.menu-is-visible {
 }
 
 .portotabelle {
-  width: 77%;
+    width: 95%;
   margin: 20px 0px 20px;
 }
 
@@ -11587,7 +11587,7 @@ tr._idGenTableRowColumn-5 {
 }
 
 .itemDefList dd {
-  width: 75%;
+    width: 95%;
 }
 
 .text-abel {
@@ -11765,6 +11765,11 @@ a:hover {
   list-style-type: none;
   padding-bottom: 3px;
   border-bottom: 1px solid #e0e0e0;
+}
+
+.ao-span-icon {
+    display: inline-block;
+    width: 5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

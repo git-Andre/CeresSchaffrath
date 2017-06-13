@@ -27,7 +27,7 @@
     font-weight: bold;
   }
   dd {
-    width: 75%;
+    width: 95%;
   }
 }
 
@@ -211,4 +211,10 @@ a:hover {
   list-style-type: none;
   padding-bottom: 3px;
   border-bottom: 1px solid #e0e0e0;
+}
+
+// span fontawesome 2x
+.ao-span-icon {
+  display: inline-block;
+  width: 5rem;
 }
