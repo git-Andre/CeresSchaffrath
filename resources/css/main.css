@@ -11787,4 +11787,9 @@ a:hover {
   font-family: "Abel", sans-serif;
 }
 
+.ao-zahl-txt td {
+  border-top: 0px;
+  border-bottom: 1px solid #dcdbd8;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -11,7 +11,7 @@
             <div class="col-xs-12 col-lg-10 offset-lg-1 m-t-1">
 
                 {% autoescape false %}
-                    <h1>{{ categoryByRoute.details.first.name }}</h1>
+                    <h1>{{ categoryByRoute.details[0].name }}</h1>
                 {% endautoescape %}
 
                 <hr class="m-y-2">

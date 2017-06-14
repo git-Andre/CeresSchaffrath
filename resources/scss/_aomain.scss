@@ -233,4 +233,9 @@ a:hover {
   font-size: 1.5em;
   padding-top: 1em;
   font-family: "Abel", sans-serif;
+
+  td {
+    border-top: 0px;
+    border-bottom: 1px solid #dcdbd8;
+  }
 }
