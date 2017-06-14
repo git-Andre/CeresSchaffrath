@@ -11772,4 +11772,19 @@ a:hover {
   width: 5rem;
 }
 
+.ao-zahl-img {
+  max-width: 180px;
+}
+
+.ao-zahl-zeile {
+  padding-top: 25px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.ao-zahl-txt {
+  font-size: 1.5em;
+  padding-top: 1em;
+  font-family: "Abel", sans-serif;
+}
+
 /*# sourceMappingURL=main.css.map */
