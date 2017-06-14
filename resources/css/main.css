@@ -11421,7 +11421,7 @@ body.menu-is-visible {
 }
 
 .portotabelle {
-    width: 95%;
+  width: 95%;
   margin: 20px 0px 20px;
 }
 
@@ -11587,7 +11587,7 @@ tr._idGenTableRowColumn-5 {
 }
 
 .itemDefList dd {
-    width: 95%;
+  width: 95%;
 }
 
 .text-abel {
@@ -11662,7 +11662,7 @@ a:hover {
 
 .flex-item {
   position: relative;
-  background: #fff;
+  background: rgba(240, 173, 78, 0.2);
   padding: 0;
   width: 180px;
   height: 180px;
@@ -11725,7 +11725,7 @@ a:hover {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  text-align: left;
+  text-align: center;
   line-height: 0%;
   transform: scale(1, 0);
   /* W3C */
@@ -11768,8 +11768,8 @@ a:hover {
 }
 
 .ao-span-icon {
-    display: inline-block;
-    width: 5rem;
+  display: inline-block;
+  width: 5rem;
 }
 
 /*# sourceMappingURL=main.css.map */

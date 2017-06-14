@@ -109,7 +109,7 @@ a:hover {
 
 .flex-item {
   position: relative;
-  background: #fff;
+  background: rgba(240, 173, 78, 0.2);
   padding: 0;
   width: 180px;
   height: 180px;
@@ -173,7 +173,7 @@ a:hover {
   margin: 0;
   padding: 0;
   font-weight: normal;
-  text-align: left;
+  text-align: center;
   line-height: 0%;
   transform: scale(1, 0); /* W3C */
   -webkit-transform: scale(1, 0); /* Safari and Chrome */
