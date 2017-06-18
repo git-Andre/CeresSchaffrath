@@ -11570,14 +11570,20 @@ tr._idGenTableRowColumn-5 {
   /*Standard*/
 }
 
+.tab-content {
+    margin-left: 20px;
+}
+
 .tab-content h5 {
-  font-size: 1.5rem;
-  margin: 5px 0 15px 20px;
+    font-family: "Abel", sans-serif;
+    font-size: 1.20rem;
+    border-bottom: 1px solid #dcdbd8;
 }
 
 .itemDefList {
   display: block;
-  margin: 0 0 0 30px;
+    font-family: "Abel", sans-serif;
+    margin: 13px 0 0 30px;
 }
 
 .itemDefList dt {
@@ -11600,7 +11606,7 @@ tr._idGenTableRowColumn-5 {
 
 .cmp-product-thumb {
   border: 1px solid #c9890f;
-  box-shadow: 3px 3px 9px 1px #b2b1a7;
+    box-shadow: 2px 2px 10px 0px #b2b1a7;
 }
 
 /*

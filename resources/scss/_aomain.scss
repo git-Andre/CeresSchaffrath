@@ -11,16 +11,21 @@
 // items
 
 .tab-content {
+  margin-left: 20px;
+  // background: $brand-back-light;  // nur test
   h5 {
-    font-size: 1.5rem;
-    margin: 5px 0 15px 20px;
+    font-family: $font-family-heading;
+    //font-weight: bold;
+    font-size: 1.20rem;
+    border-bottom: $border-line-ao;
   }
 }
 
 .itemDefList {
   display: block;
+  font-family: $font-family-heading;
   // width: 60%;
-  margin: 0 0 0 30px;
+  margin: 13px 0 0 30px;
   dt {
     width: 25%;
     float: left;
@@ -43,7 +48,7 @@
 
 .cmp-product-thumb {
   border: 1px solid $brand-primary;
-  box-shadow: 3px 3px 9px 1px $gray-light;
+  box-shadow: 2px 2px 10px 0px $gray-light;
 }
 
 /*
@@ -109,7 +114,7 @@ a:hover {
 
 .flex-item {
   position: relative;
-  background: rgba(240, 173, 78, 0.2);
+  background: $brand-back-light; // rgba(240, 173, 78, 0.2);
   padding: 0;
   width: 180px;
   height: 180px;
@@ -234,3 +239,4 @@ a:hover {
   padding-top: 1em;
   font-family: "Abel", sans-serif;
 }
+
