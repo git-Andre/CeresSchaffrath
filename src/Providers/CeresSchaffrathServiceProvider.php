@@ -33,8 +33,6 @@
 
         public function boot(Twig $twig, Dispatcher $eventDispatcher)
         {
-            $twig -> enableDebug();
-            $twig -> addExtension(new Twig_Extension_Debug());
 
             // provide template to use for homepage
             $eventDispatcher -> listen('IO.tpl.home', function (TemplateContainer $container, $templateData) {
