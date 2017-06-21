@@ -41,13 +41,6 @@
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
 
-            // // provide template to use for ...Ersatz für /gtc (CERES Plugin)
-            // $eventDispatcher -> listen('IO.tpl.gtc', function (TemplateContainer $container) {
-            //     $container -> setTemplate('Ceres::StaticPages.TermsAndConditions');
-            //
-            //     return false;
-            // }, self::EVENT_LISTENER_PRIORITY);
-
 
             $eventDispatcher -> listen('IO.init.templates', function (Partial $partial) {
                 $partial -> set('footer', 'CeresSchaffrath::Footer.ThemeFooter');

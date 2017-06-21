@@ -30,7 +30,7 @@
 @import "ceres/components/component-base";
 @import "ceres/components/accordion";
 @import "ceres/components/alerts";
-//@import "ceres/components/featured-category";
+@import "ceres/components/featured-category";
 @import "ceres/components/featured-sale";
 // unterschiedlich
 // Forms  - deaktivierte sind unterschiedlich zu Original-Ceres
@@ -46,13 +46,13 @@
 @import "ceres/views/PageDesign/footer";
 // Templates-- prüfen... !!!
 //@import "ceres/views/Confirmation/confirmation-order-item";
-//@import "ceres/views/Templates/AddressSelect/address-select";
+@import "ceres/views/Templates/AddressSelect/address-select";
 //@import "ceres/views/Templates/BasketItemList/basket-item";
 //@import "ceres/views/Templates/BasketPreview/basket-preview-item";
 //@import "ceres/views/Templates/BasketPreview/basket-preview";
 //@import "ceres/views/Templates/BasketTotalSum/basket-total-sum";
-//@import "ceres/views/Templates/CategoryListItem/category-list-item";
-//@import 'ceres/views/Templates/CategoryViewFilter/category-view-filter';
+@import "ceres/views/Templates/CategoryListItem/category-list-item";
+@import 'ceres/views/Templates/CategoryViewFilter/category-view-filter';
 //@import "ceres/views/Templates/ItemListSort/pagination";
 //@import "ceres/views/Templates/ItemRating/item-rating-roll";
 //@import "ceres/views/Templates/ItemRating/item-rating-section";
