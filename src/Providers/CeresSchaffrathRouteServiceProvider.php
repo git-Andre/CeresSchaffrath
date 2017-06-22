@@ -16,7 +16,6 @@
          */
         public function map(Router $router)
         {
-            ∆
             $router -> get('versandkosten', 'CeresSchaffrath\StaticPagesRoutesController@showVersandkosten');
             $router -> get('zahlungsarten', 'CeresSchaffrath\StaticPagesRoutesController@showZahlungsarten');
             $router -> get('kontakt', 'CeresSchaffrath\StaticPagesRoutesController@showKontakt');

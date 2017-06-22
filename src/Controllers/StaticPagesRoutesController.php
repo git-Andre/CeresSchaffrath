@@ -1,6 +1,6 @@
 <?php
 
-    namespace StaticPagesRoutes\Controllers;
+    namespace CeresSchaffrath\Controllers;
 
     use Plenty\Plugin\Controller;
     use Plenty\Plugin\Templates\Twig;
