@@ -53,6 +53,14 @@
 
     <div class="single container-max page-content">
         <div class="row m-t-3">
+
+            {# ao Var-Dump #}
+            {% include "CeresSchaffrath::VarDump" with { 'dataAo': releaseDate } %}
+            {% include "CeresSchaffrath::VarDump" with { 'dataAo': basePriceList } %}
+            {% include "CeresSchaffrath::VarDump" with { 'dataAo': configItemName } %}
+            {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemData } %}
+
+
             <div class="col-md-7 single-leftside">
                 <div class="row">
                     <div class="col-xs-12">
