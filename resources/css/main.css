@@ -12166,4 +12166,9 @@ a:hover {
   font-family: "Abel", sans-serif;
 }
 
+.custom-select {
+  margin-top: 20px;
+  border: 0px;
+}
+
 /*# sourceMappingURL=main.css.map */
