@@ -49,11 +49,13 @@
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
-    {# ao #}
-    {% set dataAo = item %}
-    {% include "CeresSchaffrath::VarDump" %} {#with { 'item': item }#}
 
     <div class="single container-max page-content">
+
+        {# ao #}
+        {% set dataAo = item %}
+        {% include "CeresSchaffrath::VarDump" %} {#with { 'item': item }#}
+
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
                 <div class="row">
