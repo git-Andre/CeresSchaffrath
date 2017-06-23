@@ -1,8 +1,9 @@
 [
   "itemId",
   "id",
+
   "item.id",
-  "item.manufacturer.name",
+  "item.manufacturer.externalName",
   "item.documents.data",
   "item.ageRestriction",
   "item.customsTariffNumber",
