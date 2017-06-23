@@ -36,6 +36,7 @@
         "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
         "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
         "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
+
     </script>
 {% endblock %}
 
@@ -51,11 +52,6 @@
 
 
     <div class="single container-max page-content">
-
-        {# ao #}
-        {#{% set dataAo = item %}#}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item } %} {#with { 'dataAo': item }#}
-
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
                 <div class="row">
@@ -127,6 +123,10 @@
                     <sup>*</sup>
                     <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                 </span>
+
+                {# ao Var-Dump #}
+                {% include "CeresSchaffrath::VarDump" with { 'dataAo': basePriceList } %}
+
 
                 {% for variationId, basePrice in basePriceList %}
                     <div class="base-price text-muted m-y-1"
