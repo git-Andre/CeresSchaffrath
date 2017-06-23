@@ -53,8 +53,8 @@
     <div class="single container-max page-content">
 
         {# ao #}
-        {% set dataAo = item %}
-        {% include "CeresSchaffrath::VarDump" %} {#with { 'item': item }#}
+        {#{% set dataAo = item %}#}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item } %} {#with { 'dataAo': item }#}
 
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
