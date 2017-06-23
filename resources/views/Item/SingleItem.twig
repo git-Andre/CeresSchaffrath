@@ -50,8 +50,8 @@
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
     {# ao #}
-    {% set data = item %}
-    {% include 'VarDump.twig', data %}
+    {% set dataAo = item %}
+    {% include "CeresSchaffrath::VarDump" %} {#with { 'item': item }#}
 
     <div class="single container-max page-content">
         <div class="row m-t-3">
