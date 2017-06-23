@@ -52,6 +52,11 @@
 
 
     <div class="single container-max page-content">
+
+        {# ao Var-Dump #}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item } %}
+
+
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
                 <div class="row">
@@ -123,10 +128,6 @@
                     <sup>*</sup>
                     <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                 </span>
-
-                {# ao Var-Dump ------------------- #}
-                {% include "CeresSchaffrath::VarDump" with { 'dataAo': basePriceList } %}
-
 
                 {% for variationId, basePrice in basePriceList %}
                     <div class="base-price text-muted m-y-1"
