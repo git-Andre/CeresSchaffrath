@@ -54,11 +54,11 @@
     <div class="single container-max page-content">
 
         {# ao Var-Dump #}
-        {% set test = services.item.getAttributeName( 4 ) %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.attributes.values.id } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': variations } %}
 
+        {% set test = services.item.getAttributeValueName( 302 ) %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': test } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.dokuments[0].data.variation.name } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].data.item.id } %}
 
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
