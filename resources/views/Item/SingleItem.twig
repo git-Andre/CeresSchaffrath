@@ -96,11 +96,11 @@
                 <h2 class="h4 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name"
                           v-resource-if:currentVariation="documents[0].data.variation.name != ''">
-                        {{ item.documents[0].data.texts | itemName('name3') }}
+                        {{ item.documents[0].data.texts | itemName(2) }} {# name3 #}
                     </span>
 
                     <span v-resource-if:currentVariation="documents[0].data.variation.name == ''">
-                        {{ item.documents[0].data.texts | itemName('name3') }}
+                        {{ item.documents[0].data.texts | itemName(2) }}
                     </span>
                 </h2>
 
