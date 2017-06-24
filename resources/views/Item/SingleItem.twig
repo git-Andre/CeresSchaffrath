@@ -8,8 +8,8 @@
 {% set crossSellingList = services.item.getItemCrossSellingList( item.documents[0].data.item.id  ) %}
 
 {#ao Variables #}
-{% set variationList = services.item.getVariationList( item.documents[0].data.item.id ) %}
-{% set variation = services.item.getVariationList( 34431 ) %}
+{#{% set variationList = services.item.getVariationList( item.documents[0].data.item.id ) %}#}
+{% set variation = services.item.getVariation( documents[0].data.variation.id ) %}
 
 
 {% block PartialHead %}
@@ -59,8 +59,7 @@
     <div class="single container-max page-content">
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': configItemName } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': variationList } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': variation } %}
 
         {% set test = services.item.getAttributeValueName( 302 ) %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': test } %}
@@ -83,14 +82,7 @@
                 {#</h6>#}
 
                 <h1 class="h3 title">
-                    <span v-resource-bind:currentVariation="documents.0.data.variation.name"
-                          v-resource-if:currentVariation="documents[0].data.variation.name != ''">
                         {{ item.documents[0].data.texts | itemName(configItemName) }}
-                    </span>
-
-                    <span v-resource-if:currentVariation="documents[0].data.variation.name == ''">
-                        {{ item.documents[0].data.texts | itemName(configItemName) }}
-                    </span>
                 </h1>
 
                 <h2 class="h4 title">
