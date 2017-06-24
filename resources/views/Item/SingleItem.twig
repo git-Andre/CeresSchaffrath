@@ -2,10 +2,15 @@
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
 
 {% set itemData = config("Ceres.item.data") | split(', ') %}
-{% set configItemName = 'name2' %}
+{% set configItemName = config("Ceres.item.name") %}
 {% set variations = services.item.getVariationAttributeMap( item.documents[0].data.item.id  ) %}
 {% set basePriceList = getBasePriceList( services.item.getVariationList( item.documents[0].data.item.id  ) ) %}
 {% set crossSellingList = services.item.getItemCrossSellingList( item.documents[0].data.item.id  ) %}
+
+{#ao Variables #}
+{% set variationList = services.item.getVariationList( item.documents[0].data.item.id ) %}
+{% set variation = services.item.getVariationList( 34431 ) %}
+
 
 {% block PartialHead %}
     <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
@@ -54,8 +59,8 @@
     <div class="single container-max page-content">
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.attributes.values.id } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': variations } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': configItemName } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': variationList } %}
 
         {% set test = services.item.getAttributeValueName( 302 ) %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': test } %}
