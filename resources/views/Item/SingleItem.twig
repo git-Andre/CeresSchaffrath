@@ -8,9 +8,7 @@
 {% set crossSellingList = services.item.getItemCrossSellingList( item.documents[0].data.item.id  ) %}
 
 {#ao Variables #}
-{% set variationList = services.item.getVariationList( item.documents[0].data.item.id ) %}
-{#{% set variation = items.documents.0.data.variation.number %}#}
-
+{#{% set variationList = services.item.getVariationList( item.documents[0].data.item.id ) %}#}
 
 {% block PartialHead %}
     <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
@@ -59,10 +57,11 @@
     <div class="single container-max page-content">
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': variationList } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.first.data } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.defaultCategories.id } %}
-        {% set test = items.documents[0].data.variation.id %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': variations } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.data } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].defaultCategories.id } %}
+
+        {% set test = items.documents[0].data.calculatedPrices %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': test } %}
 
         <div class="row m-t-3">

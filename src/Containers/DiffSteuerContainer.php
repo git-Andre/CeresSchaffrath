@@ -22,7 +22,7 @@
     // use Plenty\Modules\Item\Attribute\Contracts\AttributeNameRepositoryContract;
     // use Plenty\Modules\Item\Attribute\Contracts\AttributeValueNameRepositoryContract;
     // use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
-    // use Plenty\Modules\Item\DataLayer\Models\Record;
+    use Plenty\Modules\Item\DataLayer\Models\Record;
     // use Plenty\Modules\Item\DataLayer\Models\RecordList;
     // use Plenty\Modules\Item\Search\Aggregations\AttributeValueListAggregation;
     // use Plenty\Modules\Item\Search\Aggregations\AttributeValueListAggregationProcessor;
@@ -37,7 +37,7 @@
 
     class DiffSteuerContainer {
 
-        public function call(Twig $twig, $itemData) : string
+        public function call(Twig $twig, Item $itemData) : string
         {
             return $twig -> render('CeresSchaffrath::Containers.DiffSteuer', $itemData);
         }
