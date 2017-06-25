@@ -60,8 +60,8 @@
 
         {# ao Var-Dump #}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': variation } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': items.documents[0].data.variation.number } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': items.documents[0].data.variation.id } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].data } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].data.item.id } %}
 
         {% set test = items.documents[0].data.variation.name %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': test } %}
