@@ -1,9 +1,5 @@
 <div class="alert alert-info col-lg-11 offset-lg-1">
-    <h3>
-        {{ dumpArray.dataTitle }}
-    </h3>
     <pre>
-
-        {{ dumpArray['dump_data'] | json_encode(constant('JSON_PRETTY_PRINT')) }}
+        {{ dataAo | json_encode(constant('JSON_PRETTY_PRINT')) }}
     </pre>
 </div>
