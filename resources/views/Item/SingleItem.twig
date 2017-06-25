@@ -59,7 +59,7 @@
         {# ao Var-Dump #}
 
         {% set itemTest = services.item.getItem( item.documents[0].data.item.id ) %}
-        {#{% include "CeresSchaffrath::VarDump" with { 'dataAo': itemTest } %}#}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemTest } %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemTest.documents.0.id } %} {#['free14']#}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.data.texts.name2 } %}#}
