@@ -58,12 +58,12 @@
     <div class="single container-max page-content">
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': services.item.getItem( item.documents[0].data.item.id ) } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dump_data': services.item.getItem( item.documents[0].data.item.id ) } %}
 
         {% set itemTest = services.item.getItem( item.documents[0].data.item.id ) %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemTest.item('free14') } %}
+        {% include "CeresSchaffrath::VarDump" with { dump_data: itemTest.item('free14') } %}
 
-        {% set dumpArray = {'dataAo': item.documents.0.data.texts.name2, 'dataTitle': 'item.documents.0.data.texts.name2'} %}
+        {% set dumpArray = {dump_data: item.documents.0.data.texts.name2, dump_title: 'item.documents.0.data.texts.name2'} %}
         {% include "CeresSchaffrath::VarDump" with { dumpArray } %}
 
 
