@@ -9,7 +9,7 @@
 
 {#ao Variables #}
 {#{% set variationList = services.item.getVariationList( item.documents[0].data.item.id ) %}#}
-{% set variation = items.documents.0.data.variation.name %}
+{% set variation = items.documents.0.data.variation.number %}
 
 
 {% block PartialHead %}
@@ -63,7 +63,7 @@
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].data } %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].data.item.id } %}
 
-        {% set test = items.documents[0].data.variation.name %}
+        {% set test = items.documents[0].data.variation.id %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': test } %}
 
         <div class="row m-t-3">
