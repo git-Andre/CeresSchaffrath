@@ -64,8 +64,8 @@
         {% set itemTest = services.item.getItem( item.documents[0].data.item.id ) %}
         {% include "CeresSchaffrath::VarDump" with { dump_data: itemTest.item('free14') } %}
 
-        {% set dumpArray = {dump_data: item.documents.0.data.texts.name2, dump_title: 'item.documents.0.data.texts.name2'} %}
-        {% include "CeresSchaffrath::VarDump" with { dumpArray } %}
+        {#{% set dumpArray = {dump_data: item.documents.0.data.texts.name2, dump_title: 'item.documents.0.data.texts.name2'} %}#}
+        {#{% include "CeresSchaffrath::VarDump" %}#}
 
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.data.texts.name2 } %}#}
