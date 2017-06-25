@@ -57,12 +57,11 @@
     <div class="single container-max page-content">
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': variations } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.data } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].defaultCategories.id } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': services.item.getItem( item.documents[0].data.item.id ) } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.data.texts } %}
 
         {% set test = items.documents[0].data.calculatedPrices %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': test } %}
+        {{ test | json_encode }}
 
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
