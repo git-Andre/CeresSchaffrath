@@ -40,6 +40,7 @@
         "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
         "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
 
+
     </script>
 {% endblock %}
 
@@ -62,7 +63,8 @@
         {% set itemTest = services.item.getItem( item.documents[0].data.item.id ) %}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemTest.item('free14') } %}
 
-        {% include "CeresSchaffrath::VarDump" with { ['dataAo': item.documents.0.data.texts.name2, 'dataTitle': 'item.documents.0.data.texts.name2'] } %}
+        {% set dumpArray = ['dataAo': item.documents.0.data.texts.name2, 'dataTitle': 'item.documents.0.data.texts.name2'] %}
+        {% include "CeresSchaffrath::VarDump" with { dumpArray } %}
 
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.data.texts.name2 } %}#}
@@ -85,7 +87,7 @@
                 {#</h6>#}
 
                 <h1 class="h3 title">
-                        {{ item.documents[0].data.texts | itemName(configItemName) }}
+                    {{ item.documents[0].data.texts | itemName(configItemName) }}
                 </h1>
 
                 <h2 class="h4 title">
