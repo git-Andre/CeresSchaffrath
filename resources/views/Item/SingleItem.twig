@@ -67,12 +67,14 @@
         {% set itemGet = services.item.getItem( item.documents[0].data.item.id ) %}
         {% set itemDirect = item.documents[0].data %}
         {% set itemVariationId = item.documents[0].data.variation.id %}
-        {% set itemAttributId = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}
+        {% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}
+        {% set itemAttributId = documents[0].data.variation.name) %}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemGet } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemDirect } %}#}
 
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationId } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemAttributMap.values.['302'] } %}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemAttributId } %}
 
 
