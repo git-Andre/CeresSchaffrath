@@ -67,7 +67,7 @@
         {% set itemGet = services.item.getItem( item.documents[0].data.item.id ) %}
         {% set itemDirect = item.documents[0].data %}
         {% set itemVariationId = item.documents[0].data.variation.id %}
-        {% set itemVariationName = item.documents[0].data.variation.name) %}
+        {% set itemVariationName = item.documents[0].data.variation.name %}
         {% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemGet } %}#}
