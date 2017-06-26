@@ -40,6 +40,11 @@
         "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
         "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
 
+
+
+
+
+
     </script>
 {% endblock %}
 
@@ -59,13 +64,12 @@
         {# ao Var-Dump #}
 
         {% set itemTest = services.item.getItem( item.documents[0].data.item.id ) %}
-        {#{% include "CeresSchaffrath::VarDump" with { 'dataAo': itemTest } %}#}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemTest.documents.0.data.item.free14 } %} {#['free14']#}
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest } %}#}
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest.documents.0.data.item.free14 } %}#}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest.documents.0.data.item.free14 } %}
 
-        {#{% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.data.texts.name2 } %}#}
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents.0.data.texts.name2 } %}#}
 
-
-        {#{% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents.0.data.texts.name2 } %}#}
 
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
@@ -91,7 +95,7 @@
                 <h2 class="h4 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name"
                           v-resource-if:currentVariation="documents[0].data.variation.name != ''">
-                        {{ item.documents[0].data.texts | itemName(2) }} {# name3 #}
+                        {{ item.documents[0].data.texts | itemName(2) }}
                     </span>
 
                     <span v-resource-if:currentVariation="documents[0].data.variation.name == ''">
@@ -104,14 +108,20 @@
                 {% endif %}
 
                 <hr>
-
+                {# ArtikelNummern #}
+                <div class="m-b-0">
+                    <span class="articlenumber small text-muted">
+                        <b>{{ trans("Ceres::Template.itemId") }}</b>
+                        <span v-resource-bind:currentVariation="documents.0.data.variation.id">{{ item.documents[0].data.variation.id }}</span>
+                    </span>
+                </div>
                 <div class="m-b-3">
                     <span class="articlenumber small text-muted">
                         <b>{{ trans("Ceres::Template.itemNumber") }}</b>
                         <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>
                     </span>
                 </div>
-
+                {#Variationen#}
                 {% if variations is not null %}
                     <div class="row m-b-1">
                         <variation-select template="#vue-variation-select"
@@ -120,7 +130,7 @@
                                           preselect="{{ item.documents[0].data.variation.id }}"></variation-select>
                     </div>
                 {% endif %}
-
+                {#Preise#}
                 {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}
                 {% if ('item.recommendedPrice' in itemData or 'all' in itemData) %}
                     <div class="crossprice"
@@ -157,15 +167,16 @@
                         </span>
                     </div>
                 {% endfor %}
-                {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
+                {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
+                {#Verfügbarkeit#}
                 {% for availability in services.availability.getAvailabilities() %}
                     <span class="availability tag availability_{{ availability.id }}"
                           v-resource-if:currentVariation="documents[0].data.variation.availability.id == {{ availability.id }}">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.availability.names.name">{{ item.documents[0].data.variation.availability.names.name }}</span>
                 </span>
                 {% endfor %}
-
+                {# Warenkorb #}
                 <div class="row m-y-1">
 
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
@@ -175,7 +186,7 @@
 
                     {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
                 </div>
-
+                {#Wunschliste#}
                 <div class="row">
                     <!--
                     <div class="col-xs-6 offset-xs-6 m-t-1">
@@ -190,7 +201,7 @@
                 {{ LayoutContainer.show("Ceres::SingleItem.AdditionalContentAfterAddToBasket", item.documents[0].data) }}
 
                 <hr>
-
+                {# Hinweis Versandkosten #}
                 <span class="vat small text-muted">
                     {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
                     <a href="#"
@@ -225,7 +236,7 @@
 
                     {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabs") }}
                 </ul>
-
+                {# Details #}
                 <div class="tab-content">
                     <div class="tab-pane active" id="details-{{ item.documents[0].data.variation.id }}" role="tabpanel">
                         <div class="m-y-2">

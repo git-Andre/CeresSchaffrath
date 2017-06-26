@@ -2,6 +2,7 @@
 
     namespace CeresSchaffrath\Containers;
 
+    use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
     use Plenty\Plugin\Templates\Twig;
 
     // use IO\Builder\Item\Fields\ItemCrossSellingFields;
@@ -21,9 +22,9 @@
     // use Plenty\Modules\Cloud\ElasticSearch\Lib\Source\IncludeSource;
     // use Plenty\Modules\Item\Attribute\Contracts\AttributeNameRepositoryContract;
     // use Plenty\Modules\Item\Attribute\Contracts\AttributeValueNameRepositoryContract;
-    use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
 
-    // use Plenty\Modules\Item\DataLayer\Models\Record;
+    use Plenty\Modules\Item\DataLayer\Models\Record;
+
     // use Plenty\Modules\Item\DataLayer\Models\RecordList;
     // use Plenty\Modules\Item\Search\Aggregations\AttributeValueListAggregation;
     // use Plenty\Modules\Item\Search\Aggregations\AttributeValueListAggregationProcessor;
@@ -35,10 +36,9 @@
     // use Plenty\Plugin\Application;
 
 
-
     class DiffSteuerContainer {
 
-        public function call(Twig $twig, ItemDataLayerRepositoryContract $itemData) : string
+        public function call(Twig $twig, Record $itemData) : string
         {
             return $twig -> render('CeresSchaffrath::Containers.DiffSteuer', $itemData);
         }
