@@ -67,25 +67,24 @@
         {% set itemGet = services.item.getItem( item.documents[0].data.item.id ) %}
         {% set singleItemFields = item.documents[0].data %}
         {% set itemVariationId = item.documents[0].data.variation.id %}
-        {% set itemVariationName = item.documents[0].data.variation.name %}
+        {#{% set itemVariationName = item.documents[0].data.variation.name %}#}
         {% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemGet } %}#}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields } %}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.itemId } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.id } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.salesPrices.price } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.salesPrices.type } %}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.item.id } %}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.id } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.name } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.number } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.item.documents.data } %}
 
 
 
 
 
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationName } %}
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationName } %}#}
 
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest.documents.0.data.item.free14 } %}#}
