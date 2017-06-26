@@ -66,7 +66,9 @@
         {% set itemTest = services.item.getItem( item.documents[0].data.item.id ) %}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest.documents.0.data.item.free14 } %}#}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest.documents.0.data.item.free14 } %}
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest.documents.0.data.item.free14 } %}#}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents.0.data.texts.name2 } %}#}
 
@@ -111,13 +113,13 @@
                 {# ArtikelNummern #}
                 <div class="m-b-0">
                     <span class="articlenumber small text-muted">
-                        <b>{{ trans("Ceres::Template.itemId") }}</b>
+                        <b>{{ trans("CeresSchaffrath::Template.itemId") }}</b>
                         <span v-resource-bind:currentVariation="documents.0.data.variation.id">{{ item.documents[0].data.variation.id }}</span>
                     </span>
                 </div>
                 <div class="m-b-3">
                     <span class="articlenumber small text-muted">
-                        <b>{{ trans("Ceres::Template.itemNumber") }}</b>
+                        <b>{{ trans("CeresSchaffrath::Template.itemNumber") }}</b>
                         <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>
                     </span>
                 </div>

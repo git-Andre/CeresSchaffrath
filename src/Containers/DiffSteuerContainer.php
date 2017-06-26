@@ -38,7 +38,7 @@
 
     class DiffSteuerContainer {
 
-        public function call(Twig $twig, Record $itemData) : string
+        public function call(Twig $twig, $itemData) : string
         {
             return $twig -> render('CeresSchaffrath::Containers.DiffSteuer', $itemData);
         }
