@@ -78,11 +78,13 @@
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.id } %}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.number } %}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.name } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
+
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.calculatedPrices.rrp } %}
 
 
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.item.free14 } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.item.free14 | escape } %}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemAttributMap } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}#}
