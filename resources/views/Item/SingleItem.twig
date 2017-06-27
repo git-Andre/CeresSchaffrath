@@ -81,7 +81,7 @@
 
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemVariationData.properties } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemVariationData.item } %}
 
 
         <div class="row m-t-3">
@@ -261,7 +261,6 @@
                         {#Merkmale#}
                         <div class="m-y-1">
                             <dl class="itemDefList">
-
                                 {% for prop in itemVariationData.properties %}
                                     {% if prop.selection[0].name != '' %}
                                         <dt>{{ prop.property.names[0].name }}</dt>
