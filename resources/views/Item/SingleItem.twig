@@ -65,15 +65,13 @@
 
         {# ao Var-Dump #}
 
-
         {% set itemData = item.documents[0].data %}
         {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
         {% set itemVariationData = itemGetVariation.documents[0].data %}
 
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.item.free14 | raw } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData } %}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
 
         {#{% set variationList = services.item.getVariationList(item.documents[0].data.item.id) %}#}
@@ -87,15 +85,9 @@
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': variationList } %}#}
 
 
-
-
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}#}
 
 
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.item.free14 | raw } %}#}
-
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.calculatedPrices.rrp } %}#}
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemAttributMap } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}#}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents.0.data.texts.name2 } %}#}
