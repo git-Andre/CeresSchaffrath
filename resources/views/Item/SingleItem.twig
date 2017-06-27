@@ -82,8 +82,11 @@
 
         {# ao Var-Dump #}
         {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemMain } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemGetVariation } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemVariationData } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].data } %}
+
+        {# ao Var-Dump #}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo':  } %}
+
 
 
         <div class="row m-t-3">
