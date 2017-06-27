@@ -52,6 +52,7 @@
 
 
 
+
     </script>
 {% endblock %}
 
@@ -265,8 +266,8 @@
                 </ul>
                 {# Details #}
                 <div class="tab-content">
-                    <h2 class="m-y-1">{{ itemData.texts.name2 }}</h2>
                     <div class="tab-pane active" id="details-{{ item.documents[0].data.variation.id }}" role="tabpanel">
+                        <h2 class="m-y-1">{{ itemData.texts.name2 }}</h2>
                         <div class="m-y-2">
                             {{ item.documents[0].data.texts.description|raw }}
                         </div>
