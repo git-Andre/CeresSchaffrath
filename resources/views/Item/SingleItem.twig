@@ -47,6 +47,9 @@
 
 
 
+
+
+
     </script>
 {% endblock %}
 
@@ -66,31 +69,40 @@
         {# ao Var-Dump #}
 
         {% set itemData = item.documents[0].data %}
+
         {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
         {% set itemVariationData = itemGetVariation.documents[0].data %}
 
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.item.free1 } %}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
+        <dl class="itemDefList">
 
-        {#{% set variationList = services.item.getVariationList(item.documents[0].data.item.id) %}#}
+            {% for prop in itemVariationData.properties %}
+                <dt>{{ itemVariationData.properties.property.names[0].name }}</dt>
+                <dd>{{ itemVariationData.properties.selection[0]name }}</dd>
+            {% endfor %}
+        </dl>
 
-
-        {#{% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}#}
-
-
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData.item.id } %}#}
-
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': variationList } %}#}
-
-
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}#}
+        {#
+                {% set variationList = services.item.getVariationList(item.documents[0].data.item.id) %}
 
 
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}#}
+                {% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}
 
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents.0.data.texts.name2 } %}#}
+
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData.item.id } %}
+
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': variationList } %}
+
+
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
+
+
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}
+
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents.0.data.texts.name2 } %}
+        #}
 
 
         <div class="row m-t-3">
@@ -174,22 +186,22 @@
                     <sup>*</sup>
                     <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                 </span>
-
-                {% for variationId, basePrice in basePriceList %}
-                    <div class="base-price text-muted m-y-1"
-                         v-resource-if:currentVariation="documents[0].data.variation.id == {{ variationId }}">
-                        {{ trans("Ceres::Template.itemUnitPrice") }}
-                        <span class="base-price-value">{{ item.documents[0].data.calculatedPrices.default.unitPrice | formatMonetary(item.documents[0].data.calculatedPrices.default.currency) }}</span>
-                        /
-                        <span class="base-price-amount">
+                {% if itemVariationData.variation.mayShowUnitPrice %}
+                    {% for variationId, basePrice in basePriceList %}
+                        <div class="base-price text-muted m-y-1"
+                             v-resource-if:currentVariation="documents[0].data.variation.id == {{ variationId }}">
+                            {{ trans("Ceres::Template.itemUnitPrice") }}
+                            <span class="base-price-value">{{ item.documents[0].data.calculatedPrices.default.unitPrice | formatMonetary(item.documents[0].data.calculatedPrices.default.currency) }}</span>
+                            /
+                            <span class="base-price-amount">
                         {% if basePrice.lot > 1 %}
                             {{ basePrice.lot }}
                         {% endif %}
-                            {{ services.unit.getUnitById( basePrice.unit, services.sessionStorage.getLang() ).name }}
+                                {{ services.unit.getUnitById( basePrice.unit, services.sessionStorage.getLang() ).name }}
                         </span>
-                    </div>
-                {% endfor %}
-
+                        </div>
+                    {% endfor %}
+                {% endif %}
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
                 {#Verfügbarkeit#}
