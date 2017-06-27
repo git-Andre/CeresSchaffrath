@@ -65,21 +65,24 @@
         {# ao Var-Dump #}
 
 
-        {% set itemFields = item.documents[0].data.item %}
-        {% set itemVariation = item.documents[0].data.variation %}
+        {% set itemMain = item.documents[0].data.item %}
+
+        {#{% set itemsGetAll = services.item.getItem( item.documents[0].data.item.id ) %}#}
+        {% set variationList = services.item.getVariationList(item.documents[0].data.item.id) %}
+
+        {% set itemVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 
         {#{% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}#}
 
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet } %}#}
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields } %}#}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemFields.id } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemMain.id } %}
 
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation } %}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation.id } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation.number } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation.name } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': variationList } %}
+
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0] } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data } %}
 
 
 
