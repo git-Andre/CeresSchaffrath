@@ -64,28 +64,32 @@
 
         {# ao Var-Dump #}
 
-        {% set itemsGetAll = services.item.getItem( item.documents[0].data.item.id ) %}
-        {% set itemsGet = itemsGetAll.documents[0].data %}
-        {#{% set itemCurrentVariation = itemsGet %}#}
 
-        {% set singleItemFields = item.documents[0].data %}
-        {% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}
+        {% set itemFields = item.documents[0].data.item %}
+        {% set itemVariation = item.documents[0].data.variation %}
+
+        {#{% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}#}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields } %}#}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.item.id } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.id } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.number } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.name } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemFields.id } %}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.calculatedPrices.rrp } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation } %}
+
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation.id } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation.number } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation.name } %}
 
 
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.item.free14 | escape } %}
 
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}#}
+
+
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.item.free14 | raw } %}#}
+
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.calculatedPrices.rrp } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemAttributMap } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}#}
 
