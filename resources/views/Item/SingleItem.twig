@@ -222,13 +222,13 @@
             <div class="col-md-7 m-y-3">
 
                 <ul class="nav nav-tabs" role="tablist">
-                    {% if not item.documents[0].data.texts.description == '' and('item.description' in itemData or 'all' in itemData) %}
+                    {#{% if not item.documents[0].data.texts.description == '' and('item.description' in itemData or 'all' in itemData) %}#}
                         <li class="nav-item">
                             <a class="nav-link active" data-toggle="tab"
                                href="#details-{{ item.documents[0].data.variation.id }}"
                                role="tab">{{ trans("Ceres::Template.itemDescription") }}</a>
                         </li>
-                    {% endif %}
+                    {#{% endif %}#}
 
                     {% if not item.documents[0].data.texts.technicalData == '' and('item.technical_data' in itemData or 'all' in itemData) %}
                         <li class="nav-item">
@@ -268,12 +268,12 @@
 
                                 {% if itemVariationData.item.free1 != '' %}
                                     <dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>
-                                    <dd>{{ itemVariationData.item.free1 }}</dd>
+                                    <dd>{{ itemVariationData.item.free1 }} g</dd>
                                 {% endif %}
 
                                 {% if itemVariationData.item.free2 != '' %}
                                     <dt>{{ trans("CeresSchaffrath::Template.free2") }}</dt>
-                                    <dd>{{ itemVariationData.item.free2 }}</dd>
+                                    <dd>{{ itemVariationData.item.free2 }} mm</dd>
                                 {% endif %}
 
                             </dl>
