@@ -61,6 +61,8 @@
 
 
 
+
+
     </script>
 {% endblock %}
 
@@ -261,10 +263,10 @@
                             <dl class="itemDefList">
 
                                 {% for prop in itemVariationData.properties %}
-                                    <div class="defItem">
+                                    {% if prop.selection[0].name != '' %}
                                         <dt>{{ prop.property.names[0].name }}</dt>
                                         <dd>{{ prop.selection[0].name }}</dd>
-                                    </div>
+                                    {% endif %}
                                 {% endfor %}
                             </dl>
                         </div>
