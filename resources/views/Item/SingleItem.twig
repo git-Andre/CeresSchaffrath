@@ -72,31 +72,10 @@
 
         {# ao Var-Dump #}
 
-        {% set itemData = item.documents[0].data %}
+        {% set itemMain = item.documents[0].data %}
 
         {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
         {% set itemVariationData = itemGetVariation.documents[0].data %}
-
-
-        {#
-                {% set variationList = services.item.getVariationList(item.documents[0].data.item.id) %}
-
-
-                {% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}
-
-
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData.item.id } %}
-
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': variationList } %}
-
-
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
-
-
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemsGet.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}
-
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents.0.data.texts.name2 } %}
-        #}
 
 
         <div class="row m-t-3">
@@ -268,7 +247,7 @@
                 {# Details #}
                 <div class="tab-content">
                     <div class="tab-pane active" id="details-{{ item.documents[0].data.variation.id }}" role="tabpanel">
-                        <h2 class="m-y-1">{{ itemData.texts.name2 }}</h2>
+                        <h2 class="m-y-1">{{ itemMain.texts.name2 }}</h2>
                         <div class="m-y-2">
                             {{ item.documents[0].data.texts.description|raw }}
                         </div>
