@@ -7,12 +7,6 @@
 {% set basePriceList = getBasePriceList( services.item.getVariationList( item.documents[0].data.item.id  ) ) %}
 {% set crossSellingList = services.item.getItemCrossSellingList( item.documents[0].data.item.id  ) %}
 
-{#ao Variables #}
-    {% set itemMain = item.documents[0].data %}
-
-    {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
-    {% set itemVariationData = itemGetVariation.documents[0].data %}
-
 
 {% block PartialHead %}
     <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
@@ -78,6 +72,12 @@
 
 
     <div class="single container-max page-content">
+        {#ao Variables #}
+        {% set itemMain = item.documents[0].data %}
+
+        {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
+        {% set itemVariationData = itemGetVariation.documents[0].data %}
+
 
 
         {# ao Var-Dump #}
