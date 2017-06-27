@@ -8,7 +8,11 @@
 {% set crossSellingList = services.item.getItemCrossSellingList( item.documents[0].data.item.id  ) %}
 
 {#ao Variables #}
-{#{% set variationList = services.item.getVariationList( item.documents[0].data.item.id ) %}#}
+    {% set itemMain = item.documents[0].data %}
+
+    {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
+    {% set itemVariationData = itemGetVariation.documents[0].data %}
+
 
 {% block PartialHead %}
     <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
@@ -55,6 +59,8 @@
 
 
 
+
+
     </script>
 {% endblock %}
 
@@ -71,12 +77,9 @@
 
     <div class="single container-max page-content">
 
+
         {# ao Var-Dump #}
-
-        {% set itemMain = item.documents[0].data %}
-
-        {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
-        {% set itemVariationData = itemGetVariation.documents[0].data %}
+        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemVariationData.properties } %}
 
 
         <div class="row m-t-3">
@@ -258,8 +261,10 @@
                             <dl class="itemDefList">
 
                                 {% for prop in itemVariationData.properties %}
-                                    <dt>{{ prop.property.names[0].name }}</dt>
-                                    <dd>{{ prop.selection[0].name }}</dd>
+                                    <div class="defItem">
+                                        <dt>{{ prop.property.names[0].name }}</dt>
+                                        <dd>{{ prop.selection[0].name }}</dd>
+                                    </div>
                                 {% endfor %}
                             </dl>
                         </div>
