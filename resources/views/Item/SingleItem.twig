@@ -53,6 +53,7 @@
 
 
 
+
     </script>
 {% endblock %}
 
@@ -271,33 +272,33 @@
                         <div class="m-y-2">
                             {{ item.documents[0].data.texts.description|raw }}
                         </div>
-                    </div>
 
-                    {#Merkmale#}
-                    <div class="m-y-1">
-                        <dl class="itemDefList">
+                        {#Merkmale#}
+                        <div class="m-y-1">
+                            <dl class="itemDefList">
 
-                            {% for prop in itemVariationData.properties %}
-                                <dt>{{ prop.property.names[0].name }}</dt>
-                                <dd>{{ prop.selection[0].name }}</dd>
-                            {% endfor %}
-                        </dl>
-                    </div>
-                    {#Free Felder#}
-                    <div class="m-y-1">
-                        <dl class="itemDefList">
+                                {% for prop in itemVariationData.properties %}
+                                    <dt>{{ prop.property.names[0].name }}</dt>
+                                    <dd>{{ prop.selection[0].name }}</dd>
+                                {% endfor %}
+                            </dl>
+                        </div>
+                        {#Free Felder#}
+                        <div class="m-y-1">
+                            <dl class="itemDefList">
 
-                            {% if itemVariationData.item.free1 != '' %}
-                                <dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>
-                                <dd>{{ itemVariationData.item.free1 }}</dd>
-                            {% endif %}
+                                {% if itemVariationData.item.free1 != '' %}
+                                    <dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>
+                                    <dd>{{ itemVariationData.item.free1 }}</dd>
+                                {% endif %}
 
-                            {% if itemVariationData.item.free2 != '' %}
-                                <dt>{{ trans("CeresSchaffrath::Template.free2") }}</dt>
-                                <dd>{{ itemVariationData.item.free2 }}</dd>
-                            {% endif %}
+                                {% if itemVariationData.item.free2 != '' %}
+                                    <dt>{{ trans("CeresSchaffrath::Template.free2") }}</dt>
+                                    <dd>{{ itemVariationData.item.free2 }}</dd>
+                                {% endif %}
 
-                        </dl>
+                            </dl>
+                        </div>
                     </div>
 
                     <div class="tab-pane" id="data-{{ item.documents[0].data.variation.id }}" role="tabpanel">
