@@ -46,6 +46,7 @@
 
 
 
+
     </script>
 {% endblock %}
 
@@ -65,24 +66,25 @@
         {# ao Var-Dump #}
 
 
-        {% set itemMain = item.documents[0].data.item %}
+        {% set itemData = item.documents[0].data %}
+        {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
+        {% set itemVariationData = itemGetVariation.documents[0].data %}
 
-        {#{% set itemsGetAll = services.item.getItem( item.documents[0].data.item.id ) %}#}
-        {% set variationList = services.item.getVariationList(item.documents[0].data.item.id) %}
 
-        {% set itemVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.item.free14 | raw } %}
+
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData } %}
+
+        {#{% set variationList = services.item.getVariationList(item.documents[0].data.item.id) %}#}
+
 
         {#{% set itemAttributMap = services.item.getAttributeNameMap( item.documents[0].data.item.id) %}#}
 
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemMain.id } %}
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemData.item.id } %}#}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariation } %}
-
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': variationList } %}
-
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0] } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data } %}
+        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': variationList } %}#}
 
 
 
