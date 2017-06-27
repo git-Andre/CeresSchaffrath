@@ -73,16 +73,17 @@
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemGet } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields } %}#}
 
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.salesPrices.price } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.salesPrices.type } %}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.item.id } %}
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.id } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.number } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.variation.name } %}
+
+
+
         {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.item.documents.data } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': singleItemFields.texts.urlPath } %}
 
 
-        {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationName } %}#}
-
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationName } %}
 
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemTest.documents.0.data.item.free14 } %}#}
         {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': itemGet.documents.0.data.variation.plenty_item_variation_base_show_unit_price } %}#}
@@ -188,6 +189,7 @@
                 {% endfor %}
 
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
+
                 {#Verfügbarkeit#}
                 {% for availability in services.availability.getAvailabilities() %}
                     <span class="availability tag availability_{{ availability.id }}"
@@ -223,7 +225,7 @@
                 {# Hinweis Versandkosten #}
                 <span class="vat small text-muted">
                     {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
-                    <a href="#"
+                    <a href="/versandkosten" target="_blank"
                        title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
                 </span>
 

@@ -40,7 +40,7 @@
     {
       "key": "CeresSchaffrath\\Containers\\DiffSteuerContainer",
       "name": "DiffSteuer",
-      "description": "Hinweis für die Differenzbesteuereung"
+      "description": "Hinweis auf die Differenzbesteuereung"
     }
   ]
 }
