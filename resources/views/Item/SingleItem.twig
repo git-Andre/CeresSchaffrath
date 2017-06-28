@@ -382,12 +382,13 @@
                     </div>
 
                     {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent") }}
+
+                    {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data) }}
                 </div>
             </div>
         </div>
         <!-- ./ITEM DESCRIPTION -->
 
-        {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data) }}
 
         <!-- CROSSSELLING -->
         {#{% if crossSellingList | length > 0 %}#}
