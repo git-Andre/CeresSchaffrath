@@ -241,7 +241,6 @@
                     {#Merkmale#}
 
                     {# ao Var-Dump #}
-                    {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemVariationData.properties[0] } %}
 
                     {% if itemVariationData.properties is not empty %}
                     <div class="m-y-1">
@@ -253,11 +252,9 @@
                                 {% endif %}
                             {% endfor %}
                         </dl>
-                    </div>
                     {% endif %}
                     {#Free Felder#}
                     {% if itemVariationData.item.free1 > '4' or itemVariationData.item.free2 != '' %}
-                        <div class="m-y-1">
                             <dl class="itemDefList">
 
                                 {% if itemVariationData.item.free1 > '4' %}
