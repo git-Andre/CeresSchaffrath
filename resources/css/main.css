@@ -11954,6 +11954,22 @@ tr._idGenTableRowColumn-5 {
   border-bottom: 1px solid #dcdbd8;
 }
 
+.tab-content ul {
+  list-style-position: outside;
+}
+
+.tab-content li {
+  list-style: none;
+}
+
+.tab-content li::before {
+  content: "\f0da";
+  font-family: FontAwesome;
+  font-size: 1rem;
+  padding: 0.4rem;
+  color: #4D4F4D;
+}
+
 .itemDefList {
   display: block;
   background-color: #f7f7f9;
@@ -11969,6 +11985,10 @@ tr._idGenTableRowColumn-5 {
 
 .itemDefList dd {
   width: 95%;
+}
+
+.product-list li::before {
+  content: '';
 }
 
 .text-abel {

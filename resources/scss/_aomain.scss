@@ -20,6 +20,21 @@
     font-size: 1.20rem;
     border-bottom: $border-line-ao;
   }
+  ul {
+    //list-style-type: image(<i class="fa fa-truck" aria-hidden="true">);
+    list-style-position: outside;
+  }
+  li {
+    list-style: none;
+  }
+  li::before {
+    content: "\f0da";
+    font-family: FontAwesome;
+    font-size: 1rem;
+    padding: 0.4rem;
+    color: $gray-dark;
+  }
+
 }
 
 .itemDefList {
@@ -36,6 +51,12 @@
   }
   dd {
     width: 95%;
+  }
+}
+
+.product-list {
+  li::before {
+    content: '';
   }
 }
 
