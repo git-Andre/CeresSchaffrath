@@ -6,8 +6,8 @@
 
     class CeresSchaffrathInfoContainer {
 
-        public function call(Twig $twig) : string
+        public function call(Twig $twig, $variationData) : string
         {
-            return $twig -> render('CeresSchaffrath::Containers.InfoSchaffrath');
+            return $twig -> render('CeresSchaffrath::Containers.InfoSchaffrath', $variationData);
         }
     }
