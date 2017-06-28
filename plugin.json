@@ -43,6 +43,11 @@
       "description": "Disclaimer Schaffrath"
     },
     {
+      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoSchaffrathTabContainer",
+      "name": "InfoSchaffrathTab",
+      "description": "Tab für Disclaimer Schaffrath"
+    },
+    {
       "key": "CeresSchaffrath\\Containers\\DiffSteuerContainer",
       "name": "DiffSteuer",
       "description": "Hinweis auf die Differenzbesteuereung"

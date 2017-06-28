@@ -11948,6 +11948,7 @@ tr._idGenTableRowColumn-5 {
 }
 
 .tab-content h5 {
+    width: 5rem;
   font-family: "Abel", sans-serif;
   font-size: 1.20rem;
   border-bottom: 1px solid #dcdbd8;
@@ -11955,6 +11956,7 @@ tr._idGenTableRowColumn-5 {
 
 .itemDefList {
   display: block;
+    background-color: gray;
   font-family: "Abel", sans-serif;
   margin: 13px 0 0 30px;
 }

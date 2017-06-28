@@ -4,10 +4,10 @@
 
     use Plenty\Plugin\Templates\Twig;
 
-    class CeresSchaffrathInfoSchaffrath {
+    class CeresSchaffrathInfoSchaffrathTab {
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::Containers.InfoSchaffrath');
+            return $twig -> render('CeresSchaffrath::Containers.InfoSchaffrathTab');
         }
     }
