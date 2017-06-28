@@ -75,17 +75,18 @@
         {#ao Variables #}
         {% set itemMain = item.documents[0].data %}
 
+
         {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
         {% set itemVariationData = itemGetVariation.documents[0].data %}
 
 
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemMain } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': item.documents[0].data } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemMawwwwin } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data } %}
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo':  itemVariationData } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData':  itemVariationData } %}
 
 
 
