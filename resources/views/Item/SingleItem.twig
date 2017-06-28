@@ -241,7 +241,7 @@
                     {#Merkmale#}
 
                     {# ao Var-Dump #}
-                    {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemVariationData.properties } %}
+                    {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemVariationData.properties[0] } %}
 
                     {% if itemVariationData.properties is not empty %}
                     <div class="m-y-1">

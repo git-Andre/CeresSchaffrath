@@ -4,7 +4,7 @@
 
     use Plenty\Plugin\Templates\Twig;
 
-    class CeresSchaffrathInfo {
+    class CeresSchaffrathInfoContainer {
 
         public function call(Twig $twig) : string
         {
