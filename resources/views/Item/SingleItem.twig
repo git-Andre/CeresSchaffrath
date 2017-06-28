@@ -52,6 +52,7 @@
 
 
 
+
     </script>
 {% endblock %}
 
@@ -241,17 +242,9 @@
                             {{ item.documents[0].data.texts.description|raw }}
                         </div>
 
-                        {% set test1 = '1' %}
-                        {% set test0 = '0' %}
-                        {% set test5 = '3' %}
-
-                        {% if test5 > 4 and test1 > '0' and test0 != '' %}
-                            <h3>Bedingung erfüllt - soso also</h3>
-                        {% endif %}
-
                         {#Merkmale#}
 
-                        {% if itemVariationData.properties is not empty %}
+                        {% if itemVariationData.properties is not empty or itemVariationData.item.free1 < '5' %}
                             <div class="m-y-1">
                                 <dl class="itemDefList">
                                     {% for prop in itemVariationData.properties %}
@@ -261,12 +254,10 @@
                                         {% endif %}
                                     {% endfor %}
                                     {#Free Felder#}
-                                    {% if itemVariationData.item.free1 > '4' or itemVariationData.item.free1 != '' %}
+                                    {% if itemVariationData.item.free1 > '4' %}
 
-                                        {% if itemVariationData.item.free1 > '4' %}
-                                            <dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>
-                                            <dd>{{ itemVariationData.item.free1 }} g</dd>
-                                        {% endif %}
+                                        <dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>
+                                        <dd>{{ itemVariationData.item.free1 }} g</dd>
 
                                         {% if itemVariationData.item.free2 != '' or itemVariationData.item.free2 != '0' %}
                                             <dt>{{ trans("CeresSchaffrath::Template.free2") }}</dt>
