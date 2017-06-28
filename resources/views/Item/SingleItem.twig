@@ -381,10 +381,6 @@
                         </div>
                     </div>
 
-                    {# ao Var-Dump #}
-                    {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.item } %}
-
-
                     {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent", itemVariationData.item) }}
 
                     {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer") }} {# , item.documents[0].data #}

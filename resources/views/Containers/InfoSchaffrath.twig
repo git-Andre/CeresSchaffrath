@@ -1,16 +1,18 @@
 <div class="tab-pane" id="assessments-info" role="tabpanel">
-    <div class="m-y-2">
+    <div class="m-t-2 m-b-3">
 
-        <div class="ao-werbung">
-            <h3>Besuchen Sie auch unser <a href="/kontakt/">Ladengeschäft</a> in Kleinmachnow</h3>
-            <h2>Im Raum Berlin/Potsdam können Sie mir gerne alles anbieten, was mit Numismatik zu tun hat (Münzen,
-                Medaillen usw.).</h2>
-            <h4>Ich kann jederzeit Ihre Sammlung bei Ihnen vor Ort bewerten <strong>( kostenfrei! )</strong><br>
-                - und kaufe natürlich auch an!</h4>
+        <div class="alert alert-success" role="alert">
+            <h4 class="alert-heading">Besuchen Sie auch unser <a href="/kontakt/">Ladengeschäft</a></h4>
+            <p>Im Raum Berlin/Potsdam können Sie mir gerne alles anbieten, was mit Numismatik zu tun hat <span
+                        class="small text-muted">(Münzen,
+                Medaillen usw.)</span></p>
+            <p class="m-b-0">Ich kann jederzeit Ihre Sammlung bei Ihnen vor Ort bewerten <strong>( kostenfrei!
+                    )</strong><br>
+                - und kaufe natürlich auch an!</p>
         </div>
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dataAo': itemVariationData } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.item } %}
 
 
     </div>
