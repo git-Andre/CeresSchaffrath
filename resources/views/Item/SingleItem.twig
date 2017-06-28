@@ -41,6 +41,7 @@
         "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
         "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
         "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
+
     </script>
 {% endblock %}
 
@@ -371,10 +372,10 @@
                     </div>
 
                     {# ao Var-Dump #}
-                    {% include "CeresSchaffrath::VarDump" with { 'dumpData': lang } %}
 
-
-                    {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent", itemVariationData.item) }}
+                    {% if lang = 'de' %}
+                        {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent") }}
+                    {% endif %}
 
                     {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer") }} {# , item.documents[0].data #}
                 </div>
