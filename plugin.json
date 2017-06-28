@@ -38,12 +38,12 @@
       "description": "Schaffrath Theme for Ceres"
     },
     {
-      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoSchaffrathContainer",
+      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoContainer",
       "name": "InfoSchaffrath",
       "description": "Disclaimer Schaffrath"
     },
     {
-      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoSchaffrathTabContainer",
+      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoTabContainer",
       "name": "InfoSchaffrathTab",
       "description": "Tab für Disclaimer Schaffrath"
     },
