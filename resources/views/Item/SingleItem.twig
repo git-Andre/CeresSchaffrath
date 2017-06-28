@@ -250,7 +250,7 @@
                         <div class="m-y-1">
                             <dl class="itemDefList">
 
-                                {% if itemVariationData.item.free1 != '' %}
+                                {% if itemVariationData.item.free1 > '4' %}
                                     <dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>
                                     <dd>{{ itemVariationData.item.free1 }} g</dd>
                                 {% endif %}
