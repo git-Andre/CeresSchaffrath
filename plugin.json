@@ -38,6 +38,11 @@
       "description": "Schaffrath Theme for Ceres"
     },
     {
+      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoSchaffrathContainer",
+      "name": "InfoSchaffrath",
+      "description": "Disclaimer Schaffrath"
+    },
+    {
       "key": "CeresSchaffrath\\Containers\\DiffSteuerContainer",
       "name": "DiffSteuer",
       "description": "Hinweis auf die Differenzbesteuereung"

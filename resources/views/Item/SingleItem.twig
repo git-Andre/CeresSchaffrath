@@ -334,7 +334,7 @@
 
                                 {% if ('item.weightG' in itemData or 'all' in itemData) and item.documents[0].data.variation.weightG != '' %}
                                     <tr v-resource-if:currentVariation="documents[0].data.variation.weightG != ''">
-                                        <td>{{ trans("Ceres::Template.itemWeight") }}</td>
+                                        <td>{{ trans("CeresSchaffrath::Template.itemWeight") }}</td>
                                         <td v-resource-bind:currentVariation="documents.0.data.variation.weightG">{{ item.documents[0].data.variation.weightG }}
                                             g
                                         </td>
