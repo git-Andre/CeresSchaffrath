@@ -24,10 +24,11 @@
 
 .itemDefList {
   display: block;
-  background-color: gray;
+  background-color: $gray-ao;
   font-family: $font-family-heading;
+  padding: 1.5rem;
   // width: 60%;
-  margin: 13px 0 0 30px;
+  //margin: 13px 0 0 30px;
   dt {
     width: 25%;
     float: left;

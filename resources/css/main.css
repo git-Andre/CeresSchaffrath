@@ -321,7 +321,7 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   color: #4D4F4D;
-  background-color: #e4e4e4;
+  background-color: #efefef;
 }
 
 [tabindex="-1"]:focus {
@@ -667,7 +667,7 @@ dl.row > dd + dt {
 
 .img-thumbnail {
   padding: 0.25rem;
-  background-color: #e4e4e4;
+  background-color: #efefef;
   border: 1px solid #ddd;
   border-radius: 0.1rem;
   transition: all .2s ease-in-out;
@@ -1703,7 +1703,7 @@ pre code {
 }
 
 .table .table {
-  background-color: #e4e4e4;
+  background-color: #efefef;
 }
 
 .table-sm th,
@@ -3623,7 +3623,7 @@ input[type="button"].btn-block {
 .nav-tabs .nav-item.open .nav-link:focus,
 .nav-tabs .nav-item.open .nav-link:hover {
   color: #7a7f7f;
-  background-color: #e4e4e4;
+  background-color: #efefef;
   border-color: #ddd #ddd transparent;
 }
 
@@ -9225,7 +9225,7 @@ a.text-danger:focus, a.text-danger:hover {
 }
 
 body {
-  background-color: #e4e4e4 !important;
+  background-color: #efefef !important;
 }
 
 .page-content {
@@ -11948,7 +11948,7 @@ tr._idGenTableRowColumn-5 {
 }
 
 .tab-content h5 {
-    width: 5rem;
+  width: 5rem;
   font-family: "Abel", sans-serif;
   font-size: 1.20rem;
   border-bottom: 1px solid #dcdbd8;
@@ -11956,9 +11956,9 @@ tr._idGenTableRowColumn-5 {
 
 .itemDefList {
   display: block;
-    background-color: gray;
+  background-color: #efefef;
   font-family: "Abel", sans-serif;
-  margin: 13px 0 0 30px;
+  padding: 1.5rem;
 }
 
 .itemDefList dt {
@@ -12003,7 +12003,7 @@ tr._idGenTableRowColumn-5 {
 }
 
 .copyright {
-  background-color: #e4e4e4;
+  background-color: #efefef;
   color: #4D4F4D;
 }
 
