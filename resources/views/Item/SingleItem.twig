@@ -313,7 +313,8 @@
 
 
                                 {# ao Var-Dump #}
-                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.item.manufacturer.externalName } %}
+                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.item.manufacturer } %}
+                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.filter } %}
 
 
                                 {% if ('item.manufacturer' in itemData or 'all' in itemData) and item.documents[0].data.item.manufacturer.externalName != '' %}
@@ -333,7 +334,7 @@
 
                                 {% if 'item.variationBase_content' in itemData or 'all' in itemData %}
                                     <tr>
-                                        <td>{{ trans("Ceres::Template.itemContent") }}</td>
+                                        <td>{{ trans("CeresSchaffrath::Template.itemContent") }}</td>
                                         <td>{{ item.documents[0].data.unit.content|formatDecimal(0) }} {{ item.documents[0].data.unit.names.name }}</td>
                                     </tr>
                                 {% endif %}
