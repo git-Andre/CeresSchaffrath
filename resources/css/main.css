@@ -9677,14 +9677,14 @@ body.lb-disable-scrolling {
 .owl-prev {
   position: absolute;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .owl-next {
   position: absolute;
   right: 0;
   -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 .owl-carousel.owl-loaded {
@@ -9940,7 +9940,7 @@ Custom classes
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-36%);
-          transform: translateY(-36%);
+  transform: translateY(-36%);
 }
 
 .owl-carousel .disabled {
@@ -9999,7 +9999,6 @@ Custom classes
 @media (min-width: 544px) {
   #single-carousel .owl-item img {
     height: 100%;
-    max-height: 500px;
   }
 }
 
@@ -10007,6 +10006,7 @@ Custom classes
   .owl-thumbs {
     display: inline-block;
   }
+
   .owl-thumbs .owl-thumb {
     object-fit: contain;
     width: 8em;
@@ -10017,6 +10017,7 @@ Custom classes
     border: 0px solid rgba(201, 137, 15, 0.5);
     margin: .5rem .5rem 0 0;
   }
+
   .owl-thumbs .owl-thumb.active, .owl-thumbs .owl-thumb:hover {
     border: 1px solid #c9890f;
     cursor: pointer;
@@ -10026,14 +10027,12 @@ Custom classes
 @media (min-width: 992px) {
   #single-carousel .owl-item img {
     height: 100%;
-    max-height: 600px;
   }
 }
 
 @media (min-width: 1200px) {
   #single-carousel .owl-item img {
     height: 100%;
-    max-height: 700px;
   }
 }
 
