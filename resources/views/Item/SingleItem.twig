@@ -47,6 +47,7 @@
 
 
 
+
     </script>
 {% endblock %}
 
@@ -382,12 +383,12 @@
                         </div>
                     </div>
 
-                    {# ao Var-Dump #}
-
+                    {#wenn Deutsch dann Inhalt für Info-Tab#}
                     {% if lang == 'de' %}
                         {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent") }}
                     {% endif %}
 
+                    {#Latest items                    #}
                     {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeenList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
 
                     <hr class="m-t-3 m-b-1">
@@ -396,6 +397,7 @@
                     <div class="row">
                         {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
                     </div>
+
                     {#{{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}#}
                 </div>
             </div>
