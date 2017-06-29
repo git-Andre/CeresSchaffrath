@@ -46,6 +46,7 @@
 
 
 
+
     </script>
 {% endblock %}
 
@@ -389,8 +390,12 @@
 
                     {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeenList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
 
-                    {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
+                    <hr class="m-t-3 m-b-1">
+                    <h1 class="h3">{{ trans("Ceres::Template.itemListLastSeen") }}</h1>
 
+                    <div class="row">
+                        {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
+                    </div>
                     {#{{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}#}
                 </div>
             </div>
