@@ -42,6 +42,8 @@
         "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
         "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
 
+
+
     </script>
 {% endblock %}
 
@@ -221,7 +223,10 @@
                            role="tab">{{ trans("Ceres::Template.itemMoreDetails") }}</a>
                     </li>
 
-                    {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabs") }}
+                    {% if lang == 'de' %}
+                        {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabs") }}
+                    {% endif %}
+
                 </ul>
                 {# Details #}
                 <div class="tab-content">
