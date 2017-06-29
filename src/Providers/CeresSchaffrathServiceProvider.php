@@ -46,11 +46,11 @@
                 $partial -> set('footer', 'CeresSchaffrath::Footer.ThemeFooter');
             }, self::EVENT_LISTENER_PRIORITY);
 
-            // provide template to use for single items
-            $eventDispatcher -> listen('IO.tpl.item', function (TemplateContainer $container, $templateData) {
-                $container -> setTemplate("CeresSchaffrath::Item.SingleItem");
-
-                return false;
-            }, self::EVENT_LISTENER_PRIORITY);
+// provide template to use for single items
+//             $eventDispatcher -> listen('IO.tpl.item', function (TemplateContainer $container, $templateData) {
+//                 $container -> setTemplate("CeresSchaffrath::Item.SingleItem");
+//
+//                 return false;
+//             }, self::EVENT_LISTENER_PRIORITY);
         }
     }
