@@ -11,7 +11,7 @@
 {% set itemMain = item.documents[0].data %}
                     {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 {% set itemVariationData = itemGetVariation.documents[0].data %}
-{% set lastSeenAo = 3 %}
+{#{% set lastSeenAo = 3 %}#}
 
 {% block PartialHead %}
     <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
@@ -45,14 +45,13 @@
 
 
 
+
     </script>
 {% endblock %}
 
 {% block PageBody %}
 
-    {{ services.lastSeen.setLastSeenMaxCount(lastSeenAo) }}
-
-
+    {#{{ services.lastSeen.setLastSeenMaxCount(lastSeenAo) }}#}
 
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
@@ -385,7 +384,10 @@
                         {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent") }}
                     {% endif %}
 
-                    {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}
+                    {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeen', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
+                    {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
+
+                    {#{{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}#}
                 </div>
             </div>
         </div>
