@@ -172,7 +172,7 @@
         {#{{ topItems }}#}
         {#{% endif %}#}
 
-        {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Containers.ItemLists.LastSeenItemList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
+        {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Test', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
 
         {% if itemList[2] %}
 
