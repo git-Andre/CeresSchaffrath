@@ -314,14 +314,15 @@
 
                                 {# ao Var-Dump #}
                                 {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.item.manufacturer } %}
+                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.item.manufacturer.externalName } %}
                                 {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.filter.hasManufacturer } %}
                                 {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.filter.hasProperty } %}
 
 
-                                {% if ('item.manufacturer' in itemData or 'all' in itemData) and item.documents[0].data.item.manufacturer.externalName != '' %}
+                                {% if ('item.manufacturer' in itemData or 'all' in itemData) and itemVariationData.filter.hasManufacturer %}
                                     <tr>
                                         <td>{{ trans("CeresSchaffrath::Template.itemManufacturer") }}</td>
-                                        <td>{{ item.documents[0].data.item.manufacturer.externalName }}</td>
+                                        <td>{{ itemVariationData.item.manufacturer.externalName }}</td>
                                     </tr>
                                 {% endif %}
 
