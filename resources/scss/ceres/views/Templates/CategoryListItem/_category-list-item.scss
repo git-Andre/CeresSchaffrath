@@ -74,7 +74,7 @@
     padding: 0 .8rem;
     margin-left: -.3em;
     background-color: #fff;
-
+    margin-bottom: 12px !important;
     transition: all 200ms ease-in-out;
   }
 
@@ -159,7 +159,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       line-height: 1.5em;
-      max-width: 75%;
+      max-width: 100%;
     }
 
     .thumb-image {

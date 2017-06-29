@@ -11403,6 +11403,7 @@ body.menu-is-visible {
   padding: 0 .8rem;
   margin-left: -.3em;
   background-color: #fff;
+  margin-bottom: 12px !important;
   transition: all 200ms ease-in-out;
 }
 
@@ -11484,7 +11485,7 @@ body.menu-is-visible {
     text-overflow: ellipsis;
     white-space: nowrap;
     line-height: 1.5em;
-    max-width: 75%;
+    max-width: 100%;
   }
   .cmp-product-thumb .thumb-image {
     width: 100%;
@@ -11948,6 +11949,215 @@ body.menu-is-visible {
   }
   .cmp-hero .hero-category:nth-last-child(n+2):nth-last-child(-n+2):first-child ~ .hero-category {
     border-left: none;
+  }
+}
+
+.single {
+  padding-top: 0 !important;
+}
+
+.single .main-image img {
+  width: 100%;
+}
+
+.single .title {
+  line-height: 1.2;
+}
+
+.single .producer {
+  line-height: 1.1;
+  font-weight: 700;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.single .single-description {
+  font-size: .85rem;
+}
+
+.single .price {
+  display: block;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.single .input-number {
+  text-align: center;
+}
+
+.single .vat {
+  display: none;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: .5em;
+  color: #020260;
+}
+
+.single .crosssellers img {
+  max-width: 100%;
+  width: auto;
+}
+
+.single .crosssellers .special-tags {
+  padding: .3rem;
+}
+
+.single .nav-tabs .nav-item {
+  float: none;
+}
+
+.single .nav-tabs .nav-item .nav-link {
+  border: 1px solid #ddd;
+}
+
+.single .nav-tabs .nav-item .nav-link.active, .single .nav-tabs .nav-item .nav-link:hover {
+  border: 1px solid #ddd;
+  color: #282d2f;
+  background: #f4f4f4;
+}
+
+.single .nav-tabs .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.owl-carousel-single .owl-controls {
+  position: absolute;
+  top: 50%;
+  z-index: 950;
+  width: 100%;
+}
+
+.owl-carousel-single .owl-controls .owl-buttons > div {
+  background: rgba(255, 255, 255, 0.75);
+  padding: 1rem;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.owl-carousel-single .owl-controls .owl-buttons > div.owl-next {
+  right: 0;
+}
+
+.owl-carousel-single .owl-controls .owl-buttons > div:hover {
+  background: white;
+}
+
+.owl-carousel-single .owl_item {
+  margin: 0;
+}
+
+.owl-carousel-single .owl_item a {
+  width: 100%;
+}
+
+.owl-carousel-preview .owl-item .owl_item {
+  padding: 5px;
+  margin: 5px 0;
+  cursor: pointer;
+}
+
+.owl-carousel-preview .owl-item .owl_item.synced {
+  background: #c9890f;
+}
+
+.owl-carousel-preview .owl-controls {
+  position: absolute;
+  top: 50%;
+  z-index: 9999;
+  width: 100%;
+}
+
+.owl-carousel-preview .owl-controls .owl-buttons > div {
+  background: rgba(255, 255, 255, 0.75);
+  padding: .5rem;
+  position: absolute;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.owl-carousel-preview .owl-controls .owl-buttons > div.owl-next {
+  right: 0;
+}
+
+.owl-carousel-preview .owl-controls .owl-buttons > div:hover {
+  background: white;
+}
+
+.availability_1,
+.availability_2 {
+  background-color: #7ED321;
+}
+
+.availability_3,
+.availability_4 {
+  background-color: #f0ad4e;
+}
+
+.availability_5 {
+  background-color: #d9534f;
+}
+
+.rating .tag {
+  padding-right: 0;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.rating .tag .amount {
+  padding: 0.2rem .6rem 0.2rem .4rem;
+  margin-left: .2rem;
+  background-color: #4d5154;
+}
+
+.rezension {
+  display: inline-block;
+}
+
+.img-thumbnail {
+  border: none;
+  border-radius: none;
+  padding: .75rem .45rem .25rem 0;
+}
+
+.wishlist:hover {
+  color: #d9534f !important;
+  text-decoration: none;
+}
+
+.single-rightside .shariff .orientation-horizontal li .fa {
+  line-height: 30px;
+  text-align: center;
+  margin-left: 0.5rem;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .single .price {
+    float: right;
+  }
+}
+
+@media (min-width: 768px) {
+  .single .nav-tabs .nav-item {
+    float: left;
+  }
+
+  .single .nav-tabs .nav-item .nav-link {
+    border: 1px solid #ddd;
+  }
+
+  .single .nav-tabs .nav-item .nav-link.active, .single .nav-tabs .nav-item .nav-link:hover {
+    border: 1px solid #ddd;
+    color: #7a7f7f;
+    background: white;
+  }
+
+  .single .nav-tabs .nav-item .nav-link.active {
+    border-bottom: 1px solid transparent;
+  }
+
+  .single .nav-tabs .nav-item + .nav-item {
+    margin-left: -1px;
   }
 }
 
@@ -12634,6 +12844,11 @@ a:hover {
 .custom-select {
   margin-top: 20px;
   border: 0px;
+}
+
+.ao-nach-oben {
+  -webkit-transform: translateY(-119px);
+  transform: translateY(-119px);
 }
 
 /*# sourceMappingURL=main.css.map */
