@@ -311,6 +311,11 @@
                                     </tr>
                                 {% endif %}
 
+
+                                {# ao Var-Dump #}
+                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.item.manufacturer.externalName } %}
+
+
                                 {% if ('item.manufacturer' in itemData or 'all' in itemData) and item.documents[0].data.item.manufacturer.externalName != '' %}
                                     <tr>
                                         <td>{{ trans("CeresSchaffrath::Template.itemManufacturer") }}</td>
