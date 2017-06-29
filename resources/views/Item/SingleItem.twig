@@ -314,8 +314,8 @@
 
                                 {# ao Var-Dump #}
                                 {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.item.manufacturer } %}
-                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemMain.filter.hasManufacturer } %}
-                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemMain.filter.hasProperty } %}
+                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.filter.hasManufacturer } %}
+                                {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemVariationData.filter.hasProperty } %}
 
 
                                 {% if ('item.manufacturer' in itemData or 'all' in itemData) and item.documents[0].data.item.manufacturer.externalName != '' %}
