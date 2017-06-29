@@ -19,6 +19,7 @@
         ","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         /search?query={search_term}","query-input": "required name=search_term"}}
 
+
     </script>
 {% endblock %}
 
@@ -173,10 +174,18 @@
         {#{{ topItems }}#}
         {#{% endif %}#}
 
-        {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeen', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
+        {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeenList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
 
         {% if itemList[2] %}
-            {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
+            <div class="m-b-1 clearfix">
+
+                <div class="section-header m-b-1">
+                    <h4>{{ trans("Ceres::Template.itemListLastSeen") }}</h4>
+                </div>
+
+                {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
+
+            </div>
         {% endif %}
 
 

@@ -56,6 +56,9 @@
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
+    {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
+    {{ component( "Ceres::ItemList.Components.ItemLazyImg" ) }}
+
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
@@ -384,7 +387,8 @@
                         {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent") }}
                     {% endif %}
 
-                    {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeen', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
+                    {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeenList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
+
                     {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
 
                     {#{{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}#}
