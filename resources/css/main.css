@@ -9677,14 +9677,14 @@ body.lb-disable-scrolling {
 .owl-prev {
   position: absolute;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .owl-next {
   position: absolute;
   right: 0;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .owl-carousel.owl-loaded {
@@ -9940,7 +9940,7 @@ Custom classes
   position: absolute;
   top: 50%;
   -webkit-transform: translateY(-36%);
-  transform: translateY(-36%);
+          transform: translateY(-36%);
 }
 
 .owl-carousel .disabled {
@@ -12032,7 +12032,7 @@ body.menu-is-visible {
   padding: 1rem;
   position: absolute;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .owl-carousel-single .owl-controls .owl-buttons > div.owl-next {
@@ -12073,7 +12073,7 @@ body.menu-is-visible {
   padding: .5rem;
   position: absolute;
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
 .owl-carousel-preview .owl-controls .owl-buttons > div.owl-next {
@@ -12141,21 +12141,17 @@ body.menu-is-visible {
   .single .nav-tabs .nav-item {
     float: left;
   }
-
   .single .nav-tabs .nav-item .nav-link {
     border: 1px solid #ddd;
   }
-
   .single .nav-tabs .nav-item .nav-link.active, .single .nav-tabs .nav-item .nav-link:hover {
     border: 1px solid #ddd;
     color: #7a7f7f;
     background: white;
   }
-
   .single .nav-tabs .nav-item .nav-link.active {
     border-bottom: 1px solid transparent;
   }
-
   .single .nav-tabs .nav-item + .nav-item {
     margin-left: -1px;
   }
@@ -12848,7 +12844,7 @@ a:hover {
 
 .ao-nach-oben {
   -webkit-transform: translateY(-119px);
-  transform: translateY(-119px);
+          transform: translateY(-119px);
 }
 
 /*# sourceMappingURL=main.css.map */
