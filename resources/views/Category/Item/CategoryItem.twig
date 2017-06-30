@@ -77,11 +77,15 @@
 
         <div class="row">
 
+                {# ao Var-Dump #}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': lang } %}
+
+
             {% if showHeaderNavBar == "side" or showHeaderNavBar == "both" %}
                 <div class="col-xs-3 hidden-md-down">
                     <div class="sidebar-categories">
                         <div class="category-title">{{ trans("Ceres::Template.generalCategories") }}</div>
-                        {{ includeCached('Ceres::PageDesign.Partials.Header.SideNavigation.twig') }}
+                        {{ includeCached('CeresSchaffrath::PageDesign.Partials.Header.SideNavigation.twig') }}
                     </div>
                 </div>
 
