@@ -12643,6 +12643,7 @@ body.menu-is-visible {
 
 .sidebar-categories ul li.active > a {
   background: #f4f4f4;
+  color: #c9890f;
 }
 
 .portotabelle {
@@ -13048,6 +13049,13 @@ a:hover {
 .ao-nach-oben {
   -webkit-transform: translateY(-119px);
           transform: translateY(-119px);
+}
+
+.vat-ao {
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: .5em;
+  color: #020260;
 }
 
 /*# sourceMappingURL=main.css.map */

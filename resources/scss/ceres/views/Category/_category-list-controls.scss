@@ -186,6 +186,7 @@
       &.active {
         & > a {
           background: $gray-lighter2;
+          color: $brand-primary;
         }
       }
     }
