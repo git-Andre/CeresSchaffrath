@@ -10348,6 +10348,8 @@ Custom classes
   right: 0;
   height: 100%;
   width: 100%;
+  border: 1px solid #c9890f;
+  border-bottom: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

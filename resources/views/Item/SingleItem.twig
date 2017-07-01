@@ -49,6 +49,8 @@
 
 
 
+
+
     </script>
 {% endblock %}
 
@@ -128,17 +130,22 @@
                 {% endif %}
                 {#Preise#}
                 {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}
-                {% if ('item.recommendedPrice' in itemData or 'all' in itemData) %}
-                    <div class="crossprice"
-                         v-resource-if:currentVariation="documents[0].data.calculatedPrices.rrp.price > 0">
-                        <del class="text-muted small"
-                             v-resource-bind:currentVariation="documents.0.data.calculatedPrices.rrp.price"
-                             :filters="['currency']">
-                            {{ item.documents[0].data.calculatedPrices.rrp.price | formatMonetary(item.documents[0].data.calculatedPrices.rrp.currency) }}
-                        </del>
-                    </div>
-                {% endif %}
 
+                {# Grundpreis #}
+                {#
+
+                                {% if ('item.recommendedPrice' in itemData or 'all' in itemData) %}
+                                    <div class="crossprice"
+                                         v-resource-if:currentVariation="documents[0].data.calculatedPrices.rrp.price > 0">
+                                        <del class="text-muted small"
+                                             v-resource-bind:currentVariation="documents.0.data.calculatedPrices.rrp.price"
+                                             :filters="['currency']">
+                                            {{ item.documents[0].data.calculatedPrices.rrp.price | formatMonetary(item.documents[0].data.calculatedPrices.rrp.currency) }}
+                                        </del>
+                                    </div>
+                                {% endif %}
+
+                #}
                 <span class="price h1">
                     <span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.default.price"
                           :filters="['currency']"
