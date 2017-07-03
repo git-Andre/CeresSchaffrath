@@ -131,7 +131,7 @@
                 {#Preise#}
                 {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}
 
-                {# Grundpreis #}
+                {# Empfohlener Preis #}
                 {#
 
                                 {% if ('item.recommendedPrice' in itemData or 'all' in itemData) %}
@@ -155,6 +155,9 @@
                     <sup>*</sup>
                     <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                 </span>
+
+                {# Grundpreis #}
+{#
                 {% if itemVariationData.variation.mayShowUnitPrice %}
                     {% for variationId, basePrice in basePriceList %}
                         <div class="base-price text-muted m-y-1"
@@ -171,9 +174,10 @@
                         </div>
                     {% endfor %}
                 {% endif %}
+#}
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
-                {#Verfügbarkeit#}
+                {# Verfügbarkeit #}
                 {% for availability in services.availability.getAvailabilities() %}
                     <span class="availability tag availability_{{ availability.id }}"
                           v-resource-if:currentVariation="documents[0].data.variation.availability.id == {{ availability.id }}">
@@ -190,7 +194,7 @@
 
                     {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
                 </div>
-                {#Wunschliste#}
+                {# Wunschliste #}
                 <div class="row">
                     <!--
                     <div class="col-xs-6 offset-xs-6 m-t-1">
