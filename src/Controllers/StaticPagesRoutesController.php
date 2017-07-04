@@ -61,4 +61,9 @@
             return $twig -> render('CeresSchaffrath::StaticPages.Agb');
         }
 
+        public function showTest(Twig $twig) : string
+        {
+            return $twig -> render('CeresSchaffrath::StaticPages.Test');
+        }
+
     }

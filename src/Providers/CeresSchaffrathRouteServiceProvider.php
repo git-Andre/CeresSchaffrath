@@ -32,5 +32,9 @@
 
             $router -> get('datenschutz', 'CeresSchaffrath\Controllers\StaticPagesRoutesController@showDatenschutz');
             $router -> get('privacy-policy', 'CeresSchaffrath\Controllers\StaticPagesRoutesController@showDatenschutz');
+
+
+
+            $router -> get('test', 'CeresSchaffrath\Controllers\StaticPagesRoutesController@showTest');
         }
     }
