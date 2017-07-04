@@ -1,8 +1,14 @@
-{% set bankAccount = config("system.bank") %}
-<hr>
-<div class="row">
-    <strong class="col-xs-6 col-sm-5">{{ trans("PrePayment::PaymentMethod.bankDetails") }}</strong>
-    <span class="col-xs-6 col-sm-7">
+{% extends 'Ceres::PageDesign.PageDesign' %}
+
+{% block PageBody %}
+
+
+
+    {% set bankAccount = config("system.bank") %}
+    <hr>
+    <div class="row">
+        <strong class="col-xs-6 col-sm-5">{{ trans("PrePayment::PaymentMethod.bankDetails") }}</strong>
+        <span class="col-xs-6 col-sm-7">
         <table border="0" cellpadding="0">
             <tbody>
                 <tr>
@@ -24,4 +30,15 @@
             </tbody>
         </table>
     </span>
-</div>
+    </div>
+
+
+            {# ao Var-Dump #}
+            {% include "CeresSchaffrath::VarDump" with { 'dumpData': config("system.bank") } %}
+
+            {% include "CeresSchaffrath::VarDump" with { 'dumpData': config("system") } %}
+
+
+
+
+{% endblock %}
