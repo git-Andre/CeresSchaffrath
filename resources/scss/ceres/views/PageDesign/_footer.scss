@@ -1,10 +1,10 @@
 .footer {
   display: block;
-  background-color: $footer-bg;
+  background: $brand-primary-gradient; // $footer-bg;
   max-width: 1200px;
   margin: 0 auto;
   > .container-max {
-    background-color: $footer-bg;
+    background: $brand-primary-gradient; // $footer-bg;
     hr {
       border-top: 1px solid white;
     }

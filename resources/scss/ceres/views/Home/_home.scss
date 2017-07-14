@@ -136,7 +136,7 @@
 .section-header {
   padding: 1rem 1.5rem;
   border-bottom: 0;
-  background: $brand-primary;
+  background: $brand-primary-gradient; // $brand-primary;
   position: relative;
   font-family: $font-family-heading;
   h4 {

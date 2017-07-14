@@ -92,7 +92,7 @@ body.menu-is-visible {
     margin: 0;
     padding: 0;
     position: relative;
-    background-color: $menu-bg-lg;
+    background-color: $brand-primary-gradient; // $menu-bg-lg;
 
     li {
       width: $menu-list-width;

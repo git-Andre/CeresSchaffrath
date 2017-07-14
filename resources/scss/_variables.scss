@@ -15,7 +15,6 @@ $flag-icon-square-path: '/1x1' !default;
 $fa-font-path: "../documents/fonts" !default;
 
 // Spacing
-//
 // Control the default styling of most Bootstrap elements by modifying these
 // variables. Mostly focused on spacing.
 // You can add more entries to the $spacers map, should you need more variation.
@@ -48,7 +47,6 @@ $spacers: (
 $border-width: 1px !default;
 
 // Grid containers
-//
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
@@ -66,16 +64,16 @@ $grid-columns: 12 !default;
 $grid-gutter-width: 30px !default;
 
 //== Colors
-//
-//## Gray and brand colors for use across Bootstrap.
-$gray: #7a7f7f;
 
+// ## Gray and brand colors for use across Bootstrap.
+$gray: #7a7f7f;
 $gray-darker: #282d2f;
 $gray-dark: #4D4F4D;
 $gray-light: #b2b1a7;
 $gray-lighter: #dcdbd8;
-$gray-lighter2: #f4f4f4;
-$gray-lightest: #f7f7f9;
+$gray-lighter2: #ececec; // vorher  #f4f4f4;
+$gray-lightest: #f7f7f7;
+
 $gray-ao: #efefef; // 20% darken von irgendwas ? ?!!
 
 $border-line-ao: 1px solid $gray-lighter;
@@ -83,12 +81,12 @@ $border-line-ao: 1px solid $gray-lighter;
 
 $white: #fff;
 
-$brand-primary: #c9890f;
+$brand-primary: #daa520; // linear-gradient(to right, #c9890f, #daa520, #c9890f);   // heller #daa520; // vorher #c9890f;
+$brand-primary-gradient: linear-gradient(42deg, #daa520, #c9890f, #daa520, #ffd700, #c9890f, #daa520); //to right
 $brand-secondary: #a7a7a7;
 
 // ao back light
-$brand-back-light: rgba(240, 173, 78, 0.2);
-
+$brand-back-light: rgba($brand-primary, 0.2); //
 
 $brand-success: #7ED321;
 $brand-info: #5bc0de;

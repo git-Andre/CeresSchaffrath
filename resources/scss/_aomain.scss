@@ -12,7 +12,6 @@
 
 .tab-content {
   margin-left: 20px;
-  // background: $brand-back-light;  // nur test
   h5 {
     width: 5rem;
     font-family: $font-family-heading;
@@ -21,7 +20,6 @@
     border-bottom: $border-line-ao;
   }
   ul {
-    //list-style-type: image(<i class="fa fa-truck" aria-hidden="true">);
     list-style-position: outside;
   }
   li {
@@ -38,10 +36,9 @@
 
 .itemDefList {
   display: block;
-  background-color: $gray-lighter;
+  background-color: $gray-lighter2;
   font-family: $font-family-heading;
   padding: 1.5rem;
-  // margin: 13px 0 0 30px;
   dt {
     width: 25%;
     float: left;
@@ -59,7 +56,6 @@
 }
 
 // allgemein
-
 .text-abel {
   font-family: $font-family-heading;
 }
@@ -158,7 +154,7 @@ a:hover {
   bottom: 0;
   width: 100%;
   margin-bottom: 0;
-  background: rgba(201, 137, 15, 0.7);
+  background: rgba($brand-primary, 0.7);
   text-align: left;
   padding: 0;
   padding-left: .3em;
@@ -170,7 +166,7 @@ a:hover {
 }
 
 .flex-item:hover > a > .flex-align-bottom {
-  background: rgba(201, 137, 15, 1);
+  background: rgba($brand-primary, 1);
   padding-bottom: .4em;
 
 }
@@ -180,7 +176,7 @@ a:hover {
   line-height: 110%;
   transition: transform 1s, line-height 1s, color 1s;
   font-size: 14px;
-  color: rgba(255, 255, 255, 1);
+  color: rgba($white, 1);
 
 }
 
@@ -209,7 +205,7 @@ a:hover {
   -o-transform: scale(1, 0); /* Opera */
   font-size: 0;
   transition: transform 1s, line-height 1s, font-size 1s;
-  color: rgba(201, 137, 15, 0.9);
+  color: rgba($brand-primary, 0.9);
 }
 
 .flex-container {

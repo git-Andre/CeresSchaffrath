@@ -5,13 +5,6 @@
 {% set configItemName = config("Ceres.item.name") %}
 {% set variations = services.item.getVariationAttributeMap( item.documents[0].data.item.id  ) %}
 {% set basePriceList = getBasePriceList( services.item.getVariationList( item.documents[0].data.item.id  ) ) %}
-{% set crossSellingList = services.item.getItemCrossSellingList( item.documents[0].data.item.id  ) %}
-
-{#ao Variables #}
-{% set itemMain = item.documents[0].data %}
-                    {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
-{% set itemVariationData = itemGetVariation.documents[0].data %}
-{#{% set lastSeenAo = 3 %}#}
 
 {% block PartialHead %}
     <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
@@ -42,15 +35,6 @@
         "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
         "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
         "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
-
-
-
-
-
-
-
-
-
     </script>
 {% endblock %}
 
@@ -61,14 +45,10 @@
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
-    {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
-    {{ component( "Ceres::ItemList.Components.ItemLazyImg" ) }}
-
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
     <div class="single container-max page-content">
-
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
                 <div class="row">
@@ -81,10 +61,6 @@
 
             <!-- ITEM DETAIL -->
             <div class="col-md-5 single-rightside m-t-1">
-                {#<h6 class="producertag">#}
-                {#<a href="#"#}
-                {#class="producer text-muted">{{ item.documents[0].data.item.manufacturer.externalName }}</a>#}
-                {#</h6>#}
 
                 <h1 class="h3 title">
                     {{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -123,7 +99,7 @@
                 {% if variations is not null %}
                     <div class="row m-b-1">
                         <variation-select template="#vue-variation-select"
-                                          :attributes="{{ services.item.getAttributeNameMap( item.documents[0].data.item.id ) | json_encode() }}"
+                                          :attributes="{{ attributeNameMap | json_encode() }}"
                                           :variations="{{ variations | json_encode() }}"
                                           preselect="{{ item.documents[0].data.variation.id }}"></variation-select>
                     </div>
@@ -150,7 +126,7 @@
                     <span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.default.price"
                           :filters="['currency']"
                           content="{{ item.documents[0].data.calculatedPrices.default.price }}">
-                        {{ item.documents[0].data.calculatedPrices.default.price | formatMonetary(item.documents[0].data.calculatedPrices.default.currency) }}
+                        {{ item.documents[0].data.calculatedPrices.formatted.defaultPrice }}
                     </span>
                     <sup>*</sup>
                     <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
@@ -177,14 +153,13 @@
 #}
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
-                {# Verfügbarkeit #}
-                {% for availability in services.availability.getAvailabilities() %}
-                    <span class="availability tag availability_{{ availability.id }}"
-                          v-resource-if:currentVariation="documents[0].data.variation.availability.id == {{ availability.id }}">
-                    <span v-resource-bind:currentVariation="documents.0.data.variation.availability.names.name">{{ item.documents[0].data.variation.availability.names.name }}</span>
+                <span class="availability tag availability_{{ item.documents[0].data.variation.availability.id }}"
+                      v-availability-class:currentVariation>
+                    <span v-resource-bind:currentVariation="documents.0.data.variation.availability.names.name">
+                        {{ item.documents[0].data.variation.availability.names.name }}
+                    </span>
                 </span>
-                {% endfor %}
-                {# Warenkorb #}
+
                 <div class="row m-y-1">
 
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
@@ -330,10 +305,10 @@
                                     </tr>
                                 {% endif %}
 
-                                {% if ('item.manufacturer' in itemData or 'all' in itemData) and itemVariationData.filter.hasManufacturer %}
+                                {% if ('item.manufacturer' in itemData or 'all' in itemData) and item.documents[0].data.item.manufacturer.externalName != '' %}
                                     <tr>
-                                        <td>{{ trans("CeresSchaffrath::Template.itemManufacturer") }}</td>
-                                        <td>{{ itemVariationData.item.manufacturer.externalName }}</td>
+                                        <td>{{ trans("Ceres::Template.itemManufacturer") }}</td>
+                                        <td>{{ item.documents[0].data.item.manufacturer.externalName }}</td>
                                     </tr>
                                 {% endif %}
 
@@ -347,14 +322,14 @@
 
                                 {% if 'item.variationBase_content' in itemData or 'all' in itemData %}
                                     <tr>
-                                        <td>{{ trans("CeresSchaffrath::Template.itemContent") }}</td>
+                                        <td>{{ trans("Ceres::Template.itemContent") }}</td>
                                         <td>{{ item.documents[0].data.unit.content|formatDecimal(0) }} {{ item.documents[0].data.unit.names.name }}</td>
                                     </tr>
                                 {% endif %}
 
                                 {% if ('item.weightG' in itemData or 'all' in itemData) and item.documents[0].data.variation.weightG != '' %}
                                     <tr v-resource-if:currentVariation="documents[0].data.variation.weightG != ''">
-                                        <td>{{ trans("CeresSchaffrath::Template.itemWeight") }}</td>
+                                        <td>{{ trans("Ceres::Template.itemWeight") }}</td>
                                         <td v-resource-bind:currentVariation="documents.0.data.variation.weightG">{{ item.documents[0].data.variation.weightG }}
                                             g
                                         </td>

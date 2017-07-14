@@ -6,6 +6,60 @@
   background-color: #fff;
   margin-bottom: $grid-gutter-width/2;
 
+  .tag-list span {
+    background-color: #4D4F4D;
+    text-transform: uppercase;
+    cursor: default;
+  }
+
+  .prices {
+    display: flex;
+  }
+
+  .crossprice {
+    font-size: 1rem;
+  }
+
+  .price-view-port {
+    flex: 1 0 0;
+  }
+
+  .thumb-title {
+    min-height: 32px;
+  }
+
+  .add-to-basket-lg-container {
+    -webkit-transform: rotate(360deg);
+    border-style: solid;
+    border-width: 0px 70px 70px 0;
+    border-color: transparent #F7F7F9 transparent transparent;
+    position: absolute;
+    z-index: 99;
+    top: 0;
+    right: 0;
+    transition: 300ms ease-out;
+    cursor: pointer;
+
+    & > i {
+      right: -56px;
+      top: 11px;
+      position: absolute;
+      transition: 300ms ease-out;
+    }
+
+    &:hover {
+      border-color: transparent $brand-primary transparent transparent;
+
+      & > i {
+        color: #fff;
+      }
+    }
+  }
+
+  .category-list-view-port {
+    display: none;
+  }
+
   .thumb-background {
     position: absolute;
     top: 0px; // -1, -1, -2, -1 ????
