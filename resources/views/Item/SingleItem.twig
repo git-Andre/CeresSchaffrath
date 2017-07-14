@@ -6,12 +6,6 @@
 {% set variations = services.item.getVariationAttributeMap( item.documents[0].data.item.id  ) %}
 {% set basePriceList = getBasePriceList( services.item.getVariationList( item.documents[0].data.item.id  ) ) %}
 
-{#ao Variables #}
-{% set itemMain = item.documents[0].data %}
-                    {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
-{% set itemVariationData = itemGetVariation.documents[0].data %}
-{#{% set lastSeenAo = 3 %}#}
-
 {% block PartialHead %}
     <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
     <meta property="og:type" content="article"/>
@@ -41,6 +35,7 @@
         "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
         "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
         "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
+
     </script>
 {% endblock %}
 
@@ -51,9 +46,6 @@
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
-    {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
-    {{ component( "Ceres::ItemList.Components.ItemLazyImg" ) }}
-
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
