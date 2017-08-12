@@ -3,6 +3,7 @@
 
 {% set itemData = config("Ceres.item.data") | split(', ') %}
 {% set configItemName = config("Ceres.item.name") %}
+{% set enabledRoutes = config("IO.routing.enabled_routes") | split(', ') %}
 {% set variations = services.item.getVariationAttributeMap( item.documents[0].data.item.id  ) %}
 {% set basePriceList = getBasePriceList( services.item.getVariationList( item.documents[0].data.item.id  ) ) %}
 
@@ -10,12 +11,12 @@
     <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
     <meta property="og:type" content="article"/>
     <meta property="og:url"
-          content="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}"/>
+            content="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}"/>
     <meta property="og:image" content="{{ item.documents[0].data.images.all[0].url }}"/>
     <meta property="og:description" content="{{ item.documents[0].data.texts.shortDescription }}"/>
 
     <link rel="canonical"
-          href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
+            href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
     <script type="application/ld+json">
         {"@context":"http://schema.org/","@type":"Product","name":"{{ item.documents[0].data.texts | itemName(configItemName) }}
         ","category":"item.","releaseDate":"{{ item.documents[0].data.variation.releasedAt }}
@@ -35,8 +36,10 @@
         "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
         "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
         "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
-
     </script>
+
+    <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
+        | {{ config("Ceres.header.company_name") }}</title>
 {% endblock %}
 
 {% block PageBody %}
@@ -45,10 +48,8 @@
 
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
+    {{ component( "Ceres::Item.Components.AddToWishList" ) }}
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
-    {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
-    {{ component( "Ceres::ItemList.Components.ItemLazyImg" ) }}
-
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
@@ -137,24 +138,24 @@
                 </span>
 
                 {# Grundpreis #}
-{#
-                {% if itemVariationData.variation.mayShowUnitPrice %}
-                    {% for variationId, basePrice in basePriceList %}
-                        <div class="base-price text-muted m-y-1"
-                             v-resource-if:currentVariation="documents[0].data.variation.id == {{ variationId }}">
-                            {{ trans("Ceres::Template.itemUnitPrice") }}
-                            <span class="base-price-value">{{ item.documents[0].data.calculatedPrices.default.unitPrice | formatMonetary(item.documents[0].data.calculatedPrices.default.currency) }}</span>
-                            /
-                            <span class="base-price-amount">
-                        {% if basePrice.lot > 1 %}
-                            {{ basePrice.lot }}
-                        {% endif %}
-                                {{ services.unit.getUnitById( basePrice.unit, services.sessionStorage.getLang() ).name }}
-                        </span>
-                        </div>
-                    {% endfor %}
-                {% endif %}
-#}
+                {#
+                                {% if itemVariationData.variation.mayShowUnitPrice %}
+                                    {% for variationId, basePrice in basePriceList %}
+                                        <div class="base-price text-muted m-y-1"
+                                             v-resource-if:currentVariation="documents[0].data.variation.id == {{ variationId }}">
+                                            {{ trans("Ceres::Template.itemUnitPrice") }}
+                                            <span class="base-price-value">{{ item.documents[0].data.calculatedPrices.default.unitPrice | formatMonetary(item.documents[0].data.calculatedPrices.default.currency) }}</span>
+                                            /
+                                            <span class="base-price-amount">
+                                        {% if basePrice.lot > 1 %}
+                                            {{ basePrice.lot }}
+                                        {% endif %}
+                                                {{ services.unit.getUnitById( basePrice.unit, services.sessionStorage.getLang() ).name }}
+                                        </span>
+                                        </div>
+                                    {% endfor %}
+                                {% endif %}
+                #}
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
                 <span class="availability tag availability_{{ item.documents[0].data.variation.availability.id }}"
@@ -428,3 +429,5 @@
     </div>
 
 {% endblock %}
+<link rel="canonical"
+        href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
