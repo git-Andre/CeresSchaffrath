@@ -385,12 +385,12 @@
 
                     <hr class="m-t-3 m-b-1">
 
-                    <div class="m-b-1 clearfix">
+                    {#<div class="m-b-1 clearfix">#}
 
-                        <h1 class="h3 m-b-1">{{ trans("Ceres::Template.itemListLastSeen") }}</h1>
+                    {#<h1 class="h3 m-b-1">{{ trans("Ceres::Template.itemListLastSeen") }}</h1>#}
 
-                        {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
-                    </div>
+                    {#{% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}#}
+                    {#</div>#}
                     {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}
                 </div>
             </div>
