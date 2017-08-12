@@ -191,6 +191,7 @@
                 <hr>
                 {# Hinweis Versandkosten #}
                 <span class="vat-ao small text-muted">
+                    <sup>*</sup>
                     {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
                     <a href="/versandkosten" target="_blank"
                        title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
@@ -381,9 +382,9 @@
                     {% endif %}
 
                     {#Latest items                    #}
-                    {% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeenList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}
+                    {#{% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeenList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}#}
 
-                    <hr class="m-t-3 m-b-1">
+                    {#<hr class="m-t-3 m-b-1">#}
 
                     {#<div class="m-b-1 clearfix">#}
 
