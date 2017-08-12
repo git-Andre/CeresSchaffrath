@@ -1,17 +1,20 @@
 [
   "itemId",
   "id",
-
   "item.id",
   "item.manufacturer.externalName",
   "item.documents.data",
   "item.ageRestriction",
   "item.customsTariffNumber",
   "item.producingCountryId",
+  "item.storeSpecial",
+
   "variation.id",
   "variation.name",
   "variation.number",
   "variation.externalId",
+  "variation.minimumOrderQuantity",
+  "variation.maximumOrderQuantity",
   "variation.model",
   "variation.weightG",
   "variation.weightNetG",
@@ -21,19 +24,26 @@
   "variation.availability.names.*",
   "variation.availability.id",
   "variation.releasedAt",
+
   "texts.*",
+
   "salesPrices.price",
   "salesPrices.type",
+
   "unit.content",
   "unit.names.name",
+  "unit.names.lang",
+
   "images.all.url",
+  "images.all.urlMiddle",
   "images.all.urlPreview",
   "images.all.position",
+  "images.all.path",
   "images.variation.url",
   "images.variation.urlPreview",
   "images.variation.position",
-  "properties.group.backendName",
-  "properties.property.names.name",
-  "properties.property.names.lang",
-  "defaultCategories"
+  "images.variation.path",
+  "properties.*",
+  "defaultCategories",
+  "filter.isSalable"
 ]
