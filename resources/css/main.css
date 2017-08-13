@@ -10956,7 +10956,7 @@ body.menu-is-visible {
   }
   #mainNavbarCollapsable ul.mainmenu > li > ul > li {
     font-size: 1em;
-    background: #fff;
+    background: #efefef;
     color: #4D4F4D;
     transition: all .1s ease;
     width: 100%;
