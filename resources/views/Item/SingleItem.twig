@@ -175,15 +175,13 @@
                     {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
                 </div>
                 {# Wunschliste #}
-                <div class="row">
-                    <!--
-                    <div class="col-xs-6 offset-xs-6 m-t-1">
-                        <a class="pull-xs-right text-muted small" href="#">
-                            {{ trans("Ceres::Template.itemWishList") }}
-                            <i class="fa fa-heart"></i>
-                        </a>
-                    </div> -->
-                </div>
+
+                {% if "wish-list" in enabledRoutes or "all" in enabledRoutes %}
+                    <div class="row">
+                        <add-to-wish-list template="#vue-add-to-wish-list" variation-id="{{ item.documents[0].data.variation.id }}" :is-active="{{ item.documents[0].isInWishListVariation | json_encode() }}"></add-to-wish-list>
+                    </div>
+                {% endif %}
+
                 <!-- ./ITEM DETAIL -->
 
                 {{ LayoutContainer.show("Ceres::SingleItem.AdditionalContentAfterAddToBasket", item.documents[0].data) }}
