@@ -21,6 +21,7 @@
 
      <link rel="canonical"
              href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
+{#
      <script type="application/ld+json">
           {"@context":"http://schema.org/","@type":"Product","name":"{{ item.documents[0].data.texts | itemName(configItemName) }}
           ","category":"item.","releaseDate":"{{ item.documents[0].data.variation.releasedAt }}
@@ -41,6 +42,7 @@
           "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
           "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
      </script>
+#}
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
          | {{ config("Ceres.header.company_name") }}</title>
@@ -123,7 +125,25 @@
 
 
 
-                {#Auction start ---------- #}
+                {#Auction start ---------- ToDo: Hier erst mal alle relevanten Data sammeln... #}
+
+{#
+                von PluginAuctionService:
+                    startDate
+                    Duration
+                    itemId
+                    startPrice
+                    buyNowPrice
+
+                Date
+                    now()
+
+                von LiveAuctionService:
+                    highestBid = startPrice
+                    bidderList[] = push Logged in User...
+
+                LoggedInUser ????
+#}
 
                 {# ao Var-Dump #}
                 {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.item.id } %}
