@@ -99,8 +99,16 @@
 
 
 
-                     {#ao Var-Dump #}
-                    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'Test Beschreibung', 'dumpData': item.documents[0].item.id } %}
+
+                {# ao Var-Dump #}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': item.documents[0] } %}
+
+                {# ao Var-Dump #}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0].isInWishListVariation | json_encode()', 'dumpData': item.documents[0].isInWishListVariation | json_encode() } %}
+
+
+
+
 
 
 
