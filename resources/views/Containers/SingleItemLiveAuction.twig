@@ -3,7 +3,7 @@
 
 <h1>
     {# ao Var-Dump #}
-    {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0] } %}
+    {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.variation.id } %}
 
 </h1>
 
