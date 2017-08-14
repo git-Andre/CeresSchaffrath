@@ -63,7 +63,7 @@
 
         public function showTest(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::StaticPages.Test');
+            return $twig -> render('CeresSchaffrath::Content.Test');
         }
 
     }
