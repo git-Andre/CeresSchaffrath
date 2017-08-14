@@ -67,11 +67,6 @@
                     </div>
                 </div>
 
-                {# ao Var-Dump #}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0].data.item.id', 'dumpData': item.documents[0].data.item.id } %}
-
-
-
 
                 {# ao Var-Dump #}
                 {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': item.documents[0] } %}
@@ -129,6 +124,11 @@
 
 
                 {#Auction start ---------- #}
+
+                {# ao Var-Dump #}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.item.id } %}
+
+
                 {#<span class="price h1">#}
                 {#<span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultPrice"#}
                 {#content="{{ item.documents[0].data.calculatedPrices.default.price }}">#}
