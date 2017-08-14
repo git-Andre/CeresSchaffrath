@@ -1,5 +1,6 @@
 {% extends getPartial('page-design') %}
 {% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+{% set itemMain = item.documents[0].data %}
 
  {% block PartialHead %}
      <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
@@ -32,25 +33,30 @@
           "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
           "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
 
+
+
+
      </script>
 
-     <title>{{ item.documents[0].data.texts | itemName(configItemName) }}| {{ config("Ceres.header.company_name") }}</title>
+     <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
+         | {{ config("Ceres.header.company_name") }}</title>
 
  {% endblock %}
 
-     {% set itemMain = item.documents[0].data %}
 
 
 {% block PageBody %}
 
-    <h1>Hallo Andre {{ ziel }}</h1>
+    <div class="single container-max page-content">
+        <h1>Hallo Andre {{ ziel }}</h1>
 
-    <h4>{{ "now" | date('d/m/Y H:i', timezone="Europe/Paris") }}</h4>
+        <h4>{{ "now" | date('d/m/Y H:i', timezone="Europe/Paris") }}</h4>
 
 
-    {# ao Var-Dump #}
-    {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.variation.id } %}
-    {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0] } %}
+        {# ao Var-Dump #}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.variation.id } %}
+        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0] } %}
 
+    </div>
 
 {% endblock %}
