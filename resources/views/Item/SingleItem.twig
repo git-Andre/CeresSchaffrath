@@ -100,7 +100,7 @@
 
 
                 {#<h1>#}
-                    {# ao Var-Dump #}
+                     {#ao Var-Dump #}
                     {#Anfang#}
                     {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0] } %}#}
                 {#</h1>#}
@@ -115,20 +115,6 @@
                     <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                 </span>
 
-                <div class="base-price text-muted m-y-1">
-                    {{ trans("Ceres::Template.itemUnitPrice") }}
-                    <span class="base-price-value"
-                            v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultUnitPrice">{{ item.documents[0].data.calculatedPrices.formatted.defaultUnitPrice }}</span>
-                    /
-
-                    <span v-if="true"
-                            class="base-price-amount"
-                            v-resource-bind:currentVariation="documents.0.data.unit.content"
-                            v-resource-if:currentVariation="documents[0].data.unit.content > 1">{{ item.documents[0].data.unit.content }}</span>
-
-                    <span class="base-price-amount"
-                            v-resource-bind:currentVariation="documents.0.data.unit.names.name">{{ item.documents[0].data.unit.names.name }}</span>
-                </div>
 
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
