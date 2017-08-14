@@ -120,13 +120,14 @@
 
         {#<div class="row m-y-1">#}
 
-            {#{{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}#}
+            {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
 
             {#<add-to-basket template="#vue-add-to-basket" v-resource-push:item data-accessor="true"#}
                     {#resource="currentVariation" :show-quantity="true"></add-to-basket>#}
 
-            {#{{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}#}
+            {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
         {#</div>#}
+
                 {# Wunschliste #}
 
                 {% if "wish-list" in enabledRoutes or "all" in enabledRoutes %}
