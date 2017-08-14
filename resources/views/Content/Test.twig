@@ -1,3 +1,4 @@
 <h1>Hallo Andre {{ ziel }}</h1>
 
-<h3>{{ now() | dateTimeFormatMoment }}</h3>
+<h3>{{ "now" | dateTimeFormatMoment }}</h3>
+<h4>{{ "now" | date('d/m/Y H:i', timezone="Europe/Paris") }}</h4>
