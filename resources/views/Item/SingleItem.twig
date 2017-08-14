@@ -105,14 +105,14 @@
                     </span>
                 </div>
                 {#Variationen#}
-        {#{% if variations is not null %}#}
-            {#<div class="row m-b-1">#}
-                {#<variation-select template="#vue-variation-select"#}
-                        {#:attributes="{{ attributeNameMap | json_encode() }}"#}
-                        {#:variations="{{ variations | json_encode() }}"#}
-                        {#preselect="{{ item.documents[0].data.variation.id }}"></variation-select>#}
-            {#</div>#}
-        {#{% endif %}#}
+                {% if variations is not null %}
+                    <div class="row m-b-1">
+                        <variation-select template="#vue-variation-select"
+                                :attributes="{{ attributeNameMap | json_encode() }}"
+                                :variations="{{ variations | json_encode() }}"
+                                preselect="{{ item.documents[0].data.variation.id }}"></variation-select>
+                    </div>
+                {% endif %}
                 {#Preise#}
                 {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}
 
