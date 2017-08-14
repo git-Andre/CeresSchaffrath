@@ -1,3 +1,20 @@
+{% extends getPartial('page-design') %}
+{% import "Ceres::PageDesign.Macros.LayoutContainer" as LayoutContainer %}
+
+{% set itemMain = item.documents[0].data %}
+
+
+
+{% block PageBody %}
+
 <h1>Hallo Andre {{ ziel }}</h1>
 
 <h4>{{ "now" | date('d/m/Y H:i', timezone="Europe/Paris") }}</h4>
+
+
+    {# ao Var-Dump #}
+    {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.variation.id } %}
+    {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0] } %}
+
+
+{% endblock %}
