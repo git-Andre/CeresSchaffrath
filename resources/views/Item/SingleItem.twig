@@ -148,12 +148,12 @@
                 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 
                 {% if( auction[0] ) %}
-                    <p>startDate: {{ auction[0].startDate }}</p>
-                    <p>startHour: {{ auction[0].startHour }}</p>
-                    <p>startMinute: {{ auction[0].startMinute }}</p>
-                    <p>Duration: {{ auction[0].auctionDuration }}</p>
+                    <p>startDate: {{ auction[0].startDate | date('d.m.Y h:i:s') }}</p>
+                    <p>startHour: {{ auction[0].startHour }} h</p>
+                    <p>startMinute: {{ auction[0].startMinute }} min</p>
+                    <p>Duration: {{ auction[0].auctionDuration }} Tage</p>
                     <p>startPrice: {{ auction[0].startPrice }}</p>
-                    <p>buyNowPrice: {{ auction[0].buyNowPrice }}</p>
+                    <p>buyNowPrice: {{ auction[0].buyNowPrice.formatted.defaultPrice }}</p>
 
 
 
