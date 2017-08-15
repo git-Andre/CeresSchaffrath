@@ -149,19 +149,19 @@
                                 LoggedInUser ????
                 #}
 
-                {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
+                {% set auction = auctions.auction.getAuctionForItemId(73) %}
 
                 {# ao Var-Dump #}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.itemId', 'dumpData': auction.id } %}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.id', 'dumpData': auction.id } %}
                 {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.itemId', 'dumpData': auction.itemId } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.startDate', 'dumpData': auction.createdAt } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.startDate', 'dumpData': auction.updatedAt } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.startDate', 'dumpData': auction.startDate } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.startDate', 'dumpData': auction.startHour } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.startDate', 'dumpData': auction.startMinute } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.startDate', 'dumpData': auction.auctionDuration } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.startDate', 'dumpData': auction.startPrice } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.startDate', 'dumpData': auction.buyNowPrice } %}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction.createdAt } %}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction.updatedAt } %}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction.startDate } %}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction.startHour } %}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction.startMinute } %}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction.auctionDuration } %}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction.startPrice } %}
+                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction.buyNowPrice } %}
 
                 {#<span class="price h1">#}
                 {#<span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultPrice"#}
