@@ -69,7 +69,8 @@
 
 
                 {# ao Var-Dump #}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': item.documents[0] } %}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': auctions.auction.getAuctions() } %}
+                {#{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': item.documents[0] } %}#}
 
 
             </div>
@@ -145,7 +146,7 @@
                 LoggedInUser ????
 #}
 
-                {% set test = auctions.auction.getAuction(item.documents[0].data.item.id) %}
+                {% set test = auctions.auction.getAuction(73)) %}
 
                 {# ao Var-Dump #}
                 {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'test', 'dumpData': test } %}
