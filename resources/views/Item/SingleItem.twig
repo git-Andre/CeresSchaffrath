@@ -155,6 +155,8 @@
                     <p>startPrice: {{ auction[0].startPrice }}</p>
                     <p>buyNowPrice: {{ auction[0].buyNowPrice }}</p>
 
+
+
                 {% else %}
 
 
@@ -169,7 +171,6 @@
                 <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                 </span>
 
-                {% endif %}
 
                 {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
@@ -195,6 +196,10 @@
 
                     {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
                 </div>
+
+                {% endif %}
+
+
                 {#./Auction end#}
 
                 {# Wunschliste--------------- #}
@@ -207,9 +212,9 @@
                     </div>
                 {% endif %}
                 {# maybe use the button for wishlist #}
-                <button type="button" class="btn btn-primary" @click="directToItem()">
-                    <i class="fa fa-heart-o" aria-hidden="true"></i>
-                </button>
+                {#<button type="button" class="btn btn-primary" @click="directToItem()">#}
+                    {#<i class="fa fa-heart-o" aria-hidden="true"></i>#}
+                {#</button>#}
                 <!-- ./ITEM DETAIL -->
 
                 {#<hr>#}
