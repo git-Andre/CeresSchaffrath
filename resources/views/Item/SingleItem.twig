@@ -149,7 +149,7 @@
                                 LoggedInUser ????
                 #}
 
-                {% set auction = auctions.auction.getAuctionForItemId(73) %}
+                {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 
                 {# ao Var-Dump #}
                 {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.id', 'dumpData': auction.id } %}
