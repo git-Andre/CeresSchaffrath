@@ -145,6 +145,14 @@
                 LoggedInUser ????
 #}
 
+                {% set lang2 = services.sessionStorage.getLang() %}
+
+                {# ao Var-Dump #}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'lang', 'dumpData': lang } %}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'lang2', 'dumpData': lang2 } %}
+
+
+
                 {# ao Var-Dump #}
                 {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.item.id } %}
 

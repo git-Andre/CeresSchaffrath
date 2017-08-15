@@ -7,12 +7,14 @@
         <h1>Hallo Andre {{ ziel }}</h1>
 
         <h4>{{ "now" | date('d/m/Y H:i', timezone="Europe/Paris") }}</h4>
-        <h4>{{ "now" | date('F jS \\a\\t g:ia') }}</h4>
+        <h4>{{ "now" | date('F jS \\a\\t g:ia', timezone="Europe/Paris) }}</h4>
 
+        {% set lang2 = services.sessionStorage.getLang() %}
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0].data.variation.id } %}
-        {% include "CeresSchaffrath::VarDump" with { 'dumpData': itemMain } %}
+        {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'lang', 'dumpData': lang } %}
+        {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'lang2', 'dumpData': lang2 } %}
+
 
     </div>
 
