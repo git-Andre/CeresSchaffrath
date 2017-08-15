@@ -40,6 +40,8 @@
           "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
           "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
           "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
+
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -149,19 +151,18 @@
                                 LoggedInUser ????
                 #}
 
+                {#von PluginAuctionService:#}
                 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
+                {% if(auction) %}
+                <p>startDate: {{ auction[0].startDate }}</p>
+                <p>auction[0].buyNowPrice: {{ auction[0].startHour }}</p>
+                <p>startMinute: {{ auction[0].startMinute }}</p>
+                <p>Duration: {{ auction[0].auctionDuration }}</p>
+                <p>startPrice: {{ auction[0].startPrice }}</p>
+                <p>buyNowPrice: {{ auction[0].buyNowPrice }}</p>
 
+                {% endif %}
                 {# ao Var-Dump #}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction.id', 'dumpData': auction[0].id } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction[0.itemId', 'dumpData': auction[0].itemId } %}
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction[0].createdAt } %}
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction[0].updatedAt } %}
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction[0].startDate } %}
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction[0].startHour } %}
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction[0].startMinute } %}
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction[0].auctionDuration } %}
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction[0].startPrice } %}
-                {% include "CeresSchaffrath::VarDump" with { 'dumpData': auction[0].buyNowPrice } %}
 
                 {#<span class="price h1">#}
                 {#<span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultPrice"#}
@@ -210,7 +211,7 @@
                 {% endif %}
                 {# maybe use the button for wishlist #}
                 <button type="button" class="btn btn-primary" @click="directToItem()">
-                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                    <i class="fa fa-heart-o" aria-hidden="true"></i>
                 </button>
                 <!-- ./ITEM DETAIL -->
 
