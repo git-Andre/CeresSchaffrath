@@ -6,7 +6,8 @@
     <div class="single container-max page-content">
         <h1>Hallo Andre {{ ziel }}</h1>
 
-        <h4>{{ "now" | date('d/m/Y H:i M:i S:i', timezone="Europe/Paris") }}</h4>
+        <h4>{{ "now" | date('d/m/Y H:i', timezone="Europe/Paris") }}</h4>
+        <h4>{{ "now" | date('F jS \\a\\t g:ia') }}</h4>
 
 
         {# ao Var-Dump #}

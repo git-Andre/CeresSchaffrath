@@ -21,7 +21,6 @@
 
      <link rel="canonical"
              href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
-{#
      <script type="application/ld+json">
           {"@context":"http://schema.org/","@type":"Product","name":"{{ item.documents[0].data.texts | itemName(configItemName) }}
           ","category":"item.","releaseDate":"{{ item.documents[0].data.variation.releasedAt }}
@@ -42,7 +41,6 @@
           "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
           "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
      </script>
-#}
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
          | {{ config("Ceres.header.company_name") }}</title>
@@ -125,9 +123,11 @@
 
 
 
-                {#Auction start ---------- ToDo: Hier erst mal alle relevanten Data sammeln... #}
+                {#Auction start ---------- ToDo: Hier erst mal alle relevanten Daten sammeln... #}
 
 {#
+                itemId: item.documents[0].data.item.id
+
                 von PluginAuctionService:
                     startDate
                     Duration
@@ -194,7 +194,10 @@
                                 :is-active="{{ item.documents[0].isInWishListVariation | json_encode() }}"></add-to-wish-list>
                     </div>
                 {% endif %}
-
+                {# maybe use the button for wishlist #}
+                <button type="button" class="btn btn-primary" @click="directToItem()">
+                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                </button>
                 <!-- ./ITEM DETAIL -->
 
                 {#<hr>#}
