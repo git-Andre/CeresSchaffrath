@@ -6,10 +6,11 @@
     <div class="single container-max page-content">
         <h1>Hallo Andre {{ ziel }}</h1>
 
-        {#<h4>{{ "now" | date('d/m/Y H:i', timezone="Europe/Paris") }}</h4>#}
-        {#<h4>{{ "now" | date('F jS \\a\\t g:ia', timezone="Europe/Paris") }}</h4>#}
+        <h4>{{ "now" | date('d/m/Y H:i', timezone="Europe/Paris") }}</h4>
 
+        <h3>{{ 1502942820 | date('d/m/Y H:h M:i S:s', false) }}</h3>
 
+        <h4>{{ "now" | date("F jS \\a\\t g:ia") }}</h4>
     </div>
 
 

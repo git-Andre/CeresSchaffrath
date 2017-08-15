@@ -87,7 +87,7 @@
                     {{ item.documents[0].data.texts | itemName(configItemName) }}
                 </h1>
 
-                <h2 class="h6 title">
+                <h2 class="h4 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name"
                             v-resource-if:currentVariation="documents[0].data.variation.name != ''">
                         {{ item.documents[0].data.texts | itemName(2) }}
@@ -162,7 +162,7 @@
 
 
 
-                    <span class="price h1">
+                <span class="price h1">
                 <span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultPrice"
                         content="{{ item.documents[0].data.calculatedPrices.default.price }}">
                 {{ item.documents[0].data.calculatedPrices.formatted.defaultPrice }}
