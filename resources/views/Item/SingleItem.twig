@@ -145,11 +145,10 @@
                 LoggedInUser ????
 #}
 
-                {% set lang2 = services.sessionStorage.getLang() %}
+                {% set test = auctions.auction.getAuction(item.documents[0].data.item.id) %}
 
                 {# ao Var-Dump #}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'lang', 'dumpData': lang } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'lang2', 'dumpData': lang2 } %}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'test', 'dumpData': test } %}
 
 
 
