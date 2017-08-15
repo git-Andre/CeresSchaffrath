@@ -10,10 +10,6 @@
         {#<h4>{{ "now" | date('F jS \\a\\t g:ia', timezone="Europe/Paris") }}</h4>#}
 
 
-        {% set auction = auctions.auction.getAuctionForItemId(73000) %}
-
-        {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
     </div>
 
 
