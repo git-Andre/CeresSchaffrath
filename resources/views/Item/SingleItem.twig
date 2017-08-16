@@ -150,27 +150,31 @@
 
                 {% if( auction[0] ) %}
 
+                    {% set endDate = ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
+
                     <dl class="itemDefList">
                         <dt>Start Datum:</dt>
                         <dd>{{ auction[0].startDate | date('d.M.Y H:i \\U\\h\\r') }}</dd>
                         <dt>End Datum:</dt>
-                        <dd>{{ ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') }}</dd>
+                        <dd>{{ endDate }}</dd>
+                        <dt>Laufzeit: </dt>
+                        <dd>{{ auction[0].auctionDuration }} Tage</dd>
+                        <dt>Start Preis: </dt>
+                        <dd>{{ auction[0].startPrice  | formatMonetary('EUR') }}</dd>
+                        <dt>Sofort Kaufen: </dt>
+                        <dd>{{ auction[0].buyNowPrice | formatMonetary('EUR') }}</dd>
                     </dl>
 
+                    {% set Ende = ( "+ auction[0].auctionDuration days" | date('d.M.Y H:i \\U\\h\\r') ) %}
+                    <p>Ende: {{ Ende }}</p>
 
+                    {#<p>Test: {{ (auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime) }}</p>#}
 
+                    {#{% set jetzt = ( "now" | formatDateTime) %}#}
+                    {#<p>test: {{ (auction[0].startDate - jetzt) }}</p>#}
 
-                    <p>Test: {{ (auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime) }}</p>
-
-                    {% set jetzt = ( "now" | date()  | formatDateTime) %}
-                    <p>jetzt: {{ jetzt }}</p>
-                    <p>test: {{ (auction[0].startDate - jetzt) }}</p>
-
-                    <p>startHour: {{ auction[0].startHour }} h</p>
-                    <p>startMinute: {{ auction[0].startMinute }} min</p>
-                    <p>Duration: {{ auction[0].auctionDuration }} Tage</p>
-                    <p>startPrice: {{ auction[0].startPrice | formatDecimal }}</p>
-                    <p>buyNowPrice: {{ auction[0].buyNowPrice | formatDecimal  | formatMonetary('EUR') }}</p>
+                    {#<p>startHour: {{ auction[0].startHour }} h</p>#}
+                    {#<p>startMinute: {{ auction[0].startMinute }} min</p>#}
 
 
 
