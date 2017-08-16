@@ -165,8 +165,8 @@
                         <dd>{{ auction[0].buyNowPrice | formatMonetary('EUR') }}</dd>
                     </dl>
 
-                    {% set Ende = ( "+ auction[0].auctionDuration days" | date('d.M.Y H:i \\U\\h\\r') ) %}
-                    <p>Ende: {{ Ende }}</p>
+                    {#{% set Ende = ( "+ auction[0].auctionDuration days" | date('d.M.Y H:i \\U\\h\\r') ) %}#}
+                    {#<p>Ende: {{ Ende }}</p>#}
 
                     {#<p>Test: {{ (auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime) }}</p>#}
 
