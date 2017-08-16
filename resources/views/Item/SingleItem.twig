@@ -154,7 +154,7 @@
                         <dt>Start Datum:</dt>
                         <dd>{{ auction[0].startDate | date('d.M.Y H:i \\U\\h\\r') }}</dd>
                         <dt>End Datum:</dt>
-                        <dd>{{ (auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60) | formatDateTime) | date('D d.M.Y H:i:s e') }}</dd>
+                        <dd>{{ (auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime) | date('D d.M.Y H:i:s e') }}</dd>
                     </dl>
 
 
@@ -170,7 +170,7 @@
                     <p>startMinute: {{ auction[0].startMinute }} min</p>
                     <p>Duration: {{ auction[0].auctionDuration }} Tage</p>
                     <p>startPrice: {{ auction[0].startPrice | formatDecimal }}</p>
-                    <p>buyNowPrice: {{ auction[0].buyNowPrice  | formatMonetary(EUR) }}</p>
+                    <p>buyNowPrice: {{ auction[0].buyNowPrice | formatDecimal  | formatMonetary() }}</p>
 
 
 
