@@ -45,6 +45,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -148,16 +149,27 @@
                 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 
                 {% if( auction[0] ) %}
-                    <p>startDate: {{ auction[0].startDate | date('d.m.Y h:i:s', timezone="Europe/Paris") }}</p>
-                    <p>startDate: {{ auction[0].startDate | date() }}</p>
+
+                    <dl class="itemDefList">
+                        <dt>Start Datum:</dt>
+                        <dd>{{ auction[0].startDate | date('D d.M.Y H:i:s e') }}</dd>
+                        <dt>End Datum:</dt>
+                        <dd>{{ auction[0].startDate | date('D d.M.Y H:i:s e') }}</dd>
+                    </dl>
+
+
+
+
+                    <p>startDate: {{ auction[0].startDate | formatDateTime }}</p>
+
                     {% set jetzt = ( "now" | date() ) %}
                     <p>jetzt: {{ jetzt }}</p>
-                    <p>jetzt: {{ jetzt - auction[0].startDate }}</p>
+                    <p>jetzt: {{ auction[0].startDate - jetzt }}</p>
 
                     <p>startHour: {{ auction[0].startHour }} h</p>
                     <p>startMinute: {{ auction[0].startMinute }} min</p>
                     <p>Duration: {{ auction[0].auctionDuration }} Tage</p>
-                    <p>startPrice: {{ auction[0].startPrice }}</p>
+                    <p>startPrice: {{ auction[0].startPrice | formatDecimal }}</p>
                     <p>buyNowPrice: {{ auction[0].buyNowPrice }}</p>
 
 
@@ -167,7 +179,7 @@
 
 
 
-                <span class="price h1">
+                    <span class="price h1">
                 <span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultPrice"
                         content="{{ item.documents[0].data.calculatedPrices.default.price }}">
                 {{ item.documents[0].data.calculatedPrices.formatted.defaultPrice }}
@@ -177,30 +189,30 @@
                 </span>
 
 
-                {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
+                    {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
-                <span class="availability tag availability_{{ item.documents[0].data.variation.availability.id }}"
-                        v-availability-class:currentVariation>
+                    <span class="availability tag availability_{{ item.documents[0].data.variation.availability.id }}"
+                            v-availability-class:currentVariation>
                 <span v-resource-bind:currentVariation="documents.0.data.variation.availability.names.name">
                 {{ item.documents[0].data.variation.availability.names.name }}
                 </span>
                 </span>
 
-                <div class="row m-y-1">
+                    <div class="row m-y-1">
 
-                    {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
+                        {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
 
-                    <add-to-basket template="#vue-add-to-basket"
-                            v-resource-if:currentVariation="documents[0].data.filter.isSalable"
-                            v-resource-push:item
-                            data-accessor="true"
-                            resource="currentVariation"
-                            :show-quantity="true"
-                            :show-order-properties="true"></add-to-basket>
+                        <add-to-basket template="#vue-add-to-basket"
+                                v-resource-if:currentVariation="documents[0].data.filter.isSalable"
+                                v-resource-push:item
+                                data-accessor="true"
+                                resource="currentVariation"
+                                :show-quantity="true"
+                                :show-order-properties="true"></add-to-basket>
 
 
-                    {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
-                </div>
+                        {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data) }}
+                    </div>
 
                 {% endif %}
 
@@ -218,7 +230,7 @@
                 {% endif %}
                 {# maybe use the button for wishlist #}
                 {#<button type="button" class="btn btn-primary" @click="directToItem()">#}
-                    {#<i class="fa fa-heart-o" aria-hidden="true"></i>#}
+                {#<i class="fa fa-heart-o" aria-hidden="true"></i>#}
                 {#</button>#}
                 <!-- ./ITEM DETAIL -->
 
