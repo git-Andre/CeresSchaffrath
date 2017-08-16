@@ -152,9 +152,9 @@
 
                     <dl class="itemDefList">
                         <dt>Start Datum:</dt>
-                        <dd>{{ auction[0].startDate | date('d.M.Y H:i:s') }}</dd>
+                        <dd>{{ auction[0].startDate | date('d.M.Y H:i \\U\\h\\r') }}</dd>
                         <dt>End Datum:</dt>
-                        <dd>{{ auction[0].startDate + auction[0].auctionDuration * 24*60*60 | date('D d.M.Y H:i:s e') }}</dd>
+                        <dd>{{ (auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60) | formatDateTime) | date('D d.M.Y H:i:s e') }}</dd>
                     </dl>
 
 
