@@ -150,6 +150,10 @@
                 {% if( auction[0] ) %}
                     <p>startDate: {{ auction[0].startDate | date('d.m.Y h:i:s', timezone="Europe/Paris") }}</p>
                     <p>startDate: {{ auction[0].startDate | date() }}</p>
+                    {% set jetzt = ( "now" | date() ) %}
+                    <p>jetzt: {{ jetzt }}</p>
+                    <p>jetzt: {{ jetzt - auction[0].startDate }}</p>
+
                     <p>startHour: {{ auction[0].startHour }} h</p>
                     <p>startMinute: {{ auction[0].startMinute }} min</p>
                     <p>Duration: {{ auction[0].auctionDuration }} Tage</p>
