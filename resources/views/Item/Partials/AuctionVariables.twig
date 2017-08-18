@@ -1,3 +1,7 @@
+
+{% if( auction[0] ) %}
+
+
 <h1>Auktion:</h1>
 
 <dl class="itemDefList">
@@ -58,3 +62,9 @@
     <dd>{{ liveAuction[0].createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
 
 </dl>
+{% else %}
+
+    <h1>StageModus...</h1>
+
+
+{% endif %}
