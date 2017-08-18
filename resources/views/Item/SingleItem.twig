@@ -46,6 +46,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -147,36 +148,54 @@
 
                 {#von PluginAuctionService:#}
                 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
+                {% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}
 
                 {% if( auction[0] ) %}
 
                     {% set endDate = ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
+                    <h1>Auktion:</h1>
 
                     <dl class="itemDefList">
                         <dt>Start Datum:</dt>
                         <dd>{{ auction[0].startDate | date('d.M.Y H:i \\U\\h\\r') }}</dd>
                         <dt>End Datum:</dt>
                         <dd>{{ endDate }}</dd>
-                        <dt>Laufzeit: </dt>
+                        <dt>Laufzeit:</dt>
                         <dd>{{ auction[0].auctionDuration }} Tage</dd>
-                        <dt>Start Preis: </dt>
+                        <dt>Start Preis:</dt>
                         <dd>{{ auction[0].startPrice  | formatMonetary('EUR') }}</dd>
-                        <dt>Sofort Kaufen: </dt>
+                        <dt>Sofort Kaufen:</dt>
                         <dd>{{ auction[0].buyNowPrice | formatMonetary('EUR') }}</dd>
                     </dl>
 
-                    {#{% set Ende = ( "+ auction[0].auctionDuration days" | date('d.M.Y H:i \\U\\h\\r') ) %}#}
-                    {#<p>Ende: {{ Ende }}</p>#}
+                    <h1>Live Auktion:</h1>
 
-                    {#<p>Test: {{ (auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime) }}</p>#}
+                    <dl class="itemDefList">
+                        <dt>ID:</dt>
+                        <dd>{{ liveAuction[0].id }}</dd>
 
-                    {#{% set jetzt = ( "now" | formatDateTime) %}#}
-                    {#<p>test: {{ (auction[0].startDate - jetzt) }}</p>#}
+                        <dt>itemId:</dt>
+                        <dd>{{ liveAuction[0].itemId }}</dd>
 
-                    {#<p>startHour: {{ auction[0].startHour }} h</p>#}
-                    {#<p>startMinute: {{ auction[0].startMinute }} min</p>#}
+                        <dt>auctionId:</dt>
+                        <dd>{{ liveAuction[0].auctionId }}</dd>
 
+                        <dt>isEnded:</dt>
+                        <dd>{{ liveAuction[0].isEnded }}</dd>
 
+                        <dt>isLive:</dt>
+                        <dd>{{ liveAuction[0].isLive }}</dd>
+
+                        <dt>isEndedWithBuyNow:</dt>
+                        <dd>{{ liveAuction[0].isEndedWithBuyNow }}</dd>
+
+                        <dt>bidderList:</dt>
+                        <dd>{{ liveAuction[0].bidderList | json_encode }}</dd>
+
+                        <dt>createdAt:</dt>
+                        <dd>{{ liveAuction[0].createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
+
+                    </dl>
 
                 {% else %}
 
