@@ -192,8 +192,14 @@
                         <dt>bidderList:</dt>
                         <dd>{{ liveAuction[0].bidderList | json_encode }}</dd>
 
+                        <dt>customerEmail Bsp.:</dt>
+                        <dd>{{ liveAuction[0].bidderList[0].customerEmail }}</dd>
+
                         <dt>bidPrice Bsp.:</dt>
-                        <dd>{{ liveAuction[0].bidderList[0].bidPrice }}</dd>
+                        <dd>{{ liveAuction[0].bidderList[0].bidPrice  | formatMonetary('EUR') }}</dd>
+
+                        <dt>bidTimeStamp  Bsp.:</dt>
+                        <dd>{{ liveAuction[0].bidderList[0].bidTimeStamp | date('d.m.Y H:i:s') }}</dd>
 
                         <dt>createdAt:</dt>
                         <dd>{{ liveAuction[0].createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
