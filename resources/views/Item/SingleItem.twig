@@ -47,6 +47,8 @@
 
 
 
+
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -127,22 +129,10 @@
                                 preselect="{{ item.documents[0].data.variation.id }}"></variation-select>
                     </div>
                 {% endif %}
-                {#Preise#}
-
-
 
                 {#Auction start ---------- ToDo: Hier erst mal alle relevanten Daten sammeln... #}
 
-
                 {#
-
-                                Date
-                                    now()
-
-                                von LiveAuctionService:
-                                    highestBid = startPrice
-                                    bidderList[] = push Logged in User...
-
                                 LoggedInUser ????
                 #}
 
@@ -150,67 +140,15 @@
                 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
                 {% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}
 
+                {% set endDate = ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
+
                 {% if( auction[0] ) %}
-
-                    {% set endDate = ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
-                    <h1>Auktion:</h1>
-
-                    <dl class="itemDefList">
-                        <dt>Start Datum:</dt>
-                        <dd>{{ auction[0].startDate | date('d.M.Y H:i \\U\\h\\r') }}</dd>
-                        <dt>End Datum:</dt>
-                        <dd>{{ endDate }}</dd>
-                        <dt>Laufzeit:</dt>
-                        <dd>{{ auction[0].auctionDuration }} Tage</dd>
-                        <dt>Start Preis:</dt>
-                        <dd>{{ auction[0].startPrice  | formatMonetary('EUR') }}</dd>
-                        <dt>Sofort Kaufen:</dt>
-                        <dd>{{ auction[0].buyNowPrice | formatMonetary('EUR') }}</dd>
-                    </dl>
-
-                    <h1>Live Auktion:</h1>
-
-                    <dl class="itemDefList">
-                        <dt>ID:</dt>
-                        <dd>{{ liveAuction[0].id }}</dd>
-
-                        <dt>itemId:</dt>
-                        <dd>{{ liveAuction[0].itemId }}</dd>
-
-                        <dt>auctionId:</dt>
-                        <dd>{{ liveAuction[0].auctionId }}</dd>
-
-                        <dt>isEnded:</dt>
-                        <dd>{{ liveAuction[0].isEnded }}</dd>
-
-                        <dt>isLive:</dt>
-                        <dd>{{ liveAuction[0].isLive }}</dd>
-
-                        <dt>isEnded...BuyNow:</dt>
-                        <dd>{{ liveAuction[0].isEndedWithBuyNow }}</dd>
-
-                        <dt>bidderList:</dt>
-                        <dd>{{ liveAuction[0].bidderList | json_encode }}</dd>
-
-                        <dt>customerEmail:</dt>
-                        <dd>{{ liveAuction[0].bidderList[0].customerEmail }}</dd>
-
-                        <dt>bidPrice Bsp.:</dt>
-                        <dd>{{ liveAuction[0].bidderList[0].bidPrice  | formatMonetary('EUR') }}</dd>
-
-                        <dt>bidTimeStamp  Bsp.:</dt>
-                        <dd>{{ liveAuction[0].bidderList[0].bidTimeStamp | date('d.m.Y H:i:s') }}</dd>
-
-                        <dt>createdAt:</dt>
-                        <dd>{{ liveAuction[0].createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
-
-                    </dl>
-
+                    {% include "CeresSchaffrath::Item.Partials.AuctionVariables" with { 'auctions': auctions } %}
                 {% else %}
 
 
 
-
+                    {#Preis#}
                     <span class="price h1">
                 <span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultPrice"
                         content="{{ item.documents[0].data.calculatedPrices.default.price }}">
