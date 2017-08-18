@@ -186,11 +186,14 @@
                         <dt>isLive:</dt>
                         <dd>{{ liveAuction[0].isLive }}</dd>
 
-                        <dt>isEndedWithBuyNow:</dt>
+                        <dt>isEnded...BuyNow:</dt>
                         <dd>{{ liveAuction[0].isEndedWithBuyNow }}</dd>
 
                         <dt>bidderList:</dt>
                         <dd>{{ liveAuction[0].bidderList | json_encode }}</dd>
+
+                        <dt>bidPrice Bsp.:</dt>
+                        <dd>{{ liveAuction[0].bidderList[0].bidPrice }}</dd>
 
                         <dt>createdAt:</dt>
                         <dd>{{ liveAuction[0].createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
