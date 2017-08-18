@@ -11,6 +11,12 @@
 {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 {% set itemVariationData = itemGetVariation.documents[0].data %}
 
+{% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
+{% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}
+
+{% set endDate = ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
+
+
  {% block PartialHead %}
      <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
      <meta property="og:type" content="article"/>
@@ -40,6 +46,7 @@
           "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
           "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
           "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
+
 
 
 
@@ -141,10 +148,6 @@
                 #}
 
                 {#von PluginAuctionService:#}
-                {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
-                {% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}
-
-                {% set endDate = ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
 
                 {% if( auction[0] ) %}
                     {#{% include "CeresSchaffrath::Item.Partials.AuctionVariables" with { 'auctions': auctions } %}#}
