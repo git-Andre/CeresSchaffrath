@@ -24,7 +24,9 @@
     <dt>Sofort Kaufen:</dt>
     <dd>{{ auction[0].buyNowPrice | formatMonetary('EUR') }}</dd>
 </dl>
+{% endif %}
 
+{% if liveAuction[0] %}
 <h1>Live Auktion Input:</h1>
 
 <dl class="itemDefList">
