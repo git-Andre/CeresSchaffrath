@@ -12,7 +12,7 @@
 {% set itemVariationData = itemGetVariation.documents[0].data %}
 
 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
-{% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id)  | json_encode %}
+{% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}
 
 {% set endDate = ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
 
