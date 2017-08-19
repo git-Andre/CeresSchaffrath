@@ -14,7 +14,7 @@
 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 {% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}
 
-{% set endDate = ((auction[0].startDate | formatDateTime) + (auction[0].auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
+{% set endDate = ((auction.startDate | formatDateTime) + (auction.auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
 
 
  {% block PartialHead %}
