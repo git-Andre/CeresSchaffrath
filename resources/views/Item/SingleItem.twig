@@ -14,7 +14,8 @@
 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 {% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}
 
-{% set endDate = ((auction.startDate | formatDateTime) + (auction.auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
+{% set endDate = ((auction.startDate | formatDateTime) + (auction.auctionDuration * 24*60*60 | formatDateTime)) %}
+{% set endDateFormat = ((auction.startDate | formatDateTime) + (auction.auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
 
 
  {% block PartialHead %}
@@ -165,28 +166,36 @@
 
                         <h2>Aktuelle Auktion:</h2>
 
+                        {% set jetzt = "now" | date() %}
+                        {% set jetztNumber = jetzt | formatDateTime %}
+
+                        <h1>{{ jetzt }}</h1>
+                        <h2>{{ jetztNumber }}</h2>
+                        <h3>{{ endDate }}</h3>
+
+
                         <dl class="auctionList">
                             <dt>Aktuelles Gebot:</dt>
-                            <dd>{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
+                            <dd class="price h1">{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
                             <dt>Restzeit: </dt>
-                            <dd>{{ endDate - ("now" | date()) | date("d \\T\\a\\g\\e H:i:s") }}</dd>
+                            <dd>{{ endDate | date("d.m.Y \\T\\a\\g\\e H:i:s") }}</dd>
                             <dt>Artikel ID:</dt>
                             <dd>{{ liveAuction.itemId }}</dd>
                             <dt>Versandpreis:</dt>
                             <dd>muß noch gefunden werden...</dd>
-                            <dt>Anzahl Gebote:</dt>
-                            <dd> {{ bidderListLength }}  <a href="#">Alle anzeigen</a></dd>
+                            <dt>Anzahl:</dt>
+                            <dd> {{ bidderListLength }} Gebote <a href="#"> -> alle anzeigen</a></dd>
                         </dl>
 
-                        <div class="row">
+                        <div class="row m-b-3">
                             <div class="col-lg-8 offset-lg-2" formGroup="maxBid">
 
                                 <input class="form-control form-control-lg text-muted"
                                         type="number"
                                         id="maximumBid"
-                                        placeholder="Geben Sie bitte Ihr Maximalgebot ein"
+                                        placeholder="Ihr Maximalgebot"
                                         aria-describedby="maxBidHelpBlock">
-                                <p id="maxBidHelpBlock" class="form-text text-muted text-center">Bitte geben Sie
+                                <p id="maxBidHelpBlock" class="form-text text-muted text-center"> Bitte geben Sie
                                                                                      mindestens {{ bidderListLast.bidPrice + 1 }}
                                                                                      EUR ein!</p>
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Gebot abgeben</button>
