@@ -162,7 +162,7 @@
 
                         <h2>Auktion:</h2>
 
-                        <p>Zeit: {{ "now | date("d.m.Y H:i:s")" }}</p>
+                        <p>Zeit: {{ "now" | date("d.m.Y H:i:s") }}</p>
 
                         <dl class="acutionList">
                             <dt>Aktuelles Gebot: </dt>
@@ -175,6 +175,7 @@
                             <dd><a href="#">Alle Gebote anzeigen</a></dd>
                         </dl>
                         <hr class="m-y-1">
+                        <input class="maxBid-input" type="number" name="MaximumBid">
 
 
 
