@@ -25,14 +25,14 @@
     </dl>
 {% endif %}
 
-{#{% if liveAuction %}#}
+{% if liveAuction %}
     <h1>Live Auktion Input:</h1>
 
-    {% bidderListLength = liveAuction.bidderList[] | length %}
-    {#{% bidderListCount = liveAuction.bidderList[].count %}#}
+    {% set bidderListLength = liveAuction.bidderList[] | length %}
+    {% set bidderListCount = liveAuction.bidderList[].count %}
 
     <h3>{{ bidderListLength }}</h3>
-    {#<h4>{{ bidderListCount }}</h4>#}
+    <h4>{{ bidderListCount }}</h4>
 
     <dl class="itemDefList">
         <dt>ID:</dt>
@@ -71,9 +71,9 @@
         <dd>{{ liveAuction.createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
 
     </dl>
-{#{% else %}#}
+{% else %}
 
     <h1>StageModus...</h1>
 
 
-{#{% endif %}#}
+{% endif %}
