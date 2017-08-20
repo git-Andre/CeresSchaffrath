@@ -31,7 +31,6 @@
     {% set bidderListLength = liveAuction.bidderList | length %}
     {#{% set bidderListCount = liveAuction.bidderList[].count %}#}
 
-    <h3>{{ bidderListLength }}</h3>
     {#<h4>{{ bidderListCount }}</h4>#}
 
     <dl class="itemDefList">
@@ -59,13 +58,13 @@
         <dd>{{ liveAuction.bidderList | json_encode }}</dd>
 
         <dt>customerEmail:</dt>
-        <dd>{{ liveAuction.bidderList.customerEmail | last }}</dd>
+        <dd>{{ liveAuction.bidderList[bidderListLength].customerEmail }}</dd>
 
         <dt>bidPrice Bsp.:</dt>
-        <dd>{{ liveAuction.bidderList[0].bidPrice  | formatMonetary('EUR') }}</dd>
+        <dd>{{ liveAuction.bidderList[bidderListLength].bidPrice  | formatMonetary('EUR') }}</dd>
 
         <dt>bidTimeStamp Bsp.:</dt>
-        <dd>{{ liveAuction.bidderList[0].bidTimeStamp | date('d.m.Y H:i:s') }}</dd>
+        <dd>{{ liveAuction.bidderList[bidderListLength].bidTimeStamp | date('d.m.Y H:i:s') }}</dd>
 
         <dt>createdAt:</dt>
         <dd>{{ liveAuction.createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
