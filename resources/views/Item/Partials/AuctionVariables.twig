@@ -1,69 +1,76 @@
-
 {% if( auction ) %}
 
 
-<h1>Auktion:</h1>
+    <h1>Auktion:</h1>
 
-<dl class="itemDefList">
-    <dt>Id:</dt>
-    <dd>{{ auction.id }} </dd>
+    <dl class="itemDefList">
+        <dt>Id:</dt>
+        <dd>{{ auction.id }} </dd>
 
-    <dt>itemId:</dt>
-    <dd>{{ auction.itemId }} </dd>
+        <dt>itemId:</dt>
+        <dd>{{ auction.itemId }} </dd>
 
-    <dt>Start Datum:</dt>
-    <dd>{{ auction.startDate | date('d.M.Y H:i \\U\\h\\r') }}</dd>
-    <dt>End Datum:</dt>
-    <dd>{{ endDate }}</dd>
+        <dt>Start Datum:</dt>
+        <dd>{{ auction.startDate | date('d.M.Y H:i \\U\\h\\r') }}</dd>
+        <dt>End Datum:</dt>
+        <dd>{{ endDate }}</dd>
 
-    <dt>Laufzeit:</dt>
-    <dd>{{ auction.auctionDuration }} Tage</dd>
+        <dt>Laufzeit:</dt>
+        <dd>{{ auction.auctionDuration }} Tage</dd>
 
-    <dt>Start Preis:</dt>
-    <dd>{{ auction.startPrice  | formatMonetary('EUR') }}</dd>
-    <dt>Sofort Kaufen:</dt>
-    <dd>{{ auction.buyNowPrice | formatMonetary('EUR') }}</dd>
-</dl>
+        <dt>Start Preis:</dt>
+        <dd>{{ auction.startPrice  | formatMonetary('EUR') }}</dd>
+        <dt>Sofort Kaufen:</dt>
+        <dd>{{ auction.buyNowPrice | formatMonetary('EUR') }}</dd>
+    </dl>
 {% endif %}
 
 {% if liveAuction %}
-<h1>Live Auktion Input:</h1>
+    <h1>Live Auktion Input:</h1>
 
-<dl class="itemDefList">
-    <dt>ID:</dt>
-    <dd>{{ liveAuction.id }}</dd>
+    {% bidderListLength = liveAuction.bidderList[].length %}
+    {% bidderListCount = liveAuction.bidderList[].count %}
 
-    <dt>itemId:</dt>
-    <dd>{{ liveAuction.itemId }}</dd>
+    <h3>{{ bidderListLength }}</h3>
+    <h4>{{ bidderListCount }}</h4>
 
-    <dt>auctionId:</dt>
-    <dd>{{ liveAuction.auctionId }}</dd>
+    <dl class="itemDefList">
+        <dt>ID:</dt>
+        <dd>{{ liveAuction.id }}</dd>
 
-    <dt>isEnded:</dt>
-    <dd>{{ liveAuction.isEnded }}</dd>
+        <dt>itemId:</dt>
+        <dd>{{ liveAuction.itemId }}</dd>
 
-    <dt>isLive:</dt>
-    <dd>{{ liveAuction.isLive }}</dd>
+        <dt>auctionId:</dt>
+        <dd>{{ liveAuction.auctionId }}</dd>
 
-    <dt>isEnded...BuyNow:</dt>
-    <dd>{{ liveAuction.isEndedWithBuyNow }}</dd>
+        {% if (liveAuction.isEnded) %}
+            <dt>isEnded:</dt>
+            <dd>{{ liveAuction.isEnded }}</dd>
+        {% endif %}
 
-    <dt>bidderList:</dt>
-    <dd>{{ liveAuction.bidderList | json_encode }}</dd>
+        <dt>isLive:</dt>
+        <dd>{{ liveAuction.isLive }}</dd>
 
-    <dt>customerEmail:</dt>
-    <dd>{{ liveAuction.bidderList[0].customerEmail }}</dd>
+        <dt>isEnded...BuyNow:</dt>
+        <dd>{{ liveAuction.isEndedWithBuyNow }}</dd>
 
-    <dt>bidPrice Bsp.:</dt>
-    <dd>{{ liveAuction.bidderList[0].bidPrice  | formatMonetary('EUR') }}</dd>
+        <dt>bidderList:</dt>
+        <dd>{{ liveAuction.bidderList | json_encode }}</dd>
 
-    <dt>bidTimeStamp Bsp.:</dt>
-    <dd>{{ liveAuction.bidderList[0].bidTimeStamp | date('d.m.Y H:i:s') }}</dd>
+        <dt>customerEmail:</dt>
+        <dd>{{ liveAuction.bidderList[0].customerEmail }}</dd>
 
-    <dt>createdAt:</dt>
-    <dd>{{ liveAuction.createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
+        <dt>bidPrice Bsp.:</dt>
+        <dd>{{ liveAuction.bidderList[0].bidPrice  | formatMonetary('EUR') }}</dd>
 
-</dl>
+        <dt>bidTimeStamp Bsp.:</dt>
+        <dd>{{ liveAuction.bidderList[0].bidTimeStamp | date('d.m.Y H:i:s') }}</dd>
+
+        <dt>createdAt:</dt>
+        <dd>{{ liveAuction.createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
+
+    </dl>
 {% else %}
 
     <h1>StageModus...</h1>
