@@ -177,9 +177,9 @@
 
                         <dl class="auctionList">
                             <dt class="align-bottom">Aktuelles Gebot:</dt>
-                            <dd class="price h1">{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
+                            <dd class="price h1 align-top">{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
                             <dt class="m-t-2">Restzeit: </dt>
-                            <dd class="m-t-2>{{ endDate | date("d.m.Y \\T\\a\\g\\e H:i:s") }}</dd>
+                            <dd class="m-t-2">{{ endDate | date("d.m.Y \\T\\a\\g\\e H:i:s") }}</dd>
                             <dt>Artikel ID:</dt>
                             <dd>{{ liveAuction.itemId }}</dd>
                             <dt>Versandpreis:</dt>
