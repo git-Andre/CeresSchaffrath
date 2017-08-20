@@ -164,7 +164,7 @@
                         {% set bidderListLast = liveAuction.bidderList | last %}
                         {% set bidderListLength = liveAuction.bidderList | length %}
 
-                        <h2>Aktuelle Auktion:</h2>
+                        <h2 class="m-b-2">Aktuelle Auktion:</h2>
 
                         {% set jetzt = "now" | date() | formatDateTime%}
                         {% set jetztNumber = "now" | formatDateTime %}
@@ -174,12 +174,12 @@
                         <h3>{{ endDateFormat }}</h3>
                         <h3>{{ endDate }}</h3>
 
-
+                        {#| date("d.m.Y \\T\\a\\g\\e H:i:s")#}
                         <dl class="auctionList">
-                            <dt class="align-bottom">Aktuelles Gebot:</dt>
-                            <dd class="price h1 align-top">{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
-                            <dt class="m-t-2">Restzeit: </dt>
-                            <dd class="m-t-2">{{ endDate | date("d.m.Y \\T\\a\\g\\e H:i:s") }}</dd>
+                            <dt>Aktuelles Gebot:</dt>
+                            <dd class="price h1 m-b-2">{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
+                            <dt>Endzeit: </dt>
+                            <dd>{{ endDateFormat }}</dd>
                             <dt>Artikel ID:</dt>
                             <dd>{{ liveAuction.itemId }}</dd>
                             <dt>Versandpreis:</dt>
