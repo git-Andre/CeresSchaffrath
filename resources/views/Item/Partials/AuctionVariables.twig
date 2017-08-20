@@ -43,7 +43,7 @@
         <dt>auctionId:</dt>
         <dd>{{ liveAuction.auctionId }}</dd>
 
-        {% if (liveAuction.isEnded) %}
+        {% if (liveAuction.isEnded == true) %}
             <dt>isEnded:</dt>
             <dd>{{ liveAuction.isEnded }}</dd>
         {% endif %}

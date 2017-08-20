@@ -50,6 +50,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -66,6 +67,7 @@
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
+    <resource name="currentAuction" :data="{{ auction | json_encode() }}"></resource>
 
     <div class="single container-max page-content">
         <div class="row m-t-3">
@@ -80,7 +82,7 @@
 
                 {# ao Var-Dump #}
 
-                {#{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': item.documents[0] } %}#}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': item.documents[0] } %}
 
                 {% include "CeresSchaffrath::Item.Partials.AuctionVariables" %}
 
@@ -141,10 +143,18 @@
 
                 {#von PluginAuctionService:#}
 
-                {% if( auction ) %}
+                {% if ( auction ) %}
                     {% if (liveAuction.isLive != true and liveAuction.isEnded != true) %}
-
                         <h2>vor der Auktion</h2>
+
+                        <span class="price h1">
+                        <span v-resource-bind:currentAuction="auction.startPrice"
+                                content="{{ auction.startPrice }}">
+                        {{ auction.startPrice }}
+                        </span>
+                        <sup>*</sup>
+                        <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
+                        </span>
 
                     {% elseif (liveAuction.isLive == true and liveAuction.isEnded != true) %}
                         <h2>WÄHREND der Auktion</h2>
