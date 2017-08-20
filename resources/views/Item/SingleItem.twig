@@ -150,14 +150,33 @@
                         <span class="price h1">
                         <span v-resource-bind:currentAuction="auction.startPrice"
                                 content="{{ auction.startPrice }}">
-                        {{ auction.startPrice }}
+                        {{ auction.startPrice | formatMonetary('EUR') }}
                         </span>
                         <sup>*</sup>
                         <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                         </span>
 
                     {% elseif (liveAuction.isLive == true and liveAuction.isEnded != true) %}
-                        <h2>WÄHREND der Auktion</h2>
+                        {% set bidderListLast = liveAuction.bidderList | last %}
+                        {% set bidderListLength = liveAuction.bidderList | length %}
+
+                        <h2>Auktion:</h2>
+
+                        <p>Zeit: {{ "now | date("d.m.Y H:i:s")" }}</p>
+
+                        <dl class="acutionList">
+                            <dt>Aktuelles Gebot: </dt>
+                            <dd>{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
+                            <dt>Versandpreis: </dt>
+                            <dd>muß gefunden werden...</dd>
+                            <dt>Artikel ID: </dt>
+                            <dd>{{ liveAuction.itemId }}</dd>
+                            <dt>Gebote: </dt>
+                            <dd><a href="#">Alle Gebote anzeigen</a></dd>
+                        </dl>
+                        <hr class="m-y-1">
+
+
 
                     {% else %}
                         <h2>NACH der Auktion</h2>
