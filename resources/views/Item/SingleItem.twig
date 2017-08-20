@@ -165,29 +165,28 @@
 
                         <h2>Aktuelle Auktion:</h2>
 
-                        <p>Zeit: {{ "now" | date("d.m.Y H:i:s") }}</p>
-
                         <dl class="auctionList">
                             <dt>Aktuelles Gebot:</dt>
                             <dd>{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
-                            <dt>Versandpreis:</dt>
-                            <dd>muß gefunden werden...</dd>
+                            <dt>Restzeit: </dt>
+                            <dd>{{ endDate - ("now" | date()) | date("d \\T\\a\\g\\e H:i:s") }}</dd>
                             <dt>Artikel ID:</dt>
                             <dd>{{ liveAuction.itemId }}</dd>
-                            <dt>Gebote:</dt>
-                            <dd><a href="#">Alle Gebote anzeigen</a></dd>
+                            <dt>Versandpreis:</dt>
+                            <dd>muß noch gefunden werden...</dd>
+                            <dt>Anzahl Gebote:</dt>
+                            <dd> {{ bidderListLength }}  <a href="#">Alle anzeigen</a></dd>
                         </dl>
-                        <hr class="m-y-2 m-x-3">
 
                         <div class="row">
                             <div class="col-lg-8 offset-lg-2" formGroup="maxBid">
 
-                                <input class="form-control form-control-lg"
+                                <input class="form-control form-control-lg text-muted"
                                         type="number"
                                         id="maximumBid"
                                         placeholder="Geben Sie bitte Ihr Maximalgebot ein"
                                         aria-describedby="maxBidHelpBlock">
-                                <p id="maxBidHelpBlock" class="form-text text-muted">Bitte geben Sie
+                                <p id="maxBidHelpBlock" class="form-text text-muted text-center">Bitte geben Sie
                                                                                      mindestens {{ bidderListLast.bidPrice + 1 }}
                                                                                      EUR ein!</p>
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Gebot abgeben</button>
