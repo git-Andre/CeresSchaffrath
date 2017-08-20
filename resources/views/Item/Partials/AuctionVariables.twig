@@ -28,11 +28,11 @@
 {% if liveAuction %}
     <h1>Live Auktion Input:</h1>
 
-    {% bidderListLength = liveAuction.bidderList[].length %}
-    {% bidderListCount = liveAuction.bidderList[].count %}
+    {% bidderListLength = liveAuction.bidderList[] | length %}
+    {#{% bidderListCount = liveAuction.bidderList[].count %}#}
 
     <h3>{{ bidderListLength }}</h3>
-    <h4>{{ bidderListCount }}</h4>
+    {#<h4>{{ bidderListCount }}</h4>#}
 
     <dl class="itemDefList">
         <dt>ID:</dt>
@@ -59,7 +59,7 @@
         <dd>{{ liveAuction.bidderList | json_encode }}</dd>
 
         <dt>customerEmail:</dt>
-        <dd>{{ liveAuction.bidderList[0].customerEmail }}</dd>
+        <dd>{{ liveAuction.bidderList[].customerEmail | last }}</dd>
 
         <dt>bidPrice Bsp.:</dt>
         <dd>{{ liveAuction.bidderList[0].bidPrice  | formatMonetary('EUR') }}</dd>
