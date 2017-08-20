@@ -52,6 +52,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -178,8 +179,14 @@
                         <hr class="m-y-2 m-x-3">
                         <div class="col-lg-5" formGroup="maxBid">
 
-                            <input class="form-control" type="number" name="MaximumBid" placeholder="Geben Sie bitte Ihr Maximalgebot ein">
-
+                            <input class="form-control"
+                                    type="number"
+                                    id="maximumBid"
+                                    placeholder="Geben Sie bitte Ihr Maximalgebot ein"
+                                    aria-describedby="maxBidHelpBlock">
+                            <p id="maxBidHelpBlock" class="form-text text-muted">Bitte geben Sie
+                                                                                 mindestens {{ bidderListLast.bidPrice + 1 }}
+                                                                                 EUR ein!</p>
                             <button class="btn btn-primary" type="submit">Gebot abgeben</button>
 
                         </div>
