@@ -266,6 +266,9 @@ a:hover {
 }
 
 // Helper
+.text-center {
+  text-align: center !important;
+}
 
 .ao-nach-oben {
   transform: translateY(-119px);
@@ -293,6 +296,6 @@ a:hover {
 .countDown {
   color: $brand-primary;
   //font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-  font-size: 1.25rem;
+  //font-size: 1.05rem;
   font-weight: bold;
 }

@@ -57,6 +57,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -184,7 +185,7 @@
                             <dd> {{ bidderListLength }} Gebote <a href="#"> -> alle anzeigen</a></dd>
                             <div class="m-t-3">
                                 <dt>Restzeit:</dt>
-                                <dd class="countDown">{{ "5 Tage, 5h:33min:22sec" }}</dd>
+                                <dd class="countDown">{{ "5d, 5h:33min" }}</dd>
                             </div>
                         </dl>
 
@@ -274,13 +275,14 @@
                 {{ LayoutContainer.show("Ceres::SingleItem.AdditionalContentAfterAddToBasket", item.documents[0].data) }}
 
                 {# Hinweis Versandkosten #}
-                <span class="vat-ao small text-muted">
+                <div class="m-b-3">
+                    <span class="vat-ao small text-muted">
                     <sup>*</sup>
-                    {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
-                    <a href="/versandkosten" target="_blank"
-                            title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
-                </span>
-
+                        {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
+                        <a href="/versandkosten" target="_blank"
+                                title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
+                     </span>
+                </div>
             </div>
 
             <!-- ITEM DESCRIPTION -->

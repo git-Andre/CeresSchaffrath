@@ -43,16 +43,13 @@
         <dt>auctionId:</dt>
         <dd>{{ liveAuction.auctionId }}</dd>
 
-        {% if (liveAuction.isEnded == true) %}
+        {% if (liveAuction.isEnded) %}
             <dt>isEnded:</dt>
             <dd>{{ liveAuction.isEnded }}</dd>
         {% endif %}
 
         <dt>isLive:</dt>
         <dd>{{ liveAuction.isLive }}</dd>
-
-        <dt>isEnded...BuyNow:</dt>
-        <dd>{{ liveAuction.isEndedWithBuyNow }}</dd>
 
         <dt>bidderList:</dt>
         <dd>{{ liveAuction.bidderList | json_encode }}</dd>
