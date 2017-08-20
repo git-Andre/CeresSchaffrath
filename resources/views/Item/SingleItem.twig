@@ -56,6 +56,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -173,7 +174,7 @@
                                 <dt>Aktuelles Gebot:</dt>
                                 <dd class="price h1 m-b-2">{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
                             {% endif %}
-                            <dt>Endzeit:</dt>
+                            <dt>Ablaufdatum:</dt>
                             <dd>{{ endDateFormat }}</dd>
                             <dt>Artikel ID:</dt>
                             <dd>{{ liveAuction.itemId }}</dd>
@@ -181,8 +182,10 @@
                             <dd>muß noch gefunden werden...</dd>
                             <dt>Anzahl:</dt>
                             <dd> {{ bidderListLength }} Gebote <a href="#"> -> alle anzeigen</a></dd>
-                            <dt>Restzeit:</dt>
-                            <dd class="m-y-2 countDown">{{ "Berechnung in Vue..." }}</dd>
+                            <div class="m-t-3">
+                                <dt>Restzeit:</dt>
+                                <dd class="countDown">{{ "5 Tage, 5h:33min:22sec" }}</dd>
+                            </div>
                         </dl>
 
                         <div class="row m-b-3">
