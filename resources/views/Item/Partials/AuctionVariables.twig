@@ -59,7 +59,7 @@
         <dd>{{ liveAuction.bidderList | json_encode }}</dd>
 
         <dt>customerEmail:</dt>
-        <dd>{{ liveAuction.bidderList[].customerEmail | last }}</dd>
+        <dd>{{ liveAuction.bidderList.customerEmail | last }}</dd>
 
         <dt>bidPrice Bsp.:</dt>
         <dd>{{ liveAuction.bidderList[0].bidPrice  | formatMonetary('EUR') }}</dd>
