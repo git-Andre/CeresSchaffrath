@@ -13224,4 +13224,20 @@ a:hover {
   color: #020260;
 }
 
+.acutionList {
+  display: block;
+  font-family: "Abel", sans-serif;
+  padding: 1.5rem;
+}
+
+.acutionList dt {
+  width: 25%;
+  float: left;
+  font-weight: bold;
+}
+
+.acutionList dd {
+  width: 95%;
+}
+
 /*# sourceMappingURL=main.css.map */

@@ -51,6 +51,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -160,23 +161,28 @@
                         {% set bidderListLast = liveAuction.bidderList | last %}
                         {% set bidderListLength = liveAuction.bidderList | length %}
 
-                        <h2>Auktion:</h2>
+                        <h2>Aktuelle Auktion:</h2>
 
                         <p>Zeit: {{ "now" | date("d.m.Y H:i:s") }}</p>
 
                         <dl class="acutionList">
-                            <dt>Aktuelles Gebot: </dt>
+                            <dt>Aktuelles Gebot:</dt>
                             <dd>{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
-                            <dt>Versandpreis: </dt>
+                            <dt>Versandpreis:</dt>
                             <dd>muß gefunden werden...</dd>
-                            <dt>Artikel ID: </dt>
+                            <dt>Artikel ID:</dt>
                             <dd>{{ liveAuction.itemId }}</dd>
-                            <dt>Gebote: </dt>
+                            <dt>Gebote:</dt>
                             <dd><a href="#">Alle Gebote anzeigen</a></dd>
                         </dl>
-                        <hr class="m-y-1">
-                        <input class="maxBid-input" type="number" name="MaximumBid">
+                        <hr class="m-y-2 m-x-3">
+                        <div class="col-lg-5" formGroup="maxBid">
 
+                            <input class="form-control" type="number" name="MaximumBid" placeholder="Geben Sie bitte Ihr Maximalgebot ein">
+
+                            <button class="btn btn-primary" type="submit">Gebot abgeben</button>
+
+                        </div>
 
 
                     {% else %}
