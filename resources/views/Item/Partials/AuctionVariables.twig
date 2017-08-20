@@ -28,11 +28,11 @@
 {% if liveAuction %}
     <h1>Live Auktion Input:</h1>
 
-    {% set bidderListLength = liveAuction.bidderList[] | length %}
-    {% set bidderListCount = liveAuction.bidderList[].count %}
+    {% set bidderListLength = liveAuction.bidderList | length %}
+    {#{% set bidderListCount = liveAuction.bidderList[].count %}#}
 
     <h3>{{ bidderListLength }}</h3>
-    <h4>{{ bidderListCount }}</h4>
+    {#<h4>{{ bidderListCount }}</h4>#}
 
     <dl class="itemDefList">
         <dt>ID:</dt>
