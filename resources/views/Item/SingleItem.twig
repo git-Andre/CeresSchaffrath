@@ -89,6 +89,8 @@
 
                 {# ao Var-Dump #}
 
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemGetVariation', 'dumpData': itemGetVariation } %}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemVariationData', 'dumpData': itemVariationData } %}
                 {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': item.documents[0] } %}
 
                 {% include "CeresSchaffrath::Item.Partials.AuctionVariables" %}
