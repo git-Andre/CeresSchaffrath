@@ -8,8 +8,8 @@
 {% set basePriceList = getBasePriceList( services.item.getVariationList( item.documents[0].data.item.id  ) ) %}
 {#ao Variables #}
 {% set itemMain = item.documents[0].data %}
-{% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
-{% set itemVariationData = itemGetVariation.documents[0].data %}
+{% set itemVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
+{% set itemVariationData = itemVariation.documents[0].data %}
 
 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 {% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}
@@ -89,8 +89,8 @@
 
                 {# ao Var-Dump #}
 
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemGetVariation', 'dumpData': itemGetVariation } %}
-                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemVariationData', 'dumpData': itemVariationData } %}
+                {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemVariation', 'dumpData': itemVariation } %}
+                {#{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemVariationData', 'dumpData': itemVariationData } %}#}
                 {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0]', 'dumpData': item.documents[0] } %}
 
                 {% include "CeresSchaffrath::Item.Partials.AuctionVariables" %}
