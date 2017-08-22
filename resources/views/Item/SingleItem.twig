@@ -153,7 +153,7 @@
                 {#von PluginAuctionService:#}
 
                 {% if ( auction ) %}
-                    {% if (liveAuction.isLive != true and liveAuction.isEnded != true) %}
+                    {% if (auction.isLive != true and auction.isEnded != true) %}
                         <h1>vor der Auktion</h1>
 
                         <span class="price h1">
@@ -165,9 +165,9 @@
                         <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                         </span>
 
-                    {% elseif (liveAuction.isLive == true and liveAuction.isEnded != true) %}
-                        {% set bidderListLast = liveAuction.bidderList | last %}
-                        {% set bidderListLength = liveAuction.bidderList | length %}
+                    {% elseif (auction.isLive == true and auction.isEnded != true) %}
+                        {% set bidderListLast = auction.bidderList | last %}
+                        {% set bidderListLength = auction.bidderList | length %}
 
                         <h2 class="m-b-2">Aktuelle Auktion:</h2>
 
@@ -180,7 +180,7 @@
                             <dt>Ablaufdatum:</dt>
                             <dd>{{ endDateFormat }}</dd>
                             <dt>Artikel ID:</dt>
-                            <dd>{{ liveAuction.itemId }}</dd>
+                            <dd>{{ auction.itemId }}</dd>
                             <dt>Versandpreis:</dt>
                             <dd>muß noch gefunden werden...</dd>
                             <dt>Anzahl:</dt>
