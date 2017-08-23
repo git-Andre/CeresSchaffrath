@@ -47,6 +47,7 @@
           "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
           "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
           "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -144,6 +145,7 @@
                     {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
 
+                    {% elseif (auction.tense == 'present') %}
                         <span class="price h1">
                         <span v-resource-bind:currentAuction="auction.startPrice"
                                 content="{{ auction.startPrice }}">
@@ -153,9 +155,10 @@
                         <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                         </span>
 
-                    {% elseif (auction.tense == 'present') %}
                         {% set bidderListLast = auction.bidderList | last %}
                         {% set bidderListLength = auction.bidderList | length %}
+                        <h3>{{ auction.bidderList }}</h3>
+                        <p>{{ auction }}</p>
 
                         <h2 class="m-b-2">Aktuelle Auktion:</h2>
 
@@ -166,7 +169,7 @@
                                 <dd class="price h1 m-b-2">{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
                             {% endif %}
                             <dt>Ablaufdatum:</dt>
-                            <dd>{{ auction.expiryDate }}</dd>
+                            <dd>{{ auction.expiryDate | date('d.m.Y H:i:s') }}</dd>
                             <dt>Artikel ID:</dt>
                             <dd>{{ auction.itemId }}</dd>
                             <dt>Versandpreis:</dt>
