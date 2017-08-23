@@ -11,7 +11,7 @@
 {% set itemVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 {% set itemVariationData = itemVariation.documents[0].data %}
 
-{% set auctionArray[] = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
+{% set auctionArray = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 {% set auction = auctionArray[0] %}
 
 {#{% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}#}
