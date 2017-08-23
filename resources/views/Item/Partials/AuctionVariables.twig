@@ -13,58 +13,37 @@
         <dt>Start Datum:</dt>
         <dd>{{ auction.startDate | date('d.M.Y H:i \\U\\h\\r') }}</dd>
         <dt>End Datum:</dt>
-        <dd>{{ endDateFormat }}</dd>
+        <dd>{{ auction.expiryDate }}</dd>
 
         <dt>Laufzeit:</dt>
         <dd>{{ auction.auctionDuration }} Tage</dd>
 
         <dt>Start Preis:</dt>
         <dd>{{ auction.startPrice  | formatMonetary('EUR') }}</dd>
-        <dt>Sofort Kaufen:</dt>
-        <dd>{{ auction.buyNowPrice | formatMonetary('EUR') }}</dd>
-    </dl>
-{% endif %}
 
-{% if liveAuction %}
-    <h1>Live Auktion Input:</h1>
+        {% set bidderListLast = auction.bidderList | last %}
+        {% set bidderListLength = auction.bidderList | length %}
 
-    {% set bidderListLast = liveAuction.bidderList | last %}
-    {#{% set bidderListCount = liveAuction.bidderList[].count %}#}
-
-    {#<h4>{{ bidderListCount }}</h4>#}
-
-    <dl class="itemDefList">
-        <dt>ID:</dt>
-        <dd>{{ liveAuction.id }}</dd>
-
-        <dt>itemId:</dt>
-        <dd>{{ liveAuction.itemId }}</dd>
-
-        <dt>auctionId:</dt>
-        <dd>{{ liveAuction.auctionId }}</dd>
-
-        {% if (liveAuction.isEnded) %}
-            <dt>isEnded:</dt>
-            <dd>{{ liveAuction.isEnded }}</dd>
-        {% endif %}
-
-        <dt>isLive:</dt>
-        <dd>{{ liveAuction.isLive }}</dd>
+        <dt>bidderListLength:</dt>
+        <dd>{{ liveAuction.bidderListLength }}</dd>
 
         <dt>bidderList:</dt>
         <dd>{{ liveAuction.bidderList | json_encode }}</dd>
 
-        <dt>customerEmail:</dt>
-        <dd>{{ bidderListLast.customerEmail }}</dd>
+        <dt>last bidderName:</dt>
+        <dd>{{ bidderListLast.bidderName }}</dd>
 
-        <dt>bidPrice Bsp.:</dt>
-        <dd>{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
+        <dt>last customerId:</dt>
+        <dd>{{ bidderListLast.customerId }}</dd>
 
-        <dt>bidTimeStamp Bsp.:</dt>
+        <dt>last customerMaxBid:</dt>
+        <dd>{{ bidderListLast.customerMaxBid | formatMonetary('EUR') }}</dd>
+
+        <dt>last bidPrice:</dt>
+        <dd>{{ bidderListLast.bidPrice | formatMonetary('EUR')  }}</dd>
+
+        <dt>last bidTimeStamp:</dt>
         <dd>{{ bidderListLast.bidTimeStamp | date('d.m.Y H:i:s') }}</dd>
-
-        <dt>createdAt:</dt>
-        <dd>{{ liveAuction.createdAt | date('d.M.Y H:i:s \\U\\h\\r') }}</dd>
 
     </dl>
 {% else %}

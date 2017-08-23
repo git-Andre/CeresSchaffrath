@@ -14,8 +14,8 @@
 {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 {#{% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}#}
 
-{% set endDate = ((auction.startDate | formatDateTime) + (auction.auctionDuration * 24*60*60 | formatDateTime)) %}
-{% set endDateFormat = ((auction.startDate | formatDateTime) + (auction.auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}
+{#{% set endDate = ((auction.startDate | formatDateTime) + (auction.auctionDuration * 24*60*60 | formatDateTime)) %}#}
+{#{% set endDateFormat = ((auction.startDate | formatDateTime) + (auction.auctionDuration * 24*60*60 | formatDateTime)) | date('D d.M.Y H:i:s e') %}#}
 
 
  {% block PartialHead %}
@@ -47,17 +47,6 @@
           "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
           "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
           "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
-
-
-
-
-
-
-
-
-
-
-
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -104,7 +93,6 @@
                 <h1 class="h3 title">
                     {{ item.documents[0].data.texts | itemName(configItemName) }}
                 </h1>
-
                 <h2 class="h4 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name"
                             v-resource-if:currentVariation="documents[0].data.variation.name != ''">
@@ -153,7 +141,7 @@
                 {#von PluginAuctionService:#}
 
                 {% if ( auction ) %}
-                    {% if (auction.isLive != true and auction.isEnded != true) %}
+                    {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
 
                         <span class="price h1">
@@ -165,20 +153,20 @@
                         <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                         </span>
 
-                    {% elseif (auction.isLive == true and auction.isEnded != true) %}
+                    {% elseif (auction.tense == 'present') %}
                         {% set bidderListLast = auction.bidderList | last %}
                         {% set bidderListLength = auction.bidderList | length %}
 
                         <h2 class="m-b-2">Aktuelle Auktion:</h2>
 
-                        {#| date("d.m.Y \\T\\a\\g\\e H:i:s")#}
+                        {#| date("d \\T\\a\\g\\e H:i:s")#}
                         <dl class="auctionList">
                             {% if (bidderListLast.bidPrice) %}
                                 <dt>Aktuelles Gebot:</dt>
                                 <dd class="price h1 m-b-2">{{ bidderListLast.bidPrice  | formatMonetary('EUR') }}</dd>
                             {% endif %}
                             <dt>Ablaufdatum:</dt>
-                            <dd>{{ endDateFormat }}</dd>
+                            <dd>{{ auction.expiryDate }}</dd>
                             <dt>Artikel ID:</dt>
                             <dd>{{ auction.itemId }}</dd>
                             <dt>Versandpreis:</dt>
@@ -187,7 +175,7 @@
                             <dd> {{ bidderListLength }} Gebote <a href="#"> -> alle anzeigen</a></dd>
                             <div class="m-t-3">
                                 <dt>Restzeit:</dt>
-                                <dd class="countDown">{{ "5d, 5h:33min" }}</dd>
+                                <dd class="countDown hardCoded">{{ "5d, 5h:33min" }}</dd>
                             </div>
                         </dl>
 
@@ -208,7 +196,7 @@
 
                         </div>
 
-                    {% else %}
+                    {% elseif (auction.tense == 'past') %}
                         <h2>NACH der Auktion</h2>
 
 
