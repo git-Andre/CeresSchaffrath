@@ -51,6 +51,7 @@
           "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -146,8 +147,8 @@
                 #}
 
                 {#von PluginAuctionService:#}
+                <div class="row"><p>{{ auction }}</p></div>
 
-                <p>{{ auction }}</p>
                 {% if ( auction ) %}
 
                     {% if (auction.tense == 'future') %}
