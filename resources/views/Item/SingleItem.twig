@@ -12,7 +12,7 @@
 {% set itemVariationData = itemVariation.documents[0].data %}
 
 
-{% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) | json_encode %}
+{% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
 
 {#{% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}#}
 
