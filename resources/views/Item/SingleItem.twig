@@ -52,6 +52,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -147,7 +148,9 @@
                 #}
 
                 {#von PluginAuctionService:#}
-                <div class="row"><p>{{ auction }}</p></div>
+                <div class="row">
+                    <p>{{ auction }}</p>
+                </div>
 
                 {% if ( auction ) %}
 
@@ -218,23 +221,23 @@
 
                     {#Preis#}
                     <span class="price h1">
-                <span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultPrice"
-                        content="{{ item.documents[0].data.calculatedPrices.default.price }}">
-                {{ item.documents[0].data.calculatedPrices.formatted.defaultPrice }}
-                </span>
-                <sup>*</sup>
-                <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
-                </span>
+                    <span v-resource-bind:currentVariation="documents.0.data.calculatedPrices.formatted.defaultPrice"
+                            content="{{ item.documents[0].data.calculatedPrices.default.price }}">
+                    {{ item.documents[0].data.calculatedPrices.formatted.defaultPrice }}
+                    </span>
+                    <sup>*</sup>
+                    <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
+                    </span>
 
 
                     {{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}
 
                     <span class="availability tag availability_{{ item.documents[0].data.variation.availability.id }}"
                             v-availability-class:currentVariation>
-                <span v-resource-bind:currentVariation="documents.0.data.variation.availability.names.name">
-                {{ item.documents[0].data.variation.availability.names.name }}
-                </span>
-                </span>
+                    <span v-resource-bind:currentVariation="documents.0.data.variation.availability.names.name">
+                    {{ item.documents[0].data.variation.availability.names.name }}
+                    </span>
+                    </span>
 
                     <div class="row m-y-1">
 
