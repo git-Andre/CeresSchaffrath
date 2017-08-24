@@ -1,5 +1,5 @@
-// const ApiService      = require("services/ApiService");
-// const ResourceService = require("services/ResourceService");
+const ApiService      = require("services/ApiService");
+const ResourceService = require("services/ResourceService");
 
 Vue.component("auction", {
 
@@ -14,7 +14,7 @@ Vue.component("auction", {
     {
         return {
             // wishListItems: [],
-            // isLoading: false,
+            isTest: true,
             // wishListCount: {}
         };
     },
@@ -33,7 +33,7 @@ Vue.component("auction", {
 
     methods:
     {
-        removeWishListItem(wishListItem, index)
+        removeWishListItem(/*wishListItem, index*/)
         {
             // ApiService.delete("/rest/io/itemWishList/" + wishListItem.data.variation.id)
             //     .done(data =>
@@ -71,7 +71,7 @@ Vue.component("auction", {
             // }
         },
 
-        updateWatchListCount(count)
+        updateWatchListCount(/*count*/)
         {
             // if (count >= 0)
             // {

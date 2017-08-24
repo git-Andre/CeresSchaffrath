@@ -38,9 +38,14 @@
       "description": "Schaffrath Theme for Ceres"
     },
     {
-      "key": "CeresSchaffrath\\Containers\\SingleItemLiveAuctionsContainer",
-      "name": "SingleItemLiveAuctions",
+      "key": "CeresSchaffrath\\Containers\\SingleItemAuctionsContainer",
+      "name": "SingleItemAuctions",
       "description": "Schaffrath SingleItemPlug für Auktionen"
+    },
+    {
+      "key": "CeresSchaffrath\\Containers\\VueComponentsContainer",
+      "name": "VueComponents",
+      "description": "Schaffrath Vue Components JS-Scripts"
     },
     {
       "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoContainer",

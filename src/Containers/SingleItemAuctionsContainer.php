@@ -4,10 +4,10 @@
 
     use Plenty\Plugin\Templates\Twig;
 
-    class SingleItemLiveAuctionsContainer {
+    class SingleItemAuctionsContainer {
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::Containers.SingleItemLiveAuctions');
+            return $twig -> render('CeresSchaffrath::Containers.SingleItemAuctions');
         }
     }
