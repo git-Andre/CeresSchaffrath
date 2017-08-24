@@ -13,6 +13,6 @@ var init = (function($, window, document)
         });
     }
 
-    window.CeresMain = new CeresSchaffrathMain();
+    window.CeresSchaffrathMain = new CeresSchaffrathMain();
 
 })(jQuery, window, document);
