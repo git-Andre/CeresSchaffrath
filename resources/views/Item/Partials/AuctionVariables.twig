@@ -25,10 +25,10 @@
         {% set bidderListLenth = auction.bidderList | length %}
 
         <dt>bidderListLength:</dt>
-        <dd>{{ liveAuction.bidderListLength }}</dd>
+        <dd>{{ bidderListLength }}</dd>
 
         <dt>bidderList:</dt>
-        <dd>{{ liveAuction.bidderList | json_encode }}</dd>
+        <dd>{{ bidderListLast | json_encode }}</dd>
 
         <dt>last bidderName:</dt>
         <dd>{{ bidderListLast.bidderName }}</dd>
