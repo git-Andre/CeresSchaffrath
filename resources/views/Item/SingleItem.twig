@@ -153,6 +153,8 @@
                 </div>
 
                 {% if ( auction ) %}
+                        {% set bidderListLast = auction.bidderList | last %}
+                        {% set bidderListLength = auction.bidderList | length %}
 
                     {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
@@ -167,8 +169,6 @@
                         {#<span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>#}
                         {#</span>#}
 
-                        {% set bidderListLast = auction.bidderList | last %}
-                        {% set bidderListLength = auction.bidderList | length %}
 
                         <h2 class="m-b-2">Laufende Auktion:</h2>
 
@@ -177,6 +177,8 @@
                             {% if (bidderListLast.currentPrice != 0) %}
                                 <dt>Aktuelles Gebot:</dt>
                                 <dd class="price h1 m-b-2">{{ bidderListLast.bidPrice | formatMonetary('EUR') }}</dd>
+                                <dt>Start Preis:</dt>
+                                <dd">{{ auction.currentPrice | formatMonetary('EUR') }}</dd>
                             {% else %}
                                 <dt>Start Preis:</dt>
                                 <dd class="price h1 m-b-2">{{ auction.currentPrice | formatMonetary('EUR') }}</dd>
@@ -187,8 +189,10 @@
                             <dd>{{ auction.itemId }}</dd>
                             <dt>Versandpreis:</dt>
                             <dd>muß noch gefunden werden...</dd>
-                            <dt>AnzahlGebote:</dt>
-                            <dd> {{ bidderListLength - 1 }} <a href="#"> -> alle anzeigen</a></dd>
+                            {% if bidderListLength != 1 %}
+                                <dt>Anzahl Gebote:</dt>
+                                <dd> {{ bidderListLength - 1 }} <a href="#"> -> alle anzeigen</a></dd>
+                            {% endif %}
                             <div class="m-t-3">
                                 <dt>Restzeit:</dt>
                                 <dd class="countDown">{{ "5d, 5h:33min" }}</dd>
