@@ -159,7 +159,7 @@
 
                     {% elseif (auction.tense == 'present') %}
                         <span class="price h1">
-                        <span v-resource-bind:currentAuction="auction.startPrice"
+                        <span v-resource-bind:currentAuction="auction.currentPrice"
                                 content="{{ auction.currentPrice }}">
                         {{ auction.currentPrice | formatMonetary('EUR') }}
                         </span>
