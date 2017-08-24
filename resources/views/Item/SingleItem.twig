@@ -11,8 +11,8 @@
 {% set itemVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 {% set itemVariationData = itemVariation.documents[0].data %}
 
-{% set auctionArray = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
-{% set auction = auctionArray[0] %}
+
+{% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) | json_encode %}
 
 {#{% set liveAuction = auctions.liveAuction.getLiveAuctionForItemId(item.documents[0].data.item.id) %}#}
 
@@ -68,7 +68,6 @@
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
     <resource name="currentAuction" :data="{{ auction | json_encode() }}"></resource>
-    <p>{{ auctionArray }}</p>
 
     <div class="single container-max page-content">
         <div class="row m-t-3">
@@ -148,7 +147,6 @@
 
                 {#von PluginAuctionService:#}
 
-                <p>{{ auctionArray }}</p>
                 <p>{{ auction }}</p>
                 {% if ( auction ) %}
 
