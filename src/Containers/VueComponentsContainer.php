@@ -8,6 +8,6 @@
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::Containers.VueComponentsContainer');
+            return $twig -> render('CeresSchaffrath::Containers.VueComponents');
         }
     }
