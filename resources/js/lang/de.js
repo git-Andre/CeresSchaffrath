@@ -1,0 +1,1 @@
+var Languages = Languages || {}; Languages['de'] = {Template: {accAccountSettings: "Kontoeinstellungen"}};
