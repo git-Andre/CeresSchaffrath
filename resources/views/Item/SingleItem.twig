@@ -140,10 +140,6 @@
                 #}
 
                 {#von PluginAuctionService:#}
-                <div class="row">
-                    <p>{{ auction | json_encode() }}</p>
-                </div>
-
                 {% if ( auction ) %}
                     {% set bidderListLast = auction.bidderList | last %}
                     {% set bidderListLength = auction.bidderList | length %}

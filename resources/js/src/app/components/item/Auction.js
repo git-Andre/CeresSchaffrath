@@ -1,5 +1,5 @@
-const ApiService      = require("services/ApiService");
-const ResourceService = require("services/ResourceService");
+// const ApiService      = require("services/ApiService");
+// const ResourceService = require("services/ResourceService");
 
 Vue.component("auction", {
 
