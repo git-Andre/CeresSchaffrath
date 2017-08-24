@@ -4,10 +4,10 @@
 
     use Plenty\Plugin\Templates\Twig;
 
-    class SingleItemAuctionsContainer {
+    class VueComponentsContainer {
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::Containers.SingleItemAuctions');
+            return $twig -> render('CeresSchaffrath::Containers.VueComponentsContainer');
         }
     }
