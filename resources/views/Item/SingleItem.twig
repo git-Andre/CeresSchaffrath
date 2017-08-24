@@ -190,8 +190,8 @@
                             <dt>Anzahl:</dt>
                             <dd> {{ bidderListLength }} Gebote <a href="#"> -> alle anzeigen</a></dd>
                             <div class="m-t-3">
-                                <dt>Restzeit:</dt>
-                                <dd class="countDown hardCoded">{{ "5d, 5h:33min" }}</dd>
+                                <dt>Restzeit hardCoded:</dt>
+                                <dd class="countDown">{{ "5d, 5h:33min" }}</dd>
                             </div>
                         </dl>
 
@@ -204,7 +204,7 @@
                                         placeholder="Ihr Maximalgebot"
                                         aria-describedby="maxBidHelpBlock">
                                 <p id="maxBidHelpBlock" class="form-text text-muted text-center"> Bitte geben Sie
-                                                                                                  mindestens {{ bidderListLast.bidPrice + 1 }}
+                                                                                                  mindestens {{ bidderListLast.currentPrice + 1 }}
                                                                                                   EUR ein!</p>
                                 <button class="btn btn-primary btn-lg btn-block" type="submit">Gebot abgeben</button>
 
