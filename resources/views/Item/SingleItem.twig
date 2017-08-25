@@ -142,8 +142,7 @@
 
                 {#von PluginAuctionService:#}
                 {% if ( auction ) %}
-                <script src="https://unpkg.com/vue"></script>
-                <div id="root">
+                <div id="auction">
                     {% set bidderListLast = auction.bidderList | last %}
                     {% set bidderListLength = auction.bidderList | length %}
 
@@ -257,9 +256,11 @@
 
                     {% endif %}
                 </div>
+                <script src="https://unpkg.com/vue"></script>
+
                 <script>
                     new Vue( {
-                                 el: '#root',
+                                 el: '#auction',
 
                                  props: [
 
