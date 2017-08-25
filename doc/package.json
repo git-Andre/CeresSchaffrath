@@ -1,7 +1,9 @@
 {
-  "name": "Ceres",
   "license": "AGPL-3.0",
-  "version": "1.4.2",
+  "name": "CeresSchaffrath",
+  "description": "plenty auction for schaffrath",
+  "version": "1.0.0",
+  "author": "git-Andre <post@andre-oelschlaegel.de>",
   "repository": {
     "type": "git",
     "url": "https://github.com/plentymarkets/plugin-ceres.git"
