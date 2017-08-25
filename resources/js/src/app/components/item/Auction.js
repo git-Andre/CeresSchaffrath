@@ -1,10 +1,9 @@
-
-
-
 // const ApiService      = require( "services/ApiService" );
 // const ResourceService = require( "services/ResourceService" );
 
 Vue.component( "auction", {
+    template: `        <p> hier ist die ZWEITE message: ${ message }.</p>
+`,
     name: 'auction',
     props: [
 
