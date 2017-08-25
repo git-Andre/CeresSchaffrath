@@ -143,32 +143,7 @@
                 {#von PluginAuctionService:#}
                 {% if ( auction ) %}
                 <script src="https://unpkg.com/vue"></script>
-                <script>
-                    new Vue( {
-                                 el: '#auction',
-
-                                 props: [
-
-                                     "isActive"
-                                 ],
-
-                                 data: {
-
-                                     isTest: true,
-                                     message: 'hi André II.'
-                                 },
-
-                                 created() {
-                                 },
-
-                                 ready() {
-                                 },
-
-                                 methods:
-                                     {}
-                             } );
-                </script>
-                <div id="auction">
+                <div id="root">
                     {% set bidderListLast = auction.bidderList | last %}
                     {% set bidderListLength = auction.bidderList | length %}
 
@@ -282,6 +257,31 @@
 
                     {% endif %}
                 </div>
+                <script>
+                    new Vue( {
+                                 el: '#root',
+
+                                 props: [
+
+                                     "isActive"
+                                 ],
+
+                                 data: {
+
+                                     isTest: true,
+                                     message: 'hi André II.'
+                                 },
+
+                                 created() {
+                                 },
+
+                                 ready() {
+                                 },
+
+                                 methods:
+                                     {}
+                             } );
+                </script>
 
                 {#./Auction end#}
 
