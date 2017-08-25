@@ -142,6 +142,31 @@
 
                 {#von PluginAuctionService:#}
                 {% if ( auction ) %}
+                <script>
+                    new Vue( {
+                                 el: '#auction',
+
+                                 props: [
+
+                                     "isActive"
+                                 ],
+
+                                 data: {
+
+                                     isTest: true,
+                                     message: 'hi André II.'
+                                 },
+
+                                 created() {
+                                 },
+
+                                 ready() {
+                                 },
+
+                                 methods:
+                                     {}
+                             } );
+                </script>
                 <div id="auction">
                     {% set bidderListLast = auction.bidderList | last %}
                     {% set bidderListLength = auction.bidderList | length %}
