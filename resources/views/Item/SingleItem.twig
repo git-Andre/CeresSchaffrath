@@ -44,6 +44,7 @@
          "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
          "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -148,9 +149,8 @@
 
                     {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
-                        <input type="text" id="input" v-model="message">
-                        <p> hier ist die message: ${ message }.</p>
 
+                        <auction>inner</auction>
                         {#<auction></auction>  #}{#  template="#vue-auction"  isActive="true" #}
 
                     {% elseif (auction.tense == 'present') %}
@@ -256,33 +256,6 @@
 
                     {% endif %}
                 </div>
-                <script src="https://unpkg.com/vue"></script>
-
-                <script>
-                    new Vue( {
-                                 el: '#auction',
-
-                                 props: [
-
-                                     "isActive"
-                                 ],
-
-                                 data: {
-
-                                     isTest: true,
-                                     message: 'hi André II.'
-                                 },
-
-                                 created() {
-                                 },
-
-                                 ready() {
-                                 },
-
-                                 methods:
-                                     {}
-                             } );
-                </script>
 
                 {#./Auction end#}
 

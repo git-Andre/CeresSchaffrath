@@ -1,6 +1,11 @@
 <script type="x/template" id="vue-auction">
     <div class="col-xs-6">
 <h2>und noch ein Test</h2>
+        <input type="text" id="input" v-model="message">
+        <p> hier ist die message: ${ message }.</p>
+
+
+
         {#<h1 :class="{small: isActive}">Hallo André</h1>#}
         {#<a class="text-muted small auction"#}
                 {#:class="{active: isActive}"#}
