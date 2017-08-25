@@ -80,5 +80,5 @@ Vue.component( "auction", {
 } );
 
 new Vue( {
-             el: '#root'
+             el: '#auction'
          } );
