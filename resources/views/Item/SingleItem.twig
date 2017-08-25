@@ -144,6 +144,8 @@
                 {#von PluginAuctionService:#}
                 {% if ( auction ) %}
                 <div id="auction">
+                </div>
+
                     {% set bidderListLast = auction.bidderList | last %}
                     {% set bidderListLength = auction.bidderList | length %}
 
@@ -261,7 +263,6 @@
                         </div>
 
                     {% endif %}
-                </div>
 
                 {#./Auction end#}
 
