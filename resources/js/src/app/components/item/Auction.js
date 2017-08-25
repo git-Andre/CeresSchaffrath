@@ -5,6 +5,7 @@
 // const ResourceService = require( "services/ResourceService" );
 
 Vue.component( "auction", {
+    name: 'auction',
     props: [
 
         // "isActive",
