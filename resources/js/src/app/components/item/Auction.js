@@ -1,8 +1,7 @@
 // const ApiService      = require("services/ApiService");
 // const ResourceService = require("services/ResourceService");
 
-Vue.component("auction", {
-    template: "<h1>TERROR</h1>",
+new Vue.component("auction", {
     props: [
 
         "isActive"

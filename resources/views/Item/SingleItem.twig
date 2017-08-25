@@ -147,7 +147,7 @@
                     {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
 
-                        <auction template="#vue-auction"></auction>  {# isActive="true" #}
+                        <auction></auction>  {#  template="#vue-auction"  isActive="true" #}
 
                     {% elseif (auction.tense == 'present') %}
                         {#<span class="price h1">#}
