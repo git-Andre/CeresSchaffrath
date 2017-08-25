@@ -71,3 +71,5 @@ typings/
 resources/documents/alt.txt
 resources/documents/neu.txt
 
+App.vue
+main.js
