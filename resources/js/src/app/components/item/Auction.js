@@ -1,3 +1,6 @@
+
+
+
 // const ApiService      = require( "services/ApiService" );
 // const ResourceService = require( "services/ResourceService" );
 
@@ -75,6 +78,7 @@ Vue.component( "auction", {
             }
         }
 } );
+
 new Vue( {
              el: '#root'
          } );
