@@ -2,7 +2,7 @@
 // const ResourceService = require( "services/ResourceService" );
 
 Vue.component( "auction", {
-    template: `        <p> hier ist die ZWEITE message: ${ message }.</p>
+    template: `        <p> hier ist die ZWEITE message: HARD CODE.</p>
 `,
     name: 'auction',
     props: [
