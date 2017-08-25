@@ -1,36 +1,38 @@
 {#<script src="{{ plugin_path('CeresSchaffrath') }}/js/src/app/components/item/Auction.js"></script>#}
 
 <script type="text/javascript">
-   new Vue.component( "auction", {
+    new Vue ( {
+                           el: '#auction',
 
-        props: [
+                           props: [
 
-            "isActive"
+                               "isActive"
 // "template",
 // "wishListIds"
-        ],
+                           ],
 
-        data() {
-            return {
+                           data: {
+
 // wishListItems: [],
-                isTest: true,
+                                   isTest: true,
+                               message: 'hi André II.'
 // wishListCount: {}
-            };
-        },
 
-        created() {
+                           },
+
+                           created() {
 // this.$options.template = this.template;
-        },
+                           },
 
-        ready() {
+                           ready() {
 // ResourceService.bind("wishListCount", this);
 //
 // this.getWishListItems();
-        },
+                           },
 
-        methods:
-            {
-                removeWishListItem(/*wishListItem, index*/) {
+                           methods:
+                               {
+                                   removeWishListItem(/*wishListItem, index*/) {
 // ApiService.delete("/rest/io/itemWishList/" + wishListItem.data.variation.id)
 //     .done(data =>
 //     {
@@ -45,9 +47,9 @@
 //     });
 //
 // this.wishListItems.splice(index, 1);
-                },
+                                   },
 
-                getWishListItems() {
+                                   getWishListItems() {
 // if (this.wishListIds[0])
 // {
 //     this.isLoading = true;
@@ -64,14 +66,14 @@
 //             this.isLoading = false;
 //         });
 // }
-                },
+                                   },
 
-                updateWatchListCount(/*count*/) {
+                                   updateWatchListCount(/*count*/) {
 // if (count >= 0)
 // {
 //     ResourceService.getResource("wishListCount").set({count: count});
 // }
-                }
-            }
-    } );
+                                   }
+                               }
+                       } );
 </script>
