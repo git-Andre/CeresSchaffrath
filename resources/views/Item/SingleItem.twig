@@ -69,8 +69,6 @@
     {#{{ component( "Ceres::Item.Components.OrderProperties" ) }}#}
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 
-    {{ component( "CeresSchaffrath::Item.Components.Auction" ) }}
-
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
     {#<resource name="currentAuction" :data="{{ auction | json_encode() }}"></resource>#}
 
@@ -157,15 +155,8 @@
 
                     {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
-                        <div id="app">
+                        <div id="auction">
 
-                            <app template="#vue-auction">
-                            </app>
-
-                            <div>
-                                <h3>1: ${ message}</h3>
-                                <p>message2: {{ message }}</p>
-                            </div>
                         </div>
 
                         {#<auction></auction>  #}{#  template="#vue-auction"  isActive="true" #}
