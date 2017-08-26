@@ -153,10 +153,11 @@
                     {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
 
-                        <div id="auction">
-                            <h3>${ message}</h3>
-                            <p>message: {{ message }}</p>
-                            <auction inline-template>inner {{ message }}</auction>
+                        <div id="auction" inline-template>
+                            <h3>1: ${ message}</h3>
+                            <p>message2: {{ message }}</p>
+                            <auction>inner1 {{ message }}</auction>
+                            <auction>inner 2 ${ message }</auction>
                         </div>
 
                         {#<auction></auction>  #}{#  template="#vue-auction"  isActive="true" #}
