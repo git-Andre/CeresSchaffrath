@@ -48,6 +48,10 @@
 
 
 
+
+
+
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -153,11 +157,13 @@
                     {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
 
-                        <div id="auction" inline-template>
-                            <h3>1: ${ message}</h3>
-                            <p>message2: {{ message }}</p>
-                            <auction>inner1 {{ message }}</auction>
-                            <auction>inner 2 ${ message }</auction>
+                        <div id="auction" class="container row">
+                            <auction inline-template>
+                                <div>
+                                    <h3>1: ${ message}</h3>
+                                    <p>message2: {{ message }}</p>
+                                </div>
+                            </auction>
                         </div>
 
                         {#<auction></auction>  #}{#  template="#vue-auction"  isActive="true" #}

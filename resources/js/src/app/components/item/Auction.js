@@ -6,7 +6,7 @@ Vue.component( "auction", {
     props: [
 
         "isActive",
-        "template"
+        // "template"
     ],
 
     data() {
@@ -17,7 +17,7 @@ Vue.component( "auction", {
     },
 
     created() {
-        this.$options.template = this.template;
+        // this.$options.template = this.template;
     },
 
     ready() {
