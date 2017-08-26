@@ -11,7 +11,6 @@ Vue.component( "auction", {
 
     data() {
         return {
-            isTest: true,
             message: 'testVariable'
         };
     },
@@ -29,8 +28,5 @@ Vue.component( "auction", {
 } );
 
 new Vue( {
-             el: '#auction',
-    data: {
-                 message: 'hi Oeli'
-    }
+             el: '#root',
          } );
