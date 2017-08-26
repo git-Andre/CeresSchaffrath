@@ -52,6 +52,7 @@
 
 
 
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -149,21 +150,22 @@
                 #}
 
                 {#von PluginAuctionService:#}
-                {% if ( auction ) %}
+                {% if ( auction is not null ) %}
 
                     {% set bidderListLast = auction.bidderList | last %}
                     {% set bidderListLength = auction.bidderList | length %}
 
                     {% if (auction.tense == 'future') %}
                         <h1>vor der Auktion</h1>
+                        <div id="app">
 
-                        <div id="auction" class="container row">
-                            <auction template="#vue-auction">
-                            </auction>
-                                <div>
-                                    <h3>1: ${ message}</h3>
-                                    <p>message2: {{ message }}</p>
-                                </div>
+                            <app template="#vue-auction">
+                            </app>
+
+                            <div>
+                                <h3>1: ${ message}</h3>
+                                <p>message2: {{ message }}</p>
+                            </div>
                         </div>
 
                         {#<auction></auction>  #}{#  template="#vue-auction"  isActive="true" #}
