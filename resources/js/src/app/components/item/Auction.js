@@ -27,6 +27,6 @@ Vue.component( "auction", {
         }
 } );
 
-// new Vue( {
-//              el: '#root',
-//          } );
+new Vue( {
+             el: '#auction',
+         } );
