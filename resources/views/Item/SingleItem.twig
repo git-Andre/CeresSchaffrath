@@ -68,7 +68,7 @@
     {#{{ component( "Ceres::Item.Components.OrderProperties" ) }}#}
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 
-    {#{{ component( "CeresSchaffrath::Item.Components.Auction" ) }}#}
+    {{ component( "CeresSchaffrath::Item.Components.Auction" ) }}
 
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
     {#<resource name="currentAuction" :data="{{ auction | json_encode() }}"></resource>#}
@@ -158,7 +158,7 @@
                         <h1>vor der Auktion</h1>
 
                         <div id="auction" class="container row">
-                            <auction inline-template>
+                            <auction template="#vue-auction">
                                 <div>
                                     <h3>1: ${ message}</h3>
                                     <p>message2: {{ message }}</p>
