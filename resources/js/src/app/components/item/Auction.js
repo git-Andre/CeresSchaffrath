@@ -28,5 +28,5 @@ Vue.component( "auction", {
 } );
 
 new Vue( {
-             el: '#auction',
+             el: '#body',
          } );
