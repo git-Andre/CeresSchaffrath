@@ -28,9 +28,9 @@ Vue.component( "auction", {
         }
 } );
 
-// new Vue( {
-//              el: '#auction',
-//     data: {
-//                  message: 'hi Oeli'
-//     }
-//          } );
+new Vue( {
+             el: '#auction',
+    data: {
+                 message: 'hi Oeli'
+    }
+         } );
