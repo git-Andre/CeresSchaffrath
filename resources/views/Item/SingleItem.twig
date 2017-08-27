@@ -95,15 +95,10 @@
                                 preselect="{{ item.documents[0].data.variation.id }}"></variation-select>
                     </div>
                 {% endif %}
+
+                {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}
+
                 {#Preise#}
-
-
-
-                {#<h1>#}
-                     {#ao Var-Dump #}
-                    {#Anfang#}
-                    {#{% include "CeresSchaffrath::VarDump" with { 'dumpData': item.documents[0] } %}#}
-                {#</h1>#}
 
                 {#Auction start ---------- #}
                 <span class="price h1">
