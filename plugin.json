@@ -52,12 +52,12 @@
       "name"        : "DiffSteuer",
       "description" : "Hinweis auf die Differenzbesteuereung"
     }
-  ],
-  "containers"       : [
-    {
-      "key"         : "SingleItemAuction.BeforePrice",
-      "name"        : "Single item Auction: Before price",
-      "description" : "Override content  item price in the single item view with auction."
-    }
   ]
+//  "containers"       : [
+//    {
+//      "key"         : "SingleItemAuction.BeforePrice",
+//      "name"        : "Single item Auction: Before price",
+//      "description" : "Override content  item price in the single item view with auction."
+//    }
+//  ]
 }

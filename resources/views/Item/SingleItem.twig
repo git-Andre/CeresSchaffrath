@@ -385,10 +385,8 @@
                     {#</div>#}
 
                     {# ao Var-Dump #}
-                    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0].data', 'dumpData': item.documents[0].data } %}
 
                     {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}
-                    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0].data', 'dumpData': item.documents[0].data } %}
                 </div>
             </div>
         </div>
