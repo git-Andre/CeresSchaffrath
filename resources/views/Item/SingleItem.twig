@@ -157,7 +157,9 @@
                     </div>
                 {% else %}
                     {#Auction start ---------- #}
-                    {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data) }}
+
+                    {% set itemId = item.documents[0].data.item.id %}
+                    {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", itemId }}
 
                 {% endif %}
 
