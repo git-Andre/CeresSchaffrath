@@ -8,6 +8,6 @@
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::Head-link-css');
+            return $twig -> render('CeresSchaffrath::Containers.Head-link-css');
         }
     }
