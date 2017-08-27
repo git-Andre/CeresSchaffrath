@@ -383,7 +383,9 @@
 
                     {#{% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}#}
                     {#</div>#}
+                    <h2>{{ item.documents[0].data }}</h2>
                     {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}
+                    <h3>{{ item.documents[0].data }}</h3>
                 </div>
             </div>
         </div>
