@@ -383,14 +383,16 @@
 
                     {#{% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}#}
                     {#</div>#}
-                    <h2>{{ item.documents[0].data }}</h2>
+
+                    {# ao Var-Dump #}
+                    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0].data', 'dumpData': item.documents[0].data } %}
+
                     {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}
-                    <h3>{{ item.documents[0].data }}</h3>
+                    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.documents[0].data', 'dumpData': item.documents[0].data } %}
                 </div>
             </div>
         </div>
-        <!-- ./ITEM DESCRIPTION -->
-
+        <!-- ./ITEM DESCRIPTION --
 
         {#<h3 class="m-t-3 m-b-1">{{ trans("Ceres::Template.itemCustomerFeedback") }}</h3>#}
         {#<div class="row m-b-3">#}
