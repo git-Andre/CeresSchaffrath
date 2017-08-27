@@ -78,7 +78,7 @@
                     {{ item.documents[0].data.texts | itemName(configItemName) }}
                 </h1>
 
-                <h2 class="h6 title">
+                <h2 class="h5 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name"
                             v-resource-if:currentVariation="documents[0].data.variation.name != ''">
                         {{ item.documents[0].data.texts | itemName(2) }}
@@ -158,8 +158,7 @@
                 {% else %}
                     {#Auction start ---------- #}
 
-                    {% set itemId = item.documents[0].data.item.id %}
-                    {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", itemId ) }}
+                    {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data ) }}
 
                 {% endif %}
 

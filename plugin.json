@@ -1,22 +1,22 @@
 {
-  "version": "1.1.1",
-  "name": "CeresSchaffrath",
-  "description": "Das ist das SchaffrathNumis Theme für Ceres",
-  "author": "ao (based on Frontend)",
-  "license": "AGPL-3.0",
-  "pluginIcon": "icon_plugin_xs.png",
-  "price": 0.00,
-  "shortDescription": {
-    "de": "Das ist das SchaffrathNumis Theme für Ceres",
-    "en": "This is a SchaffrathNumis Theme for Ceres"
+  "version"          : "1.1.1",
+  "name"             : "CeresSchaffrath",
+  "description"      : "Das ist das SchaffrathNumis Theme für Ceres",
+  "author"           : "ao (based on Frontend)",
+  "license"          : "AGPL-3.0",
+  "pluginIcon"       : "icon_plugin_xs.png",
+  "price"            : 0.00,
+  "shortDescription" : {
+    "de" : "Das ist das SchaffrathNumis Theme für Ceres",
+    "en" : "This is a SchaffrathNumis Theme for Ceres"
   },
-  "authorIcon": "icon_author_xs.png",
-  "categories": [
+  "authorIcon"       : "icon_author_xs.png",
+  "categories"       : [
     "3518"
   ],
-  "email": "web@andre-oelschlaegel.de",
-  "phone": "",
-  "keywords": [
+  "email"            : "web@andre-oelschlaegel.de",
+  "phone"            : "",
+  "keywords"         : [
     "plentymarkets",
     "plugins",
     "layout",
@@ -24,33 +24,40 @@
     "ceres",
     "schaffrath"
   ],
-  "type": "theme",
-  "require": [
+  "type"             : "theme",
+  "require"          : [
     "Ceres",
     "IO"
   ],
-  "namespace": "CeresSchaffrath",
-  "serviceProvider": "CeresSchaffrath\\Providers\\CeresSchaffrathServiceProvider",
-  "dataProviders": [
+  "namespace"        : "CeresSchaffrath",
+  "serviceProvider"  : "CeresSchaffrath\\Providers\\CeresSchaffrathServiceProvider",
+  "dataProviders"    : [
     {
-      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathCss",
-      "name": "CeresSchaffrathCss",
-      "description": "Schaffrath Theme for Ceres"
+      "key"         : "CeresSchaffrath\\Containers\\CeresSchaffrathCss",
+      "name"        : "CeresSchaffrathCss",
+      "description" : "Schaffrath Theme for Ceres"
     },
     {
-      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoContainer",
-      "name": "InfoSchaffrath",
-      "description": "Disclaimer Schaffrath"
+      "key"         : "CeresSchaffrath\\Containers\\CeresSchaffrathInfoContainer",
+      "name"        : "InfoSchaffrath",
+      "description" : "Disclaimer Schaffrath"
     },
     {
-      "key": "CeresSchaffrath\\Containers\\CeresSchaffrathInfoTabContainer",
-      "name": "InfoSchaffrathTab",
-      "description": "Tab für Disclaimer Schaffrath"
+      "key"         : "CeresSchaffrath\\Containers\\CeresSchaffrathInfoTabContainer",
+      "name"        : "InfoSchaffrathTab",
+      "description" : "Tab für Disclaimer Schaffrath"
     },
     {
-      "key": "CeresSchaffrath\\Containers\\DiffSteuerContainer",
-      "name": "DiffSteuer",
-      "description": "Hinweis auf die Differenzbesteuereung"
+      "key"         : "CeresSchaffrath\\Containers\\DiffSteuerContainer",
+      "name"        : "DiffSteuer",
+      "description" : "Hinweis auf die Differenzbesteuereung"
+    }
+  ],
+  "containers"       : [
+    {
+      "key"         : "SingleItemAuction.BeforePrice",
+      "name"        : "Single item Auction: Before price",
+      "description" : "Override content  item price in the single item view with auction."
     }
   ]
 }
