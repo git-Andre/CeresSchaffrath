@@ -61,7 +61,10 @@
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
+}
+.text-center {
+  text-align: center !important;
 }
 
 .cmp-product-thumb {
@@ -276,3 +279,25 @@ a:hover {
   margin-bottom: .5em;
   color: #020260;
 }
+.auctionList {
+  display: block;
+  //background-color: $gray-lighter2;
+  // font-family: $font-family-heading;
+  padding: 1.5rem;
+  dt {
+    width: 25%;
+    float: left;
+    font-weight: bold;
+  }
+  dd {
+    width: 95%;
+  }
+}
+
+.countDown {
+  // color: $brand-primary;
+  //font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+  //font-size: 1.05rem;
+  font-weight: bold;
+}
+

@@ -13015,7 +13015,11 @@ tr._idGenTableRowColumn-5 {
 }
 
 .text-right {
-  text-align: right;
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
 }
 
 .cmp-product-thumb {
@@ -13222,6 +13226,25 @@ a:hover {
   margin-top: 0;
   margin-bottom: .5em;
   color: #020260;
+}
+
+.auctionList {
+  display: block;
+  padding: 1.5rem;
+}
+
+.auctionList dt {
+  width: 25%;
+  float: left;
+  font-weight: bold;
+}
+
+.auctionList dd {
+  width: 95%;
+}
+
+.countDown {
+  font-weight: bold;
 }
 
 /*# sourceMappingURL=main.css.map */
