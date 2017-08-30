@@ -69,7 +69,11 @@
                             template="#vue-item-image-carousel"></item-image-carousel>
                 </div>
             </div>
-            {% include "PluginAuctions::VarDump" with { 'testDescription': 'item', 'dumpData': itemData } %}
+
+            {#ToDo:  delete #}
+            {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
+
+            {% include "PluginAuctions::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
             {% include "PluginAuctions::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
 
         </div>
