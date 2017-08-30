@@ -126,7 +126,13 @@
             {% endif %}
 
 
-            {% if LayoutContainer.show("Ceres::SingleItem.BeforePrice") | trim is empty %}
+            {% if item.documents[0].data.defaultCategories[0].id == 593 %} {# Todo: config Category-Auktion #}
+
+                {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data ) }}
+
+            {% else %}
+                {#Auction start ---------- #}
+
 
                 {#Preise#}
                 <span class="price h1">
@@ -138,7 +144,6 @@
                     <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                     </span>
 
-
                 {#{{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}#}
 
                 <span class="availability tag availability_{{ item.documents[0].data.variation.availability.id }}"
@@ -149,9 +154,7 @@
                     </span>
 
                 <div class="row m-y-1">
-
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
-
                     <add-to-basket template="#vue-add-to-basket"
                             v-resource-if:currentVariation="documents[0].data.filter.isSalable"
                             v-resource-push:item
@@ -159,14 +162,8 @@
                             resource="currentVariation"
                             :show-quantity="true"
                             :show-order-properties="true"></add-to-basket>
-
-
                     {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data ) }}
                 </div>
-            {% else %}
-                {#Auction start ---------- #}
-
-                {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data ) }}
 
             {% endif %}
 
