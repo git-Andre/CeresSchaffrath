@@ -42,7 +42,7 @@
 <div class="single container-max page-content">
     <div class="row m-t-3">
         <div class="col-md-7 single-leftside">
-            <div class="row">
+            <div class="row off">
                 <div class="col-xs-12">
                     <item-image-carousel image-url-accessor="url"
                             template="#vue-item-image-carousel"></item-image-carousel>
@@ -132,7 +132,7 @@
                     </span>
                     </span>
 
-                <div class="row m-y-1">
+                <div class="row m-t-2 m-b-3 container">
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
                     <add-to-basket template="#vue-add-to-basket"
                             v-resource-if:currentVariation="documents[0].data.filter.isSalable"
