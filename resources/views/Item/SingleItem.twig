@@ -48,6 +48,13 @@
                             template="#vue-item-image-carousel"></item-image-carousel>
                 </div>
             </div>
+
+            {#ToDo:  delete #}
+            {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
+
+            {% include "PluginAuctions::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
+            {% include "PluginAuctions::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
+
         </div>
 
 
@@ -132,7 +139,7 @@
                             v-resource-push:item
                             data-accessor="true"
                             resource="currentVariation"
-                            :show-quantity="true"
+                            :show-quantity="false"
                             :show-order-properties="true"></add-to-basket>
                     {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data ) }}
                 </div>
