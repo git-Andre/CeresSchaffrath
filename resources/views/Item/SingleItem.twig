@@ -21,29 +21,7 @@
 
      <link rel="canonical"
              href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
-     <script type="application/ld+json">
-          {"@context":"http://schema.org/","@type":"Product","name":"{{ item.documents[0].data.texts | itemName(configItemName) }}
-          ","category":"item.","releaseDate":"{{ item.documents[0].data.variation.releasedAt }}
-          ","image":"{{ item.documents[0].data.images.all[0].urlPreview }}
-          ","identifier":"{{ item.documents[0].data.variation.id }}
-          ","description":"{{ item.documents[0].data.texts.description }}
-          ","disambiguatingDescription":"{{ item.documents[0].data.texts.shortDescription }}
-          ","manufacturer":{"@type":"Organization","name":"{{ item.documents[0].data.item.manufacturer.externalName }}
-          "},"model":{"@type":"ProductModel","isVariantOf":"{{ item.documents[0].data.item.id }}
-          ","model":"{{ item.documents[0].data.variation.model }}
-          "},"offers":{"@type":"Offer","priceCurrency":"{{ item.documents[0].data.calculatedPrices.default.currency }}
-          ","price":"{{ item.documents[0].data.calculatedPrices.default.price }}
-          ","availability":"{{ item.documents[0].data.variation.availability.names.name }}
-          ","itemCondition":"{{ item.documents[0].data.item.condition.name }}
-          ","serialNumber":"{{ item.documents[0].data.variation.number }}
-          "},"depth":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.lengthMM }}
-          "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
-          "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
-          "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
-
-
-
-     </script>
+    <script type="application/ld+json">{"@context":"http://schema.org/","@type":"Product","name":"{{ item.documents[0].data.texts | itemName(configItemName) }}","category":"item.","releaseDate":"{{ item.documents[0].data.variation.releasedAt }}","image":"{{ item.documents[0].data.images.all[0].urlPreview }}","identifier":"{{ item.documents[0].data.variation.id }}","description":"{{ item.documents[0].data.texts.description }}","disambiguatingDescription":"{{ item.documents[0].data.texts.shortDescription }}","manufacturer":{"@type":"Organization","name":"{{ item.documents[0].data.item.manufacturer.externalName }}"},"model":{"@type":"ProductModel","isVariantOf":"{{ item.documents[0].data.item.id }}","model":"{{ item.documents[0].data.variation.model }}"},"offers":{"@type":"Offer","priceCurrency":"{{ item.documents[0].data.calculatedPrices.default.currency }}","price":"{{ item.documents[0].data.calculatedPrices.default.price }}","availability":"{{ item.documents[0].data.variation.availability.names.name }}","itemCondition":"{{ item.documents[0].data.item.condition.name }}","serialNumber":"{{ item.documents[0].data.variation.number }}"},"depth":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.lengthMM }}"},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}"},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}"},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}</script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
          | {{ config("Ceres.header.company_name") }}</title>
@@ -56,6 +34,7 @@
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
     {{ component( "Ceres::Item.Components.AddToWishList" ) }}
+    {{ component( "Ceres::Item.Components.OrderProperties" ) }}
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
 
 <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
@@ -69,13 +48,6 @@
                             template="#vue-item-image-carousel"></item-image-carousel>
                 </div>
             </div>
-
-            {#ToDo:  delete #}
-            {% set auction = auctions.auction.getAuctionForItemId(item.documents[0].data.item.id) %}
-
-            {% include "PluginAuctions::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
-            {% include "PluginAuctions::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
-
         </div>
 
 
@@ -380,18 +352,6 @@
                 {% endif %}
 
                 {#Latest items                    #}
-                {#{% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Item.LastSeenList', itemLoaderPresets.lastSeenItemsList, {'items':itemsPerPage}).documents %}#}
-
-                {#<hr class="m-t-3 m-b-1">#}
-
-                {#<div class="m-b-1 clearfix">#}
-
-                {#<h1 class="h3 m-b-1">{{ trans("Ceres::Template.itemListLastSeen") }}</h1>#}
-
-                {#{% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}#}
-                {#</div>#}
-
-                {# ao Var-Dump #}
 
                 {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}
             </div>
