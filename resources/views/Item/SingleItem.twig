@@ -101,18 +101,18 @@
 
                 <hr>
                 {# ArtikelNummern #}
-                <div class="m-b-0">
+                <div class="m-t-0 m-b-2">
                     <span class="articlenumber small text-muted">
                         <b>{{ trans("CeresSchaffrath::Template.itemId") }}</b>
                         <span v-resource-bind:currentVariation="documents.0.data.variation.id">{{ item.documents[0].data.variation.id }}</span>
                     </span>
                 </div>
-                <div class="m-b-3">
-                    <span class="articlenumber small text-muted">
-                        <b>{{ trans("CeresSchaffrath::Template.itemNumber") }}</b>
-                        <span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>
-                    </span>
-                </div>
+                {#<div class="m-b-3">#}
+                    {#<span class="articlenumber small text-muted">#}
+                        {#<b>{{ trans("CeresSchaffrath::Template.itemNumber") }}</b>#}
+                        {#<span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>#}
+                    {#</span>#}
+                {#</div>#}
                 {#Variationen#}
                 {% if variations is not null %}
                     <div class="row m-b-1">
