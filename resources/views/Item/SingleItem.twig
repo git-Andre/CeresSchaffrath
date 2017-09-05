@@ -104,8 +104,12 @@
                 <div class="m-t-0 m-b-2">
                     <span class="articlenumber small text-muted">
                         <b>{{ trans("CeresSchaffrath::Template.itemId") }}</b>
-                        <span v-resource-bind:currentVariation="documents[0].data.item.id">{{ item.documents[0].data.item.id }}</span>
+                        <span>{{ item.documents[0].data.item.id }}</span>
                     </span>
+                    {#<span class="articlenumber small text-muted">#}
+                        {#<b>{{ trans("CeresSchaffrath::Template.itemId") }}</b>#}
+                        {#<span v-resource-bind:currentVariation="documents[0].data.item.id">{{ item.documents[0].data.item.id }}</span>#}
+                    {#</span>#}
                 </div>
 
                 {#<div class="m-b-3">#}
@@ -275,10 +279,9 @@
                                 <tbody>
                                 {% if 'item.id' in itemData or 'all' in itemData %}
                                     <tr>
-                                        <td>{{ "Variaten-ID" }}</td>
+                                        <td>{{ "Variation-ID" }}</td>
                                         <td>{{ item.documents[0].data.variation.id }}</td>
                                     </tr>
-
                                 {% endif %}
                                 {# Condition #}
                                 {#{% if 'item.condition' in itemData or 'all' in itemData %}#}
