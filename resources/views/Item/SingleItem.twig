@@ -40,6 +40,7 @@
          "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}
          "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}
          "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
+
      </script>
 
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -107,16 +108,16 @@
                         <span>{{ item.documents[0].data.item.id }}</span>
                     </span>
                     {#<span class="articlenumber small text-muted">#}
-                        {#<b>{{ trans("CeresSchaffrath::Template.itemId") }}</b>#}
-                        {#<span v-resource-bind:currentVariation="documents[0].data.item.id">{{ item.documents[0].data.item.id }}</span>#}
+                    {#<b>{{ trans("CeresSchaffrath::Template.itemId") }}</b>#}
+                    {#<span v-resource-bind:currentVariation="documents[0].data.item.id">{{ item.documents[0].data.item.id }}</span>#}
                     {#</span>#}
                 </div>
 
                 {#<div class="m-b-3">#}
-                    {#<span class="articlenumber small text-muted">#}
-                        {#<b>{{ trans("CeresSchaffrath::Template.itemNumber") }}</b>#}
-                        {#<span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>#}
-                    {#</span>#}
+                {#<span class="articlenumber small text-muted">#}
+                {#<b>{{ trans("CeresSchaffrath::Template.itemNumber") }}</b>#}
+                {#<span v-resource-bind:currentVariation="documents.0.data.variation.number">{{ item.documents[0].data.variation.number }}</span>#}
+                {#</span>#}
                 {#</div>#}
                 {#Variationen#}
                 {% if variations is not null %}
@@ -157,13 +158,19 @@
                     </span>
                     <div class="row m-t-2 m-b-3">
                         {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
+
                         <add-to-basket template="#vue-add-to-basket"
                                 v-resource-if:currentVariation="documents[0].data.filter.isSalable"
+                                v-resource-push:item data-accessor="true"
+                                resource="currentVariation"
+                                :show-quantity="true"></add-to-basket>
+
+                        <order-properties template="#vue-order-properties"
                                 v-resource-push:item
                                 data-accessor="true"
                                 resource="currentVariation"
-                                :show-quantity="true"
-                                :show-order-properties="true"></add-to-basket>
+                                v-resource-if:currentVariation="documents[0].data.filter.isSalable"></order-properties>
+
                         {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data ) }}
                     </div>
 
