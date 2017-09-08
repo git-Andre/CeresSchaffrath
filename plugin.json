@@ -52,5 +52,12 @@
       "name"        : "DiffSteuer",
       "description" : "Hinweis auf die Differenzbesteuereung"
     }
+  ],
+  "containers"       : [
+    {
+      "key"           : "SingleItem.BeforeImage",
+      "name"          : "Single item: Before image",
+      "description"   : "Add content before the item image in the single item view. (for Modals over image)"
+    }
   ]
 }
