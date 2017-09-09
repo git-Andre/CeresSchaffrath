@@ -108,7 +108,7 @@
                 {% endif %}
 
 
-                {% if item.documents[0].data.defaultCategories[0].id == 593 %} {# Todo: config Category-Auktion #}
+                {% if item.documents[0].data.defaultCategories[0].id == config("PluginAuctions.global.liveAuctionCategoryId") %}
 
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data ) }}
 
@@ -139,7 +139,8 @@
 
                         <add-to-basket template="#vue-add-to-basket"
                                 v-resource-if:currentVariation="documents[0].data.filter.isSalable"
-                                v-resource-push:item data-accessor="true"
+                                v-resource-push:item
+                                data-accessor="true"
                                 resource="currentVariation"
                                 :show-quantity="true"></add-to-basket>
 
