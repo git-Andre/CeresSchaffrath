@@ -33,6 +33,7 @@
   "unit.content",
   "unit.names.name",
   "unit.names.lang",
+  "unit.unitOfMeasurement",
 
   "images.all.url",
   "images.all.urlMiddle",
@@ -43,7 +44,10 @@
   "images.variation.urlPreview",
   "images.variation.position",
   "images.variation.path",
+
   "properties.*",
+
   "defaultCategories",
+
   "filter.isSalable"
 ]
