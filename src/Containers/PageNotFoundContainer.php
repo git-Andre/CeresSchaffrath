@@ -9,6 +9,6 @@
 
         public function call(Twig $twig) : string
         {
-            return $twig -> render('CeresSchaffrath::Containers.DiffSteuer');
+            return $twig -> render('CeresSchaffrath::Containers.PageNotFound');
         }
     }
