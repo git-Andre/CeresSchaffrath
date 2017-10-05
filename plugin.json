@@ -52,6 +52,11 @@
       "description" : "Tab für Disclaimer Schaffrath"
     },
     {
+      "key"         : "CeresSchaffrath\\Containers\\PageNotFoundContainer",
+      "name"        : "404-Extension",
+      "description" : "404 extend with login"
+    },
+    {
       "key"         : "CeresSchaffrath\\Containers\\DiffSteuerContainer",
       "name"        : "DiffSteuer",
       "description" : "Hinweis auf die Differenzbesteuereung"
