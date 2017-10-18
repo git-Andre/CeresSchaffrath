@@ -126,14 +126,19 @@
                 {% endif %}
 
 
+                    {#Auction start ---------- #}
                 {% if item.documents[0].data.defaultCategories[0].id == config("PluginAuctions.global.liveAuctionCategoryId") %}
 
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data ) }}
 
                 {% else %}
-                    {#Auction start ---------- #}
+
+                    <div class="row">
+                        <order-properties template="#vue-order-properties" v-resource-push:item data-accessor="true" resource="currentVariation" v-resource-if:currentVariation="documents[0].data.filter.isSalable"></order-properties>
+                    </div>
 
                     <graduated-prices template="#vue-graduated-prices"></graduated-prices>
+
 
                     {#Preise#}
                     <span class="price h1">
@@ -202,6 +207,7 @@
                 {#<hr>#}
 
                 {{ LayoutContainer.show("Ceres::SingleItem.AdditionalContentAfterAddToBasket", item.documents[0].data) }}
+
                 {# Hinweis Versandkosten #}
                 <div class="row container m-b-3">
                     <span class="vat small text-muted">
