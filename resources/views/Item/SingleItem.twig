@@ -55,21 +55,6 @@
 
             <!-- ITEM DETAIL -->
             <div class="col-md-5 single-rightside m-t-1">
-                <h1 class="h2 title">
-                    <span v-resource-bind:currentVariation="documents.0.data.variation.name"
-                            v-resource-if:currentVariation="documents[0].data.variation.name != ''">
-                        {{ item.documents[0].data.texts | itemName(configItemName) }}
-                    </span>
-
-                    <span v-resource-if:currentVariation="documents[0].data.variation.name == ''">
-                        {{ item.documents[0].data.texts | itemName(configItemName) }}
-                    </span>
-                </h1>
-
-                {% if ('item.shortDescription' in itemData or 'all' in itemData) and item.documents[0].data.texts.shortDescription != '' %}
-                    <p class="single-description">{{ item.documents[0].data.texts.shortDescription }}</p>
-                {% endif %}
-
 
                 <h1 class="h3 title">
                     {{ item.documents[0].data.texts | itemName(configItemName) }}
@@ -78,7 +63,7 @@
                 <h2 class="h5 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name"
                             v-resource-if:currentVariation="documents[0].data.variation.name != ''">
-                        {{ item.documents[0].data.texts | itemName(2) }}
+                        {{ item.documents[0].data.variation.name }}
                     </span>
 
                     <span v-resource-if:currentVariation="documents[0].data.variation.name == ''">
