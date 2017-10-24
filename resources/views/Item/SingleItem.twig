@@ -12,6 +12,9 @@
 {% set itemVariationData = itemGetVariation.documents[0].data %}
 
  {% block PartialHead %}
+    <meta name="description" content="{{ item.documents[0].data.texts.metaDescription }}">
+    <meta name="keywords" content="{{ item.documents[0].data.texts.keywords | json_encode }}">
+
      <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
      <meta property="og:type" content="article"/>
      <meta property="og:url"
@@ -278,7 +281,7 @@
 
                                 {% if ('item.manufacturer' in itemData or 'all' in itemData) and item.documents[0].data.item.manufacturer.externalName != '' %}
                                     <tr>
-                                        <td>{{ trans("Ceres::Template.itemManufacturer") }}</td>
+                                        <td>{{ trans("CeresSchaffrath::Template.itemManufacturer") }}</td>
                                         <td>{{ item.documents[0].data.item.manufacturer.externalName }}</td>
                                     </tr>
                                 {% endif %}
