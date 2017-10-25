@@ -11465,24 +11465,21 @@ body.menu-is-visible {
 
 .cmp-product-thumb .cat-item-titel-ao {
   font-family: "Abel", sans-serif;
-  font-size: 1.25rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  font-size: 1.15rem;
+  margin: 0.5rem 0 1.8rem 0;
 }
 
 .cmp-product-thumb .thumb-title {
   display: block;
   position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   text-align: left;
-  font-weight: 700;
   color: #282d2f;
   line-height: 1.1em;
   min-height: 20px;
-}
-
-.cmp-product-thumb .thumb-title:hover {
-  color: #daa520;
+  margin-bottom: 0px;
 }
 
 .cmp-product-thumb .thumb-meta {

@@ -89,7 +89,7 @@
   .main-image {
     @include img-contain();
     position: absolute;
-    background-color: #fff;
+    background-color: $gray-ao;
     display: flex;
     align-items: center;
   }
@@ -130,7 +130,7 @@
   .cat-item-titel-ao {
     font-family: $font-family-heading;
     font-size: 1.15rem;
-    margin: 0.5rem 0 1.8rem 0;
+    margin: 0.5rem 0 1.5rem 0;
   }
   .thumb-title {
     display: block;
