@@ -129,22 +129,23 @@
   }
   .cat-item-titel-ao {
     font-family: $font-family-heading;
-    font-size: 1.25rem;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    font-size: 1.15rem;
+    margin: 0.5rem 0 1.8rem 0;
   }
   .thumb-title {
     display: block;
     position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     text-align: left;
-    font-weight: 700;
     color: $gray-darker;
     line-height: 1.1em;
     min-height: 20px;
-    &:hover {
-      color: $brand-primary;
-    }
+    margin-bottom: 0px;
+    //&:hover {
+    //  color: $brand-primary;
+    //}
   }
 
   .thumb-meta {

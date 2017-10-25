@@ -88,7 +88,7 @@
         <div class="thumb-content">
             <div class="cat-item-titel-ao">
                 <p class="thumb-title">
-                    {{ item.data.texts | itemName(configItemName) }}
+                    {{ item.data.texts | itemName(1) }}
                 </p>
                 <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
 
@@ -98,7 +98,7 @@
 
                 <div class="prices">
 
-                    <span class="m-l-2">
+                    <span class="m-x-2">
                         <h5>{{ trans("CeresSchaffrath::Template.sofortKaufen") }}<span class="m-l-5"><i class="fa fa-check text-success" aria-hidden="true"></i></span></h5>
                     </span>
                     <a href="{{ itemUrl }}">
