@@ -11462,7 +11462,7 @@ body.menu-is-visible {
   height: auto;
   padding: 0 .8rem;
   margin-left: -.3em;
-  background-color: #fff;
+  background-color: #daa520;
   margin-bottom: 12px !important;
   transition: all 200ms ease-in-out;
 }
@@ -11502,6 +11502,12 @@ body.menu-is-visible {
   line-height: 1.1;
   font-weight: 700;
   font-size: 1.2rem;
+  min-height: 21px;
+}
+
+.cmp-product-thumb .category-unit-price {
+  font-size: .81em;
+  color: #b2b1a7;
 }
 
 .cmp-product-thumb .thumb-buy {
@@ -11515,6 +11521,53 @@ body.menu-is-visible {
   z-index: 1000;
   transition: all .3s ease;
   opacity: 1;
+}
+
+.cmp-product-thumb .mobile-text-only {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .cmp-product-thumb .btn-group {
+    right: 15px;
+    position: absolute;
+  }
+}
+
+@media (max-width: 543px) {
+  .cmp-product-thumb .btn-group {
+    width: 52%;
+  }
+  .cmp-product-thumb .mobile-icon-right {
+    display: none;
+  }
+  .cmp-product-thumb .vat-porto-info {
+    white-space: normal !important;
+  }
+}
+
+@media (max-width: 991px) {
+  .cmp-product-thumb .btn-group {
+    margin-top: 5px;
+    position: inherit;
+    width: 100%;
+  }
+  .cmp-product-thumb .mobile-text-only {
+    display: inline;
+    margin-left: -8px;
+  }
+  .cmp-product-thumb .mobile-width-button {
+    width: 100%;
+  }
+  .cmp-product-thumb .mobile-icon-right {
+    float: right;
+  }
+  .cmp-product-thumb .thumb-title {
+    min-height: 32px;
+  }
+  .cmp-product-thumb .category-list-view-port {
+    display: inline;
+  }
 }
 
 @media (min-width: 544px) {
@@ -11541,15 +11594,12 @@ body.menu-is-visible {
     margin: 0;
   }
   .cmp-product-thumb .btn-group {
-    bottom: .8rem;
+    bottom: 2.5rem;
     left: auto;
-    right: .5rem;
+    right: .8rem;
   }
   .cmp-product-thumb .thumb-title {
     font-weight: 400;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
     line-height: 1.5em;
     max-width: 100%;
   }

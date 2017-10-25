@@ -89,22 +89,18 @@
             <a href="{{ itemUrl }}" class="thumb-title small">
                 {{ item.data.texts | itemName(configItemName) }}
             </a>
+            <p>{{ item.data.texts | itemName(2) }}</p>
             <div class="thumb-meta">
                 {{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}
 
                 <div class="prices">
-                    {% if item.data.calculatedPrices.rrp.price != '0' %}
-                        <a href="{{ itemUrl }}" class="price-view-port">
-                            <del class="crossprice">
-                                {{ item.data.calculatedPrices.rrp.price | formatMonetary(item.data.calculatedPrices.rrp.currency) }}
-                            </del>
-                        </a>
-                    {% endif %}
 
+                    <span class="m-x-2">
+                        <h4>{{ trans("CeresSchaffrath::Template.sofortKaufen") }}</h4><span><i class="fa fa-check text-success" aria-hidden="true"></i></span>
+                    </span>
                     <a href="{{ itemUrl }}">
                         <div class="price">
-                            {#{{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }} *#}
-                            {{ 99.99 | formatMonetary(item.data.calculatedPrices.default.currency) }} *
+                            {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }} *
                         </div>
                     </a>
                 </div>
