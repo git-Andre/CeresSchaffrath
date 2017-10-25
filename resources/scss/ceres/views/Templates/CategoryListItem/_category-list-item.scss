@@ -127,11 +127,15 @@
     height: auto;
     padding: 0 .8rem;
     margin-left: -.3em;
-    background-color: $brand-primary;
+    background-color: #fff;
     margin-bottom: 12px !important;
     transition: all 200ms ease-in-out;
   }
-
+  .cat-item-titel-ao {
+    max-width: 100%;
+    font-family: $font-family-heading;
+    font-size: 1rem;
+  }
   .thumb-title {
     display: block;
     position: relative;

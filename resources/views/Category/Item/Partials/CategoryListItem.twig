@@ -86,17 +86,20 @@
 
         <!-- ITEM DETAILS CeresSchaffrath -->
         <div class="thumb-content">
-            <a href="{{ itemUrl }}" class="thumb-title small">
-                {{ item.data.texts | itemName(configItemName) }}
-            </a>
-            <p>{{ item.data.texts | itemName(2) }}</p>
+            <div class="cat-item-titel-ao">
+                <a href="{{ itemUrl }}" class="thumb-title small">
+                    {{ item.data.texts | itemName(configItemName) }}
+                </a>
+                <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
+
+            </div>
             <div class="thumb-meta">
                 {{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}
 
                 <div class="prices">
 
                     <span class="m-x-2">
-                        <h4>{{ trans("CeresSchaffrath::Template.sofortKaufen") }}</h4><span><i class="fa fa-check text-success" aria-hidden="true"></i></span>
+                        <h5>{{ trans("CeresSchaffrath::Template.sofortKaufen") }}<span><i class="fa fa-check text-success" aria-hidden="true"></i></span></h5>
                     </span>
                     <a href="{{ itemUrl }}">
                         <div class="price">

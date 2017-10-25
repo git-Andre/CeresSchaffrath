@@ -11462,9 +11462,15 @@ body.menu-is-visible {
   height: auto;
   padding: 0 .8rem;
   margin-left: -.3em;
-  background-color: #daa520;
+  background-color: #fff;
   margin-bottom: 12px !important;
   transition: all 200ms ease-in-out;
+}
+
+.cmp-product-thumb .cat-item-titel-ao {
+  max-width: 100%;
+  font-family: "Abel", sans-serif;
+  font-size: 1rem;
 }
 
 .cmp-product-thumb .thumb-title {
