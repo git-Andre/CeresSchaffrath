@@ -53,6 +53,7 @@
                  return false;
              }, self::EVENT_LISTENER_PRIORITY);
 
+//            Ceres::Category.Item.Partials.CategoryListItem
 
             $eventDispatcher -> listen('IO.init.templates', function (Partial $partial) {
                 $partial -> set('footer', 'CeresSchaffrath::Footer.ThemeFooter');

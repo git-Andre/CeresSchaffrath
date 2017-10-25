@@ -18,9 +18,11 @@
     <div class="thumb-inner">
         <add-to-basket template="#vue-add-to-basket"
                 :item="{{ item.data | json_encode() }}"
-                :show-quantity="false" :show-order-properties="{{ showOrderProperties }}"
+                :show-quantity="false"
+                :show-order-properties="{{ showOrderProperties }}"
                 :use-large-scale="true"
-                       item-url="{{ itemUrl }}" :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
+                item-url="{{ itemUrl }}"
+                :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
 
         <div class="thumb-background"></div>
 
@@ -29,12 +31,12 @@
                 <div class="square-inner main-image">
 
                     <category-image-carousel template="#vue-category-image-carousel"
-                                             :image-urls="{{ item.data.images | json_encode() }} | itemImages 'urlMiddle'"
-                                             alt-text="{{ item.data.texts | itemName(configItemName) }}"
-                                             item-url="{{ itemUrl }}"
-                                             :show-dots="{{ config("Ceres.item.category_show_dots") | json_encode() }}"
-                                             :show-nav="{{ config("Ceres.item.category_show_nav") | json_encode() }}"
-                                             :enable-carousel="{{ enableCarousel }}">
+                            :image-urls="{{ item.data.images | json_encode() }} | itemImages 'urlMiddle'"
+                            alt-text="{{ item.data.texts | itemName(configItemName) }}"
+                            item-url="{{ itemUrl }}"
+                            :show-dots="{{ config("Ceres.item.category_show_dots") | json_encode() }}"
+                            :show-nav="{{ config("Ceres.item.category_show_nav") | json_encode() }}"
+                            :enable-carousel="{{ enableCarousel }}">
                     </category-image-carousel>
 
                     <noscript>
@@ -101,7 +103,8 @@
 
                     <a href="{{ itemUrl }}">
                         <div class="price">
-                            {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }} *
+                            {#{{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }} *#}
+                            {{ 99.99 | formatMonetary(item.data.calculatedPrices.default.currency) }} *
                         </div>
                     </a>
                 </div>
@@ -117,15 +120,20 @@
                 {% endif %}
 
             </div>
-            <add-to-basket template="#vue-add-to-basket" :item="{{ item.data | json_encode() }}" :show-quantity="false" :show-order-properties="{{ showOrderProperties }}" :use-large-scale="false"
-                       item-url="{{ itemUrl }}" :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
+            <add-to-basket template="#vue-add-to-basket"
+                    :item="{{ item.data | json_encode() }}"
+                    :show-quantity="false"
+                    :show-order-properties="{{ showOrderProperties }}"
+                    :use-large-scale="false"
+                    item-url="{{ itemUrl }}"
+                    :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
 
             <span class="vat-porto-info small text-muted">
                 * {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
                 <a {% if shippingCat is not empty %} data-toggle="modal" href="#shippingscosts"{% endif %} title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
             </span>
 
-            
+
             {# {% if tags > 0 %}
                 <div class="m-t-1 tag-list">
                     {% for tag in tags %}
