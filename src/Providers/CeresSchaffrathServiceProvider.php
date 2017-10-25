@@ -47,11 +47,11 @@
             }, self::EVENT_LISTENER_PRIORITY);
 
 // provide template to use for Category items
-//             $eventDispatcher -> listen('IO.category.item', function (TemplateContainer $container, $templateData) {
-//                 $container -> setTemplate("CeresSchaffrath::Category.Item.CategoryItem");
-//
-//                 return false;
-//             }, self::EVENT_LISTENER_PRIORITY);
+             $eventDispatcher -> listen('IO.category.item', function (TemplateContainer $container, $templateData) {
+                 $container -> setTemplate("CeresSchaffrath::Category.Item.CategoryItem");
+
+                 return false;
+             }, self::EVENT_LISTENER_PRIORITY);
 
 
             $eventDispatcher -> listen('IO.init.templates', function (Partial $partial) {
