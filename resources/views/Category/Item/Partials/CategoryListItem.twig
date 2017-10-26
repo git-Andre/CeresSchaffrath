@@ -6,7 +6,7 @@
 {% set configItemName = config("Ceres.item.name") %}
 {% set itemUrl =  item.data | itemURL %}
 
-{% set auction = auctions.auction.getAuctionForItemId(item.id) %}
+{% set auction = auctions.auction.getAuctionForItemId(item.item.id) %}
 
 
 {# ao Var-Dump #}
