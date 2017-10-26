@@ -31,7 +31,7 @@
 
         {% elseif  auction.id > 0 %}
             {#Auktion#}
-            <div    class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
+            <div class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
                     v-tooltip data-toggle="tooltip"
                     data-placement="top"
                     title="{{ trans("CeresSchaffrath::Template.goToAuction") }}">
@@ -70,11 +70,10 @@
 
             {% set storeSpecial = item.data.item.storeSpecial.names.name %}
 
-            <div class="special-tags">
                 {% if  item.data.item.storeSpecial.id == 1 %}
 
                     <div class="auction-category-item-special">
-                        <h1>{{ trans("CeresSchaffrath::Template.auktion") }}</h1>
+                        <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auktion") }}</h1>
                     </div>
 
 
@@ -86,27 +85,29 @@
                     {#{% set percent = percent | number_format(dezimalcount, ',', '.') %}#}
                     {#{% set storeSpecial = percent ~"%" %}#}
                     {#{% endif %}#}
+                {% else %}
 
-                {% elseif  item.data.item.storeSpecial.id == 2 %}
+                    {% if  item.data.item.storeSpecial.id == 2 %}
 
-                    {% set storeSpecialColor = 'primary' %}
+                        {% set storeSpecialColor = 'primary' %}
 
-                    <span class="tag bg-{{ storeSpecialColor }}">
-                     {{ storeSpecial }}
-                    </span>
+                        <div class="special-tags">
+                            <span class="tag bg-{{ storeSpecialColor }}">
+                             {{ storeSpecial }}
+                            </span>
+                        </div>
 
-                {% elseif  item.data.item.storeSpecial.id == 3 %}
+                    {% elseif  item.data.item.storeSpecial.id == 3 %}
 
-                    {% set storeSpecialColor = 'success' %}
+                        {% set storeSpecialColor = 'success' %}
 
-                    <span class="tag bg-{{ storeSpecialColor }}">
-                        {{ storeSpecial }}
-                    </span>
-
-
+                        <div class="special-tags">
+                            <span class="tag bg-{{ storeSpecialColor }}">
+                                {{ storeSpecial }}
+                            </span>
+                        </div>
+                    {% endif %}
                 {% endif %}
-
-            </div>
         {% endif %}
         <!-- ./STORE SPECIALS -->
 

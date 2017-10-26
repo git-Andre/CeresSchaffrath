@@ -134,14 +134,25 @@
     font-size: 1.15rem;
   }
   .auction-category-item-special {
+    z-index: 100;
     font-family: $font-family-heading;
     color: $brand-danger;
+    background-color: $white;
     display: block;
     position: absolute;
-    top: 20px; // -1, -1, -2, -1 ????
-    right: 0px;
-    bottom: 0px;
+    top: 20px;
+    right: auto;
+    bottom: auto;
     left: 20px;
+    padding: 1rem;
+
+    .auction-special-tag {
+      display: block;
+      padding: .3em .5em .2rem;
+      font-size: 4rem;
+      font-weight: 300;
+      box-shadow: 0 0 3px 0 rgba(0, 0, 0, .4);
+    }
   }
   .auction-basket-corner {
     color: $white;
