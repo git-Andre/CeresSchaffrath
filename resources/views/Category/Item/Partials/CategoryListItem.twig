@@ -18,6 +18,8 @@
 
 <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
     <div class="thumb-inner">
+
+
         {#Warenkorb#}
         <add-to-basket template="#vue-add-to-basket"
                 v-if="!auction"
@@ -29,7 +31,7 @@
                 :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
 
         {#Auktion#}
-        <div v-else
+        <div v-else-if="auction.id"
                 class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
                 v-tooltip data-toggle="tooltip"
                 data-placement="top"
