@@ -4,6 +4,7 @@
 {% set numberOfCols = 3 %}
 {% set numberOfRows = 4 %}
 {% set numberOfFeatures = 3 %}
+{% set topButtonPosition = config('Ceres.footer.to_top_button') %}
 
 {% set footerLinks = {
 col_1_url_1: "/zahlungsarten",
@@ -34,7 +35,11 @@ col_3_url_4: "/agb"
 } %}
 
 <div class="footer">
-    <div id="detlef" class="to-top hidden-md-up">
+    <div class="{% if topButtonPosition == "right" %}back-to-top{% else %}back-to-top-center{% endif %} hidden-sm-down">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+
+    <div id="to-top" class="to-top hidden-md-up">
         <i class="fa fa-arrow-up" aria-hidden="true"></i>
     </div>
 

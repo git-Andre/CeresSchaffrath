@@ -8,12 +8,6 @@
 
 {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
-
-{# ao Var-Dump #}
-{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
-
-
-
 {% if enableCarousel is not defined %}
     {% if config("Ceres.item.enable_image_carousel") == "true" %}
         {% set enableCarousel = "true" %}
@@ -80,7 +74,7 @@
                 {% if  item.data.item.storeSpecial.id == 1 %}
 
                     <div class="auction-category-item-special">
-                        <h1>Auktion</h1>
+                        <h1>{{ trans("CeresSchaffrath::Template.auktion") }}</h1>
                     </div>
 
 
@@ -119,9 +113,8 @@
         <!-- ITEM DETAILS CeresSchaffrath -->
         <div class="thumb-content">
             <div class="cat-item-titel-ao">
-                <p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>
+                <p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
                 <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
-
             </div>
 
             <div class="thumb-meta">
