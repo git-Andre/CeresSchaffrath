@@ -6,6 +6,8 @@
 {% set configItemName = config("Ceres.item.name") %}
 {% set itemUrl =  item.data | itemURL %}
 
+{% set auction = auctions.auction.getAuctionForItemId(item.id) %}
+
 {% if enableCarousel is not defined %}
     {% if config("Ceres.item.enable_image_carousel") == "true" %}
         {% set enableCarousel = "true" %}
@@ -14,6 +16,9 @@
     {% endif %}
 {% endif %}
 
+
+{# ao Var-Dump #}
+{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item', 'dumpData': item} %}
 
 
 <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
@@ -28,7 +33,7 @@
                 {#:salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>#}
 
 
-        <div class="add-to-basket-lg-container hidden-md-down"
+        <div class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
                 {#v-if="(!showQuantity && useLargeScale) && (!hasChildren && item.filter.isSalable) && (item.variation.minimumOrderQuantity == null && item.variation.maximumOrderQuantity == null)"#}
                 v-tooltip data-toggle="tooltip"
                 data-placement="top"

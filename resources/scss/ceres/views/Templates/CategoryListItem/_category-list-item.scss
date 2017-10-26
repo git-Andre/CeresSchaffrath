@@ -143,6 +143,10 @@
     bottom: 0px;
     left: 0px;
   }
+  .auction-basket-corner {
+    columns: $white;
+    border-color: transparent $brand-danger transparent transparent;
+  }
   .thumb-title {
     font-family: $font-family-heading;
     display: block;
