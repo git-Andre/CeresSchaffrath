@@ -140,13 +140,13 @@
     background-color: rgba(204, 48, 46, .5);
     display: block;
     position: absolute;
-    top: 223px;
-    right: auto;
+    top: 222px;
+    right: 17px;
     bottom: auto;
-    left: 100px;
+    left: auto;
     padding: 0.4rem 0.4rem 0rem 0.4rem;
-    -webkit-transform: skewY(-6deg); /* Safari */
-    transform: skewY(-6deg); /* Standard syntax */
+    -webkit-transform: skewY(-5deg); /* Safari */
+    transform: skewY(-5deg); /* Standard syntax */
     box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, .2);
 
     .auction-special-tag {
