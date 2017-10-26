@@ -133,18 +133,18 @@
     margin: 0.5rem 0 1.5rem 0;
     font-size: 1.15rem;
   }
-  .auction-category-item-list {
+  .auction-category-item-special {
     font-family: $font-family-heading;
 
     display: block;
     position: absolute;
-    top: 0px; // -1, -1, -2, -1 ????
+    top: 20px; // -1, -1, -2, -1 ????
     right: 0px;
     bottom: 0px;
-    left: 0px;
+    left: 20px;
   }
   .auction-basket-corner {
-    columns: $white;
+    color: $white;
     border-color: transparent $brand-danger transparent transparent;
   }
   .thumb-title {
