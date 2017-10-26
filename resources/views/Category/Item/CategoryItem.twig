@@ -117,10 +117,10 @@
                     </ul>
                 </div>
 
-                {#<div id="vue-rendered-item-list" style="display:none">#}
-                    {#<item-list template="#vue-item-list" #}
-                            {#:category-id="{{ category.id }}"></item-list>#}
-                {#</div>#}
+                <div id="vue-rendered-item-list" style="display:none">
+                    <item-list template="#vue-item-list"
+                            :category-id="{{ category.id }}"></item-list>
+                </div>
 
             </div>
         </div>
