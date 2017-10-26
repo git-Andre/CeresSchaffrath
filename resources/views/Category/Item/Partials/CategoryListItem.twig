@@ -8,15 +8,6 @@
 
 {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
-
-{# ao Var-Dump #}
-{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.id', 'dumpData': item.data.variation.itemId } %}
-
-
-{# ao Var-Dump #}
-{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction.id } %}
-
-
 {% if enableCarousel is not defined %}
     {% if config("Ceres.item.enable_image_carousel") == "true" %}
         {% set enableCarousel = "true" %}
@@ -38,8 +29,8 @@
                 :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
 
         {#Auktion#}
-        <div class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
-                v-else
+        <div v-else
+                class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
                 v-tooltip data-toggle="tooltip"
                 data-placement="top"
                 title="{{ trans("CeresSchaffrath::Template.goToAuction") }}">
