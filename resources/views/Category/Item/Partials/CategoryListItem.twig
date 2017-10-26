@@ -31,7 +31,7 @@
                 :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
 
         {#Auktion#}
-        <div v-else-if="auction.id"
+        <div v-else-if="auction.id > 0"
                 class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
                 v-tooltip data-toggle="tooltip"
                 data-placement="top"
