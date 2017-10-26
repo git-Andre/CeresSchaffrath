@@ -14,6 +14,8 @@
 
   .prices {
     display: flex;
+    margin-right: 5px;
+    -webkit-justify-content: flex-end;
   }
 
   .crossprice {
@@ -27,7 +29,7 @@
   .add-to-basket-lg-container {
     -webkit-transform: rotate(360deg);
     border-style: solid;
-    border-width: 0px 70px 70px 0;
+    border-width: 0px 90px 80px 0;
     border-color: transparent #F7F7F9 transparent transparent;
     position: absolute;
     z-index: 99;
@@ -37,8 +39,8 @@
     cursor: pointer;
 
     & > i {
-      right: -56px;
-      top: 11px;
+      right: -72px;
+      top: 20px;
       position: absolute;
       transition: 300ms ease-out;
     }
@@ -128,11 +130,21 @@
     transition: all 200ms ease-in-out;
   }
   .cat-item-titel-ao {
-    font-family: $font-family-heading;
-    font-size: 1.15rem;
     margin: 0.5rem 0 1.5rem 0;
+    font-size: 1.15rem;
+  }
+  .auction-category-item-list {
+    font-family: $font-family-heading;
+
+    display: block;
+    position: absolute;
+    top: 0px; // -1, -1, -2, -1 ????
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
   }
   .thumb-title {
+    font-family: $font-family-heading;
     display: block;
     position: relative;
     white-space: nowrap;

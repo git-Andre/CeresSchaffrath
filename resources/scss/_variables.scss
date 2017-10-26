@@ -84,6 +84,9 @@ $white: #fff;
 $brand-primary: #daa520; // linear-gradient(to right, #c9890f, #daa520, #c9890f);   // heller #daa520; // vorher #c9890f;
 $brand-primary-gradient: linear-gradient(42deg, #daa520, #c9890f, #daa520, #ffd700, #c9890f, #daa520); //to right
 $brand-secondary: #a7a7a7;
+//$brand-secondary-red: #e2282d;
+$brand-primary-dark: #936f16;
+
 
 // ao back light
 $brand-back-light: rgba($brand-primary, 0.2); //
@@ -91,7 +94,7 @@ $brand-back-light: rgba($brand-primary, 0.2); //
 $brand-success: #7ED321;
 $brand-info: #5bc0de;
 $brand-warning: #f0ad4e;
-$brand-danger: #d9534f;
+$brand-danger: #cc302e; // ao from adobe Illustrator (matching)
 
 $custom-colors: (
         "gelb": "#ffff00",

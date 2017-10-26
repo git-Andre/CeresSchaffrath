@@ -11331,6 +11331,8 @@ body.menu-is-visible {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: 5px;
+  -webkit-justify-content: flex-end;
 }
 
 .cmp-product-thumb .crossprice {
@@ -11346,7 +11348,7 @@ body.menu-is-visible {
 .cmp-product-thumb .add-to-basket-lg-container {
   -webkit-transform: rotate(360deg);
   border-style: solid;
-  border-width: 0px 70px 70px 0;
+  border-width: 0px 90px 90px 0;
   border-color: transparent #F7F7F9 transparent transparent;
   position: absolute;
   z-index: 99;
@@ -11357,8 +11359,8 @@ body.menu-is-visible {
 }
 
 .cmp-product-thumb .add-to-basket-lg-container > i {
-  right: -56px;
-  top: 11px;
+  right: -72px;
+  top: 20px;
   position: absolute;
   transition: 300ms ease-out;
 }
@@ -11409,7 +11411,7 @@ body.menu-is-visible {
   position: relative;
   overflow: hidden;
   position: absolute;
-  background-color: #fff;
+  background-color: #efefef;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -11464,12 +11466,12 @@ body.menu-is-visible {
 }
 
 .cmp-product-thumb .cat-item-titel-ao {
-  font-family: "Abel", sans-serif;
+  margin: 0.5rem 0 1.5rem 0;
   font-size: 1.15rem;
-  margin: 0.5rem 0 1.8rem 0;
 }
 
 .cmp-product-thumb .thumb-title {
+  font-family: "Abel", sans-serif;
   display: block;
   position: relative;
   white-space: nowrap;
