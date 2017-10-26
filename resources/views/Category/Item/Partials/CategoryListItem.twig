@@ -6,15 +6,15 @@
 {% set configItemName = config("Ceres.item.name") %}
 {% set itemUrl =  item.data | itemURL %}
 
-{% set auction = auctions.auction.getAuctionForItemId(item.item.id) %}
+{% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
 
 {# ao Var-Dump #}
-{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.id', 'dumpData': item } %}
+{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.id', 'dumpData': item.data.variation.itemId } %}
 
 
 {# ao Var-Dump #}
-{#{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}#}
+{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction.id } %}
 
 
 {% if enableCarousel is not defined %}
