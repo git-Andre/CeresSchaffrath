@@ -7,6 +7,8 @@
 {% set itemUrl =  item.data | itemURL %}
 
 {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
+    {% set bidderListLast = auction.bidderList | last %}
+    {% set bidderListLength = auction.bidderList | length %}
 
 {% if enableCarousel is not defined %}
     {% if config("Ceres.item.enable_image_carousel") == "true" %}
@@ -118,53 +120,88 @@
         <!-- ./STORE SPECIALS -->
 
         <!-- ITEM DETAILS CeresSchaffrath -->
-        <div class="thumb-content">
-            <div class="cat-item-titel-ao">
-                <p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
-                <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
-            </div>
 
-            <div class="thumb-meta">
-                {#{{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}#}
+        {# Sofortkaufen ########################################### #}
+        {% if not auction %}
 
-                <div class="prices">
+            <div class="thumb-content">
+                <div class="cat-item-titel-ao">
+                    <p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
+                    <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
+                </div>
+
+                <div class="thumb-meta">
+                    {#{{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}#}
+
+                    <div class="prices">
                     <span class="m-x-2">
-                        <h5>{{ trans("CeresSchaffrath::Template.sofortKaufen") }}<span class="m-l-5"><i class="fa fa-check text-success"
+                        <h5>{{ trans("CeresSchaffrath::Template.buyNow") }}<span class="m-l-5"><i class="fa fa-check text-success"
                                         aria-hidden="true"></i></span></h5>
                     </span>
-                    <span class="price">
+                        <span class="price">
                         {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }}
-                        *
+                            *
                     </span>
+                    </div>
+
+                    {#{{ LayoutContainer.show("Ceres::CategoryItem.AfterPrices", item.data) }}#}
+
                 </div>
 
-                {#{{ LayoutContainer.show("Ceres::CategoryItem.AfterPrices", item.data) }}#}
+                <span class="vat-porto-info small text-muted">
+                    * {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
+                    <a {% if shippingCat is not empty %} data-toggle="modal" href="#shippingscosts"{% endif %} title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
+                </span>
+            </div>
+            {#Auktion ########################################### #}
+        {% elseif auction.id > 0 %}
+
+            <div class="thumb-content">
+                <div class="cat-item-titel-ao">
+                    <p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
+                    <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
+                </div>
+
+                <div class="thumb-meta">
+                    <div class="prices">
+                        {% if auction.tense == 'future' %}
+                            <span class="m-x-2">
+                            <h5>{{ trans("CeresSchaffrath::Template.startPrice") }}<span class="m-l-5"><i class="fa fa-pencil-square-o text-alert"
+                                            aria-hidden="true"></i></span></h5>
+                           </span>
+                            <span class="price">
+                                {{ auction.startPrice | formatMonetary('EUR') }} *
+                                    *
+                            </span>
+                        {% elseif auction.tense == 'present' %}
+                            <span class="m-x-2">
+                            <h5>{{ trans("CeresSchaffrath::Template.highestBid") }}<span class="m-l-5"><i class="fa fa-gavel text-info"
+                                            aria-hidden="true"></i></span></h5>
+                           </span>
+                            <span class="price">
+                                {{ bidderListLast.bidPrice | formatMonetary('EUR') }} *
+                            </span>
+                        {% else %}
+                            <span class="m-x-2">
+                            <h5>{{ trans("CeresSchaffrath::Template.closedPrice") }}<span class="m-l-5"><i class="fa fa-lock text-success"
+                                            aria-hidden="true"></i></span></h5>
+                           </span>
+                            <span class="price">
+                                {{ bidderListLast.bidPrice | formatMonetary('EUR') }} *
+                            </span>
+                        {% endif %}
+
+                    </div>
+
+
+                </div>
+
+                <span class="vat-porto-info small text-muted">
+                    * {{ trans("Ceres::Template.itemExclusive") }} {{ trans("CeresSchaffrath::Template.surcharge") }} {{ trans("Ceres::Template.itemInclVAT") }}
+                </span>
 
             </div>
-            {#<add-to-basket template="#vue-add-to-basket"#}
-                    {#:item="{{ item.data | json_encode() }}"#}
-                    {#:show-quantity="false"#}
-                    {#:show-order-properties="{{ showOrderProperties }}"#}
-                    {#:use-large-scale="false"#}
-                    {#item-url="{{ itemUrl }}"#}
-                    {#:salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>#}
-
-            <span class="vat-porto-info small text-muted">
-                * {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
-                <a {% if shippingCat is not empty %} data-toggle="modal" href="#shippingscosts"{% endif %} title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
-            </span>
-
-
-            {# {% if tags > 0 %}
-                <div class="m-t-1 tag-list">
-                    {% for tag in tags %}
-                        <span class="tag bg-black">
-                            {{ tag.names.name }}
-                        </span>
-                    {% endfor %}
-                </div>
-            {% endif %} #}
-        </div>
+        {% endif %}
         <!-- ./ITEM DETAILS  -->
     </div>
 </article>
