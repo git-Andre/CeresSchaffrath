@@ -7,6 +7,7 @@
     use Plenty\Plugin\Events\Dispatcher;
     use Plenty\Plugin\ServiceProvider;
     use Plenty\Plugin\Templates\Twig;
+    use PluginAuctions\Extensions\TwigAuctionsServiceProvider;
 
 // CERES Original
     // use IO\Extensions\Functions\Partial;
@@ -33,25 +34,29 @@
 
         public function boot(Twig $twig, Dispatcher $eventDispatcher)
         {
+            // twig service auction
+            $twig -> addExtension(TwigAuctionsServiceProvider::class);
 
 // provide template to use for homepage
             $eventDispatcher -> listen('IO.tpl.home', function (TemplateContainer $container, $templateData) {
                 $container -> setTemplate("CeresSchaffrath::Homepage.Homepage");
+
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
 
 // provide template to use for single items
             $eventDispatcher -> listen('IO.tpl.item', function (TemplateContainer $container, $templateData) {
                 $container -> setTemplate("CeresSchaffrath::Item.SingleItem");
+
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
 
 // provide template to use for Category items
-             $eventDispatcher -> listen('IO.tpl.category.item', function (TemplateContainer $container, $templateData) {
-                 $container -> setTemplate("CeresSchaffrath::Category.Item.CategoryItem");
+            $eventDispatcher -> listen('IO.tpl.category.item', function (TemplateContainer $container, $templateData) {
+                $container -> setTemplate("CeresSchaffrath::Category.Item.CategoryItem");
 
-                 return false;
-             }, self::EVENT_LISTENER_PRIORITY);
+                return false;
+            }, self::EVENT_LISTENER_PRIORITY);
 
 //            Ceres::Category.Item.Partials.CategoryListItem
 
