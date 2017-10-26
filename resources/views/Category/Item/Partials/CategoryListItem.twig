@@ -30,7 +30,7 @@
 
 
         <div class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
-                v-else="auction.id > 0"
+                v-else-if="auction.id > 0"
                 v-tooltip data-toggle="tooltip"
                 data-placement="top"
                 title="{{ trans("CeresSchaffrath::Template.goToAuction") }}">
