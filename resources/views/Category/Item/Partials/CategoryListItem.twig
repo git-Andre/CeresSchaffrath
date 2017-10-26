@@ -70,44 +70,50 @@
 
             {% set storeSpecial = item.data.item.storeSpecial.names.name %}
 
-                {% if  item.data.item.storeSpecial.id == 1 %}
+            {% if  item.data.item.storeSpecial.id == 1 %}
 
+                {% if auction %}
                     <div class="auction-category-item-special">
-                        <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auktion") }}</h1>
+                        {% if auction.tense == 'present' or auction.tense == 'future' %}
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auktion") }}</h1>
+                        {% else %}
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.beendet") }}</h1>
+                        {% endif %}
                     </div>
+                {% endif %}
 
 
-                    {#{% set storeSpecialColor = 'danger' %}#}
-                    {#{% set percent = (1 - item.data.calculatedPrices.default.price / item.data.calculatedPrices.rrp.price) * -100 %}#}
+                {#{% set storeSpecialColor = 'danger' %}#}
+                {#{% set percent = (1 - item.data.calculatedPrices.default.price / item.data.calculatedPrices.rrp.price) * -100 %}#}
 
-                    {#{% if percent <= 0 %}#}
-                    {#{% set dezimalcount = config('Ceres.item.storeSpecial') %}#}
-                    {#{% set percent = percent | number_format(dezimalcount, ',', '.') %}#}
-                    {#{% set storeSpecial = percent ~"%" %}#}
-                    {#{% endif %}#}
-                {% else %}
+                {#{% if percent <= 0 %}#}
+                {#{% set dezimalcount = config('Ceres.item.storeSpecial') %}#}
+                {#{% set percent = percent | number_format(dezimalcount, ',', '.') %}#}
+                {#{% set storeSpecial = percent ~"%" %}#}
+                {#{% endif %}#}
+            {% else %}
 
-                    {% if  item.data.item.storeSpecial.id == 2 %}
+                {% if  item.data.item.storeSpecial.id == 2 %}
 
-                        {% set storeSpecialColor = 'primary' %}
+                    {% set storeSpecialColor = 'primary' %}
 
-                        <div class="special-tags">
+                    <div class="special-tags">
                             <span class="tag bg-{{ storeSpecialColor }}">
                              {{ storeSpecial }}
                             </span>
-                        </div>
+                    </div>
 
-                    {% elseif  item.data.item.storeSpecial.id == 3 %}
+                {% elseif  item.data.item.storeSpecial.id == 3 %}
 
-                        {% set storeSpecialColor = 'success' %}
+                    {% set storeSpecialColor = 'success' %}
 
-                        <div class="special-tags">
+                    <div class="special-tags">
                             <span class="tag bg-{{ storeSpecialColor }}">
                                 {{ storeSpecial }}
                             </span>
-                        </div>
-                    {% endif %}
+                    </div>
                 {% endif %}
+            {% endif %}
         {% endif %}
         <!-- ./STORE SPECIALS -->
 
@@ -135,13 +141,13 @@
                 {#{{ LayoutContainer.show("Ceres::CategoryItem.AfterPrices", item.data) }}#}
 
             </div>
-            <add-to-basket template="#vue-add-to-basket"
-                    :item="{{ item.data | json_encode() }}"
-                    :show-quantity="false"
-                    :show-order-properties="{{ showOrderProperties }}"
-                    :use-large-scale="false"
-                    item-url="{{ itemUrl }}"
-                    :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
+            {#<add-to-basket template="#vue-add-to-basket"#}
+                    {#:item="{{ item.data | json_encode() }}"#}
+                    {#:show-quantity="false"#}
+                    {#:show-order-properties="{{ showOrderProperties }}"#}
+                    {#:use-large-scale="false"#}
+                    {#item-url="{{ itemUrl }}"#}
+                    {#:salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>#}
 
             <span class="vat-porto-info small text-muted">
                 * {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}

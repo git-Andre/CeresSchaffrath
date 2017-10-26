@@ -137,21 +137,23 @@
     z-index: 100;
     font-family: $font-family-heading;
     color: $brand-danger;
-    background-color: $white;
+    background-color: rgba(204, 48, 46, .5);
     display: block;
     position: absolute;
-    top: 20px;
+    top: 222px;
     right: auto;
     bottom: auto;
-    left: 20px;
-    padding: 1rem;
+    left: 104px;
+    padding: 0.4rem 0.4rem 0rem 0.4rem;
+    -webkit-transform: skewY(-6deg); /* Safari */
+    transform: skewY(-6deg); /* Standard syntax */
+    box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, .2);
 
     .auction-special-tag {
       display: block;
-      padding: .3em .5em .2rem;
-      font-size: 4rem;
-      font-weight: 300;
-      box-shadow: 0 0 3px 0 rgba(0, 0, 0, .4);
+      background-color: rgba(255, 255, 255, .6);
+      padding: .2em .8em .2rem;
+      font-size: 2rem;
     }
   }
   .auction-basket-corner {
