@@ -8,6 +8,15 @@
 
 {% set auction = auctions.auction.getAuctionForItemId(item.id) %}
 
+
+{# ao Var-Dump #}
+{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item.id', 'dumpData': item.id } %}
+
+
+{# ao Var-Dump #}
+{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
+
+
 {% if enableCarousel is not defined %}
     {% if config("Ceres.item.enable_image_carousel") == "true" %}
         {% set enableCarousel = "true" %}
