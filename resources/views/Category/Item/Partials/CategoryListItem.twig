@@ -20,7 +20,7 @@
     <div class="thumb-inner">
 
         <add-to-basket template="#vue-add-to-basket"
-                v-if="!auction.id"
+                v-if="!auction"
                 :item="{{ item.data | json_encode() }}"
                 :show-quantity="false"
                 :show-order-properties="{{ showOrderProperties }}"
@@ -30,7 +30,7 @@
 
 
         <div class="add-to-basket-lg-container hidden-md-down auction-basket-corner"
-                v-if="auction.id > 0"
+                v-else="auction.id > 0"
                 v-tooltip data-toggle="tooltip"
                 data-placement="top"
                 title="{{ trans("CeresSchaffrath::Template.goToAuction") }}">
