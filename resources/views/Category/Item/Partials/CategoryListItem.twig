@@ -52,33 +52,35 @@
             </div>
         </div>
 
-        <!-- STORE SPECIALS -->
+        <!-- STORE SPECIALS - nur 'Neuheit' und 'Top-Artikel'-->
 
-        {% if item.data.item.storeSpecial.id > 0 %}
+        <div class="special-tags">
+            {% if  item.data.item.storeSpecial.id == 1 %}
 
-            {% set storeSpecial = item.data.item.storeSpecial.names.name %}
+                {% set storeSpecialColor = 'danger' %}
+                {% set percent = (1 - item.data.calculatedPrices.default.price / item.data.calculatedPrices.rrp.price) * -100 %}
 
-            {% if  item.data.item.storeSpecial.id == 2 %}
+                {% if percent <= 0 %}
+                    {% set dezimalcount = config('Ceres.item.storeSpecial') %}
+                    {% set percent = percent | number_format(dezimalcount, ',', '.') %}
+                    {% set storeSpecial = percent ~"%" %}
+                {% endif %}
+
+            {% elseif  item.data.item.storeSpecial.id == 2 %}
 
                 {% set storeSpecialColor = 'primary' %}
-
-                <div class="special-tags">
-                            <span class="tag bg-{{ storeSpecialColor }}">
-                             {{ storeSpecial }}
-                            </span>
-                </div>
 
             {% elseif  item.data.item.storeSpecial.id == 3 %}
 
                 {% set storeSpecialColor = 'success' %}
 
-                <div class="special-tags">
-                            <span class="tag bg-{{ storeSpecialColor }}">
-                                {{ storeSpecial }}
-                            </span>
-                </div>
             {% endif %}
-        {% endif %}
+
+            <span class="tag bg-{{ storeSpecialColor }}">
+                    {{ storeSpecial }}
+                </span>
+
+        </div>
         <!-- ./STORE SPECIALS -->
 
         <!-- ITEM DETAILS CeresSchaffrath -->
