@@ -59,6 +59,12 @@
 
         {% set storeSpecial = item.data.item.storeSpecial.names.name %}
 
+
+        {# ao Var-Dump #}
+        {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'storeSpecial', 'dumpData': storeSpecial } %}
+
+
+
         {% if  item.data.item.storeSpecial.id == 1 %}
             {% if auction %}
                 <div class="auction-category-item-special">
