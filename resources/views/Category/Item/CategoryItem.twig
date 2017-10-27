@@ -114,6 +114,10 @@
                         {% include "Ceres::ItemList.Partials.LoadingAnimation" %}
                     {% endif %}
 
+
+                    {# ao Var-Dump #}
+                    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
+
                     <ul class="product-list row grid" v-is-loading-watcher>
                         {% for item in itemList %}
                             <li class="col-xs-12 col-sm-6 col-md-4 col-lg-{% if showHeaderNavBar == "side" or showHeaderNavBar == "both" %}4{% else %}3{% endif %}">

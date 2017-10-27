@@ -9,15 +9,16 @@
     <meta property="og:type" content="article"/>
     <meta property="og:url" content="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}"/>
     <meta property="og:image"
-          content="{% if ('http' in companyLogo) or ('layout/' in companyLogo) %}{{ companyLogo }}{% else %}{{ plugin_path('Ceres') }}/{{ companyLogo }}{% endif %}"/>
+            content="{% if ('http' in companyLogo) or ('layout/' in companyLogo) %}{{ companyLogo }}{% else %}{{ plugin_path('Ceres') }}/{{ companyLogo }}{% endif %}"/>
 
     <link rel="canonical"
-          href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
+            href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
 
     <script type="application/ld+json">
         {"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         ","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         /search?query={search_term}","query-input": "required name=search_term"}}
+
 
 
     </script>
@@ -38,6 +39,9 @@
     ) %}
 
     {% set categoryList2 = paginatedCategoryList2.documents %}
+
+    {#Homepage Auktion#}
+    {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
     {{ component( "Ceres::ItemList.Components.ItemList") }}
     {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
@@ -97,7 +101,7 @@
         <div class="row">
             <div class="col-lg-1">
                 <a class="btn btn-secondary" data-toggle="collapse" href="#collapseMore" aria-expanded="false"
-                   aria-controls="collapseMore">
+                        aria-controls="collapseMore">
                     {{ trans("CeresSchaffrath::Template.homepageMoreButton") }}
                 </a>
             </div>
@@ -113,7 +117,7 @@
                 <h4>{{ trans("CeresSchaffrath::Template.homepageLongTextTitle") }}</h4>
                 <p class="text-abel">{{ trans("CeresSchaffrath::Template.homepageLongText") | raw }}</p>
                 <p class="small text-muted text-right">{{ trans("CeresSchaffrath::Template.homepageLongTextQuelle") }}:
-                    wikipedia.org/wiki/Numismatik</p>
+                                                                                                                      wikipedia.org/wiki/Numismatik</p>
             </div>
         </div>
 
@@ -148,7 +152,7 @@
                     <div class="section-header m-b-1">
                         <h4><span class="small">z.B. </span>{{ category6.details[0].name }}</h4>
                         <a href="{{ services.category.getURL(category6, lang) }}"
-                           class="section-link-all"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                                class="section-link-all"><i class="fa fa-angle-double-right" aria-hidden="true"></i>
                             {{ trans("Ceres::Template.homepageShowAll") }}
                         </a>
                     </div>
@@ -182,9 +186,11 @@
                 <div class="section-header m-b-1">
                     <h4>{{ trans("Ceres::Template.itemListLastSeen") }}</h4>
                 </div>
-
-                {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
-
+                {% if not auction %}
+                    {% include  "CeresSchaffrath::Item.LastSeen" with { 'itemList': itemList } %}
+                {% elseif  auction.id > 0 %}
+                    {% include  "CeresSchaffrath::Item.LastSeen" with { 'item': item, 'auction': auction } %}
+                {% endif %}
             </div>
         {% endif %}
 
@@ -216,7 +222,7 @@
         }
 
         var currentLang = "{{ lang }}";
-        var json = JSON.parse( getJson( 'https://www.schaffrathnumis.de/layout/theme/homepage.json' ) );
+        var json        = JSON.parse( getJson( 'https://www.schaffrathnumis.de/layout/theme/homepage.json' ) );
 
         renderCarousel();
         renderTexts();
@@ -247,20 +253,20 @@
         }
 
         function renderTexts() {
-            var welcomeText = document.getElementById( "welcome-text" );
+            var welcomeText      = document.getElementById( "welcome-text" );
             var shortDescription = document.getElementById( "short-description" );
-            var recommendText = document.getElementById( "recommend-text" );
+            var recommendText    = document.getElementById( "recommend-text" );
 
-            welcomeText.innerHTML = json[currentLang].texts.welcome;
+            welcomeText.innerHTML      = json[currentLang].texts.welcome;
             shortDescription.innerHTML = json[currentLang].texts.shortDescription;
-            recommendText.innerHTML = json[currentLang].texts.recommendText;
+            recommendText.innerHTML    = json[currentLang].texts.recommendText;
         }
 
         function renderRecommendPlugins() {
             var recommendedPlugins = document.getElementById( "recommended-plugins" );
 
             for (var i = 0; i < json[currentLang].recommended.length; i++) {
-                var contentToAddLi = document.createElement( 'li' );
+                var contentToAddLi       = document.createElement( 'li' );
                 contentToAddLi.className = "flex-item";
 
                 var contentToAdd = '<a href="' + json[currentLang].recommended[i].pluginLink + '">' +
