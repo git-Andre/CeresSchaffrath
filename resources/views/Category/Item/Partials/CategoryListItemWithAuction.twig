@@ -67,21 +67,22 @@
 
         {% if item.data.item.storeSpecial.id > 0 %}
 
-        {% set storeSpecial = item.data.item.storeSpecial.names.name %}
+            {% set storeSpecial = item.data.item.storeSpecial.names.name %}
 
 
-        {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'storeSpecial', 'dumpData': storeSpecial } %}
+            {# ao Var-Dump #}
+            {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'storeSpecial', 'dumpData': storeSpecial } %}
 
-        {% if  item.data.item.storeSpecial.id == 1 %}
-            {% if auction %}
-                <div class="auction-category-item-special">
-                    {% if auction.tense == 'present' or auction.tense == 'future' %}
-                        <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auktion") }}</h1>
-                    {% else %}
-                        <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.beendet") }}</h1>
-                    {% endif %}
-                </div>
+            {% if  item.data.item.storeSpecial.id == 1 %}
+                {% if auction %}
+                    <div class="auction-category-item-special">
+                        {% if auction.tense == 'present' or auction.tense == 'future' %}
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auktion") }}</h1>
+                        {% else %}
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.beendet") }}</h1>
+                        {% endif %}
+                    </div>
+                {% endif %}
             {% endif %}
         {% endif %}
         <!-- ./STORE SPECIALS -->
@@ -130,7 +131,6 @@
                                 {{ bidderListLast.bidPrice | formatMonetary('EUR') }} *
                             </span>
                         {% endif %}
-
                     </div>
                 </div>
 
