@@ -53,34 +53,38 @@
         </div>
 
         <!-- STORE SPECIALS - nur 'Neuheit' und 'Top-Artikel'-->
+        {% if item.data.item.storeSpecial.id > 0 %}
 
-        <div class="special-tags">
-            {% if  item.data.item.storeSpecial.id == 1 %}
+            {% set storeSpecial = item.data.item.storeSpecial.names.name %}
 
-                {% set storeSpecialColor = 'danger' %}
-                {% set percent = (1 - item.data.calculatedPrices.default.price / item.data.calculatedPrices.rrp.price) * -100 %}
+            <div class="special-tags">
+                {% if  item.data.item.storeSpecial.id == 1 %}
 
-                {% if percent <= 0 %}
-                    {% set dezimalcount = config('Ceres.item.storeSpecial') %}
-                    {% set percent = percent | number_format(dezimalcount, ',', '.') %}
-                    {% set storeSpecial = percent ~"%" %}
+                    {% set storeSpecialColor = 'danger' %}
+                    {% set percent = (1 - item.data.calculatedPrices.default.price / item.data.calculatedPrices.rrp.price) * -100 %}
+
+                    {% if percent <= 0 %}
+                        {% set dezimalcount = config('Ceres.item.storeSpecial') %}
+                        {% set percent = percent | number_format(dezimalcount, ',', '.') %}
+                        {% set storeSpecial = percent ~"%" %}
+                    {% endif %}
+
+                {% elseif  item.data.item.storeSpecial.id == 2 %}
+
+                    {% set storeSpecialColor = 'primary' %}
+
+                {% elseif  item.data.item.storeSpecial.id == 3 %}
+
+                    {% set storeSpecialColor = 'success' %}
+
                 {% endif %}
 
-            {% elseif  item.data.item.storeSpecial.id == 2 %}
-
-                {% set storeSpecialColor = 'primary' %}
-
-            {% elseif  item.data.item.storeSpecial.id == 3 %}
-
-                {% set storeSpecialColor = 'success' %}
-
-            {% endif %}
-
-            <span class="tag bg-{{ storeSpecialColor }}">
+                <span class="tag bg-{{ storeSpecialColor }}">
                     {{ storeSpecial }}
                 </span>
 
-        </div>
+            </div>
+        {% endif %}
         <!-- ./STORE SPECIALS -->
 
         <!-- ITEM DETAILS CeresSchaffrath -->
