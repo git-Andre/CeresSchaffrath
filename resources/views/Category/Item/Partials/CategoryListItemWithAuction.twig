@@ -16,8 +16,16 @@
 {% endif %}
 
 <!-- Auction CategoryListItemWithAuction -->
+{% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
+
 {% set bidderListLast = auction.bidderList | last %}
 {% set bidderListLength = auction.bidderList | length %}
+
+
+
+{# ao Var-Dump #}
+{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
+
 
 <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
     <div class="thumb-inner">
