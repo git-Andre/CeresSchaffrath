@@ -58,27 +58,17 @@
         </div>
 
         <!-- STORE SPECIALS -->
-
-        {% if item.data.item.storeSpecial.id > 0 %}
-
-            {% set storeSpecial = item.data.item.storeSpecial.names.name %}
-
-
-            {# ao Var-Dump #}
-            {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'storeSpecial', 'dumpData': storeSpecial } %}
-
-            {% if  item.data.item.storeSpecial.id == 1 %}
                 {% if auction %}
                     <div class="auction-category-item-special">
-                        {% if auction.tense == 'present' or auction.tense == 'future' %}
-                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auktion") }}</h1>
+                        {% if auction.tense == 'future' %}
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auctionFuture") }}</h1>
+                        {% elseif %}
+                        {% if auction.tense == 'present' %}
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auctionPresent") }}</h1>
                         {% else %}
-                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.beendet") }}</h1>
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auctionPast") }}</h1>
                         {% endif %}
                     </div>
-                {% endif %}
-            {% endif %}
-        {% endif %}
         <!-- ./STORE SPECIALS -->
 
         <!-- ITEM DETAILS CeresSchaffrath -->
