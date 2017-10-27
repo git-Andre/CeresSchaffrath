@@ -11373,6 +11373,43 @@ body.menu-is-visible {
   color: #fff;
 }
 
+.cmp-product-thumb .auction-category-item-special {
+  z-index: 100;
+  font-family: "Abel", sans-serif;
+  color: #c50000;
+  background-color: rgba(204, 48, 46, 0.5);
+  display: block;
+  position: absolute;
+  top: 222px;
+  right: 17px;
+  bottom: auto;
+  left: auto;
+  padding: 0.4rem 0.4rem 0rem 0.4rem;
+  -webkit-transform: skewY(-5deg);
+  /* Safari */
+  transform: skewY(-5deg);
+  /* Standard syntax */
+  box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cmp-product-thumb .auction-category-item-special .auction-special-tag {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: .2em .8em .2rem;
+  font-size: 2rem;
+}
+
+.cmp-product-thumb .auction-basket-corner {
+  color: #fff;
+  border-color: transparent #c50000 transparent transparent;
+}
+
+.cmp-product-thumb .auction-basket-corner-small {
+  color: #fff;
+  border-color: transparent #c50000 transparent transparent;
+  border-width: 0px 70px 70px 0;
+}
+
 .cmp-product-thumb .category-list-view-port {
   display: none;
 }
@@ -11468,37 +11505,6 @@ body.menu-is-visible {
 .cmp-product-thumb .cat-item-titel-ao {
   margin: 0.5rem 0 1.5rem 0;
   font-size: 1.15rem;
-}
-
-.cmp-product-thumb .auction-category-item-special {
-  z-index: 100;
-  font-family: "Abel", sans-serif;
-  color: #c50000;
-  background-color: rgba(204, 48, 46, 0.5);
-  display: block;
-  position: absolute;
-  top: 222px;
-  right: 17px;
-  bottom: auto;
-  left: auto;
-  padding: 0.4rem 0.4rem 0rem 0.4rem;
-  -webkit-transform: skewY(-5deg);
-  /* Safari */
-  transform: skewY(-5deg);
-  /* Standard syntax */
-  box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 0.2);
-}
-
-.cmp-product-thumb .auction-category-item-special .auction-special-tag {
-  display: block;
-  background-color: rgba(255, 255, 255, 0.6);
-  padding: .2em .8em .2rem;
-  font-size: 2rem;
-}
-
-.cmp-product-thumb .auction-basket-corner {
-  color: #fff;
-  border-color: transparent #c50000 transparent transparent;
 }
 
 .cmp-product-thumb .thumb-title {
