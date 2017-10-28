@@ -11779,6 +11779,32 @@ body.menu-is-visible {
   margin: 0 15px;
 }
 
+.cmp-hero .auction-category-item-special-home {
+  z-index: 100;
+  font-family: "Abel", sans-serif;
+  color: #c50000;
+  background-color: rgba(204, 48, 46, 0.5);
+  display: block;
+  position: absolute;
+  top: 5rem;
+  right: 17px;
+  bottom: auto;
+  left: auto;
+  padding: 0.4rem 0.4rem 0rem 0.4rem;
+  -webkit-transform: skewY(-5deg);
+  /* Safari */
+  transform: skewY(-5deg);
+  /* Standard syntax */
+  box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.cmp-hero .auction-category-item-special-home .auction-special-tag {
+  display: block;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: .2em .8em .2rem;
+  font-size: 2rem;
+}
+
 .cmp-hero .hero-main .carousel .carousel-inner .carousel-item .carousel-caption {
   background-color: rgba(233, 233, 233, 0.5);
   bottom: 6.5rem;
