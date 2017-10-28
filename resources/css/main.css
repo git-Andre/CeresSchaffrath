@@ -11552,6 +11552,10 @@ body.menu-is-visible {
   margin-top: 5px;
 }
 
+.cmp-product-thumb .thumb-legal {
+  margin-top: 1rem;
+}
+
 .cmp-product-thumb .crossprice {
   font-size: .81em;
   font-weight: 700;

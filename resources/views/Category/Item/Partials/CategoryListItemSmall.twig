@@ -103,7 +103,7 @@
 
                 <div class="prices">
                     <span>
-                        <h4 class="m-x-1"><i class="fa fa-lg fa-check text-success" aria-hidden="true"></i></h4>
+                        <h4 class="m-r-1"><i class="fa fa-lg fa-check text-success" aria-hidden="true"></i></h4>
                     </span>
                     <span class="price">
                         {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }}
@@ -118,8 +118,8 @@
             <div class="thumb-legal vat-porto-info small text-muted tiny">
                 <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}
                 <br>
-                {{ trans("Ceres::Template.itemExclusive") }}
-                <span class="m-l-5">{{ trans("Ceres::Template.itemShippingCosts") }}</span>
+                <span class="m-l-5">{{ trans("Ceres::Template.itemExclusive") }}
+                {{ trans("Ceres::Template.itemShippingCosts") }}</span>
             </div>
         </div>
         <!-- ./ITEM DETAILS  -->
