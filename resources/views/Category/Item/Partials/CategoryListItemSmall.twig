@@ -21,12 +21,12 @@
 
         {#Warenkorb#}
         {#<add-to-basket template="#vue-add-to-basket"#}
-                {#:item="{{ item.data | json_encode() }}"#}
-                {#:show-quantity="false"#}
-                {#:show-order-properties="{{ showOrderProperties }}"#}
-                {#:use-large-scale="true"#}
-                {#item-url="{{ itemUrl }}"#}
-                {#:salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>#}
+        {#:item="{{ item.data | json_encode() }}"#}
+        {#:show-quantity="false"#}
+        {#:show-order-properties="{{ showOrderProperties }}"#}
+        {#:use-large-scale="true"#}
+        {#item-url="{{ itemUrl }}"#}
+        {#:salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>#}
 
         <div class="thumb-background"></div>
 
@@ -107,7 +107,7 @@
                     </span>
                     <span class="price">
                         {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }}
-                        *
+                        <sup>*</sup>
                     </span>
                 </div>
 
@@ -115,11 +115,11 @@
 
             </div>
 
-            <p class="vat-porto-info small text-muted tiny"></p>
-                    * {{ trans("Ceres::Template.itemInclVAT") }}
-                 <p class="m-l-1">{{ trans("Ceres::Template.itemExclusive") }}
+            <span class="vat-porto-info small text-muted tiny">
+                    * {{ trans("Ceres::Template.itemInclVAT") }}</span>
+            <span class="m-l-1">{{ trans("Ceres::Template.itemExclusive") }}
                 <a {% if shippingCat is not empty %} data-toggle="modal" href="#shippingscosts"{% endif %} title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
-               </p>
+               </span>
         </div>
         <!-- ./ITEM DETAILS  -->
     </div>

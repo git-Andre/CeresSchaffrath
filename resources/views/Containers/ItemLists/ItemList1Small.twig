@@ -5,13 +5,19 @@
 
 {% set randomIdentifier = random() %}
 
-<div class="row">
-    <div class="col-xs-12 col-lg-12">
-        {% if itemList | length > 4 %}
-            <div id="list-carousel-{{ randomIdentifier }}" class="list-item-carousel owl-carousel owl-theme owl-single-item">
-                {% for item in itemList %}
+{% if itemList is not empty %}
+    <hr>
 
-                    {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
+    <p class="h3">
+            {{ trans("Ceres::Template.itemListLastSeen") }}
+
+    <div class="row">
+        <div class="col-xs-12 col-lg-12">
+            {% if itemList | length > 4 %}
+                <div id="list-carousel-{{ randomIdentifier }}" class="list-item-carousel owl-carousel owl-theme owl-single-item">
+                    {% for item in itemList %}
+
+                        {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
                         {% if not auction %}
                             {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
@@ -19,53 +25,54 @@
                             {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
                         {% endif %}
 
-                {% endfor %}
-            </div>
-        {% else %}
-            <ul id="list-carousel-{{ randomIdentifier }}" class="product-list row grid">
-                {% for item in itemList %}
+                    {% endfor %}
+                </div>
+            {% else %}
+                <ul id="list-carousel-{{ randomIdentifier }}" class="product-list row grid">
+                    {% for item in itemList %}
 
-                    {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
+                        {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
-                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
-                        {% if not auction %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
-                        {% elseif  auction.id > 0 %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
-                        {% endif %}
-                    </li>
-                {% endfor %}
-            </ul>
-        {% endif %}
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                            {% if not auction %}
+                                {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                            {% elseif  auction.id > 0 %}
+                                {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
     </div>
-</div>
 
-{% if itemList | length > 4 %}
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $( document ).ready( function () {
-            $( "#list-carousel-{{ randomIdentifier }}" ).owlCarousel( {
-                                                                          autoHeight: true,
-                                                                          dots: true,
-                                                                          items: 4, // 4
-                                                                          lazyLoad: false,
-                                                                          loop: false, // false
-                                                                          margin: 7, // 10
-                                                                          mouseDrag: true,
-                                                                          nav: true,
-                                                                          navClass: [
-                                                                              "owl-single-item-nav left carousel-control list-control-special",
-                                                                              "owl-single-item-nav right carousel-control list-control-special"
-                                                                          ],
-                                                                          navContainerClass: "",
-                                                                          navText: [
-                                                                              "<i class=\"owl-single-item-control fa fa-chevron-left\" aria-hidden=\"true\"></i>",
-                                                                              "<i class=\"owl-single-item-control fa fa-chevron-right\" aria-hidden=\"true\"></i>"
-                                                                          ],
-                                                                          smartSpeed: 350,
-                                                                      } );
-        } );
-    </script>
+    {% if itemList | length > 4 %}
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+            $( document ).ready( function () {
+                $( "#list-carousel-{{ randomIdentifier }}" ).owlCarousel( {
+                                                                              autoHeight: true,
+                                                                              dots: true,
+                                                                              items: 4, // 4
+                                                                              lazyLoad: false,
+                                                                              loop: false, // false
+                                                                              margin: 7, // 10
+                                                                              mouseDrag: true,
+                                                                              nav: true,
+                                                                              navClass: [
+                                                                                  "owl-single-item-nav left carousel-control list-control-special",
+                                                                                  "owl-single-item-nav right carousel-control list-control-special"
+                                                                              ],
+                                                                              navContainerClass: "",
+                                                                              navText: [
+                                                                                  "<i class=\"owl-single-item-control fa fa-chevron-left\" aria-hidden=\"true\"></i>",
+                                                                                  "<i class=\"owl-single-item-control fa fa-chevron-right\" aria-hidden=\"true\"></i>"
+                                                                              ],
+                                                                              smartSpeed: 350,
+                                                                          } );
+            } );
+        </script>
+    {% endif %}
 {% endif %}
 
 

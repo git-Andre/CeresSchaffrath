@@ -72,49 +72,49 @@
 
             <div class="thumb-content">
                 <div class="cat-item-titel-ao">
-                    <p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
+                    <p class="thumb-title-small">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
                     <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
                 </div>
 
                 <div class="thumb-meta">
+
                     <div class="prices">
                         {% if auction.tense == 'future' %}
                             <span class="m-x-2">
-                            <h5>{{ trans("CeresSchaffrath::Template.startPrice") }}
-                                <span class="m-l-5"><i class="fa fa-pencil-square-o text-warning"
-                                            aria-hidden="true"></i></span></h5>
+                             <h4 class="m-l-5"><i class="fa fa-lg fa-pencil-square-o text-warning" aria-hidden="true"></i></h4>
                            </span>
                             <span class="price">
-                                {{ auction.startPrice | formatMonetary('EUR') }} *
+                                {{ auction.startPrice | formatMonetary('EUR') }} <sup>*</sup>
                             </span>
                         {% elseif auction.tense == 'present' %}
                             <span class="m-x-2">
-                            <h5>{{ trans("CeresSchaffrath::Template.highestBid") }}
-                                <span class="m-l-5"><i class="fa fa-gavel text-danger"
-                                            aria-hidden="true"></i></span></h5>
+                            <h4 class="m-l-5"><i class="fa fa-gavel text-danger"
+                                            aria-hidden="true"><</i></h4>
                            </span>
                             <span class="price">
                                 {% if bidderListLength > 1 %}
-                                    {{ bidderListLast.bidPrice | formatMonetary('EUR') }} *
+                                    {{ bidderListLast.bidPrice | formatMonetary('EUR') }} <sup>*</sup>
                                 {% else %}
-                                    {{ auction.startPrice | formatMonetary('EUR') }} *
+                                    {{ auction.startPrice | formatMonetary('EUR') }} <sup>*</sup>
                                 {% endif %}
                             </span>
                         {% else %}
                             <span class="m-x-2">
-                            <h5>{{ trans("CeresSchaffrath::Template.closedPrice") }}<span class="m-l-5"><i class="fa fa-lock"
-                                            aria-hidden="true"></i></span></h5>
+                            <h4 class="m-l-5"><i class="fa fa-lock"
+                                            aria-hidden="true"><</i></h4>
                            </span>
                             <span class="price">
-                                {{ bidderListLast.bidPrice | formatMonetary('EUR') }} *
+                                {{ bidderListLast.bidPrice | formatMonetary('EUR') }} <sup>*</sup>
                             </span>
                         {% endif %}
 
                     </div>
                 </div>
 
-                <span class="vat-porto-info small text-muted">
-                    * {{ trans("Ceres::Template.itemExclusive") }} {{ trans("CeresSchaffrath::Template.surcharge") }} {{ trans("Ceres::Template.itemInclVAT") }}
+                <span class="vat-porto-info small text-muted tiny">
+                    <sup>*</sup> {{ trans("Ceres::Template.itemExclusive") }}
+                    {{ trans("CeresSchaffrath::Template.surcharge") }}
+                    {{ trans("Ceres::Template.itemInclVAT") }}
                 </span>
 
             </div>
