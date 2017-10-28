@@ -14,6 +14,9 @@
 {#{% set itemList = services.itemLoader.loadForTemplate('Ceres::Containers.ItemLists.ItemList1', itemLoaderPresets.lastSeenItemsList, {'items': itemsPerPage}).documents %}#}
 
 
+{# ao Var-Dump #}
+{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
+
 
  {% block PartialHead %}
     <meta name="description" content="{{ item.documents[0].data.texts.metaDescription }}">

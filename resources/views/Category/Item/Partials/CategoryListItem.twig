@@ -21,10 +21,10 @@
 
         {#Warenkorb#}
         <add-to-basket template="#vue-add-to-basket"
-                :item="{{ item.data | json_encode() }}"
                 :show-quantity="false"
-                :show-order-properties="{{ showOrderProperties }}"
                 :use-large-scale="true"
+                :item="{{ item.data | json_encode() }}"
+                :show-order-properties="{{ showOrderProperties }}"
                 item-url="{{ itemUrl }}"
                 :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
 

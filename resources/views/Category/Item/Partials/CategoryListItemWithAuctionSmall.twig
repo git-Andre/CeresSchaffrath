@@ -68,7 +68,7 @@
         <!-- ITEM DETAILS CeresSchaffrath -->
 
         {#Auktion ########################################### #}
-        {% if auction.id > 0 %}
+        {#{% if auction.id > 0 %}#}
 
             <div class="thumb-content">
                 <div class="cat-item-titel-ao">
@@ -100,7 +100,7 @@
                             </span>
                         {% else %}
                             <span>
-                            <h4 class="m-r-1"><i class="fa fa-lg fa-lock"
+                            <h4 class="m-r-1"><i class="fa fa-lock"
                                         aria-hidden="true"></i></h4>
                            </span>
                             <span class="price">
@@ -112,13 +112,13 @@
                 </div>
 
                 <div class="thumb-legal vat-porto-info small text-muted tiny">
-                    <sup>*</sup> {{ trans("Ceres::Template.itemExclusive") }}
-                    {{ trans("CeresSchaffrath::Template.surcharge") }}
+                    <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}
                     <br>
-                    <span class="m-l-5">{{ trans("Ceres::Template.itemInclVAT") }}</span>
+                    <span class="m-l-5">{{ trans("Ceres::Template.itemExclusive") }}
+                        {{ trans("CeresSchaffrath::Template.surcharge") }}</span>
                 </div>
             </div>
-        {% endif %}
+        {#{% endif %}#}
         <!-- ./ITEM DETAILS  -->
     </div>
 </article>
