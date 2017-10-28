@@ -1,6 +1,6 @@
 <?php
 
-    namespace CeresSchaffrath\Containers\ItemLists;
+    namespace CeresSchaffrath\Containers;
 
     use Plenty\Plugin\Templates\Twig;
 
