@@ -102,8 +102,8 @@
                 {{ LayoutContainer.show("Ceres::CategoryItem.BeforePrices", item.data) }}
 
                 <div class="prices">
-                    <span class="m-x-2">
-                        <h4 class="m-x-1"><i class="fa fa-check text-success" aria-hidden="true"></i><</h4>
+                    <span>
+                        <h4 class="m-x-1"><i class="fa fa-lg fa-check text-success" aria-hidden="true"></i></h4>
                     </span>
                     <span class="price">
                         {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }}
@@ -115,10 +115,11 @@
 
             </div>
 
-            <span class="vat-porto-info small text-muted">
-                    * {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
+            <p class="vat-porto-info small text-muted tiny"></p>
+                    * {{ trans("Ceres::Template.itemInclVAT") }}
+                 <p class="m-l-1">{{ trans("Ceres::Template.itemExclusive") }}
                 <a {% if shippingCat is not empty %} data-toggle="modal" href="#shippingscosts"{% endif %} title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
-                </span>
+               </p>
         </div>
         <!-- ./ITEM DETAILS  -->
     </div>

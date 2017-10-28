@@ -2,7 +2,6 @@
 
     namespace CeresSchaffrath\Containers;
 
-    use Plenty\Modules\Item\DataLayer\Contracts\ItemDataLayerRepositoryContract;
     use Plenty\Plugin\Templates\Twig;
 
     class PageNotFoundContainer {

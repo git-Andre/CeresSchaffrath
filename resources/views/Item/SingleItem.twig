@@ -212,7 +212,7 @@
                         </div>
 
                         {#Merkmale#}
-                        {% if itemMain.properties is not empty %}
+                        {% if itemMain.properties is not empty and itemMain.properties[0].selection[0].name != ''%}
                             <div class="m-y-1">
                                 <dl class="itemDefList">
                                     {% for prop in itemMain.properties %}
