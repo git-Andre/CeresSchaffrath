@@ -11521,6 +11521,26 @@ body.menu-is-visible {
   margin-bottom: 0px;
 }
 
+.cmp-product-thumb .thumb-title-small {
+  font-family: "Abel", sans-serif;
+  font-size: 1rem;
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+  color: #282d2f;
+  line-height: 1.1em;
+  min-height: 20px;
+  margin-bottom: 0px;
+}
+
+.cmp-product-thumb .tiny {
+  font-size: 0.75rem;
+  line-height: 1.2rem;
+}
+
 .cmp-product-thumb .thumb-meta {
   margin-top: .5rem;
   text-align: left;
