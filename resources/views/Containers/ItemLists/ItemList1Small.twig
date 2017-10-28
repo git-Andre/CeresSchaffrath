@@ -15,9 +15,9 @@
 
                     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-{% if showHeaderNavBar == "side" or showHeaderNavBar == "both" %}4{% else %}3{% endif %}">
                         {% if not auction %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, 'showOrderProperties': false } %}
                         {% elseif  auction.id > 0 %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, 'showOrderProperties': false } %}
                         {% endif %}
                     </li>
 
@@ -31,9 +31,9 @@
 
                     <li class="col-xs-12 col-sm-6 col-md-4 col-lg-{% if showHeaderNavBar == "side" or showHeaderNavBar == "both" %}4{% else %}3{% endif %}">
                         {% if not auction %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, 'showOrderProperties': false } %}
                         {% elseif  auction.id > 0 %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
+                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, 'showOrderProperties': false } %}
                         {% endif %}
                     </li>
                 {% endfor %}
