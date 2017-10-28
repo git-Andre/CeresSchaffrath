@@ -10,8 +10,8 @@
 {% set itemMain = item.documents[0].data %}
 {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 {% set itemVariationData = itemGetVariation.documents[0].data %}
-{% set test = services.item.getLatestItems(8) %}
-{% set itemList = services.itemLoader.loadForTemplate('Ceres::Containers.ItemLists.ItemList1', itemLoaderPresets.lastSeenItemsList, {'items': itemsPerPage}).documents %}
+
+{#{% set itemList = services.itemLoader.loadForTemplate('Ceres::Containers.ItemLists.ItemList1', itemLoaderPresets.lastSeenItemsList, {'items': itemsPerPage}).documents %}#}
 
 
 
@@ -48,20 +48,6 @@
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
     {{ LayoutContainer.show("CeresSchaffrath::SingleItem.BeforeImage", item.documents[0].data ) }}
-
-
-
-    {# ao Var-Dump #}
-    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
-    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemVariationData', 'dumpData': itemVariationData } %}
-
-
-    {# ao Var-Dump #}
-    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'test', 'dumpData': test } %}
-    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemList', 'dumpData': itemList } %}
-
-
-
 
     <div class="single container-max page-content">
         <div class="row m-t-3">
@@ -226,30 +212,42 @@
                         </div>
 
                         {#Merkmale#}
-                        {% if itemVariationData.properties is not empty or itemVariationData.item.free1 > 4 %}
+                        {% if itemMain.properties is not empty %}
                             <div class="m-y-1">
                                 <dl class="itemDefList">
-                                    {% for prop in itemVariationData.properties %}
+                                    {% for prop in itemMain.properties %}
                                         {% if prop.selection[0].name != '' %}
                                             <dt>{{ prop.property.names[0].name }}</dt>
                                             <dd>{{ prop.selection[0].name }}</dd>
                                         {% endif %}
                                     {% endfor %}
-                                    {#Free Felder#}
-                                    {% if itemVariationData.item.free1 > '4' %}
-
-                                        <dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>
-                                        <dd>{{ itemVariationData.item.free1 }} g</dd>
-
-                                        {% if itemVariationData.item.free2 != '' or itemVariationData.item.free2 != '0' %}
-                                            <dt>{{ trans("CeresSchaffrath::Template.free2") }}</dt>
-                                            <dd>{{ itemVariationData.item.free2 }} mm</dd>
-                                        {% endif %}
-                                    {% endif %}
-
                                 </dl>
                             </div>
                         {% endif %}
+                        {#{% if itemMain.properties is not empty or itemMain.item.free1 > 4 %}#}
+                            {#<div class="m-y-1">#}
+                                {#<dl class="itemDefList">#}
+                                    {#{% for prop in itemMain.properties %}#}
+                                        {#{% if prop.selection[0].name != '' %}#}
+                                            {#<dt>{{ prop.property.names[0].name }}</dt>#}
+                                            {#<dd>{{ prop.selection[0].name }}</dd>#}
+                                        {#{% endif %}#}
+                                    {#{% endfor %}#}
+                                    {#Free Felder#}
+                                    {#{% if itemMain.item.free1 > '4' %}#}
+
+                                        {#<dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>#}
+                                        {#<dd>{{ itemMain.item.free1 }} g</dd>#}
+
+                                        {#{% if itemMain.item.free2 != '' or itemMain.item.free2 != '0' %}#}
+                                            {#<dt>{{ trans("CeresSchaffrath::Template.free2") }}</dt>#}
+                                            {#<dd>{{ itemMain.item.free2 }} mm</dd>#}
+                                        {#{% endif %}#}
+                                    {#{% endif %}#}
+
+                                {#</dl>#}
+                            {#</div>#}
+                        {#{% endif %}#}
                     </div>
 
                     <div class="tab-pane m-b-3" id="data-{{ item.documents[0].data.variation.id }}" role="tabpanel">

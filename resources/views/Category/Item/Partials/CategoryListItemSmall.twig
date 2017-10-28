@@ -20,13 +20,13 @@
     <div class="thumb-inner">
 
         {#Warenkorb#}
-        <add-to-basket template="#vue-add-to-basket"
-                :item="{{ item.data | json_encode() }}"
-                :show-quantity="false"
-                :show-order-properties="{{ showOrderProperties }}"
-                :use-large-scale="true"
-                item-url="{{ itemUrl }}"
-                :salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>
+        {#<add-to-basket template="#vue-add-to-basket"#}
+                {#:item="{{ item.data | json_encode() }}"#}
+                {#:show-quantity="false"#}
+                {#:show-order-properties="{{ showOrderProperties }}"#}
+                {#:use-large-scale="true"#}
+                {#item-url="{{ itemUrl }}"#}
+                {#:salable="{{ services.item.getVariationIsSalable(item.data.variation.id) | json_encode() }}"></add-to-basket>#}
 
         <div class="thumb-background"></div>
 
@@ -93,7 +93,7 @@
 
         <div class="thumb-content">
             <div class="cat-item-titel-ao">
-                <p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
+                <p class="thumb-title-small">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
                 <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
             </div>
 
@@ -103,8 +103,7 @@
 
                 <div class="prices">
                     <span class="m-x-2">
-                        <h5>{{ trans("CeresSchaffrath::Template.buyNow") }}<span class="m-l-5"><i class="fa fa-check text-success"
-                                        aria-hidden="true"></i></span></h5>
+                        <h4 class="m-x-1"><i class="fa fa-check text-success" aria-hidden="true"></i><</h4>
                     </span>
                     <span class="price">
                         {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }}
