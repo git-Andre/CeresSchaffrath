@@ -7,19 +7,17 @@
 
 <div class="row">
     <div class="col-xs-12 col-lg-12">
-        {% if itemList | length > 4 %}
+        {% if itemList | length > 8 %}
             <div id="list-carousel-{{ randomIdentifier }}" class="list-item-carousel owl-carousel owl-theme owl-single-item">
                 {% for item in itemList %}
 
                     {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
-                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-{% if showHeaderNavBar == "side" or showHeaderNavBar == "both" %}4{% else %}3{% endif %}">
                         {% if not auction %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, 'showOrderProperties': false } %}
+                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
                         {% elseif  auction.id > 0 %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, 'showOrderProperties': false } %}
+                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
                         {% endif %}
-                    </li>
 
                 {% endfor %}
             </div>
@@ -29,11 +27,11 @@
 
                     {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
-                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-{% if showHeaderNavBar == "side" or showHeaderNavBar == "both" %}4{% else %}3{% endif %}">
+                    <li class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
                         {% if not auction %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, 'showOrderProperties': false } %}
+                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
                         {% elseif  auction.id > 0 %}
-                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, 'showOrderProperties': false } %}
+                            {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
                         {% endif %}
                     </li>
                 {% endfor %}
