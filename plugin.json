@@ -42,6 +42,11 @@
       "description" : "Schaffrath Theme for Ceres"
     },
     {
+      "key"         : "CeresSchaffrath\\Containers\\ItemLists\\ItemList1Small",
+      "name"        : "ItemList1Small",
+      "description" : "ItemListLastSmall"
+    },
+    {
       "key"         : "CeresSchaffrath\\Containers\\CeresSchaffrathInfoContainer",
       "name"        : "InfoSchaffrath",
       "description" : "Disclaimer Schaffrath"
