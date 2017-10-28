@@ -65,22 +65,26 @@
 
             <div class="hero-xtras">
                 <a class="hero-category" href="{{ DOMAIN_PATH }}/medaillen/">
-                    <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/categorie2.jpg" alt="Medaillen">
+                    <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/category2.jpg" alt="Medaillen">
                     <div class="hero-category-inner">
                         <h4 class="hero-category-headline">
-                            {{ trans("CeresSchaffrath::Template.homepageKategorieMedaillen") }}
+                            {{ trans("CeresSchaffrath::Template.homepageCategoryMedaillen") }}
                         </h4>
                     </div>
                 </a>
-                <a class="hero-category" href="{{ DOMAIN_PATH }}/muenzen/">
-                    <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/categorie1.jpg" alt="Münzen">
+                <a class="hero-category" href="{{ DOMAIN_PATH }}/muenzen?facets=2">
+                    <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/category1.jpg" alt="Münzen">
 
                     <div class="hero-category-inner">
                         <h4 class="hero-category-headline">
-                            {{ trans("CeresSchaffrath::Template.homepageKategorieMuenzen") }}
+                            {{ trans("CeresSchaffrath::Template.homepageCategoryMuenzen") }}
                         </h4>
 
                     </div>
+                    <div class="auction-category-item-special-home">
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auctionHomeTeaser") }}</h1>
+                    </div>
+
                 </a>
             </div>
 
@@ -128,10 +132,10 @@
                 <div class="prop-xs-2-1 prop-sm-4-1 prop-md-6-1">
                     <div class="prop-inner">
                         <a class="featured-sale" href="{{ DOMAIN_PATH }}/geldscheine/">
-                            <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/categorie3.jpg" alt="First slide">
+                            <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/category3.jpg" alt="First slide">
                             <div class="featured-category-inner">
                                 <h4 class="featured-category-headline">
-                                    {{ trans("CeresSchaffrath::Template.homepageKategorieGeld") }}
+                                    {{ trans("CeresSchaffrath::Template.homepageCategoryGeld") }}
                                 </h4>
 
                             </div>
