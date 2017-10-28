@@ -49,8 +49,6 @@
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
     {{ LayoutContainer.show("CeresSchaffrath::SingleItem.BeforeImage", item.documents[0].data ) }}
-{# ao Var-Dump #}
-{% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
 
     <div class="single container-max page-content">
         <div class="row m-t-3">
