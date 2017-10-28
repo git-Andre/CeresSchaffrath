@@ -10,7 +10,7 @@
 {% set itemMain = item.documents[0].data %}
 {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 {% set itemVariationData = itemGetVariation.documents[0].data %}
-{% set test = item.getLatestItems(8) %}
+{% set test = services.item.getLatestItems(8) %}
 {% set itemList = services.itemLoader.loadForTemplate('Ceres::Containers.ItemLists.ItemList1', itemLoaderPresets.lastSeenItemsList, {'items': itemsPerPage}).documents %}
 
 
@@ -53,6 +53,7 @@
 
     {# ao Var-Dump #}
     {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
+    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemVariationData', 'dumpData': itemVariationData } %}
 
 
     {# ao Var-Dump #}
