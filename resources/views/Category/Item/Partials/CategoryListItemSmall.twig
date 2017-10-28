@@ -94,7 +94,7 @@
         <div class="thumb-content">
             <div class="cat-item-titel-ao">
                 <p class="thumb-title-small">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
-                <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
+                {#<p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>#}
             </div>
 
             <div class="thumb-meta">
@@ -115,13 +115,12 @@
 
             </div>
 
-
-        </div>
-        <div class="thumb-legal vat-porto-info small text-muted tiny">
-            <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}
-            <br>
-            {{ trans("Ceres::Template.itemExclusive") }}
-            <span class="m-l-5">{{ trans("Ceres::Template.itemShippingCosts") }}</span>
+            <div class="thumb-legal vat-porto-info small text-muted tiny">
+                <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}
+                <br>
+                {{ trans("Ceres::Template.itemExclusive") }}
+                <span class="m-l-5">{{ trans("Ceres::Template.itemShippingCosts") }}</span>
+            </div>
         </div>
         <!-- ./ITEM DETAILS  -->
     </div>
