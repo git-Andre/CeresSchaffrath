@@ -64,7 +64,11 @@
             </div>
 
             <div class="hero-xtras">
-                <a class="hero-category" href="{{ DOMAIN_PATH }}/medaillen/">
+                    <div class="auction-category-item-special-home">
+                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auctionHomeTeaser") }}</h1>
+                    </div>
+
+                <a class="hero-category" href="{{ DOMAIN_PATH }}/geldscheine?facets=2">
                     <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/category2.jpg" alt="Medaillen">
                     <div class="hero-category-inner">
                         <h4 class="hero-category-headline">
@@ -73,10 +77,6 @@
                     </div>
                 </a>
                 <a class="hero-category" href="{{ DOMAIN_PATH }}/muenzen?facets=2">
-                    <div class="auction-category-item-special-home">
-                            <h1 class="auction-special-tag">{{ trans("CeresSchaffrath::Template.auctionHomeTeaser") }}</h1>
-                    </div>
-
                     <img src="{{ DOMAIN_PATH }}/layout/theme/images/homepage/category1.jpg" alt="Münzen">
 
                     <div class="hero-category-inner">
