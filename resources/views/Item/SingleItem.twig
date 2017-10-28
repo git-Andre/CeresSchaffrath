@@ -11,6 +11,8 @@
 {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 {% set itemVariationData = itemGetVariation.documents[0].data %}
 
+
+
  {% block PartialHead %}
     <meta name="description" content="{{ item.documents[0].data.texts.metaDescription }}">
     <meta name="keywords" content="{{ item.documents[0].data.texts.keywords | json_encode }}">
@@ -44,6 +46,18 @@
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
 
     {{ LayoutContainer.show("CeresSchaffrath::SingleItem.BeforeImage", item.documents[0].data ) }}
+
+
+
+    {# ao Var-Dump #}
+    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemGetVariation', 'dumpData': itemGetVariation } %}
+
+
+    {# ao Var-Dump #}
+    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'services.lastSeen', 'dumpData': services.lastSeen } %}
+
+
+
 
     <div class="single container-max page-content">
         <div class="row m-t-3">
