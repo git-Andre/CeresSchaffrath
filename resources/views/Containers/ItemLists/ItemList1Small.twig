@@ -7,7 +7,7 @@
 
 <div class="row">
     <div class="col-xs-12 col-lg-12">
-        {% if itemList | length > 3 %}
+        {% if itemList | length > 4 %}
             <div id="list-carousel-{{ randomIdentifier }}" class="list-item-carousel owl-carousel owl-theme owl-single-item">
                 {% for item in itemList %}
 
@@ -47,10 +47,10 @@
             $( "#list-carousel-{{ randomIdentifier }}" ).owlCarousel( {
                                                                           autoHeight: true,
                                                                           dots: true,
-                                                                          items: 3, // 4
+                                                                          items: 4, // 4
                                                                           lazyLoad: false,
-                                                                          loop: true, // false
-                                                                          margin: 5, // 10
+                                                                          loop: false, // false
+                                                                          margin: 7, // 10
                                                                           mouseDrag: true,
                                                                           nav: true,
                                                                           navClass: [

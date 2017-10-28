@@ -10,6 +10,8 @@
 {% set itemMain = item.documents[0].data %}
 {% set itemGetVariation = services.item.getVariation(item.documents[0].data.variation.id) %}
 {% set itemVariationData = itemGetVariation.documents[0].data %}
+{% set test = item.getLatestItems(8) %}
+{% set itemList = services.itemLoader.loadForTemplate('Ceres::Containers.ItemLists.ItemList1', itemLoaderPresets.lastSeenItemsList, {'items': itemsPerPage}).documents %}
 
 
 
@@ -50,11 +52,12 @@
 
 
     {# ao Var-Dump #}
-    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemGetVariation', 'dumpData': itemGetVariation } %}
+    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
 
 
     {# ao Var-Dump #}
-    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'services.lastSeen', 'dumpData': services.lastSeen } %}
+    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'test', 'dumpData': test } %}
+    {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemList', 'dumpData': itemList } %}
 
 
 
