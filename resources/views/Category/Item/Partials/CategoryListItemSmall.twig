@@ -114,12 +114,13 @@
                 {{ LayoutContainer.show("Ceres::CategoryItem.AfterPrices", item.data) }}
 
             </div>
+            <div class="thumb-legal vat-porto-info small text-muted tiny">
+                <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}
+                <br>
+                {{ trans("Ceres::Template.itemExclusive") }}
+                <span class="m-l-5">{{ trans("Ceres::Template.itemShippingCosts") }}</span>
+            </div>
 
-            <span class="vat-porto-info small text-muted tiny">
-                    <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}</span><br>
-            <span class="m-l-1">{{ trans("Ceres::Template.itemExclusive") }}
-                {{ trans("Ceres::Template.itemShippingCosts") }}
-               </span>
         </div>
         <!-- ./ITEM DETAILS  -->
     </div>
