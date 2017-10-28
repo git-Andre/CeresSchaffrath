@@ -116,9 +116,9 @@
             </div>
 
             <span class="vat-porto-info small text-muted tiny">
-                    * {{ trans("Ceres::Template.itemInclVAT") }}</span>
+                    <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}</span><br>
             <span class="m-l-1">{{ trans("Ceres::Template.itemExclusive") }}
-                <a {% if shippingCat is not empty %} data-toggle="modal" href="#shippingscosts"{% endif %} title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
+                {{ trans("Ceres::Template.itemShippingCosts") }}
                </span>
         </div>
         <!-- ./ITEM DETAILS  -->

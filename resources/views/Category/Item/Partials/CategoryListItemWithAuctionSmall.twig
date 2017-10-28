@@ -23,10 +23,10 @@
 
         {#Auktion#}
         {#<div class="add-to-basket-lg-container hidden-md-down auction-basket-corner-small"#}
-                {#v-tooltip data-toggle="tooltip"#}
-                {#data-placement="top"#}
-                {#title="{{ trans("CeresSchaffrath::Template.goToAuction") }}">#}
-            {#<i class="fa fa-gavel fa-lg mobile-icon-right"></i>#}
+        {#v-tooltip data-toggle="tooltip"#}
+        {#data-placement="top"#}
+        {#title="{{ trans("CeresSchaffrath::Template.goToAuction") }}">#}
+        {#<i class="fa fa-gavel fa-lg mobile-icon-right"></i>#}
         {#</div>#}
 
         <div class="thumb-background"></div>
@@ -89,7 +89,7 @@
                         {% elseif auction.tense == 'present' %}
                             <span class="m-x-2">
                             <h4 class="m-l-5"><i class="fa fa-gavel text-danger"
-                                            aria-hidden="true"><</i></h4>
+                                        aria-hidden="true"></i></h4>
                            </span>
                             <span class="price">
                                 {% if bidderListLength > 1 %}
@@ -101,7 +101,7 @@
                         {% else %}
                             <span class="m-x-2">
                             <h4 class="m-l-5"><i class="fa fa-lock"
-                                            aria-hidden="true"><</i></h4>
+                                        aria-hidden="true"></i></h4>
                            </span>
                             <span class="price">
                                 {{ bidderListLast.bidPrice | formatMonetary('EUR') }} <sup>*</sup>
@@ -114,7 +114,8 @@
                 <span class="vat-porto-info small text-muted tiny">
                     <sup>*</sup> {{ trans("Ceres::Template.itemExclusive") }}
                     {{ trans("CeresSchaffrath::Template.surcharge") }}
-                    {{ trans("Ceres::Template.itemInclVAT") }}
+                    </span><br>
+                <span class="m-l-1">{{ trans("Ceres::Template.itemInclVAT") }}
                 </span>
 
             </div>
