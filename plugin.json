@@ -38,22 +38,22 @@
   "dataProviders"    : [
     {
       "key"         : "CeresSchaffrath\\Containers\\CeresSchaffrathCss",
-      "name"        : "CeresSchaffrathCss",
+      "name"        : "CeresSchaffrath (S)Css",
       "description" : "Schaffrath Theme for Ceres"
     },
     {
-      "key"         : "CeresSchaffrath\\Containers\\ItemLists\\ItemList1Small",
-      "name"        : "ItemList1Small",
+      "key"         : "CeresSchaffrath\\Containers\\ItemList1Small",
+      "name"        : "ItemListSmall for Single Item",
       "description" : "ItemListLastSmall"
     },
     {
       "key"         : "CeresSchaffrath\\Containers\\CeresSchaffrathInfoContainer",
-      "name"        : "InfoSchaffrath",
+      "name"        : "Info Schaffrath",
       "description" : "Disclaimer Schaffrath"
     },
     {
       "key"         : "CeresSchaffrath\\Containers\\CeresSchaffrathInfoTabContainer",
-      "name"        : "InfoSchaffrathTab",
+      "name"        : "Info Schaffrath Tab",
       "description" : "Tab für Disclaimer Schaffrath"
     },
     {

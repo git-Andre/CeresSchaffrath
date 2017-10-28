@@ -1,13 +1,13 @@
 {{ component( "Ceres::ItemList.Components.CategoryImageCarousel") }}
 {{ component( "Ceres::ItemList.Components.ItemLazyImg" ) }}
 
-{% set itemList = services.itemLoader.loadForTemplate('CeresSchaffrath::Containers.ItemLists.ItemList1Small', itemLoaderPresets.lastSeenItemsList, {'items': itemsPerPage}).documents %}
+{% set itemList = services.itemLoader.loadForTemplate('Ceres::Containers.ItemLists.ItemList1', itemLoaderPresets.lastSeenItemsList, {'items': itemsPerPage}).documents %}
 
 {% set randomIdentifier = random() %}
 
 <div class="row">
     <div class="col-xs-12 col-lg-12">
-        {% if itemList | length > 8 %}
+        {% if itemList | length > 3 %}
             <div id="list-carousel-{{ randomIdentifier }}" class="list-item-carousel owl-carousel owl-theme owl-single-item">
                 {% for item in itemList %}
 
@@ -47,10 +47,10 @@
             $( "#list-carousel-{{ randomIdentifier }}" ).owlCarousel( {
                                                                           autoHeight: true,
                                                                           dots: true,
-                                                                          items: 4,
+                                                                          items: 3, // 4
                                                                           lazyLoad: false,
-                                                                          loop: false,
-                                                                          margin: 10,
+                                                                          loop: true, // false
+                                                                          margin: 5, // 10
                                                                           mouseDrag: true,
                                                                           nav: true,
                                                                           navClass: [
