@@ -33,7 +33,7 @@
 
                         {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 
-                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 p-x-5">
+                        <li class="col-xs-12 col-sm-6 col-md-4 col-lg-3 p-x-0">
                             {% if not auction %}
                                 {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item, enableCarousel: false, 'tags': item.data.tags, 'showOrderProperties': false } %}
                             {% elseif  auction.id > 0 %}
