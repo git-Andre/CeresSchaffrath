@@ -27,10 +27,7 @@
     "schaffrath"
   ],
   "type"             : "theme",
-  "require"          : [
-    "IO",
-    "Ceres"
-  ],
+  "require"          : [],
   "namespace"        : "CeresSchaffrath",
   "serviceProvider"  : "CeresSchaffrath\\Providers\\CeresSchaffrathServiceProvider",
   "javaScriptFiles"  : [],
