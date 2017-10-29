@@ -3,7 +3,7 @@
 {% set showHeaderNavBar = config("Ceres.header.show_navbars") %}
 {% set configItemName = config("Ceres.item.name") %}
 
-{% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
+{% set auction = auctions.auction.getAuctionForItemId(itemData.variation.itemId) %}
     {% set bidderListLast = auction.bidderList | last %}
     {% set bidderListLength = auction.bidderList | length %}
 
@@ -23,7 +23,8 @@
 
 
         {# ao Var-Dump #}
-        {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'item', 'dumpData': item } %}
+        {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'itemData', 'dumpData': itemData } %}
+        {% include "CeresSchaffrath::VarDump" with { 'testDescription': 'auction', 'dumpData': auction } %}
 
 
         <article class="cmp cmp-product-thumb cmp-product-thumb--grid">
