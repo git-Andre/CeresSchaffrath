@@ -93,7 +93,10 @@
 
         <div class="thumb-content">
             <div class="cat-item-titel-ao">
-                <p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
+                {#<p class="thumb-title">{{ item.data.texts | itemName(1) }}</p>#}{# todo: config...#}
+                <p class="thumb-title"><a href="{{ itemUrl }}">{{ item.data.texts | itemName(1) }}</a></p>
+
+
                 <p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>
             </div>
 
@@ -108,7 +111,7 @@
                     </span>
                     <span class="price">
                         {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }}
-                        *
+                        <sup>*</sup>
                     </span>
                 </div>
 
@@ -117,7 +120,7 @@
             </div>
 
             <span class="vat-porto-info small text-muted">
-                    * {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
+                    <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }} {{ trans("Ceres::Template.itemExclusive") }}
                 <a {% if shippingCat is not empty %} data-toggle="modal" href="#shippingscosts"{% endif %} title="{{ trans("Ceres::Template.itemShippingCosts") }}">{{ trans("Ceres::Template.itemShippingCosts") }}</a>
                 </span>
         </div>

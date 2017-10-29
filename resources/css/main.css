@@ -11521,6 +11521,14 @@ body.menu-is-visible {
   margin-bottom: 0px;
 }
 
+.cmp-product-thumb .thumb-title a:link {
+  color: #282d2f;
+}
+
+.cmp-product-thumb .thumb-title a:hover {
+  color: #daa520;
+}
+
 .cmp-product-thumb .thumb-title-small {
   font-family: "Abel", sans-serif;
   font-size: 1rem;
