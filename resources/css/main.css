@@ -11521,7 +11521,10 @@ body.menu-is-visible {
   margin-bottom: 0px;
 }
 
-.cmp-product-thumb .thumb-title a:link {
+.cmp-product-thumb .thumb-title a:link,
+.cmp-product-thumb .thumb-title a:visited,
+.cmp-product-thumb .thumb-title a:focus,
+.cmp-product-thumb .thumb-title a:active {
   color: #282d2f;
 }
 

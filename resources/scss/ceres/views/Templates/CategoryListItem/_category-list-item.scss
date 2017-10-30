@@ -179,7 +179,10 @@
     line-height: 1.1em;
     min-height: 20px;
     margin-bottom: 0px;
-    a:link {
+    a:link,
+    a:visited,
+    a:focus,
+    a:active {
       color: $gray-darker;
     }
     a:hover {

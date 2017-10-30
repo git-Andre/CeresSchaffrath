@@ -72,7 +72,9 @@
 
             <div class="thumb-content">
                 <div class="cat-item-titel-ao">
-                    <p class="thumb-title-small">{{ item.data.texts | itemName(1) }}</p>{# todo: config...#}
+                    <p class="thumb-title"><a href="{{ itemUrl }}">{{ item.data.texts | itemName(1) }}</a></p>
+
+                    {#<p class="thumb-title-small">{{ item.data.texts | itemName(1) }}</p>#}{# todo: config...#}
                     {#<p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>#}
                 </div>
 
