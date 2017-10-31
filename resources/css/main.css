@@ -11558,7 +11558,6 @@ body.menu-is-visible {
 }
 
 .cmp-product-thumb .thumb-meta .vat-porto-info {
-  display: none;
   white-space: nowrap;
   margin-top: 5px;
 }
