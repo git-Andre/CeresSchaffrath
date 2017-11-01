@@ -54,41 +54,7 @@
         </div>
 
         <!-- STORE SPECIALS -->
-        {% if item.data.item.storeSpecial.id > 0 %}
-
-            {% set storeSpecial = item.data.item.storeSpecial.names.name %}
-
-            <div class="special-tags">
-                {% if  item.data.item.storeSpecial.id == 1 %}
-
-                    {% set storeSpecialColor = 'danger' %}
-                    {% set percent = (1 - item.data.calculatedPrices.default.price / item.data.calculatedPrices.rrp.price) * -100 %}
-
-                    {% if percent <= 0 %}
-                        {% set dezimalcount = config('Ceres.item.storeSpecial') %}
-                        {% set percent = percent | number_format(dezimalcount, ',', '.') %}
-                        {% set storeSpecial = percent ~"%" %}
-                    {% endif %}
-
-                {% elseif  item.data.item.storeSpecial.id == 2 %}
-
-                    {% set storeSpecialColor = 'primary' %}
-
-                {% elseif  item.data.item.storeSpecial.id == 3 %}
-
-                    {% set storeSpecialColor = 'success' %}
-
-                {% endif %}
-
-                <span class="tag bg-{{ storeSpecialColor }}">
-                    {{ storeSpecial }}
-                </span>
-
-            </div>
-        {% endif %}
-
         <!-- ./STORE SPECIALS -->
-
         <!-- Auction Banner -->
         <div class="special-tags">
             {% if auction.tense == 'future' %}
@@ -106,56 +72,56 @@
         {#Auktion ########################################### #}
         {#{% if auction.id > 0 %}#}
 
-        <div class="thumb-content">
-            <div class="cat-item-titel-ao">
-                <p class="thumb-title"><a href="{{ itemUrl }}">{{ item.data.texts | itemName(1) }}</a></p>
+            <div class="thumb-content">
+                <div class="cat-item-titel-ao">
+                    <p class="thumb-title"><a href="{{ itemUrl }}">{{ item.data.texts | itemName(1) }}</a></p>
 
-                {#<p class="thumb-title-small">{{ item.data.texts | itemName(1) }}</p>#}{# todo: config...#}
-                {#<p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>#}
-            </div>
+                    {#<p class="thumb-title-small">{{ item.data.texts | itemName(1) }}</p>#}{# todo: config...#}
+                    {#<p class="thumb-title small">{{ item.data.texts | itemName(2) }}</p>#}
+                </div>
 
-            <div class="thumb-meta">
+                <div class="thumb-meta">
 
-                <div class="prices">
-                    {% if auction.tense == 'future' %}
-                        <span>
+                    <div class="prices">
+                        {% if auction.tense == 'future' %}
+                            <span>
                              <h4 class="m-r-1"><i class="fa fa-lg fa-pencil-square-o text-warning" aria-hidden="true"></i></h4>
                            </span>
-                        <span class="price">
+                            <span class="price">
                                 {{ auction.startPrice | formatMonetary('EUR') }} <sup>*</sup>
                             </span>
-                    {% elseif auction.tense == 'present' %}
-                        <span>
+                        {% elseif auction.tense == 'present' %}
+                            <span>
                             <h4 class="m-r-1"><i class="fa fa-lg fa-gavel text-danger"
                                         aria-hidden="true"></i></h4>
                            </span>
-                        <span class="price">
+                            <span class="price">
                                 {% if bidderListLength > 1 %}
                                     {{ bidderListLast.bidPrice | formatMonetary('EUR') }} <sup>*</sup>
                                 {% else %}
                                     {{ auction.startPrice | formatMonetary('EUR') }} <sup>*</sup>
                                 {% endif %}
                             </span>
-                    {% else %}
-                        <span>
+                        {% else %}
+                            <span>
                             <h4 class="m-r-1"><i class="fa fa-lock"
                                         aria-hidden="true"></i></h4>
                            </span>
-                        <span class="price">
+                            <span class="price">
                                 {{ bidderListLast.bidPrice | formatMonetary('EUR') }} <sup>*</sup>
                             </span>
-                    {% endif %}
+                        {% endif %}
 
+                    </div>
+                </div>
+
+                <div class="thumb-legal vat-porto-info small text-muted tiny">
+                    <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}
+                    <br>
+                    <span class="m-l-5">{{ trans("Ceres::Template.itemExclusive") }}
+                        {{ trans("CeresSchaffrath::Template.surcharge") }}</span>
                 </div>
             </div>
-
-            <div class="thumb-legal vat-porto-info small text-muted tiny">
-                <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}
-                <br>
-                <span class="m-l-5">{{ trans("Ceres::Template.itemExclusive") }}
-                    {{ trans("CeresSchaffrath::Template.surcharge") }}</span>
-            </div>
-        </div>
         {#{% endif %}#}
         <!-- ./ITEM DETAILS  -->
     </div>
