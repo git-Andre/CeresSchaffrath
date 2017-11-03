@@ -10,9 +10,6 @@
 {% set columnsPerPage = config('Ceres.pagination.columnsPerPage') %}
 {% set itemsPerPage = rowsPerPage[0] * columnsPerPage %}
 
-    {#{% set bidderListLast = auction.bidderList | last %}#}
-    {#{% set bidderListLength = auction.bidderList | length %}#}
-
 {% if request.get("items") %}
     {% set itemsPerPage = request.get("items") %}
 {% endif %}
@@ -155,6 +152,7 @@
         {"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         ","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}
         /search?query={search_term}","query-input": "required name=search_term"}}
+
     </script>
 
     {% if page-1 > 0 %}

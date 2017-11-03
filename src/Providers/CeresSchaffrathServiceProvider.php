@@ -51,13 +51,13 @@
                 return false;
             }, self::EVENT_LISTENER_PRIORITY);
 
-// provide template to use for Category items
-            $eventDispatcher -> listen('IO.tpl.category.item', function (TemplateContainer $container, $templateData) {
-                $container -> setTemplate("CeresSchaffrath::Category.Item.CategoryItem");
-
-                return false;
-            }, self::EVENT_LISTENER_PRIORITY);
-
+//// provide template to use for Category items
+//            $eventDispatcher -> listen('IO.tpl.category.item', function (TemplateContainer $container, $templateData) {
+//                $container -> setTemplate("CeresSchaffrath::Category.Item.CategoryItem");
+//
+//                return false;
+//            }, self::EVENT_LISTENER_PRIORITY);
+//
 //            Ceres::Category.Item.Partials.CategoryListItem
 
             $eventDispatcher -> listen('IO.init.templates', function (Partial $partial) {
