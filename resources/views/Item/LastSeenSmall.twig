@@ -7,9 +7,9 @@
 
             <li class="col-xs-12 col-sm-6 col-md-4 col-lg-{% if showHeaderNavBar == "side" or showHeaderNavBar == "both" %}4{% else %}3{% endif %}">
                 {% if not auction %}
-                    {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemSmall" with { 'item': item } %}
+                    {% include "Ceres::Category.Item.Partials.CategoryListItemSmall" with { 'item': item } %}
                 {% elseif  auction.id > 0 %}
-                    {% include "CeresSchaffrath::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction } %}
+                    {% include "Ceres::Category.Item.Partials.CategoryListItemWithAuctionSmall" with { 'item': item, 'auction': auction } %}
                 {% endif %}
             </li>
         {% endfor %}
