@@ -64,7 +64,7 @@
             <!-- ITEM DETAIL -->
             <div class="col-md-5 single-rightside m-t-1">
 
-                <h1 class="h3 title">
+                <h1 class="h2 title">
                     {{ item.documents[0].data.texts | itemName(1) }}
                 </h1>
 
@@ -208,7 +208,8 @@
                             role="tabpanel">
                         <div class="m-y-2">
                             <h2 class="m-y-1">{{ itemMain.texts.name2 }}</h2>
-                            <h6 class="m-y-1">{{ itemMain.texts.name3 }}</h6>
+                            <h4 class="m-y-1">{{ itemMain.texts.name3 }}</h4>
+                            <hr style="margin: 20px 15rem;">
                             {{ item.documents[0].data.texts.description|raw }}
                         </div>
 
