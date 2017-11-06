@@ -11566,10 +11566,6 @@ body.menu-is-visible {
   margin-top: 5px;
 }
 
-.cmp-product-thumb .thumb-meta .price-info-ao {
-  margin: 0 20px 0 0;
-}
-
 .cmp-product-thumb .thumb-legal {
   margin-top: 1rem;
 }
@@ -11706,15 +11702,6 @@ body.menu-is-visible {
   }
 }
 
-@media (max-width: 1199px) {
-  .cmp-product-thumb .auction-category-item-special {
-    top: 13.3rem;
-  }
-  .cmp-product-thumb .price-info-ao {
-    margin: 0 10px 0 0;
-  }
-}
-
 @media (min-width: 992px) {
   .cmp-product-thumb .btn-group {
     bottom: .8rem;
@@ -11726,6 +11713,18 @@ body.menu-is-visible {
   .cmp-product-thumb:hover .btn-group {
     transition: all .3s ease;
     opacity: 1;
+  }
+  .cmp-product-thumb .price-info-ao {
+    margin: 0 20px 0 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .cmp-product-thumb .auction-category-item-special {
+    top: 13.3rem;
+  }
+  .cmp-product-thumb .price-info-ao {
+    margin: 0 10px 0 0;
   }
 }
 
