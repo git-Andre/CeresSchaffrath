@@ -1,6 +1,7 @@
 // ao
 $brand-primary-dark: darken($brand-primary, 16%);
 $menu-list-width: auto;
+$menu-big-menu-li-bg-alarm: #c50000; //$brand-primary-dark;
 
 /* settings */
 // mobile
@@ -94,11 +95,17 @@ body.menu-is-visible {
     position: relative;
     background-color: $brand-primary-gradient; // $menu-bg-lg;
 
+    > li {
+      &:last-of-type {
+        background-color: $menu-big-menu-li-bg-alarm;
+      }
+    }
+
     li {
       width: $menu-list-width;
       background-color: $brand-primary;
       margin: 1px auto;
-      min-width: 8rem;
+      min-width: 7rem;
       cursor: pointer;
       border-right: 1px solid rgba(255, 255, 255, 0.6);
 

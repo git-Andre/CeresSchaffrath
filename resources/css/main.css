@@ -10863,11 +10863,15 @@ body.menu-is-visible {
   background-color: linear-gradient(42deg, #daa520, #c9890f, #daa520, #ffd700, #c9890f, #daa520);
 }
 
+#mainNavbarCollapsable ul.mainmenu > li:last-of-type {
+  background-color: #c50000;
+}
+
 #mainNavbarCollapsable ul.mainmenu li {
   width: auto;
   background-color: #daa520;
   margin: 1px auto;
-  min-width: 8rem;
+  min-width: 7rem;
   cursor: pointer;
   border-right: 1px solid rgba(255, 255, 255, 0.6);
 }
