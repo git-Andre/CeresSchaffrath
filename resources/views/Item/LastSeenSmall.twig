@@ -1,7 +1,7 @@
 <div>
 
     <ul id="twig-rendered-item-list" class="product-list row grid">
-        {% for key, item in itemList if (key < 6) %}
+        {% for key, item in itemList if (key < 8) %}
 
             {% set auction = auctions.auction.getAuctionForItemId(item.data.variation.itemId) %}
 

@@ -60,13 +60,13 @@
     background-color: rgba(204, 48, 46, .5);
     display: block;
     position: absolute;
-    top: 222px;
+    top: 16.36rem;
     right: 17px;
     bottom: auto;
     left: auto;
     padding: 0.4rem 0.4rem 0rem 0.4rem;
-    -webkit-transform: skewY(-5deg); /* Safari */
-    transform: skewY(-5deg); /* Standard syntax */
+    -webkit-transform: skewY(-4deg); /* Safari */
+    transform: skewY(-4deg); /* Standard syntax */
     box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, .2);
 
     .auction-special-tag {
@@ -221,6 +221,9 @@
       white-space: nowrap;
       margin-top: 5px;
     }
+    .price-info-ao {
+      margin: 0 20px 0 0;
+    }
 
   }
   .thumb-legal {
@@ -311,6 +314,7 @@
     .category-list-view-port {
       display: inline;
     }
+
   }
 
   @include media-breakpoint-up(sm) {
@@ -374,7 +378,33 @@
     }
   }
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-down(lg) {
+    .auction-category-item-special {
+      //z-index: 100;
+      //font-family: $font-family-heading;
+      //color: $brand-danger;
+      //background-color: rgba(204, 48, 46, .5);
+      //display: block;
+      //position: absolute;
+      top: 13.3rem;
+      //right: 17px;
+      //bottom: auto;
+      //left: auto;
+      //padding: 0.4rem 0.4rem 0rem 0.4rem;
+      //-webkit-transform: skewY(-5deg); /* Safari */
+      //transform: skewY(-5deg); /* Standard syntax */
+      //box-shadow: 3px 2px 5px 0 rgba(0, 0, 0, .2);
+      //
+      //.auction-special-tag {
+      //  display: block;
+      //  background-color: rgba(255, 255, 255, .6);
+      //  padding: .2em .8em .2rem;
+      //  font-size: 2rem;
+      //}
+    }
+    .price-info-ao {
+      margin: 0 10px 0 0;
+    }
 
   }
 
