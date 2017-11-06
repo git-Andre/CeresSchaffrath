@@ -13398,4 +13398,18 @@ a:hover {
   color: #020260;
 }
 
+.agb-auction-head {
+  margin: 3rem 0 1rem;
+}
+
+.agb-head-2 {
+  margin: 2rem 0 0;
+  font-size: 1.33rem;
+}
+
+.agb-text {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.9rem;
+}
+
 /*# sourceMappingURL=main.css.map */

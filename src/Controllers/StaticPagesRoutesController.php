@@ -7,7 +7,7 @@
 
     class StaticPagesRoutesController extends Controller {
 
-        const CAT_HILFE = 164;
+        const CAT_HILFE = 164; // todo: config...
         const CAT_KONTAKT = 449;
         const CAT_VERSAND = 168;
         const CAT_ZAHLUNG = 166;

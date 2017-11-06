@@ -63,6 +63,7 @@
 .text-right {
   text-align: right !important;
 }
+
 .text-center {
   text-align: center !important;
 }
@@ -273,6 +274,7 @@ a:hover {
 .ao-nach-oben {
   transform: translateY(-119px);
 }
+
 .vat-ao {
   line-height: 1.4;
   margin-top: 0;
@@ -280,11 +282,20 @@ a:hover {
   color: #020260;
 }
 
-//
-//.countDown {
-//   color: $brand-primary;
-//  //font-family: "Lato", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
-//  //font-size: 1.05rem;
-//  font-weight: bold;
-//}
+// AGBs
+
+.agb-auction-head {
+  margin: 3rem 0 1rem;
+}
+
+.agb-head-2 {
+  margin: 2rem 0 0;
+  font-size: 1.33rem;
+}
+
+.agb-text {
+  margin: 0.5rem 0 1rem;
+  font-size: 0.9rem;
+
+}
 
