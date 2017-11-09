@@ -35,6 +35,6 @@
 
 
 
-//            $router -> get('test', 'CeresSchaffrath\Controllers\StaticPagesRoutesController@showTest');
+            $router -> get('test', 'CeresSchaffrath\Controllers\StaticPagesRoutesController@showTest');
         }
     }
