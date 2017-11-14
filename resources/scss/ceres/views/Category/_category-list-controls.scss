@@ -155,7 +155,7 @@
         display: block;
         color: $gray-dark;
         padding: .75rem 15px;
-        font-size: 1rem;
+        font-size: 1.0rem;
         cursor: pointer;
         &:hover {
           color: $gray-darker;
@@ -172,7 +172,7 @@
         ul {
           li {
             a {
-              padding-left: 1.5rem;
+              padding-left: 2.0rem;
             }
             ul li {
               a {

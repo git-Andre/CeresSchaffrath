@@ -12949,7 +12949,7 @@ body.menu-is-visible {
   display: block;
   color: #4D4F4D;
   padding: .75rem 15px;
-  font-size: 1rem;
+  font-size: 1.0rem;
   cursor: pointer;
 }
 
@@ -12967,7 +12967,7 @@ body.menu-is-visible {
 }
 
 .sidebar-categories ul li.active ul li a {
-  padding-left: 1.5rem;
+  padding-left: 2.0rem;
 }
 
 .sidebar-categories ul li.active ul li ul li a {
@@ -13409,8 +13409,8 @@ a:hover {
 
 .agb-text {
   margin: 0.33rem 0 1rem;
-  font-size: 0.85rem;
-  line-height: 1rem;
+  font-size: 1rem;
+  line-height: 1.4rem;
 }
 
 /*# sourceMappingURL=main.css.map */
