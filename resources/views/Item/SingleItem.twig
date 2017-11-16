@@ -103,7 +103,7 @@
                 {% endif %}
 
                 {#Auction start ---------- #}
-                {% if item.documents[0].data.defaultCategories[0].id == config("PluginAuctions.global.liveAuctionCategoryId") %}
+                {% if item.documents[0].data.defaultCategories[0].id == config("PluginAuctions.global.liveAuctionCategoryId") || item.documents[0].data.defaultCategories[0].id == 595 %} {# test #}
 
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data ) }}
 
