@@ -1,20 +1,35 @@
 //header scss
-.top-bar {
+
+.top-bar{
   position: fixed;
   width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
 
   z-index: $zIndex-6;
-  color: $gray-dark;
+  color: $top-bar-color;
   background-color: $top-bar-bg;
-  max-width: 1200px;
-  margin: 0 auto;
-  a {
+  box-shadow: 0 0 7px 0 rgba(0,0,0,.5);
+  a{
     text-decoration: none;
-    transition: all 300ms;
     color: $top-bar-color;
   }
+
+
+//.top-bar {
+//  position: fixed;
+//  width: 100%;
+//  left: 50%;
+//  transform: translateX(-50%);
+//
+//  z-index: $zIndex-6;
+//  color: $gray-dark;
+//  background-color: $top-bar-bg;
+//  max-width: 1200px;
+//  margin: 0 auto;
+//  a {
+//    text-decoration: none;
+//    transition: all 300ms;
+//    color: $top-bar-color;
+//  }
   .controls-list {
     margin-bottom: 0;
     font-size: 0;
