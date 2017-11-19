@@ -114,10 +114,12 @@
       display: inline-block;
     }
     .filter-toggle {
-      top: 45%;
       transform: translateY(0%);
       position: absolute;
+      top: 0.9rem;
       right: 5em;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+      border-radius: 0.1rem;
       background-color: $white;
     }
   }

@@ -17,39 +17,59 @@
 
 
  {% block PartialHead %}
-    <meta name="description" content="{{ item.documents[0].data.texts.metaDescription }}">
-    <meta name="keywords" content="{{ item.documents[0].data.texts.keywords | json_encode }}">
-
+     <meta name="description" content="{{ item.documents[0].data.texts.metaDescription }}">
+     <meta name="keywords" content="{{ item.documents[0].data.texts.keywords | json_encode }}">
+    
      <meta property="og:title" content="{{ item.documents[0].data.texts | itemName(configItemName) }}"/>
      <meta property="og:type" content="article"/>
      <meta property="og:url"
              content="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}"/>
      <meta property="og:image" content="{{ item.documents[0].data.images.all[0].url }}"/>
      <meta property="og:description" content="{{ item.documents[0].data.texts.shortDescription }}"/>
-
+    
      <link rel="canonical"
              href="{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}{{ item.documents[0].data | itemURL }}">
-     <script type="application/ld+json"> {"@context":"http://schema.org/","@type":"Product","name":"{{ item.documents[0].data.texts | itemName(configItemName) }} ","category":"item.","releaseDate":"{{ item.documents[0].data.variation.releasedAt }} ","image":"{{ item.documents[0].data.images.all[0].urlPreview }}","identifier":"{{ item.documents[0].data.variation.id }} ","description":"{{ item.documents[0].data.texts.description }} ","disambiguatingDescription":"{{ item.documents[0].data.texts.shortDescription }} ","manufacturer":{"@type":"Organization","name":"{{ item.documents[0].data.item.manufacturer.externalName }} "},"model":{"@type":"ProductModel","isVariantOf":"{{ item.documents[0].data.item.id }} ","model":"{{ item.documents[0].data.variation.model }} "},"offers":{"@type":"Offer","priceCurrency":"{{ item.documents[0].data.calculatedPrices.default.currency }} ","price":"{{ item.documents[0].data.calculatedPrices.default.price }} ","availability":"{{ item.documents[0].data.variation.availability.names.name }} ","itemCondition":"{{ item.documents[0].data.item.condition.name }} ","serialNumber":"{{ item.documents[0].data.variation.number }} "},"depth":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.lengthMM }} "},"width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }} "},"height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }} "},"weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}</script>
+     <script type="application/ld+json">
+          {"@context":"http://schema.org/","@type":"Product","name":"{{ item.documents[0].data.texts | itemName(configItemName) }}",
+          "category":"item.","releaseDate":"{{ item.documents[0].data.variation.releasedAt }}",
+          "image":"{{ item.documents[0].data.images.all[0].urlPreview }}","identifier":"{{ item.documents[0].data.variation.id }}",
+          "description":"{{ item.documents[0].data.texts.description }}",
+          "disambiguatingDescription":"{{ item.documents[0].data.texts.shortDescription }}",
+          "manufacturer":{"@type":"Organization","name":"{{ item.documents[0].data.item.manufacturer.externalName }}"},
+          "model":{"@type":"ProductModel","isVariantOf":"{{ item.documents[0].data.item.id }}",
+          "model":"{{ item.documents[0].data.variation.model }}"},
+          "offers":{"@type":"Offer","priceCurrency":"{{ item.documents[0].data.calculatedPrices.default.currency }}",
+          "price":"{{ item.documents[0].data.calculatedPrices.default.price }}",
+          "availability":"{{ item.documents[0].data.variation.availability.names.name }}",
+          "itemCondition":"{{ item.documents[0].data.item.condition.name }}",
+          "serialNumber":"{{ item.documents[0].data.variation.number }}"},
+          "depth":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.lengthMM }}"},
+          "width":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.widthMM }}"},
+          "height":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.heightMM }}"},
+          "weight":{"@type":"QuantitativeValue","value":"{{ item.documents[0].data.variation.weightG }}"}}
 
+     
+     </script>
+    
      <title>{{ item.documents[0].data.texts | itemName(configItemName) }}
          | {{ config("Ceres.header.company_name") }}</title>
  {% endblock %}
 
 {% block PageBody %}
-
+    
     {#{{ services.lastSeen.setLastSeenMaxCount(config("Ceres.item.lists.last_seen_number")) }}#}
-
+    
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
     {{ component( "Ceres::Item.Components.AddToWishList" ) }}
     {{ component( "Ceres::Item.Components.OrderProperties" ) }}
     {{ component( "Ceres::Item.Components.GraduatedPrices" ) }}
     {{ component( "Ceres::Basket.Components.AddToBasket" ) }}
-
+    
     <resource name="currentVariation" :data="{{ item | json_encode() }}"></resource>
-
+    
     {{ LayoutContainer.show("CeresSchaffrath::SingleItem.BeforeImage", item.documents[0].data ) }}
-
+    
     <div class="single container-max page-content">
         <div class="row m-t-3">
             <div class="col-md-7 single-leftside">
@@ -60,29 +80,29 @@
                     </div>
                 </div>
             </div>
-
+            
             <!-- ITEM DETAIL -->
             <div class="col-md-5 single-rightside m-t-1">
-
+                
                 <h1 class="h2 title">
                     {{ item.documents[0].data.texts | itemName(1) }}
                 </h1>
-
+                
                 <h2 class="h5 title">
                     <span v-resource-bind:currentVariation="documents.0.data.variation.name"
                             v-resource-if:currentVariation="documents[0].data.variation.name != ''">
                         {{ item.documents[0].data.variation.name }}
                     </span>
-
+                    
                     <span v-resource-if:currentVariation="documents[0].data.variation.name == ''">
                         {{ item.documents[0].data.texts | itemName(2) }}
                     </span>
                 </h2>
-
+                
                 {% if ('item.shortDescription' in itemData or 'all' in itemData) and item.documents[0].data.texts.shortDescription != '' %}
                     <p class="single-description">{{ item.documents[0].data.texts.shortDescription }}</p>
                 {% endif %}
-
+                
                 <hr>
                 {# ArtikelNummern #}
                 <div class="m-t-0 m-b-2">
@@ -91,7 +111,7 @@
                         <span>{{ item.documents[0].data.item.id }}</span>
                     </span>
                 </div>
-
+                
                 {#Variationen#}
                 {% if variations is not null %}
                     <div class="row m-b-1">
@@ -101,15 +121,15 @@
                                 preselect="{{ item.documents[0].data.variation.id }}"></variation-select>
                     </div>
                 {% endif %}
-
+                
                 {#Auction start ---------- #}
                 {% if item.documents[0].data.defaultCategories[0].id == config("PluginAuctions.global.liveAuctionCategoryId") or item.documents[0].data.defaultCategories[0].id == 595 %} {# test #}
-
+                    
                     {{ LayoutContainer.show("Ceres::SingleItem.BeforePrice", item.documents[0].data ) }}
-
+                
                 {% else %}
-                {#./Auction end#}
-
+                    {#./Auction end#}
+                    
                     <div class="row">
                         <order-properties template="#vue-order-properties"
                                 v-resource-push:item
@@ -117,9 +137,9 @@
                                 resource="currentVariation"
                                 v-resource-if:currentVariation="documents[0].data.filter.isSalable"></order-properties>
                     </div>
-
+                    
                     <graduated-prices template="#vue-graduated-prices"></graduated-prices>
-
+                    
                     {#Preise#}
                     <span class="price h1">
                         <span v-item-total-price content="{{ item.documents[0].data.calculatedPrices.default.price }}">
@@ -128,32 +148,32 @@
                         <sup>*</sup>
                         <span content="{{ item.documents[0].data.calculatedPrices.default.currency }}"></span>
                     </span>
-
+                    
                     {#{{ LayoutContainer.show("Ceres::SingleItem.AfterPrice", item.documents[0].data) }}#}
-
+                    
                     <span class="availability tag availability_{{ item.documents[0].data.variation.availability.id }}"
                             v-availability-class:currentVariation>
                         <span v-resource-bind:currentVariation="documents.0.data.variation.availability.names.name">
                             {{ item.documents[0].data.variation.availability.names.name }}
                         </span>
                     </span>
-
+                    
                     <div class="row m-y-1">
-
+                        
                         {{ LayoutContainer.show("Ceres::SingleItem.BeforeAddToBasket", item.documents[0].data) }}
-
+                        
                         <add-to-basket template="#vue-add-to-basket"
                                 v-resource-if:currentVariation="documents[0].data.filter.isSalable"
                                 v-resource-push:item
                                 data-accessor="true"
                                 resource="currentVariation"
                                 :show-quantity="true"></add-to-basket>
-
+                        
                         {{ LayoutContainer.show("Ceres::SingleItem.AfterAddToBasket", item.documents[0].data ) }}
                     </div>
-
+                
                 {% endif %}
-
+                
                 {# Wunschliste--------------- #}
                 {% if "wish-list" in enabledRoutes or "all" in enabledRoutes %}
                     <div class="row">
@@ -162,13 +182,13 @@
                                 :is-active="{{ item.documents[0].isInWishListVariation | json_encode() }}"></add-to-wish-list>
                     </div>
                 {% endif %}
-
+                
                 <!-- ./ITEM DETAIL -->
-
+                
                 {#<hr>#}
-
+                
                 {{ LayoutContainer.show("Ceres::SingleItem.AdditionalContentAfterAddToBasket", item.documents[0].data) }}
-
+                
                 {# Hinweis Versandkosten #}
                 <div class="row container m-b-3">
                     <span class="vat small text-muted">
@@ -177,30 +197,30 @@
                     </span>
                 </div>
             </div>
-
+            
             <!-- ITEM DESCRIPTION -->
             <div class="col-md-7 m-y-3">
-
+                
                 <ul class="nav nav-tabs" role="tablist">
-
+                    
                     <li class="nav-item">
                         <a class="nav-link active"
                                 data-toggle="tab"
                                 href="#details-{{ item.documents[0].data.variation.id }}"
                                 role="tab">{{ trans("Ceres::Template.itemDescription") }}</a>
                     </li>
-
+                    
                     <li class="nav-item">
                         <a class="nav-link"
                                 data-toggle="tab"
                                 href="#assessments-details"
                                 role="tab">{{ trans("Ceres::Template.itemMoreDetails") }}</a>
                     </li>
-
+                    
                     {% if lang == 'de' %}
                         {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabs") }}
                     {% endif %}
-
+                
                 </ul>
                 {# Details #}
                 <div class="tab-content">
@@ -212,9 +232,9 @@
                             <hr style="margin: 20px 15rem;">
                             {{ item.documents[0].data.texts.description|raw }}
                         </div>
-
+                        
                         {#Merkmale#}
-                        {% if itemMain.properties is not empty and itemMain.properties[0].selection[0].name != ''%}
+                        {% if itemMain.properties is not empty and itemMain.properties[0].selection[0].name != '' %}
                             <div class="m-y-1">
                                 <dl class="itemDefList">
                                     {% for prop in itemMain.properties %}
@@ -227,37 +247,37 @@
                             </div>
                         {% endif %}
                         {#{% if itemMain.properties is not empty or itemMain.item.free1 > 4 %}#}
-                            {#<div class="m-y-1">#}
-                                {#<dl class="itemDefList">#}
-                                    {#{% for prop in itemMain.properties %}#}
-                                        {#{% if prop.selection[0].name != '' %}#}
-                                            {#<dt>{{ prop.property.names[0].name }}</dt>#}
-                                            {#<dd>{{ prop.selection[0].name }}</dd>#}
-                                        {#{% endif %}#}
-                                    {#{% endfor %}#}
-                                    {#Free Felder#}
-                                    {#{% if itemMain.item.free1 > '4' %}#}
-
-                                        {#<dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>#}
-                                        {#<dd>{{ itemMain.item.free1 }} g</dd>#}
-
-                                        {#{% if itemMain.item.free2 != '' or itemMain.item.free2 != '0' %}#}
-                                            {#<dt>{{ trans("CeresSchaffrath::Template.free2") }}</dt>#}
-                                            {#<dd>{{ itemMain.item.free2 }} mm</dd>#}
-                                        {#{% endif %}#}
-                                    {#{% endif %}#}
-
-                                {#</dl>#}
-                            {#</div>#}
+                        {#<div class="m-y-1">#}
+                        {#<dl class="itemDefList">#}
+                        {#{% for prop in itemMain.properties %}#}
+                        {#{% if prop.selection[0].name != '' %}#}
+                        {#<dt>{{ prop.property.names[0].name }}</dt>#}
+                        {#<dd>{{ prop.selection[0].name }}</dd>#}
+                        {#{% endif %}#}
+                        {#{% endfor %}#}
+                        {#Free Felder#}
+                        {#{% if itemMain.item.free1 > '4' %}#}
+                        
+                        {#<dt>{{ trans("CeresSchaffrath::Template.free1") }}</dt>#}
+                        {#<dd>{{ itemMain.item.free1 }} g</dd>#}
+                        
+                        {#{% if itemMain.item.free2 != '' or itemMain.item.free2 != '0' %}#}
+                        {#<dt>{{ trans("CeresSchaffrath::Template.free2") }}</dt>#}
+                        {#<dd>{{ itemMain.item.free2 }} mm</dd>#}
+                        {#{% endif %}#}
+                        {#{% endif %}#}
+                        
+                        {#</dl>#}
+                        {#</div>#}
                         {#{% endif %}#}
                     </div>
-
+                    
                     <div class="tab-pane m-b-3" id="data-{{ item.documents[0].data.variation.id }}" role="tabpanel">
                         <div class="m-y-2">
                             {{ item.documents[0].data.texts.technicalData|raw }}
                         </div>
                     </div>
-
+                    
                     <div class="tab-pane m-b-3" id="assessments-details" role="tabpanel">
                         <div class="m-y-2">
                             <table class="table table-striped table-hover table-sm">
@@ -275,35 +295,35 @@
                                 {#<td>{{ trans("Ceres::Template.itemNew") }}</td>#}
                                 {#</tr>#}
                                 {#{% endif %}#}
-
+                                
                                 {% if 'item.age_rating' in itemData or 'all' in itemData %}
                                     <tr>
                                         <td>{{ trans("Ceres::Template.itemAge") }}</td>
                                         <td>{{ trans("Ceres::Template.itemFSK", {"age": item.documents[0].data.item.ageRestriction }) }}</td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if ('item.external_id' in itemData or 'all' in itemData) %}
                                     <tr v-resource-if:currentVariation="documents[0].data.variation.externalId != ''">
                                         <td>{{ trans("Ceres::Template.itemExternalVariationId") }}</td>
                                         <td v-resource-bind:currentVariation="documents.0.data.variation.externalId">{{ item.documents[0].data.variation.externalId }}</td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if ('item.variation_model' in itemData or 'all' in itemData) %}
                                     <tr v-resource-if:currentVariation="documents[0].data.variation.model != ''">
                                         <td>{{ trans("Ceres::Template.itemModel") }}</td>
                                         <td v-resource-bind:currentVariation="documents.0.data.variation.model">{{ item.documents[0].data.variation.model }}</td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if ('item.manufacturer' in itemData or 'all' in itemData) and item.documents[0].data.item.manufacturer.externalName != '' %}
                                     <tr>
                                         <td>{{ trans("CeresSchaffrath::Template.itemManufacturer") }}</td>
                                         <td>{{ item.documents[0].data.item.manufacturer.externalName }}</td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if ('item.producerCountry' in itemData or 'all' in itemData) and item.documents[0].data.item.producingCountryId != '' %}
                                     {% set country = services.country.getCountryName(item.documents[0].data.item.producingCountryId) %}
                                     <tr>
@@ -311,14 +331,14 @@
                                         <td>{{ country }}</td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if 'item.variationBase_content' in itemData or 'all' in itemData %}
                                     <tr>
                                         <td>{{ trans("Ceres::Template.itemContent") }}</td>
                                         <td>{{ item.documents[0].data.unit.content|formatDecimal(0) }} {{ item.documents[0].data.unit.names.name }}</td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if ('item.weightG' in itemData or 'all' in itemData) and item.documents[0].data.variation.weightG != '' %}
                                     <tr v-resource-if:currentVariation="documents[0].data.variation.weightG != ''">
                                         <td>{{ trans("Ceres::Template.itemWeight") }}</td>
@@ -327,7 +347,7 @@
                                         </td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if ('item.weightNetG' in itemData or 'all' in itemData) and item.documents[0].data.variation.weightNetG != '' %}
                                     <tr v-resource-if:currentVariation="documents[0].data.variation.weightNetG != ''">
                                         <td>{{ trans("Ceres::Template.itemNetWeight") }}</td>
@@ -336,7 +356,7 @@
                                         </td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if ('item.variation_dimensions' in itemData or 'all' in itemData) %}
                                     <tr>
                                         <td>{{ trans("Ceres::Template.itemDimensions") }}</td>
@@ -350,7 +370,7 @@
                                         </td>
                                     </tr>
                                 {% endif %}
-
+                                
                                 {% if ('item.customs_tariff_number' in itemData or 'all' in itemData) and item.documents[0].data.item.customsTariffNumber != '' %}
                                     <tr>
                                         <td>{{ trans("Ceres::Template.itemCustomsTariffNumber") }}</td>
@@ -361,22 +381,22 @@
                             </table>
                         </div>
                     </div>
-
+                    
                     {#wenn Deutsch dann Inhalt für Info-Tab#}
                     {% if lang == 'de' %}
                         {{ LayoutContainer.show("Ceres::SingleItem.AddDetailTabsContent") }}
                     {% endif %}
-
+                    
                     {#Latest items                    #}
-
+                    
                     {{ LayoutContainer.show("Ceres::SingleItem.ItemListContainer", item.documents[0].data ) }}
                 </div>
             </div>
         </div>
         <!-- ./ITEM DESCRIPTION -->
-
+        
         {{ LayoutContainer.show("Ceres::SingleItem.FeedbackContainer", item) }}
-
+    
     </div>
 
 {% endblock %}

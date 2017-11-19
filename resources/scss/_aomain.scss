@@ -102,10 +102,10 @@
 
 // von Homepage
 
-.row {
-  margin-left: -15px;
-  margin-right: -15px;
-}
+//.row {
+//  margin-left: -15px;
+//  margin-right: -15px;
+//}
 
 .mt-xs-0_5 {
   margin-top: 6px;
@@ -254,14 +254,15 @@ a:hover {
   font-family: "Abel", sans-serif;
 }
 
-// Auswahlbox 'Land'
+// Auswahlbox 'Land'...  SUCHEN!!
 
-.custom-select {
-  margin-top: 20px;
-  border: 0px;
-}
+//.custom-select {
+//  margin-top: 20px;
+//  border: 0px;
+//}
 
 // Helper
+
 
 .ao-nach-oben {
   transform: translateY(-119px);
@@ -292,3 +293,6 @@ a:hover {
 
 }
 
+.list-controls-inner {
+  min-height: 68.375px;
+}

@@ -8,13 +8,11 @@
 
     .auction-list-back {
       background-color: $gray-ao;
-      //display: flex;
-      //align-items: center;
     }
 
     .auction-list-image {
-      padding: 5px;
-      margin-top: -1px;
+      padding: 4px 3px 0px;
+      margin-top: -5px;
     }
 
     .auction-list-special {
@@ -31,22 +29,41 @@
     }
 
     .auction-list-content {
-      margin: 2.5rem 0rem 0rem;
+      margin: 1.0rem 0rem 0rem;
 
       .auction-list-title-block {
         margin: 0px 0px 0px 0px;
 
         .auction-list-thumb-title {
           font-size: 1.5rem;
-          margin-bottom: 1rem;
+          //margin-bottom: 0.1rem;
         }
         .auction-list-thumb-title-small {
           font-size: 1rem;
+          margin-bottom: 0.1rem;
+        }
+        .auction-list-bidderinfos {
+          font-family: $font-family-heading;
+          line-height: 0.85rem;
+
+          .auction-list-bidderinfos-dt {
+            width: 33%;
+            float: left;
+            font-size: 0.85rem;
+            font-weight: bold;
+          }
+          .auction-list-bidderinfos-dd {
+            font-size: 1rem;
+
+            .auction-list-deadline {
+              margin: 0 5px 0 20px;
+            }
+          }
         }
       }
 
       .auction-list-bid-block {
-        margin: 0px 0px 0px 0px;
+        margin: 1.33rem 0px 0px 0px;
 
         .auction-list-bid-text {
           margin: 0px 0px 0px 0px;
@@ -54,7 +71,7 @@
         }
         .auction-list-price {
           font-size: 1.66rem;
-          margin: 1rem 0 0.5rem;
+          margin: 1rem 0 0.66rem;
 
           .auction-list-price-star {
             font-size: 1.0rem;
@@ -64,6 +81,7 @@
 
         .auction-list-porto {
           margin: 0 0.5rem 0 0;
+          font-size: 0.75rem;
         }
       }
     }
@@ -74,7 +92,6 @@
   float: right;
   margin: -0.66rem 0 0 0.66rem;
 }
-
 
 .auction-list-thumb-fluid {
   border: 5px solid white;
