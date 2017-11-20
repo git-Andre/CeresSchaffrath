@@ -29,7 +29,7 @@
 
 {% block PageBody %}
     
-    {{ services.lastSeen.setLastSeenMaxCount(config("Ceres.item.lists.last_seen_number")) }}
+    {#{{ services.lastSeen.setLastSeenMaxCount(config("Ceres.item.lists.last_seen_number")) }}#}
     
     {{ component( "Ceres::Item.Components.VariationSelect" ) }}
     {{ component( "Ceres::Item.Components.ItemImageCarousel" ) }}
