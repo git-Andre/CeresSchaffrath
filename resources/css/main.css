@@ -13240,13 +13240,16 @@ tr._idGenTableRowColumn-5 {
 
 .tab-content li {
   list-style: none;
+  line-height: 1.2rem;
+  margin-top: 0.5rem;
 }
 
 .tab-content li::before {
   content: "\f0da";
   font-family: FontAwesome;
   font-size: 1rem;
-  padding: 0.4rem;
+  padding: 0.5rem;
+  margin-left: -1.4rem;
   color: #4D4F4D;
 }
 
