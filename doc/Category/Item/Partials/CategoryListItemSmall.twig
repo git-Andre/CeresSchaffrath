@@ -109,17 +109,14 @@
                         <h4 class="m-r-1"><i class="fa fa-lg fa-check text-success" aria-hidden="true"></i></h4>
                     </span>
                     <span class="price">
-                        {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }}
-                        <sup>*</sup>
+                        {{ item.data.calculatedPrices.default.price | formatMonetary(item.data.calculatedPrices.default.currency) }} *
                     </span>
                 </div>
                 {{ LayoutContainer.show("Ceres::CategoryItem.AfterPrices", item.data) }}
             </div>
 
-            <div class="thumb-legal vat-porto-info small text-muted tiny">
-                <sup>*</sup> {{ trans("Ceres::Template.itemInclVAT") }}
-                <br>
-                <span class="m-l-5">{{ trans("Ceres::Template.itemExclusive") }}
+            <div class="thumb-legal vat-porto-info small text-muted tiny"> * {{ trans("Ceres::Template.itemInclVAT") }}
+                <span class="m-x-5">|</span><span>{{ trans("Ceres::Template.itemExclusive") }}
                 {{ trans("Ceres::Template.itemShippingCosts") }}</span>
             </div>
         </div>
